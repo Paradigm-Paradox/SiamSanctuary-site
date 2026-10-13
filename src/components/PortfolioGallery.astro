@@ -1,81 +1,16 @@
 ---
-const galleryItems = [
-  {
-    image: "/uploads/2022/05/2022-05-04-Dream-Nails-104edited.png",
-    title: "Glazed Opal Stiletto",
-    category: "art",
-    tag: "Nail Art"
-  },
-  {
-    image: "/uploads/2022/05/2022-05-04-Dream-Nails-102edited.png",
-    title: "Minimalist Blush French",
-    category: "manicure",
-    tag: "Manicure"
-  },
-  {
-    image: "/uploads/2022/05/2022-05-04-Dream-Nails-108edited.png",
-    title: "Chrome Sunset Almond",
-    category: "gel",
-    tag: "Gel Polish"
-  },
-  {
-    image: "/uploads/2022/05/2022-05-04-Dream-Nails-110edited.png",
-    title: "Lavender Dream Sculpt",
-    category: "acrylic",
-    tag: "Acrylic Extension"
-  },
-  {
-    image: "/uploads/2022/05/2022-05-04-Dream-Nails-113edited.png",
-    title: "Geometric Rose Gold",
-    category: "art",
-    tag: "Nail Art"
-  },
-  {
-    image: "/uploads/2022/05/2022-05-04-Dream-Nails-114edited.png",
-    title: "Velvet Emerald Cat-Eye",
-    category: "gel",
-    tag: "Gel Polish"
-  },
-  {
-    image: "/uploads/2022/05/2022-05-04-Dream-Nails-94edited.png",
-    title: "Crystal Embedded Ombré",
-    category: "acrylic",
-    tag: "Acrylic Extension"
-  },
-  {
-    image: "/uploads/2022/05/2022-05-04-Dream-Nails-92edited.png",
-    title: "Nude Blossom Accent",
-    category: "manicure",
-    tag: "Manicure"
-  },
-  {
-    image: "/uploads/2022/05/2022-05-04-Dream-Nails-84edited.png",
-    title: "Champagne Foil Coffin",
-    category: "art",
-    tag: "Nail Art"
-  },
-  {
-    image: "/uploads/2022/05/2022-05-04-Dream-Nails-82edited.png",
-    title: "Midnight Shimmer Gloss",
-    category: "gel",
-    tag: "Gel Polish"
-  },
-  {
-    image: "/uploads/2022/05/2022-05-04-Dream-Nails-71edited.png",
-    title: "Botanical Hand-Painted Floral",
-    category: "art",
-    tag: "Nail Art"
-  },
-  {
-    image: "/uploads/2022/05/2022-05-04-Dream-Nails-50edited.png",
-    title: "Clean Russian Manicure Glow",
-    category: "manicure",
-    tag: "Manicure"
-  }
-];
+import galleryItems from '../data/gallery.json';
+
+interface Props {
+  limit?: number;
+  showAllLink?: boolean;
+}
+
+const { limit = 16, showAllLink = true } = Astro.props;
+const displayItems = limit ? galleryItems.slice(0, limit) : galleryItems;
 ---
 
-<section id="gallery" class="py-24 bg-[#181818] relative">
+<section id="gallery" class="py-24 bg-[#181818] relative select-none">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="text-center max-w-3xl mx-auto mb-12">
@@ -83,80 +18,157 @@ const galleryItems = [
         Visual Inspiration
       </span>
       <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-4">
-        Our Nail Artistry Gallery
+        Client Nail Art Lookbook
       </h2>
       <p class="text-sm text-gray-400 font-light max-w-xl mx-auto">
-        Every design is handcrafted by our master nail artists. Browse real client creations or show us a reference image for your next appointment.
+        Browse authentic hand-painted nail art, sculpted acrylics, and mirror chrome sets handcrafted by our Phuket master technicians. Click any image to view in full resolution.
       </p>
     </div>
 
-    <!-- Filter Buttons -->
-    <div class="flex items-center justify-center gap-2 sm:gap-4 flex-wrap mb-12" id="gallery-filters">
-      <button class="filter-btn active px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-[#f286aa] text-black" data-filter="all">
-        All Creations
+    <!-- Category Filters -->
+    <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-12" id="gallery-filters">
+      <button class="filter-btn active px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-[#f286aa] text-black cursor-pointer shadow-md" data-filter="all">
+        All Designs ({galleryItems.length})
       </button>
-      <button class="filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10" data-filter="art">
+      <button class="filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 cursor-pointer" data-filter="nail-art">
         Nail Art
       </button>
-      <button class="filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10" data-filter="gel">
-        Gel Enhancements
+      <button class="filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 cursor-pointer" data-filter="gel">
+        Gel Polish
       </button>
-      <button class="filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10" data-filter="acrylic">
-        Acrylic Sculpting
+      <button class="filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 cursor-pointer" data-filter="acrylic">
+        Acrylic Sculpt
       </button>
-      <button class="filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10" data-filter="manicure">
-        Classic Care
+      <button class="filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 cursor-pointer" data-filter="chrome">
+        Chrome & Glazed
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 cursor-pointer" data-filter="french">
+        French & Ombré
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 cursor-pointer" data-filter="glam">
+        Gems & 3D Charms
       </button>
     </div>
 
-    <!-- Responsive Grid (Playbook de-floated layout with centered items) -->
+    <!-- Responsive Grid -->
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="gallery-grid">
-      {galleryItems.map((item) => (
-        <div class="gallery-item group relative rounded-2xl overflow-hidden aspect-[3/4] bg-[#111111] border border-white/5 hover:border-[#f286aa]/40 transition-all duration-500 cursor-pointer shadow-lg" data-category={item.category}>
-          
+      {displayItems.map((item, index) => (
+        <div 
+          class="gallery-item group relative rounded-2xl overflow-hidden aspect-[3/4] bg-[#111111] border border-white/5 hover:border-[#f286aa]/50 transition-all duration-500 cursor-pointer shadow-xl hover:-translate-y-1.5" 
+          data-category={item.category}
+          data-index={index}
+          data-img={item.image}
+          data-title={item.title}
+          data-cat-name={item.categoryName}
+          data-desc={item.description}
+        >
           <img 
             src={item.image} 
             alt={item.title} 
-            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             loading="lazy"
           />
 
           <!-- Gradient Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 sm:p-5">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 sm:p-5">
             <span class="text-[10px] uppercase tracking-widest text-[#d9c1a3] font-semibold mb-1">
-              {item.tag}
+              {item.categoryName}
             </span>
-            <h4 class="text-base sm:text-lg font-serif text-white font-medium">
+            <h4 class="text-sm sm:text-base font-serif text-white font-medium line-clamp-1">
               {item.title}
             </h4>
             <div class="mt-2 flex items-center gap-1.5 text-xs text-[#f286aa]">
-              <i class="fas fa-camera text-[11px]"></i>
-              <span>View Details</span>
+              <i class="fas fa-search-plus text-[11px]"></i>
+              <span>Click to Zoom</span>
             </div>
           </div>
+
+          <!-- Subtle permanent corner badge -->
+          <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[9px] uppercase tracking-wider bg-black/60 backdrop-blur-md text-gray-300 font-mono border border-white/10 group-hover:opacity-0 transition-opacity">
+            #{index + 1}
+          </span>
 
         </div>
       ))}
     </div>
 
-    <!-- Instagram / Social Callout -->
-    <div class="mt-14 text-center">
-      <p class="text-xs text-gray-400 font-light mb-3">Want daily updates and behind-the-scenes nail design videos?</p>
-      <a href="https://fb.com/DreamNails.Asia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#d9c1a3] hover:text-[#f286aa] transition font-medium">
-        <i class="fab fa-facebook"></i>
-        <span>Follow @DreamNails.Asia</span>
-        <i class="fas fa-arrow-right text-[10px]"></i>
-      </a>
-    </div>
+    {showAllLink && (
+      <div class="mt-14 text-center">
+        <a href="/gallery" class="btn-luxury-primary text-xs !py-3 !px-8 shadow-xl">
+          <i class="fas fa-th-large mr-2"></i>
+          <span>View All 79+ Client Creations</span>
+        </a>
+      </div>
+    )}
 
   </div>
+
+  <!-- Interactive Lightbox Modal -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
+    <div class="relative w-full max-w-4xl bg-[#161616] border border-[#d9c1a3]/30 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh]">
+      
+      <!-- Close Button -->
+      <button id="lightbox-close" class="absolute top-3 right-4 z-30 w-10 h-10 rounded-full bg-black/60 hover:bg-[#f286aa] hover:text-black text-white text-xl flex items-center justify-center transition cursor-pointer" aria-label="Close Lightbox">
+        &times;
+      </button>
+
+      <!-- Image Area with Next/Prev Arrows -->
+      <div class="relative flex-1 bg-black flex items-center justify-center min-h-[300px] md:min-h-[500px] overflow-hidden">
+        <img id="lightbox-img" src="" alt="" class="max-h-[75vh] w-auto max-w-full object-contain transition-transform duration-300" />
+        
+        <button id="lightbox-prev" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-[#f286aa] hover:text-black text-white flex items-center justify-center transition cursor-pointer" aria-label="Previous Image">
+          <i class="fas fa-chevron-left text-xs"></i>
+        </button>
+        <button id="lightbox-next" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-[#f286aa] hover:text-black text-white flex items-center justify-center transition cursor-pointer" aria-label="Next Image">
+          <i class="fas fa-chevron-right text-xs"></i>
+        </button>
+      </div>
+
+      <!-- Details Sidebar -->
+      <div class="w-full md:w-80 p-6 md:p-8 flex flex-col justify-between bg-[#191919] border-t md:border-t-0 md:border-l border-white/10">
+        <div>
+          <span id="lightbox-cat" class="text-xs uppercase tracking-widest text-[#f286aa] font-semibold block mb-2">Category</span>
+          <h3 id="lightbox-title" class="text-2xl font-serif text-white uppercase tracking-wide mb-4 leading-tight">Design Title</h3>
+          <p id="lightbox-desc" class="text-xs text-gray-300 font-light leading-relaxed mb-6">
+            Description of the bespoke nail design.
+          </p>
+          <div class="text-[11px] text-[#d9c1a3] flex items-center gap-2 border-y border-white/10 py-3">
+            <i class="fas fa-shield-virus text-[#f286aa]"></i>
+            <span>Hospital-Grade Sterile Tools</span>
+          </div>
+        </div>
+
+        <div class="pt-6">
+          <button class="open-booking-modal w-full btn-luxury-primary text-xs !py-3 cursor-pointer">
+            <i class="far fa-calendar-check mr-2"></i>
+            <span>Book This Design</span>
+          </button>
+          <span class="block text-center text-[10px] text-gray-500 mt-2">Bring this photo to your appointment</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </section>
 
 <script is:inline>
-  function setupGalleryFilters() {
+  function initGallerySystem() {
     const filterBtns = document.querySelectorAll('#gallery-filters .filter-btn');
     const items = document.querySelectorAll('#gallery-grid .gallery-item');
+    const modal = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxCat = document.getElementById('lightbox-cat');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    const closeBtn = document.getElementById('lightbox-close');
+    const prevBtn = document.getElementById('lightbox-prev');
+    const nextBtn = document.getElementById('lightbox-next');
 
+    let visibleItems = Array.from(items);
+    let currentIdx = 0;
+
+    // Filter Logic
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => {
@@ -167,17 +179,62 @@ const galleryItems = [
         btn.classList.remove('bg-white/5', 'text-gray-300');
 
         const filter = btn.getAttribute('data-filter');
+        visibleItems = [];
         items.forEach(item => {
-          const category = item.getAttribute('data-category');
-          if (filter === 'all' || category === filter) {
+          const cat = item.getAttribute('data-category');
+          if (filter === 'all' || cat === filter) {
             item.style.display = 'block';
+            visibleItems.push(item);
           } else {
             item.style.display = 'none';
           }
         });
       });
     });
+
+    // Lightbox Logic
+    function openLightbox(index) {
+      if (!visibleItems.length) return;
+      currentIdx = (index + visibleItems.length) % visibleItems.length;
+      const target = visibleItems[currentIdx];
+
+      lightboxImg.src = target.getAttribute('data-img');
+      lightboxTitle.textContent = target.getAttribute('data-title');
+      lightboxCat.textContent = target.getAttribute('data-cat-name');
+      lightboxDesc.textContent = target.getAttribute('data-desc');
+
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+    }
+
+    function closeLightbox() {
+      modal.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    items.forEach((item) => {
+      item.addEventListener('click', () => {
+        const idx = visibleItems.indexOf(item);
+        if (idx !== -1) openLightbox(idx);
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (prevBtn) prevBtn.addEventListener('click', () => openLightbox(currentIdx - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => openLightbox(currentIdx + 1));
+
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeLightbox();
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (!modal.classList.contains('opacity-0')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') openLightbox(currentIdx - 1);
+        if (e.key === 'ArrowRight') openLightbox(currentIdx + 1);
+      }
+    });
   }
 
-  document.addEventListener('DOMContentLoaded', setupGalleryFilters);
+  document.addEventListener('DOMContentLoaded', initGallerySystem);
 </script>

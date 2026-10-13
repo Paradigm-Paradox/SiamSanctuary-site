@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PortfolioGallery from '../components/PortfolioGallery.astro';
+---
+
+<Layout 
+  title="Nail Art Lookbook & Client Showcase | DreamNails.Asia"
+  description="Explore over 79+ authentic client nail art creations, sculpted acrylics, chrome finishes, and luxury manicures handcrafted by Dream Nails master technicians."
+>
+  <div class="min-h-screen flex flex-col bg-[#141414]">
+    <Header />
+    
+    <main class="flex-grow">
+      <!-- Gallery Header Banner -->
+      <section class="relative py-24 bg-[#101010] border-b border-white/5 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+          <img src="/uploads/2022/02/SLIDE_01-1.jpg" alt="Gallery Showcase Banner" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/85 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-2">Trendsetting Lookbook</span>
+          <h1 class="text-4xl sm:text-6xl font-serif text-white uppercase tracking-wider mb-4">
+            Client Creations Showcase
+          </h1>
+          <p class="text-xs sm:text-sm uppercase tracking-widest text-[#d9c1a3]">
+            79+ Handcrafted Designs • Hospital-Grade Sanitation • Pure Botanical Polishes
+          </p>
+        </div>
+      </section>
+
+      <!-- Full Portfolio Gallery with 0 limit (all 79 photos) -->
+      <PortfolioGallery limit={0} showAllLink={false} />
+
+      <!-- Custom Art Request CTA -->
+      <section class="py-16 bg-[#121212] border-t border-white/5 text-center">
+        <div class="max-w-3xl mx-auto px-4">
+          <h3 class="text-2xl font-serif text-white uppercase mb-3">Have a specific design in mind?</h3>
+          <p class="text-xs sm:text-sm text-gray-300 font-light mb-6">
+            Bring any photo from Pinterest, Instagram, or your own sketches. Our Phuket master artists can replicate or customize any intricate design to your personal vision.
+          </p>
+          <button class="open-booking-modal btn-luxury-primary text-xs cursor-pointer">
+            <i class="far fa-calendar-check mr-2"></i>
+            <span>Schedule Custom Nail Art Appointment</span>
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+    <Footer />
+  </div>
+</Layout>
