@@ -1,66 +1,78 @@
 ---
 ---
 
-<section class="py-20 bg-[#121212] relative overflow-hidden border-y border-[#d9c1a3]/10">
+<section class="py-24 bg-[#141414] relative overflow-hidden border-y border-[#d9c1a3]/10">
+  <!-- Subtle decorative watermark from original Atura theme -->
+  <div class="absolute -left-12 bottom-6 opacity-5 select-none pointer-events-none">
+    <span class="font-script text-[14rem] sm:text-[18rem] text-[#f286aa] leading-none">nail bar</span>
+  </div>
+
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       
+      <!-- Content Column matching original WordPress site -->
       <div>
-        <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-2">Pure & Gentle</span>
+        <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-2">materials</span>
         <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-6 leading-tight">
           Only Natural <br />
           <span class="text-[#d9c1a3]">Luxury Cosmetics</span>
         </h2>
         <p class="text-sm sm:text-base text-gray-300 font-light leading-relaxed mb-6">
-          We formulate and handpick clean, eco-conscious beauty essentials. From botanical craft soaps and nutrient-rich hair balsams to revitalizing hand and cuticle creams, our product line ensures your beauty routine remains free of harsh chemicals.
+          Our Nail Products are safe products that are used to color the nails, to protect them against damage, and to improve their condition.
+        </p>
+        <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed mb-8">
+          We use exclusively certified, non-toxic, and salon-grade Korean professional lines including <strong class="text-white">Very Good Nail</strong>, engineered for unmatched pigmentation, mirror shine, and health-conscious nail nourishment without harmful fumes or harsh allergens.
         </p>
 
         <div class="space-y-3 mb-8">
           <div class="flex items-center gap-3 text-xs sm:text-sm text-gray-300">
             <span class="w-6 h-6 rounded-full bg-[#f286aa]/10 text-[#f286aa] flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
-            <span>100% Cruelty-Free & Plant-Derived Ingredients</span>
+            <span>100% Non-Toxic & 10-Free Formulations</span>
           </div>
           <div class="flex items-center gap-3 text-xs sm:text-sm text-gray-300">
             <span class="w-6 h-6 rounded-full bg-[#f286aa]/10 text-[#f286aa] flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
-            <span>Nourishing Vitamin E & Pure Essential Botanical Oils</span>
+            <span>Long-Lasting High-Gloss Finish & Zero Chipping</span>
           </div>
           <div class="flex items-center gap-3 text-xs sm:text-sm text-gray-300">
             <span class="w-6 h-6 rounded-full bg-[#f286aa]/10 text-[#f286aa] flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
-            <span>Craft Artisan Production with Sustainable Eco-Packaging</span>
+            <span>Official Very Good Nail Professional Gel Palette</span>
           </div>
         </div>
 
-        <a href="/shop" class="btn-luxury-primary text-xs">
-          <i class="fas fa-shopping-bag mr-2"></i>
-          <span>Explore All 12 Products</span>
-        </a>
+        <div class="flex items-center gap-4">
+          <a href="/shop" class="btn-luxury-primary text-xs">
+            <i class="fas fa-shopping-bag mr-2"></i>
+            <span>Browse Salon Shop</span>
+          </a>
+          <a href="/services" class="btn-luxury-outline text-xs">
+            <span>Explore Services</span>
+          </a>
+        </div>
       </div>
 
-      <!-- Product Preview Showcase -->
-      <div class="grid grid-cols-2 gap-4 sm:gap-6">
-        <div class="space-y-4">
-          <div class="rounded-2xl overflow-hidden bg-[#1a1a1a] border border-white/5 p-4 text-center group hover:border-[#f286aa]/40 transition">
-            <img src="/uploads/2021/12/shop-05.jpg" alt="Craft Soap" class="w-full h-40 object-cover rounded-xl mb-3 group-hover:scale-105 transition" />
-            <h4 class="text-sm font-serif text-white uppercase">Craft Artisan Soap</h4>
-            <span class="text-xs text-[#d9c1a3] font-semibold">$119.00 USD</span>
-          </div>
-          <div class="rounded-2xl overflow-hidden bg-[#1a1a1a] border border-white/5 p-4 text-center group hover:border-[#f286aa]/40 transition">
-            <img src="/uploads/2021/12/shop-01.jpg" alt="Hair Balsam" class="w-full h-40 object-cover rounded-xl mb-3 group-hover:scale-105 transition" />
-            <h4 class="text-sm font-serif text-white uppercase">Hair Balsam</h4>
-            <span class="text-xs text-[#d9c1a3] font-semibold">$64.00 USD</span>
+      <!-- Original Very Good Nail Photos from WordPress -->
+      <div class="grid grid-cols-2 gap-4 sm:gap-6 items-center">
+        <div class="rounded-2xl overflow-hidden bg-[#1e1e1e] border border-white/10 p-3 shadow-2xl group hover:border-[#f286aa]/40 transition duration-500">
+          <img 
+            src="/uploads/2022/05/VeryGoodNail01.png" 
+            alt="Very Good Nail Korean Luxury Gel Cosmetics" 
+            class="w-full h-auto object-cover rounded-xl group-hover:scale-105 transition duration-700" 
+          />
+          <div class="mt-3 text-center">
+            <span class="text-xs uppercase tracking-widest text-[#d9c1a3] font-semibold block">Very Good Nail</span>
+            <span class="text-[10px] text-gray-400">Seoul Master Collection</span>
           </div>
         </div>
 
-        <div class="space-y-4 pt-6">
-          <div class="rounded-2xl overflow-hidden bg-[#1a1a1a] border border-white/5 p-4 text-center group hover:border-[#f286aa]/40 transition">
-            <img src="/uploads/2021/12/shop-09.jpg" alt="Hand Cream" class="w-full h-40 object-cover rounded-xl mb-3 group-hover:scale-105 transition" />
-            <h4 class="text-sm font-serif text-white uppercase">Botanical Hand Cream</h4>
-            <span class="text-xs text-[#d9c1a3] font-semibold">$17.99 USD</span>
-          </div>
-          <div class="rounded-2xl overflow-hidden bg-[#1a1a1a] border border-white/5 p-4 text-center group hover:border-[#f286aa]/40 transition">
-            <img src="/uploads/2021/12/shop-08.jpg" alt="Wax Cream" class="w-full h-40 object-cover rounded-xl mb-3 group-hover:scale-105 transition" />
-            <h4 class="text-sm font-serif text-white uppercase">Nourishing Wax Cream</h4>
-            <span class="text-xs text-[#d9c1a3] font-semibold">$73.49 USD</span>
+        <div class="rounded-2xl overflow-hidden bg-[#1e1e1e] border border-white/10 p-3 shadow-2xl group hover:border-[#f286aa]/40 transition duration-500 transform sm:-translate-y-4">
+          <img 
+            src="/uploads/2022/05/VeryGoodNail02.jpg" 
+            alt="Very Good Nail Professional Color Spectrum" 
+            class="w-full h-auto object-cover rounded-xl group-hover:scale-105 transition duration-700" 
+          />
+          <div class="mt-3 text-center">
+            <span class="text-xs uppercase tracking-widest text-[#f286aa] font-semibold block">Rich Pigment & Care</span>
+            <span class="text-[10px] text-gray-400">Hospital-Grade Quality</span>
           </div>
         </div>
       </div>
