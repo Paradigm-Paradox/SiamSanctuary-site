@@ -1,0 +1,183 @@
+---
+const galleryItems = [
+  {
+    image: "/uploads/2022/05/2022-05-04-Dream-Nails-104edited.png",
+    title: "Glazed Opal Stiletto",
+    category: "art",
+    tag: "Nail Art"
+  },
+  {
+    image: "/uploads/2022/05/2022-05-04-Dream-Nails-102edited.png",
+    title: "Minimalist Blush French",
+    category: "manicure",
+    tag: "Manicure"
+  },
+  {
+    image: "/uploads/2022/05/2022-05-04-Dream-Nails-108edited.png",
+    title: "Chrome Sunset Almond",
+    category: "gel",
+    tag: "Gel Polish"
+  },
+  {
+    image: "/uploads/2022/05/2022-05-04-Dream-Nails-110edited.png",
+    title: "Lavender Dream Sculpt",
+    category: "acrylic",
+    tag: "Acrylic Extension"
+  },
+  {
+    image: "/uploads/2022/05/2022-05-04-Dream-Nails-113edited.png",
+    title: "Geometric Rose Gold",
+    category: "art",
+    tag: "Nail Art"
+  },
+  {
+    image: "/uploads/2022/05/2022-05-04-Dream-Nails-114edited.png",
+    title: "Velvet Emerald Cat-Eye",
+    category: "gel",
+    tag: "Gel Polish"
+  },
+  {
+    image: "/uploads/2022/05/2022-05-04-Dream-Nails-94edited.png",
+    title: "Crystal Embedded Ombré",
+    category: "acrylic",
+    tag: "Acrylic Extension"
+  },
+  {
+    image: "/uploads/2022/05/2022-05-04-Dream-Nails-92edited.png",
+    title: "Nude Blossom Accent",
+    category: "manicure",
+    tag: "Manicure"
+  },
+  {
+    image: "/uploads/2022/05/2022-05-04-Dream-Nails-84edited.png",
+    title: "Champagne Foil Coffin",
+    category: "art",
+    tag: "Nail Art"
+  },
+  {
+    image: "/uploads/2022/05/2022-05-04-Dream-Nails-82edited.png",
+    title: "Midnight Shimmer Gloss",
+    category: "gel",
+    tag: "Gel Polish"
+  },
+  {
+    image: "/uploads/2022/05/2022-05-04-Dream-Nails-71edited.png",
+    title: "Botanical Hand-Painted Floral",
+    category: "art",
+    tag: "Nail Art"
+  },
+  {
+    image: "/uploads/2022/05/2022-05-04-Dream-Nails-50edited.png",
+    title: "Clean Russian Manicure Glow",
+    category: "manicure",
+    tag: "Manicure"
+  }
+];
+---
+
+<section id="gallery" class="py-24 bg-[#181818] relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-1">
+        Visual Inspiration
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-4">
+        Our Nail Artistry Gallery
+      </h2>
+      <p class="text-sm text-gray-400 font-light max-w-xl mx-auto">
+        Every design is handcrafted by our master nail artists. Browse real client creations or show us a reference image for your next appointment.
+      </p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="flex items-center justify-center gap-2 sm:gap-4 flex-wrap mb-12" id="gallery-filters">
+      <button class="filter-btn active px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-[#f286aa] text-black" data-filter="all">
+        All Creations
+      </button>
+      <button class="filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10" data-filter="art">
+        Nail Art
+      </button>
+      <button class="filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10" data-filter="gel">
+        Gel Enhancements
+      </button>
+      <button class="filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10" data-filter="acrylic">
+        Acrylic Sculpting
+      </button>
+      <button class="filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10" data-filter="manicure">
+        Classic Care
+      </button>
+    </div>
+
+    <!-- Responsive Grid (Playbook de-floated layout with centered items) -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="gallery-grid">
+      {galleryItems.map((item) => (
+        <div class="gallery-item group relative rounded-2xl overflow-hidden aspect-[3/4] bg-[#111111] border border-white/5 hover:border-[#f286aa]/40 transition-all duration-500 cursor-pointer shadow-lg" data-category={item.category}>
+          
+          <img 
+            src={item.image} 
+            alt={item.title} 
+            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+            loading="lazy"
+          />
+
+          <!-- Gradient Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 sm:p-5">
+            <span class="text-[10px] uppercase tracking-widest text-[#d9c1a3] font-semibold mb-1">
+              {item.tag}
+            </span>
+            <h4 class="text-base sm:text-lg font-serif text-white font-medium">
+              {item.title}
+            </h4>
+            <div class="mt-2 flex items-center gap-1.5 text-xs text-[#f286aa]">
+              <i class="fas fa-camera text-[11px]"></i>
+              <span>View Details</span>
+            </div>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- Instagram / Social Callout -->
+    <div class="mt-14 text-center">
+      <p class="text-xs text-gray-400 font-light mb-3">Want daily updates and behind-the-scenes nail design videos?</p>
+      <a href="https://fb.com/DreamNails.Asia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#d9c1a3] hover:text-[#f286aa] transition font-medium">
+        <i class="fab fa-facebook"></i>
+        <span>Follow @DreamNails.Asia</span>
+        <i class="fas fa-arrow-right text-[10px]"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<script is:inline>
+  function setupGalleryFilters() {
+    const filterBtns = document.querySelectorAll('#gallery-filters .filter-btn');
+    const items = document.querySelectorAll('#gallery-grid .gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-[#f286aa]', 'text-black');
+          b.classList.add('bg-white/5', 'text-gray-300');
+        });
+        btn.classList.add('bg-[#f286aa]', 'text-black');
+        btn.classList.remove('bg-white/5', 'text-gray-300');
+
+        const filter = btn.getAttribute('data-filter');
+        items.forEach(item => {
+          const category = item.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', setupGalleryFilters);
+</script>

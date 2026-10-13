@@ -1,0 +1,147 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = "DreamNails.Asia | Luxury Nail Sanctuary & Beauty Spa",
+  description = "DreamNails.Asia is a premier international beauty destination offering trendsetting nail artistry, hospital-grade sanitized manicures, pedicures, and organic cosmetics.",
+  image = "/uploads/2022/01/serv_01_02-800x800.jpg"
+} = Astro.props;
+
+const siteUrl = "https://dreamnails.asia";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/uploads/2022/04/Dream-Salon-Transparent-BG-02-noborder-1.png" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={siteUrl} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image.startsWith('http') ? image : `${siteUrl}${image}`} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={siteUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image.startsWith('http') ? image : `${siteUrl}${image}`} />
+
+    <!-- FontAwesome fallback CDN for complete glyph set -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body class="bg-[#141414] text-[#f3f3f3] selection:bg-[#f286aa] selection:text-black">
+    <slot />
+
+    <!-- Quick Booking / Inquiry Modal -->
+    <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+      <div class="relative w-full max-w-lg bg-[#1c1c1c] border border-[#d9c1a3]/30 rounded-2xl p-6 sm:p-8 shadow-2xl transform scale-95 transition-transform duration-300">
+        <button id="close-booking-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none">&times;</button>
+        <div class="text-center mb-6">
+          <span class="font-script text-3xl text-[#f286aa] block">Pamper Yourself</span>
+          <h3 class="text-2xl font-serif text-white uppercase tracking-wider">Book Your Appointment</h3>
+          <p class="text-xs text-gray-400 mt-1">Select your preferred salon location or message us directly</p>
+        </div>
+
+        <div class="space-y-3 mb-6">
+          <a href="https://fb.com/book/DreamNails.Asia/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl bg-[#252525] hover:bg-[#2e2e2e] border border-white/5 hover:border-[#f286aa]/40 transition group">
+            <div class="flex items-center gap-3">
+              <i class="fab fa-facebook-messenger text-xl text-[#f286aa]"></i>
+              <div class="text-left">
+                <div class="text-sm font-semibold text-white">Direct Online Booking</div>
+                <div class="text-xs text-gray-400">Instant scheduling via DreamNails official portal</div>
+              </div>
+            </div>
+            <i class="fas fa-chevron-right text-xs text-gray-500 group-hover:text-white group-hover:translate-x-1 transition"></i>
+          </a>
+
+          <a href="mailto:info.maz@dreamnails.asia" class="flex items-center justify-between p-3.5 rounded-xl bg-[#252525] hover:bg-[#2e2e2e] border border-white/5 hover:border-[#d9c1a3]/40 transition group">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-map-marker-alt text-lg text-[#d9c1a3]"></i>
+              <div class="text-left">
+                <div class="text-sm font-semibold text-white">Mayagüez, Puerto Rico</div>
+                <div class="text-xs text-gray-400">info.maz@dreamnails.asia</div>
+              </div>
+            </div>
+            <span class="text-xs text-[#d9c1a3] font-medium">Email Salon</span>
+          </a>
+
+          <a href="mailto:info.hkt@dreamnails.asia" class="flex items-center justify-between p-3.5 rounded-xl bg-[#252525] hover:bg-[#2e2e2e] border border-white/5 hover:border-[#d9c1a3]/40 transition group">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-map-marker-alt text-lg text-[#d9c1a3]"></i>
+              <div class="text-left">
+                <div class="text-sm font-semibold text-white">Phuket, Thailand</div>
+                <div class="text-xs text-gray-400">info.hkt@dreamnails.asia</div>
+              </div>
+            </div>
+            <span class="text-xs text-[#d9c1a3] font-medium">Email Salon</span>
+          </a>
+
+          <a href="mailto:info.pty@dreamnails.asia" class="flex items-center justify-between p-3.5 rounded-xl bg-[#252525] hover:bg-[#2e2e2e] border border-white/5 hover:border-[#d9c1a3]/40 transition group">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-map-marker-alt text-lg text-[#d9c1a3]"></i>
+              <div class="text-left">
+                <div class="text-sm font-semibold text-white">Pattaya, Thailand</div>
+                <div class="text-xs text-gray-400">info.pty@dreamnails.asia</div>
+              </div>
+            </div>
+            <span class="text-xs text-[#d9c1a3] font-medium">Email Salon</span>
+          </a>
+        </div>
+
+        <div class="text-center pt-2 border-t border-white/10">
+          <p class="text-xs text-gray-400">For general questions or global franchise inquiries: <a href="mailto:info@dreamnails.asia" class="text-[#f286aa] underline">info@dreamnails.asia</a></p>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline>
+      // Booking Modal Triggers
+      function setupBookingModal() {
+        const modal = document.getElementById('booking-modal');
+        const closeBtn = document.getElementById('close-booking-modal');
+        const triggers = document.querySelectorAll('.open-booking-modal');
+
+        if (!modal) return;
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          modal.classList.remove('opacity-0', 'pointer-events-none');
+          const panel = modal.querySelector('div');
+          if (panel) panel.classList.remove('scale-95');
+        }
+
+        function closeModal() {
+          modal.classList.add('opacity-0', 'pointer-events-none');
+          const panel = modal.querySelector('div');
+          if (panel) panel.classList.add('scale-95');
+        }
+
+        triggers.forEach(btn => btn.addEventListener('click', openModal));
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', setupBookingModal);
+    </script>
+  </body>
+</html>

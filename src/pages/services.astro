@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServicesMenu from '../components/ServicesMenu.astro';
+
+const serviceCategories = [
+  {
+    title: "Nail Care & Artistry",
+    icon: "fa-paint-brush",
+    tag: "Signature Core",
+    description: "Our world-renowned nail styling: from Russian manicures and soothing pedicures to bespoke hand-painted nail artistry, chrome finishes, and dipping powder."
+  },
+  {
+    title: "Waxing & Hair Removal",
+    icon: "fa-feather-alt",
+    tag: "Gentle Care",
+    description: "Silky smooth skin using hypoallergenic, organic hard and soft waxes formulated to minimize discomfort and leave skin soothed and radiant."
+  },
+  {
+    title: "Skincare & Facial Treatments",
+    icon: "fa-spa",
+    tag: "Rejuvenating",
+    description: "Deep cleansing, botanical hydration, and therapeutic facial rituals tailored to restore natural balance, glow, and youthful elasticity."
+  },
+  {
+    title: "Lashes & Brows",
+    icon: "fa-eye",
+    tag: "High Definition",
+    description: "Precision brow shaping, lamination, tinting, and lightweight lash extensions designed to frame your eyes with effortless elegance."
+  },
+  {
+    title: "Hair Services",
+    icon: "fa-cut",
+    tag: "Salon Styling",
+    description: "Revitalizing hair wash rituals, deep conditioning balsams, blowouts, and event styling for a polished, sophisticated look."
+  },
+  {
+    title: "Makeup & Beauty Enhancements",
+    icon: "fa-magic",
+    tag: "Editorial & Glam",
+    description: "Day glam, wedding bridal packages, and camera-ready evening makeup crafted with clean, luxury cosmetics that highlight your natural beauty."
+  },
+  {
+    title: "Body Treatments & Wellness",
+    icon: "fa-heart",
+    tag: "Holistic Health",
+    description: "Aromatherapy wraps, exfoliating body polishes, and tension-melting relaxation massages that recharge mind, body, and spirit."
+  },
+  {
+    title: "Specialized & VIP Services",
+    icon: "fa-crown",
+    tag: "Exclusive Luxury",
+    description: "Private salon buyout sessions, bespoke bridal party experiences, champagne manicures, and custom 24K gold foil nail embellishments."
+  }
+];
+---
+
+<Layout 
+  title="All Salon Services & Treatments | DreamNails.Asia"
+  description="Explore all luxury services at Dream Nails Asia: nail care, gel extensions, pedicures, skincare, waxing, lashes, and bespoke VIP treatments."
+>
+  <div class="min-h-screen flex flex-col bg-[#141414]">
+    <Header />
+    
+    <main class="flex-grow">
+      <!-- Subpage Header Banner -->
+      <section class="relative py-24 bg-[#101010] border-b border-white/5 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+          <img src="/uploads/2021/12/inner_header_01.jpg" alt="Services Header" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-2">Sanctuary Offerings</span>
+          <h1 class="text-4xl sm:text-6xl font-serif text-white uppercase tracking-wider mb-4">
+            Services & Treatments
+          </h1>
+          <p class="text-xs sm:text-sm uppercase tracking-widest text-[#d9c1a3]">
+            Uncompromising Excellence • Hospital-Grade Disinfection • Master Craftsmanship
+          </p>
+        </div>
+      </section>
+
+      <!-- 8 Core Service Categories Grid -->
+      <section class="py-20 bg-[#181818]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="font-script text-3xl text-[#f286aa] block mb-1">Full Service Menu</span>
+            <h2 class="text-3xl sm:text-4xl font-serif text-white uppercase tracking-wider mb-4">
+              Comprehensive Care Offerings
+            </h2>
+            <p class="text-sm text-gray-400 font-light max-w-lg mx-auto">
+              Each treatment is performed with gentle precision, hospital-grade sanitized tools, and premium cruelty-free formulations.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {serviceCategories.map((cat) => (
+              <div class="p-6 rounded-2xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/40 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-[#f286aa]/10 text-[#f286aa] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                      <i class={`fas ${cat.icon}`}></i>
+                    </div>
+                    <span class="text-[10px] uppercase tracking-widest text-[#d9c1a3] font-semibold">
+                      {cat.tag}
+                    </span>
+                  </div>
+
+                  <h3 class="text-xl font-serif text-white group-hover:text-[#f286aa] transition mb-3">
+                    {cat.title}
+                  </h3>
+
+                  <p class="text-xs text-gray-400 font-light leading-relaxed">
+                    {cat.description}
+                  </p>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+                  <button class="open-booking-modal text-xs uppercase tracking-wider text-[#d9c1a3] group-hover:text-[#f286aa] transition flex items-center gap-1 cursor-pointer">
+                    <span>Inquire / Book</span>
+                    <i class="fas fa-chevron-right text-[10px]"></i>
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Signature Popular Pricing Menu -->
+      <ServicesMenu />
+
+    </main>
+
+    <Footer />
+  </div>
+</Layout>

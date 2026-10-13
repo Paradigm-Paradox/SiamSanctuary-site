@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+@font-face {
+  font-family: 'Quentin';
+  src: url('/fonts/quentin.woff2') format('woff2'),
+       url('/fonts/quentin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'lte-font';
+  src: url('/fonts/lte-font.woff2') format('woff2'),
+       url('/fonts/lte-font.woff') format('woff'),
+       url('/fonts/lte-font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "lte-font" !important;
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-clock:before { content: '\e847'; }
+.icon-phone:before { content: '\e849'; }
+.icon-email:before { content: '\e808'; }
+.icon-location:before { content: '\e809'; }
+.icon-checkmark:before { content: '\e822'; }
+.icon-whatsapp:before { content: '\e841'; }
+.icon-shopping-bag:before { content: '\e827'; }
+.icon-quote_soft:before { content: '\e80d'; }
+.icon-star:before { content: '\e812'; }
+
+:root {
+  --brand-pink: #f286aa;
+  --brand-champagne: #d9c1a3;
+  --brand-dark: #141414;
+  --brand-black: #0a0a0a;
+  --brand-surface: #1e1e1e;
+  --brand-surface-light: #252525;
+  --brand-border: rgba(217, 193, 163, 0.2);
+  --brand-border-pink: rgba(242, 134, 170, 0.25);
+  --brand-text: #f3f3f3;
+  --brand-muted: #a6a6a6;
+  
+  --font-main: 'Jost', sans-serif;
+  --font-headers: 'Cormorant Infant', Georgia, serif;
+  --font-script: 'Quentin', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--brand-dark);
+  color: var(--brand-text);
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--brand-dark);
+  color: var(--brand-text);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headers);
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-serif {
+  font-family: var(--font-headers);
+}
+
+.font-sans {
+  font-family: var(--font-main);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-pink);
+}
+
+/* Button & Badge Utility Classes */
+.btn-luxury-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--brand-pink);
+  color: #0a0a0a;
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(242, 134, 170, 0.25);
+  text-decoration: none;
+}
+
+.btn-luxury-primary:hover {
+  background-color: #ffffff;
+  color: #0a0a0a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
+}
+
+.btn-luxury-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--brand-champagne);
+  border: 1px solid var(--brand-champagne);
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.btn-luxury-outline:hover {
+  background-color: var(--brand-champagne);
+  color: #0a0a0a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(217, 193, 163, 0.25);
+}
+
+/* Luxury Subtitle Badge with Quentin Accent */
+.script-subtitle {
+  font-family: var(--font-script);
+  font-size: 2.25rem;
+  color: var(--brand-pink);
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Subtle gold foil border effect */
+.luxury-border {
+  border: 1px solid rgba(217, 193, 163, 0.15);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.luxury-border:hover {
+  border-color: rgba(242, 134, 170, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}

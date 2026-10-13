@@ -1,0 +1,137 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'About Us', href: '/about-us' },
+  { name: 'Services', href: '/services' },
+  { name: 'Nail Art Gallery', href: '/#gallery' },
+  { name: 'Organic Shop', href: '/shop' },
+  { name: 'Contacts', href: '/contacts' },
+  { name: 'Beauty Tips', href: '/news' },
+];
+---
+
+<header class="w-full relative z-40">
+  <!-- Top Utility Bar -->
+  <div class="bg-[#0d0d0d] border-b border-white/5 py-2 px-4 sm:px-8 text-xs text-gray-400">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-4 flex-wrap justify-center">
+        <span class="inline-flex items-center gap-1.5 text-gray-300">
+          <i class="fas fa-gem text-[#f286aa]"></i>
+          <span>Global Hubs: Mayagüez • Phuket • Pattaya • Bali • Dubai • Douala</span>
+        </span>
+      </div>
+      <div class="flex items-center gap-5">
+        <span class="inline-flex items-center gap-1.5 text-gray-300">
+          <i class="far fa-clock text-[#d9c1a3]"></i>
+          <span>Mon-Fri & Sun: 9:00 AM – 5:00 PM</span>
+        </span>
+        <div class="flex items-center gap-3 text-gray-400 pl-3 border-l border-white/10">
+          <a href="https://fb.com/DreamNails.Asia" target="_blank" rel="noopener noreferrer" class="hover:text-[#f286aa] transition" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/@DreamNailsAsia" target="_blank" rel="noopener noreferrer" class="hover:text-[#f286aa] transition" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="mailto:info@dreamnails.asia" class="hover:text-[#f286aa] transition" title="Email"><i class="far fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Floating Luxury Header -->
+  <nav class="bg-[#141414]/90 backdrop-blur-md border-b border-[#d9c1a3]/10 sticky top-0 px-4 sm:px-8 py-3.5 transition-all">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center gap-3 group">
+        <img 
+          src="/uploads/2022/04/Dream-Salon-Transparent-BG-02-noborder-1.png" 
+          alt="DreamNails.Asia Logo" 
+          class="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+        />
+        <div class="hidden sm:block">
+          <span class="block text-xl sm:text-2xl font-serif tracking-widest text-white uppercase group-hover:text-[#f286aa] transition">Dream Nails</span>
+          <span class="block text-[10px] tracking-[0.25em] text-[#d9c1a3] uppercase font-sans">Perfection in Every Brush</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <div class="hidden lg:flex items-center gap-7">
+        {navLinks.map((link) => {
+          const isActive = currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href));
+          return (
+            <a 
+              href={link.href} 
+              class={`text-xs uppercase tracking-[0.14em] font-medium transition-colors duration-200 py-1 relative ${
+                isActive 
+                  ? 'text-[#f286aa] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#f286aa]' 
+                  : 'text-gray-300 hover:text-white hover:text-[#f286aa]'
+              }`}
+            >
+              {link.name}
+            </a>
+          );
+        })}
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="/shop" class="text-xs font-medium uppercase tracking-wider text-gray-300 hover:text-[#d9c1a3] px-3 py-2 transition flex items-center gap-1.5">
+          <i class="fas fa-shopping-bag text-[#d9c1a3]"></i>
+          <span>Shop</span>
+        </a>
+        <button class="open-booking-modal btn-luxury-primary text-xs !py-2.5 !px-5 shadow-lg shadow-[#f286aa]/20 cursor-pointer">
+          <i class="far fa-calendar-check mr-1"></i>
+          <span>Book Now</span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button 
+        id="mobile-menu-btn" 
+        class="lg:hidden p-2 text-gray-300 hover:text-white focus:outline-none"
+        aria-label="Toggle mobile menu"
+      >
+        <i class="fas fa-bars text-xl" id="menu-icon"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden pt-4 pb-6 border-t border-white/5 mt-3 space-y-3">
+      {navLinks.map((link) => (
+        <a 
+          href={link.href} 
+          class="block py-2 px-3 text-sm uppercase tracking-wider text-gray-300 hover:text-[#f286aa] hover:bg-white/5 rounded-lg transition"
+        >
+          {link.name}
+        </a>
+      ))}
+      <div class="pt-3 border-t border-white/10 flex flex-col gap-2">
+        <a href="/shop" class="text-center py-2.5 rounded-full border border-[#d9c1a3] text-[#d9c1a3] text-xs uppercase tracking-wider">
+          Visit Organic Shop
+        </a>
+        <button class="open-booking-modal w-full text-center py-2.5 rounded-full bg-[#f286aa] text-black font-semibold text-xs uppercase tracking-wider">
+          Book Appointment
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script is:inline>
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu.classList.contains('hidden')) {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+      } else {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times');
+      }
+    });
+  }
+</script>

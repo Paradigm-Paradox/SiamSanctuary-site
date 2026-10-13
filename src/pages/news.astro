@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const articles = [
+  {
+    title: "The Best Beach-Ready Nails",
+    slug: "the-best-beach-ready-nails",
+    date: "Jan 16, 2024",
+    category: "Seasonal Trends",
+    image: "/uploads/2021/12/blog_03.jpg",
+    excerpt: "Heading to the coast or lounging poolside? Here are our top protective topcoats, sand-resistant gel formulations, and tropical color palettes to keep your manicure flawless under the sun."
+  },
+  {
+    title: "The Best Travel-Friendly Nails",
+    slug: "the-best-travel-friendly-nails",
+    date: "Dec 28, 2023",
+    category: "Pro Tips",
+    image: "/uploads/2021/12/blog_09.jpg",
+    excerpt: "Long-haul flights and luggage can take a toll on fragile nails. Discover why builder gel overlays and rounded almond shapes are the ultimate travel essentials."
+  },
+  {
+    title: "Making a Statement with Nail Art",
+    slug: "making-a-statement-with-nail-art",
+    date: "Nov 14, 2023",
+    category: "Nail Artistry",
+    image: "/uploads/2021/12/blog_11.jpg",
+    excerpt: "From subtle chrome dustings to high-drama 3D charms and fine-line brushwork, how custom nail artistry has evolved into the ultimate form of self-expression."
+  },
+  {
+    title: "Popular Nail Stamping Techniques",
+    slug: "popular-nail-stamping-techniques-2",
+    date: "Oct 22, 2023",
+    category: "Master Techniques",
+    image: "/uploads/2021/09/nail-art-stamping-process-manicure-master-makes-s-2023-11-27-05-26-19-utc-1.jpg",
+    excerpt: "Learn the secrets behind razor-sharp silicone stamping plates, high-pigment polishes, and layering techniques for intricate geometric nail patterns."
+  },
+  {
+    title: "Mistakes and Myths About Gel Polish",
+    slug: "myths-about-gel-polish",
+    date: "Sep 05, 2023",
+    category: "Nail Health",
+    image: "/uploads/2021/09/close-up-of-woman-s-hand-with-grey-nail-polish-2023-11-27-05-19-43-utc.jpg",
+    excerpt: "Does gel really damage your natural nail bed? We debunk the most common myths and reveal the proper gentle removal techniques to preserve keratin strength."
+  },
+  {
+    title: "20 Ways To Strengthen Fragile Nails",
+    slug: "20-ways-to-strengthen-nails",
+    date: "Aug 19, 2023",
+    category: "Self-Care Rituals",
+    image: "/uploads/2021/12/blog_14.jpg",
+    excerpt: "Comprehensive guide to restoring weak, brittle nails using organic jojoba cuticle oils, biotin nutrition, and clinical hospital-grade salon treatments."
+  }
+];
+---
+
+<Layout 
+  title="Beauty & Nail Care Tips | DreamNails.Asia"
+  description="Read professional nail care advice, seasonal styling guides, and nail health articles from the master artists at Dream Nails Asia."
+>
+  <div class="min-h-screen flex flex-col bg-[#141414]">
+    <Header />
+    
+    <main class="flex-grow">
+      <!-- Header Banner -->
+      <section class="relative py-24 bg-[#101010] border-b border-white/5 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+          <img src="/uploads/2021/12/inner_header_01.jpg" alt="News Header" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-2">Inspiration & Care</span>
+          <h1 class="text-4xl sm:text-6xl font-serif text-white uppercase tracking-wider mb-4">
+            Beauty & Nail Tips
+          </h1>
+          <p class="text-xs sm:text-sm uppercase tracking-widest text-[#d9c1a3]">
+            Expert Advice • Artistry Insights • Health Guides
+          </p>
+        </div>
+      </section>
+
+      <!-- Articles Grid -->
+      <section class="py-20 bg-[#181818]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {articles.map((art) => (
+              <article class="rounded-2xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/40 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group flex flex-col justify-between">
+                
+                <div>
+                  <div class="aspect-[16/10] overflow-hidden bg-[#1e1e1e]">
+                    <img 
+                      src={art.image} 
+                      alt={art.title} 
+                      class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500" 
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div class="p-6">
+                    <div class="flex items-center justify-between text-[11px] text-gray-500 mb-2">
+                      <span class="uppercase tracking-widest text-[#f286aa] font-semibold">{art.category}</span>
+                      <span>{art.date}</span>
+                    </div>
+
+                    <h3 class="text-xl font-serif text-white group-hover:text-[#f286aa] transition mb-3 leading-snug">
+                      {art.title}
+                    </h3>
+
+                    <p class="text-xs text-gray-400 font-light leading-relaxed line-clamp-3">
+                      {art.excerpt}
+                    </p>
+                  </div>
+                </div>
+
+                <div class="px-6 pb-6 pt-2 border-t border-white/5 flex items-center justify-between">
+                  <span class="text-xs uppercase tracking-wider text-[#d9c1a3] font-medium group-hover:text-white transition flex items-center gap-1.5">
+                    <span>Read Article</span>
+                    <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                  </span>
+                  <span class="text-[10px] text-gray-500">4 min read</span>
+                </div>
+
+              </article>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <Footer />
+  </div>
+</Layout>

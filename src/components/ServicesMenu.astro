@@ -1,0 +1,149 @@
+---
+const services = [
+  {
+    title: "Express Manicure",
+    price: "฿ 250",
+    approxUsd: "$7 USD",
+    image: "/uploads/2024/01/fast-beauty-service-beautiful-ginger-girl-having-2023-11-27-05-21-12-utc.jpg",
+    description: "Ideal for those on the move: refined nail shaping, gentle cuticle care, and precision polish application without compromising speed or quality."
+  },
+  {
+    title: "Pedicure Deluxe",
+    price: "฿ 350",
+    approxUsd: "$10 USD",
+    image: "/uploads/2021/12/price_02.jpg",
+    description: "Transform your feet with our revitalizing pedicure. Warm botanical soak, exfoliating scrub, heel softening, and polish for soft, pampered perfection."
+  },
+  {
+    title: "Classic Regular Manicure",
+    price: "฿ 350",
+    approxUsd: "$10 USD",
+    image: "/uploads/2021/12/price_01.jpg",
+    description: "Elevate your look with our timeless manicure. Perfectly groomed nail shape, soothing hand massage, cuticle care, and lacquer of your choice."
+  },
+  {
+    title: "Signature Nail Art",
+    price: "฿ 400 ~ 600",
+    approxUsd: "$12 - $18 USD",
+    image: "/uploads/2021/12/price_08.jpg",
+    description: "Express your unique individuality. From chic minimalist lines to intricate hand-painted motifs, chrome finishes, and personalized crystal accents."
+  },
+  {
+    title: "Gel Nail Extension",
+    price: "฿ 400",
+    approxUsd: "$12 USD",
+    image: "/uploads/2024/01/manicurist-paints-nails-with-gel-polish-applicat-2023-11-27-05-18-34-utc.jpg",
+    description: "Get glamorous with our premium gel extensions. Long-lasting, chip-free, mirror brilliance for stunning, resilient nails that steal the spotlight effortlessly."
+  },
+  {
+    title: "Nail Protection & Repair",
+    price: "฿ 350",
+    approxUsd: "$10 USD",
+    image: "/uploads/2021/12/price_05.jpg",
+    description: "Shield and fortify your natural nails. Intensive keratin strengthening treatments designed to reverse brittleness and preserve natural vitality."
+  },
+  {
+    title: "PVC Nail Extension",
+    price: "฿ 499",
+    approxUsd: "$15 USD",
+    image: "/uploads/2021/12/price_03.jpg",
+    description: "Dazzle with ultra-durable, lightweight PVC extensions. Achieve stunning length, flawless curve, and resilient wear that lasts effortlessly."
+  },
+  {
+    title: "Hand & Pedicure Spa Care",
+    price: "฿ 350",
+    approxUsd: "$10 USD",
+    image: "/uploads/2021/12/price_06.jpg",
+    description: "Indulge in deep relaxation. Rejuvenating spa treatment including herbal masks, deep moisturizing, and therapeutic pressure-point massage."
+  },
+  {
+    title: "Master Acrylic Extensions",
+    price: "฿ 999",
+    approxUsd: "$29 USD",
+    image: "/uploads/2021/12/price_04.jpg",
+    description: "Custom sculpted length, superior structural strength, and razor-sharp shaping. Impeccable craftsmanship for a high-impact, durable finish."
+  },
+  {
+    title: "Ultimate Spa + Art Combo",
+    price: "฿ 699",
+    approxUsd: "$20 USD",
+    image: "/uploads/2021/12/price_07.jpg",
+    description: "The complete luxury journey: revitalizing dual hand and foot spa treatments followed by trendy nail artistry applied by senior salon technicians."
+  }
+];
+---
+
+<section id="services-menu" class="py-24 bg-[#141414] relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-1">
+        Affordable Elegance
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-4">
+        Popular Salon Services
+      </h2>
+      <p class="text-sm text-gray-400 font-light max-w-xl mx-auto">
+        Transparent pricing, premium imported gels, and sterile medical-grade equipment for every single service.
+      </p>
+    </div>
+
+    <!-- 2-Column Responsive Service Price Menu Grid (Playbook de-floated layout) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+      {services.map((item) => (
+        <div class="flex items-start gap-4 sm:gap-5 p-4 sm:p-5 rounded-2xl bg-[#1b1b1b] border border-white/5 hover:border-[#d9c1a3]/30 transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50">
+          
+          <!-- Thumbnail -->
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden flex-shrink-0 border border-white/10 group-hover:border-[#f286aa]/40 transition">
+            <img 
+              src={item.image} 
+              alt={item.title} 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Content & Price Header -->
+          <div class="flex-1 min-w-0">
+            <div class="flex items-baseline justify-between gap-2 border-b border-white/10 pb-2 mb-2">
+              <h3 class="text-lg sm:text-xl font-serif text-white group-hover:text-[#f286aa] transition truncate">
+                {item.title}
+              </h3>
+              <div class="text-right flex-shrink-0">
+                <span class="text-base sm:text-lg font-serif font-bold text-[#d9c1a3]">
+                  {item.price}
+                </span>
+                <span class="block text-[10px] text-gray-500 uppercase tracking-widest font-sans">
+                  {item.approxUsd}
+                </span>
+              </div>
+            </div>
+
+            <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed line-clamp-3">
+              {item.description}
+            </p>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- Booking CTA Bar -->
+    <div class="mt-16 p-8 rounded-2xl bg-gradient-to-r from-[#1c1c1c] via-[#241c22] to-[#1c1c1c] border border-[#f286aa]/20 text-center max-w-4xl mx-auto shadow-2xl">
+      <h3 class="text-2xl font-serif text-white mb-2">Looking for a custom design or VIP group booking?</h3>
+      <p class="text-xs text-gray-300 font-light max-w-lg mx-auto mb-6">
+        We specialize in bridal parties, editorial shoots, and custom sculpted creations. Contact our lead nail artists directly.
+      </p>
+      <div class="flex items-center justify-center gap-4 flex-wrap">
+        <button class="open-booking-modal btn-luxury-primary text-xs cursor-pointer">
+          <i class="far fa-calendar-check mr-1.5"></i>
+          <span>Book an Appointment</span>
+        </button>
+        <a href="/services" class="btn-luxury-outline text-xs">
+          <span>View All 8 Service Categories</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

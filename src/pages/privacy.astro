@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Privacy Policy | DreamNails.Asia"
+  description="Privacy Policy and client data protection practices for Dream Nails Asia salons and website."
+>
+  <div class="min-h-screen flex flex-col bg-[#141414]">
+    <Header />
+    
+    <main class="flex-grow py-20 bg-[#181818]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-[#121212] rounded-3xl p-8 sm:p-12 border border-white/5 shadow-2xl">
+          <span class="font-script text-3xl text-[#f286aa] block mb-1">Legal Notice</span>
+          <h1 class="text-3xl sm:text-4xl font-serif text-white uppercase tracking-wider mb-6">
+            Privacy Policy
+          </h1>
+          <p class="text-xs text-gray-400 mb-8 pb-4 border-b border-white/10">
+            Last updated: October 2026 • DreamNails.Asia
+          </p>
+
+          <div class="space-y-6 text-sm text-gray-300 font-light leading-relaxed">
+            <h2 class="text-lg font-serif text-white uppercase">1. Information We Collect</h2>
+            <p>
+              When you schedule an appointment, request services, or purchase products through DreamNails.Asia, we may collect your name, email address, phone number, and appointment preferences. This information is utilized solely to facilitate bookings and provide customer support.
+            </p>
+
+            <h2 class="text-lg font-serif text-white uppercase">2. Use of Your Information</h2>
+            <p>
+              We treat your privacy with extreme care. We do not sell, rent, or trade your personal information to third parties. Your data is used exclusively to confirm appointment schedules, send service reminders, and process orders.
+            </p>
+
+            <h2 class="text-lg font-serif text-white uppercase">3. Sanitation & Health Declarations</h2>
+            <p>
+              Prior to specialized treatments or extensions, clients may optionally share any allergies or sensitivities (e.g. latex, acrylate adhesives). This health data is treated strictly confidentially by our licensed technicians.
+            </p>
+
+            <h2 class="text-lg font-serif text-white uppercase">4. Contact Inquiries</h2>
+            <p>
+              If you have any questions about this Privacy Policy or wish to modify your personal records, please reach out to our administrative team at <a href="mailto:info@dreamnails.asia" class="text-[#f286aa] underline">info@dreamnails.asia</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <Footer />
+  </div>
+</Layout>

@@ -1,0 +1,75 @@
+---
+const reviews = [
+  {
+    quote: "The cleanest nail salon I've ever set foot in. Seeing the sterilized pouch opened right before my eyes gave me total peace of mind. And my gel extension lasted over 4 weeks without a single chip!",
+    author: "Elena M.",
+    role: "Regular Client",
+    location: "Phuket, Thailand",
+    rating: 5
+  },
+  {
+    quote: "The nail artists at Dream Nails are true painters. I brought a difficult Pinterest photo with chrome and micro-floral details, and she executed it even better than the reference! Pure perfection.",
+    author: "Jessica R.",
+    role: "Fashion Enthusiast",
+    location: "Mayagüez, PR",
+    rating: 5
+  },
+  {
+    quote: "Such a calming sanctuary. The herbal pedicure spa and pressure point massage relieved all my stress. You truly feel like royalty the moment you walk through the door.",
+    author: "Amina K.",
+    role: "Spa Guest",
+    location: "Dubai, UAE",
+    rating: 5
+  }
+];
+---
+
+<section id="testimonials" class="py-24 bg-[#181818] relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-1">
+        Client Praise
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-4">
+        Loved Across the World
+      </h2>
+      <p class="text-sm text-gray-400 font-light max-w-xl mx-auto">
+        Read firsthand experiences from our cherished guests across our global locations.
+      </p>
+    </div>
+
+    <!-- 3-Column Reviews Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {reviews.map((rev) => (
+        <div class="p-8 rounded-2xl bg-[#131313] border border-white/5 hover:border-[#f286aa]/30 transition-all duration-300 relative group flex flex-col justify-between shadow-xl">
+          
+          <div>
+            <!-- Star Rating -->
+            <div class="flex items-center gap-1 text-[#f286aa] text-xs mb-6">
+              {[...Array(rev.rating)].map(() => (
+                <i class="fas fa-star"></i>
+              ))}
+            </div>
+
+            <p class="text-sm text-gray-300 font-light leading-relaxed italic mb-6">
+              "{rev.quote}"
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+            <div class="w-10 h-10 rounded-full bg-[#f286aa]/10 text-[#f286aa] font-serif font-bold flex items-center justify-center text-sm border border-[#f286aa]/20">
+              {rev.author[0]}
+            </div>
+            <div>
+              <h4 class="text-sm font-serif text-white font-medium">{rev.author}</h4>
+              <span class="text-[11px] text-gray-400 font-sans block">{rev.role} • <span class="text-[#d9c1a3]">{rev.location}</span></span>
+            </div>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

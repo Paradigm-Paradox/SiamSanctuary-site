@@ -1,0 +1,138 @@
+---
+const locations = [
+  {
+    city: "Mayagüez",
+    country: "Puerto Rico, USA",
+    code: "MAZ",
+    address: "Mayagüez, PR 00680",
+    phone: "+1.787.",
+    email: "info.maz@dreamnails.asia",
+    tagline: "Caribbean Luxury & Coastal Nail Art",
+    hours: "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
+    badge: "Active Hub"
+  },
+  {
+    city: "Phuket",
+    country: "Thailand",
+    code: "HKT",
+    address: "Phuket, Thailand 83000",
+    phone: "+66.76.",
+    email: "info.hkt@dreamnails.asia",
+    tagline: "Founding Studio & Master Artists",
+    hours: "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
+    badge: "Flagship Heritage"
+  },
+  {
+    city: "Pattaya",
+    country: "Thailand",
+    code: "PTY",
+    address: "Pattaya, Thailand 20150",
+    phone: "+66.38.",
+    email: "info.pty@dreamnails.asia",
+    tagline: "Vibrant Coastal Beauty Bar",
+    hours: "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
+    badge: "Expanding"
+  },
+  {
+    city: "Bali",
+    country: "Indonesia",
+    code: "DPS",
+    address: "Bali, Indonesia 80361",
+    phone: "+62.361.",
+    email: "info.dps@dreamnails.asia",
+    tagline: "Tropical Island Wellness Sanctuary",
+    hours: "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
+    badge: "Wellness Destination"
+  },
+  {
+    city: "Dubai",
+    country: "UAE",
+    code: "DXB",
+    address: "Dubai, United Arab Emirates",
+    phone: "+971.4.",
+    email: "info.uxb@dreamnails.asia",
+    tagline: "Ultra-Luxury Nail Lounge & 24K Treatments",
+    hours: "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
+    badge: "VIP Luxury"
+  },
+  {
+    city: "Douala",
+    country: "Cameroon",
+    code: "DLA",
+    address: "Douala, Cameroon 237",
+    phone: "+237.233.",
+    email: "info.dla@dreamnails.asia",
+    tagline: "West African Flagship Beauty Hub",
+    hours: "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
+    badge: "Global Expansion"
+  }
+];
+---
+
+<section id="locations" class="py-24 bg-[#141414] relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-1">
+        Worldwide Presence
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-4">
+        Our Global Salons & Hubs
+      </h2>
+      <p class="text-sm text-gray-400 font-light max-w-xl mx-auto">
+        DreamNails brings personalized luxury nail care across the Americas, Southeast Asia, the Middle East, and Africa.
+      </p>
+    </div>
+
+    <!-- 6 Global Locations Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      {locations.map((loc) => (
+        <div class="rounded-2xl bg-[#1c1c1c] border border-white/5 hover:border-[#d9c1a3]/40 p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl group flex flex-col justify-between">
+          
+          <div>
+            <!-- Header with airport code & badge -->
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-[#f286aa]/10 text-[#f286aa] border border-[#f286aa]/20">
+                {loc.code}
+              </span>
+              <span class="text-[10px] uppercase tracking-widest text-[#d9c1a3] font-semibold">
+                {loc.badge}
+              </span>
+            </div>
+
+            <h3 class="text-2xl font-serif text-white group-hover:text-[#f286aa] transition mb-1">
+              {loc.city}
+            </h3>
+            <span class="text-xs font-sans text-gray-400 block mb-3">{loc.country}</span>
+            <p class="text-xs text-[#d9c1a3] font-serif italic mb-5">{loc.tagline}</p>
+
+            <div class="space-y-2 text-xs text-gray-300 border-t border-white/5 pt-4">
+              <div class="flex items-start gap-2.5">
+                <i class="fas fa-map-marker-alt text-[#f286aa] text-xs mt-0.5"></i>
+                <span>{loc.address}</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="far fa-clock text-gray-400 text-xs"></i>
+                <span class="text-gray-400">{loc.hours}</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="far fa-envelope text-[#d9c1a3] text-xs"></i>
+                <a href={`mailto:${loc.email}`} class="text-gray-300 hover:text-white transition">{loc.email}</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+            <a href={`mailto:${loc.email}?subject=Booking%20Inquiry%20-%20${loc.city}`} class="text-xs uppercase tracking-wider text-[#f286aa] hover:text-white transition font-medium flex items-center gap-1.5">
+              <span>Book in {loc.city}</span>
+              <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+            <span class="text-[10px] text-gray-500 uppercase tracking-widest">Walk-ins / Appt</span>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
