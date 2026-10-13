@@ -2,117 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-
-const products = [
-  {
-    id: 1,
-    name: "Craft Artisan Soap",
-    category: "Body & Cleansing",
-    price: "$119.00",
-    image: "/uploads/2021/12/shop-05.jpg",
-    description: "Handcrafted cold-process botanical soap bar infused with raw honey, essential oils, and soothing aloe to cleanse without stripping natural moisture.",
-    tag: "Best Seller"
-  },
-  {
-    id: 2,
-    name: "Herbal Hair Balsam",
-    category: "Hair Care",
-    price: "$64.00",
-    image: "/uploads/2021/12/shop-01.jpg",
-    description: "Deep restorative conditioner formulated with organic plant extracts and keratin to smooth hair fibers and protect against tropical sun damage.",
-    tag: "Organic"
-  },
-  {
-    id: 3,
-    name: "Love and Faith Perfume Essence",
-    category: "Fragrance",
-    price: "$29.00",
-    image: "/uploads/2021/12/shop-02.jpg",
-    description: "Delicate floral fragrance mist blending jasmine, rosewood, and pink pepper notes for an uplifting, all-day personal scent.",
-    tag: "Popular"
-  },
-  {
-    id: 4,
-    name: "Archangels Story Care Oil",
-    category: "Care Oils",
-    price: "$9.99",
-    image: "/uploads/2021/12/shop-03.jpg",
-    description: "Concentrated nourishing cuticle and nail treatment oil enriched with Vitamin E and sweet almond oil for healthy nail bed recovery.",
-    tag: "Essential"
-  },
-  {
-    id: 5,
-    name: "Anything is Possible Elixir",
-    category: "Serums",
-    price: "$119.00",
-    image: "/uploads/2021/12/shop-04.jpg",
-    description: "Revitalizing youth booster serum infused with botanical antioxidants and rosehip oil to brighten tired skin and promote elastic radiance.",
-    tag: "Luxury"
-  },
-  {
-    id: 6,
-    name: "Angel Statue Signature Keepsake",
-    category: "Decor & Home",
-    price: "$190.00",
-    image: "/uploads/2021/12/shop-06.jpg",
-    description: "Exclusive salon keepsake figurine reflecting tranquility, inner grace, and artistic devotion. Handcrafted collector’s item.",
-    tag: "Limited"
-  },
-  {
-    id: 7,
-    name: "Nature Care Restorative Package",
-    category: "Spa Sets",
-    price: "$240.00",
-    image: "/uploads/2021/12/shop-07.jpg",
-    description: "The complete luxury at-home spa kit: bath minerals, massage oil, body wash, and organic exfoliating scrub packaged in an eco-gift box.",
-    tag: "VIP Set"
-  },
-  {
-    id: 8,
-    name: "Gentle Wax Cream",
-    category: "Nourishment",
-    price: "$73.49",
-    image: "/uploads/2021/12/shop-08.jpg",
-    description: "Ultra-rich conditioning balm designed to seal moisture into dry cuticles, rough elbows, and heels. Enriched with natural beeswax.",
-    tag: "Nourishing"
-  },
-  {
-    id: 9,
-    name: "Botanical Hand Cream",
-    category: "Hand Care",
-    price: "$17.99",
-    image: "/uploads/2021/12/shop-09.jpg",
-    description: "Non-greasy, fast-absorbing hand therapy with shea butter and chamomile extract to protect hands against frequent washing.",
-    tag: "Daily Essential"
-  },
-  {
-    id: 10,
-    name: "Natural Fresh Deodorant",
-    category: "Personal Care",
-    price: "$9.99",
-    image: "/uploads/2021/12/shop-10.jpg",
-    description: "Aluminum-free, baking-soda-free mineral deodorant that neutralizes odor while respecting the skin's natural microbiome.",
-    tag: "Clean Beauty"
-  },
-  {
-    id: 11,
-    name: "Intensive Cosmetic Cream",
-    category: "Skincare",
-    price: "$125.00",
-    image: "/uploads/2021/12/shop-11.jpg",
-    description: "Premium moisture recovery facial and neck cream infused with hyaluronic acid, jojoba oil, and peptide complex for supple firmness.",
-    tag: "Anti-Aging"
-  },
-  {
-    id: 12,
-    name: "Precision Cosmetic & Nail Brush",
-    category: "Tools & Accessories",
-    price: "$13.49",
-    image: "/uploads/2021/12/shop-12.jpg",
-    description: "Ergonomic ultra-fine synthetic bristle brush for detailed nail art, line precision, and smooth cuticular dusting.",
-    tag: "Pro Tool"
-  }
-];
+import products from '../data/products.json';
 ---
 
 <Layout 
@@ -179,7 +69,7 @@ const products = [
                     {p.category}
                   </span>
                   <h3 class="text-lg font-serif text-white group-hover:text-[#f286aa] transition mb-2">
-                    {p.name}
+                    <a href={`/shop/${p.slug}`} class="hover:underline">{p.name}</a>
                   </h3>
                   <p class="text-xs text-gray-400 font-light leading-relaxed line-clamp-3 mb-4">
                     {p.description}

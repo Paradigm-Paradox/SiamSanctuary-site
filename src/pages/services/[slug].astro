@@ -1,0 +1,94 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import services from '../../data/services.json';
+
+export async function getStaticPaths() {
+  return services.map((s) => ({
+    params: { slug: s.slug },
+    props: { service: s }
+  }));
+}
+
+const { service } = Astro.props;
+---
+
+<Layout 
+  title={`${service.title} | DreamNails.Asia`}
+  description={service.excerpt}
+  image={service.image}
+>
+  <div class="min-h-screen flex flex-col bg-[#141414]">
+    <Header />
+    
+    <main class="flex-grow">
+      <!-- Service Header Banner -->
+      <section class="relative py-24 bg-[#101010] border-b border-white/5 overflow-hidden">
+        <div class="absolute inset-0 opacity-25">
+          <img src={service.image} alt={service.title} class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <a href="/services" class="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#f286aa] hover:text-white transition mb-3">
+            <i class="fas fa-arrow-left text-[10px]"></i>
+            <span>All Services</span>
+          </a>
+          <span class="font-script text-3xl sm:text-4xl text-[#d9c1a3] block mb-2">{service.tag}</span>
+          <h1 class="text-4xl sm:text-6xl font-serif text-white uppercase tracking-wider mb-4">
+            {service.title}
+          </h1>
+          <p class="text-xs sm:text-sm uppercase tracking-widest text-gray-400">
+            Hospital-Grade Sanitation • Certified Master Technicians
+          </p>
+        </div>
+      </section>
+
+      <!-- Content Body -->
+      <section class="py-20 bg-[#181818]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="bg-[#121212] rounded-3xl p-8 sm:p-12 border border-white/5 shadow-2xl mb-12">
+            <div class="prose prose-invert max-w-none text-gray-300 font-light leading-relaxed space-y-6 [&>p]:text-sm sm:[&>p]:text-base [&>h2]:font-serif [&>h2]:text-white [&>h2]:text-2xl sm:[&>h2]:text-3xl [&>h3]:font-serif [&>h3]:text-[#d9c1a3] [&>ul]:list-disc [&>ul]:pl-5 [&>li]:text-sm sm:[&>li]:text-base [&>li]:text-gray-300">
+              <Fragment set:html={service.content} />
+            </div>
+
+            <!-- Service Action Box -->
+            <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div>
+                <span class="text-xs uppercase tracking-wider text-[#d9c1a3] font-semibold block">Ready for your treatment?</span>
+                <h4 class="text-lg font-serif text-white">Book Your {service.title} Session</h4>
+              </div>
+              <div class="flex items-center gap-3">
+                <button class="open-booking-modal btn-luxury-primary text-xs cursor-pointer">
+                  <i class="far fa-calendar-check mr-1.5"></i>
+                  <span>Schedule Appointment</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Services Bar -->
+          <div class="border-t border-white/10 pt-10">
+            <h3 class="text-xl font-serif text-white uppercase tracking-wide mb-6 text-center">
+              Explore More Sanctuary Offerings
+            </h3>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {services.filter(s => s.slug !== service.slug).slice(0, 4).map((other) => (
+                <a href={`/services/${other.slug}`} class="p-4 rounded-xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/40 text-center transition group">
+                  <i class={`fas ${other.icon} text-lg text-[#f286aa] group-hover:scale-110 transition-transform mb-2 block`}></i>
+                  <span class="text-xs font-serif text-white group-hover:text-[#f286aa] transition line-clamp-1">{other.title}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <Footer />
+  </div>
+</Layout>

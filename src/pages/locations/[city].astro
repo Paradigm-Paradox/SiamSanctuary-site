@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import locations from '../../data/locations.json';
+import ServicesMenu from '../../components/ServicesMenu.astro';
+
+export async function getStaticPaths() {
+  return locations.map((loc) => ({
+    params: { city: loc.city.toLowerCase() },
+    props: { location: loc }
+  }));
+}
+
+const { location } = Astro.props;
+---
+
+<Layout 
+  title={`Dream Nails ${location.name} | Luxury Salon & Spa`}
+  description={`Visit Dream Nails in ${location.name}. ${location.description} Certified master technicians, hospital-grade sanitation, and luxury nail artistry.`}
+>
+  <div class="min-h-screen flex flex-col bg-[#141414]">
+    <Header />
+    
+    <main class="flex-grow">
+      <!-- Hub Header Banner -->
+      <section class="relative py-24 bg-[#101010] border-b border-white/5 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+          <img src="/uploads/2021/12/inner_header_01.jpg" alt={location.name} class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <a href="/contacts" class="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#f286aa] hover:text-white transition mb-3">
+            <i class="fas fa-arrow-left text-[10px]"></i>
+            <span>All Global Hubs</span>
+          </a>
+          <span class="font-script text-3xl sm:text-4xl text-[#d9c1a3] block mb-2">{location.tagline}</span>
+          <h1 class="text-4xl sm:text-6xl font-serif text-white uppercase tracking-wider mb-4">
+            Dream Nails {location.name}
+          </h1>
+          <p class="text-xs sm:text-sm uppercase tracking-widest text-gray-400">
+            Airport Code: <span class="text-[#f286aa] font-mono font-bold">{location.code}</span> • {location.badge}
+          </p>
+        </div>
+      </section>
+
+      <!-- Hub Overview & Local Map -->
+      <section class="py-20 bg-[#181818]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div class="space-y-6">
+              <span class="font-script text-3xl text-[#f286aa] block">Sanctuary Details</span>
+              <h2 class="text-3xl font-serif text-white uppercase tracking-wide">
+                Welcome to Our {location.city} Studio
+              </h2>
+              <p class="text-sm sm:text-base text-gray-300 font-light leading-relaxed">
+                {location.description}
+              </p>
+
+              <!-- Local Details Card -->
+              <div class="bg-[#121212] p-6 rounded-2xl border border-white/5 space-y-4 text-xs">
+                <div class="flex items-start gap-3">
+                  <i class="fas fa-map-marker-alt text-[#f286aa] text-sm mt-0.5"></i>
+                  <div>
+                    <strong class="text-white block text-sm">Salon Address</strong>
+                    <span class="text-gray-400">{location.address}</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <i class="far fa-clock text-[#d9c1a3] text-sm mt-0.5"></i>
+                  <div>
+                    <strong class="text-white block text-sm">Operating Hours</strong>
+                    <span class="text-gray-400">{location.hours}</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <i class="far fa-envelope text-[#f286aa] text-sm mt-0.5"></i>
+                  <div>
+                    <strong class="text-white block text-sm">Direct Inquiries</strong>
+                    <a href={`mailto:${location.email}`} class="text-gray-300 hover:text-white underline">{location.email}</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2 flex items-center gap-4">
+                <a 
+                  href={`mailto:${location.email}?subject=Appointment%20Request%20-%20DreamNails%20${location.city}`} 
+                  class="btn-luxury-primary text-xs"
+                >
+                  <i class="far fa-calendar-check mr-2"></i>
+                  <span>Book in {location.city}</span>
+                </a>
+                <button class="open-booking-modal btn-luxury-outline text-xs cursor-pointer">
+                  <span>General Booking</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Leaflet City Map Embed -->
+            <div class="rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
+              <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+              <div id="city-map" class="w-full h-[400px] bg-[#111111]"></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Signature Services Available at this Location -->
+      <ServicesMenu />
+
+    </main>
+
+    <Footer />
+  </div>
+</Layout>
+
+<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script is:inline define:vars={{ lat: location.lat, lng: location.lng, name: location.name }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const mapEl = document.getElementById('city-map');
+    if (!mapEl || typeof L === 'undefined') return;
+
+    const map = L.map('city-map', { 
+      zoomControl: true, 
+      scrollWheelZoom: false 
+    }).setView([lat, lng], 13);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; OpenStreetMap & CartoDB',
+      maxZoom: 18
+    }).addTo(map);
+
+    L.marker([lat, lng])
+      .addTo(map)
+      .bindPopup(`<b>DreamNails – ${name}</b><br>Sanctuary Location`)
+      .openPopup();
+  });
+</script>

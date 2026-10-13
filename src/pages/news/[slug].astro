@@ -1,0 +1,95 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import posts from '../../data/posts.json';
+
+export async function getStaticPaths() {
+  return posts.map((p) => ({
+    params: { slug: p.slug },
+    props: { post: p }
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<Layout 
+  title={`${post.title} | DreamNails.Asia Beauty Tips`}
+  description={post.excerpt}
+  image={post.image}
+>
+  <div class="min-h-screen flex flex-col bg-[#141414]">
+    <Header />
+    
+    <main class="flex-grow">
+      <!-- Article Header Banner -->
+      <section class="relative py-24 bg-[#101010] border-b border-white/5 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+          <img src={post.image} alt={post.title} class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/85 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <a href="/news" class="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#f286aa] hover:text-white transition mb-3">
+            <i class="fas fa-arrow-left text-[10px]"></i>
+            <span>All Articles</span>
+          </a>
+          <span class="text-xs uppercase tracking-widest text-[#d9c1a3] font-semibold block mb-2">{post.date} • Beauty & Care</span>
+          <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif text-white uppercase tracking-wider mb-4 leading-tight">
+            {post.title}
+          </h1>
+          <p class="text-xs sm:text-sm text-gray-400 font-light max-w-2xl mx-auto">
+            {post.excerpt}
+          </p>
+        </div>
+      </section>
+
+      <!-- Article Content Body -->
+      <article class="py-20 bg-[#181818]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Featured Image -->
+          <div class="rounded-3xl overflow-hidden mb-12 border border-white/10 shadow-2xl">
+            <img src={post.image} alt={post.title} class="w-full h-auto max-h-[500px] object-cover" />
+          </div>
+
+          <!-- HTML Content -->
+          <div class="bg-[#121212] rounded-3xl p-8 sm:p-12 border border-white/5 shadow-2xl">
+            <div class="prose prose-invert max-w-none text-gray-300 font-light leading-relaxed space-y-6 [&>p]:text-sm sm:[&>p]:text-base [&>h2]:font-serif [&>h2]:text-white [&>h2]:text-2xl sm:[&>h2]:text-3xl [&>h3]:font-serif [&>h3]:text-[#d9c1a3] [&>ul]:list-disc [&>ul]:pl-5 [&>li]:text-sm sm:[&>li]:text-base [&>li]:text-gray-300">
+              <Fragment set:html={post.content} />
+            </div>
+
+            <!-- Author Signoff Box -->
+            <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between flex-wrap gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-[#f286aa]/10 text-[#f286aa] flex items-center justify-center font-serif font-bold text-lg border border-[#f286aa]/20">
+                  DN
+                </div>
+                <div>
+                  <h4 class="text-sm font-serif text-white">DreamNails Master Stylists</h4>
+                  <span class="text-xs text-gray-400">Joey & Onanong Jones Salon Team</span>
+                </div>
+              </div>
+              <button class="open-booking-modal btn-luxury-primary text-xs cursor-pointer">
+                <span>Book This Style</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Back to Blog -->
+          <div class="mt-12 text-center">
+            <a href="/news" class="btn-luxury-outline text-xs">
+              <i class="fas fa-arrow-left mr-2"></i>
+              <span>Back to All Beauty Articles</span>
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+    </main>
+
+    <Footer />
+  </div>
+</Layout>
