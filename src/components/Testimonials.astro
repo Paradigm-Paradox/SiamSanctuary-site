@@ -29,7 +29,7 @@ const reviews = [
     
     <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-1">
-        Client Praise
+        testimonials
       </span>
       <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-4">
         Loved Across the World
@@ -46,9 +46,9 @@ const reviews = [
           
           <div>
             <!-- Star Rating -->
-            <div class="flex items-center gap-1 text-[#f286aa] text-xs mb-6">
+            <div class="flex items-center gap-1 text-[#f286aa] text-xs mb-6" aria-label={`${rev.rating} out of 5 stars`}>
               {[...Array(rev.rating)].map(() => (
-                <i class="fas fa-star"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
               ))}
             </div>
 

@@ -16,7 +16,7 @@ import LocationsSection from '../components/LocationsSection.astro';
       <!-- Header Banner -->
       <section class="relative py-24 bg-[#101010] border-b border-white/5 overflow-hidden">
         <div class="absolute inset-0 opacity-20">
-          <img src="/uploads/2021/12/inner_header_01.jpg" alt="Contacts Header" class="w-full h-full object-cover" />
+          <img src="/images/2021/12/inner_header_01.jpg" alt="Contacts Header" class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/80 to-transparent"></div>
         </div>
 
@@ -62,22 +62,22 @@ import LocationsSection from '../components/LocationsSection.astro';
               </p>
             </div>
 
-            <form action="mailto:info@dreamnails.asia" method="POST" enctype="text/plain" class="space-y-4">
+            <form action="mailto:info@dreamnails.asia" method="POST" enctype="text/plain" class="space-y-4" aria-label="Contact and inquiry form">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5">Your Name</label>
-                  <input type="text" name="name" required class="w-full bg-[#1e1e1e] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition" placeholder="Jane Doe" />
+                  <label for="contact-name" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5">Your Name <span class="text-[#f286aa]" aria-hidden="true">*</span></label>
+                  <input type="text" id="contact-name" name="name" required class="w-full bg-[#1e1e1e] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] focus-visible:ring-1 focus-visible:ring-[#f286aa] transition" placeholder="Jane Doe" />
                 </div>
                 <div>
-                  <label class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5">Email Address</label>
-                  <input type="email" name="email" required class="w-full bg-[#1e1e1e] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition" placeholder="jane@example.com" />
+                  <label for="contact-email" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5">Email Address <span class="text-[#f286aa]" aria-hidden="true">*</span></label>
+                  <input type="email" id="contact-email" name="email" required class="w-full bg-[#1e1e1e] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] focus-visible:ring-1 focus-visible:ring-[#f286aa] transition" placeholder="jane@example.com" />
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5">Preferred Location</label>
-                  <select name="location" class="w-full bg-[#1e1e1e] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition">
+                  <label for="contact-location" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5">Preferred Location</label>
+                  <select id="contact-location" name="location" class="w-full bg-[#1e1e1e] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] focus-visible:ring-1 focus-visible:ring-[#f286aa] transition">
                     <option value="Mayaguez">Mayagüez, Puerto Rico</option>
                     <option value="Phuket">Phuket, Thailand</option>
                     <option value="Pattaya">Pattaya, Thailand</option>
@@ -88,19 +88,19 @@ import LocationsSection from '../components/LocationsSection.astro';
                   </select>
                 </div>
                 <div>
-                  <label class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5">Subject</label>
-                  <input type="text" name="subject" class="w-full bg-[#1e1e1e] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition" placeholder="Appointment or Inquiry" />
+                  <label for="contact-subject" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5">Subject</label>
+                  <input type="text" id="contact-subject" name="subject" class="w-full bg-[#1e1e1e] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] focus-visible:ring-1 focus-visible:ring-[#f286aa] transition" placeholder="Appointment or Inquiry" />
                 </div>
               </div>
 
               <div>
-                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5">Message / Details</label>
-                <textarea name="message" rows="4" required class="w-full bg-[#1e1e1e] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition" placeholder="Tell us how we can help you..."></textarea>
+                <label for="contact-message" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5">Message / Details <span class="text-[#f286aa]" aria-hidden="true">*</span></label>
+                <textarea id="contact-message" name="message" rows="4" required class="w-full bg-[#1e1e1e] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] focus-visible:ring-1 focus-visible:ring-[#f286aa] transition" placeholder="Tell us how we can help you..."></textarea>
               </div>
 
               <div class="text-center pt-2">
-                <button type="submit" class="btn-luxury-primary text-xs cursor-pointer w-full sm:w-auto">
-                  <i class="far fa-paper-plane mr-2"></i>
+                <button type="submit" class="btn-luxury-primary text-xs cursor-pointer w-full sm:w-auto focus-visible:ring-2 focus-visible:ring-[#f286aa]">
+                  <i class="far fa-paper-plane mr-2" aria-hidden="true"></i>
                   <span>Send Message</span>
                 </button>
               </div>

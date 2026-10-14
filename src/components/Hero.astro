@@ -1,28 +1,28 @@
 ---
 const slides = [
   {
-    image: "/uploads/2022/02/SLIDE_01-1.jpg",
+    image: "/images/2022/02/SLIDE_01-1.jpg",
     scriptTitle: "Perfection in Every Brush",
     heading: "Art Manicure",
     subheading: "Creative color styles. Always in trend. Best quality.",
     cta: "Book Appointment"
   },
   {
-    image: "/uploads/2022/02/SLIDE_02-1.jpg",
+    image: "/images/2022/02/SLIDE_02-1.jpg",
     scriptTitle: "Empowering Beauty",
     heading: "Creative Manicure",
     subheading: "Where creativity meets elegance in every stroke. Elevate your nails, embrace beauty.",
     cta: "Explore Service Menu"
   },
   {
-    image: "/uploads/2022/02/SLIDE_03-1.jpg",
+    image: "/images/2022/02/SLIDE_03-1.jpg",
     scriptTitle: "Sanctuary of Wellness",
     heading: "Relaxing Paraffin Spa",
     subheading: "Hospital-grade sterile care, herbal botanical soaks, and deep restorative nourishment.",
     cta: "Book Spa Treatment"
   },
   {
-    image: "/uploads/2022/02/SLIDE_04-2.jpg",
+    image: "/images/2022/02/SLIDE_04-2.jpg",
     scriptTitle: "Trendsetting Artistry",
     heading: "Soothing Pedicure",
     subheading: "Revitalize tired feet with gentle exfoliation, massage, and chip-free lustrous finishes.",
@@ -73,12 +73,12 @@ const slides = [
 
           <!-- Action Buttons -->
           <div class="slide-actions flex flex-col sm:flex-row items-center gap-4 transform translate-y-8 opacity-0 transition-all duration-700 delay-500">
-            <button class="open-booking-modal btn-luxury-primary text-xs sm:text-sm cursor-pointer shadow-2xl shadow-[#f286aa]/30">
-              <i class="far fa-calendar-check mr-2"></i>
+            <button class="open-booking-modal btn-luxury-primary text-xs sm:text-sm cursor-pointer shadow-2xl shadow-[#f286aa]/30 focus-visible:ring-2 focus-visible:ring-[#f286aa]">
+              <i class="far fa-calendar-check mr-2" aria-hidden="true"></i>
               <span>{slide.cta}</span>
             </button>
-            <a href="/gallery" class="btn-luxury-outline text-xs sm:text-sm">
-              <i class="fas fa-images mr-2 text-[#f286aa]"></i>
+            <a href="/gallery" class="btn-luxury-outline text-xs sm:text-sm focus-visible:ring-2 focus-visible:ring-[#d9c1a3]">
+              <i class="fas fa-images mr-2 text-[#f286aa]" aria-hidden="true"></i>
               <span>Browse 79+ Nail Designs</span>
             </a>
           </div>
@@ -93,18 +93,20 @@ const slides = [
   <div class="absolute bottom-10 left-0 right-0 z-30 max-w-6xl mx-auto px-4 sm:px-8 flex items-center justify-between pointer-events-none">
     
     <!-- Slide Counter (e.g. 01 / 04) -->
-    <div class="text-xs font-mono tracking-widest text-[#d9c1a3] flex items-center gap-2 pointer-events-auto bg-black/50 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10">
+    <div class="text-xs font-mono tracking-widest text-[#d9c1a3] flex items-center gap-2 pointer-events-auto bg-black/50 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10" aria-label="Slide counter">
       <span id="slide-current-num" class="text-white font-bold">01</span>
       <span class="text-gray-500">/</span>
       <span class="text-gray-400">04</span>
     </div>
 
     <!-- Bullet Dots -->
-    <div class="flex items-center gap-2.5 pointer-events-auto" id="slider-bullets">
+    <div class="flex items-center gap-2.5 pointer-events-auto" id="slider-bullets" role="tablist" aria-label="Slide indicators">
       {slides.map((_, i) => (
         <button 
-          class={`bullet-dot h-2 rounded-full transition-all duration-300 cursor-pointer ${i === 0 ? 'w-8 bg-[#f286aa]' : 'w-2 bg-white/30 hover:bg-white/60'}`}
+          class={`bullet-dot h-2 rounded-full transition-all duration-300 cursor-pointer focus-visible:ring-2 focus-visible:ring-[#f286aa] ${i === 0 ? 'w-8 bg-[#f286aa]' : 'w-2 bg-white/30 hover:bg-white/60'}`}
           data-index={i}
+          role="tab"
+          aria-selected={i === 0 ? "true" : "false"}
           aria-label={`Go to slide ${i + 1}`}
         ></button>
       ))}
@@ -112,26 +114,26 @@ const slides = [
 
     <!-- Arrow Navigation -->
     <div class="flex items-center gap-2 pointer-events-auto">
-      <button id="slider-prev" class="w-10 h-10 rounded-full bg-black/50 hover:bg-[#f286aa] hover:text-black text-white border border-white/10 flex items-center justify-center transition-all cursor-pointer" aria-label="Previous slide">
-        <i class="fas fa-chevron-left text-xs"></i>
+      <button id="slider-prev" class="w-10 h-10 rounded-full bg-black/50 hover:bg-[#f286aa] hover:text-black text-white border border-white/10 flex items-center justify-center transition-all cursor-pointer focus-visible:ring-2 focus-visible:ring-[#f286aa]" aria-label="Previous slide">
+        <i class="fas fa-chevron-left text-xs" aria-hidden="true"></i>
       </button>
-      <button id="slider-next" class="w-10 h-10 rounded-full bg-black/50 hover:bg-[#f286aa] hover:text-black text-white border border-white/10 flex items-center justify-center transition-all cursor-pointer" aria-label="Next slide">
-        <i class="fas fa-chevron-right text-xs"></i>
+      <button id="slider-next" class="w-10 h-10 rounded-full bg-black/50 hover:bg-[#f286aa] hover:text-black text-white border border-white/10 flex items-center justify-center transition-all cursor-pointer focus-visible:ring-2 focus-visible:ring-[#f286aa]" aria-label="Next slide">
+        <i class="fas fa-chevron-right text-xs" aria-hidden="true"></i>
       </button>
     </div>
 
   </div>
 
   <!-- Trust Badges Bar floating on bottom edge -->
-  <div class="hidden lg:block absolute bottom-0 left-0 right-0 z-20 bg-black/75 backdrop-blur-md border-t border-white/10 py-2.5 px-6">
+  <div class="hidden lg:block absolute bottom-0 left-0 right-0 z-20 bg-black/75 backdrop-blur-md border-t border-white/10 py-2.5 px-6" aria-label="Salon highlights">
     <div class="max-w-6xl mx-auto flex items-center justify-between text-xs text-gray-300">
-      <span class="flex items-center gap-2"><i class="fas fa-shield-virus text-[#f286aa]"></i> 100% Hospital-Grade Disinfection</span>
-      <span class="text-gray-600">•</span>
-      <span class="flex items-center gap-2"><i class="fas fa-trash text-[#d9c1a3]"></i> Single-Use Disposable Buffers & Liners</span>
-      <span class="text-gray-600">•</span>
-      <span class="flex items-center gap-2"><i class="fas fa-gem text-[#f286aa]"></i> 15+ Years Master Artistry (Phuket Roots)</span>
-      <span class="text-gray-600">•</span>
-      <span class="flex items-center gap-2"><i class="fas fa-globe text-[#d9c1a3]"></i> 6 Global Salon Hubs Worldwide</span>
+      <span class="flex items-center gap-2"><i class="fas fa-shield-virus text-[#f286aa]" aria-hidden="true"></i> 100% Hospital-Grade Disinfection</span>
+      <span class="text-gray-600" aria-hidden="true">•</span>
+      <span class="flex items-center gap-2"><i class="fas fa-trash text-[#d9c1a3]" aria-hidden="true"></i> Single-Use Disposable Buffers & Liners</span>
+      <span class="text-gray-600" aria-hidden="true">•</span>
+      <span class="flex items-center gap-2"><i class="fas fa-gem text-[#f286aa]" aria-hidden="true"></i> 15+ Years Master Artistry (Phuket Roots)</span>
+      <span class="text-gray-600" aria-hidden="true">•</span>
+      <span class="flex items-center gap-2"><i class="fas fa-globe text-[#d9c1a3]" aria-hidden="true"></i> 6 Global Salon Hubs Worldwide</span>
     </div>
   </div>
 

@@ -103,24 +103,42 @@ const displayItems = limit ? galleryItems.slice(0, limit) : galleryItems;
 
   </div>
 
-  <!-- Interactive Lightbox Modal -->
-  <div id="lightbox-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
-    <div class="relative w-full max-w-4xl bg-[#161616] border border-[#d9c1a3]/30 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh]">
+  <!-- Interactive Lightbox Modal (WCAG 2.1 AA / Section 508 Compliant) -->
+  <div 
+    id="lightbox-modal" 
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Nail art design inspection modal"
+  >
+    <div class="relative w-full max-w-4xl bg-[#161616] border border-[#d9c1a3]/30 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] focus:outline-none">
       
       <!-- Close Button -->
-      <button id="lightbox-close" class="absolute top-3 right-4 z-30 w-10 h-10 rounded-full bg-black/60 hover:bg-[#f286aa] hover:text-black text-white text-xl flex items-center justify-center transition cursor-pointer" aria-label="Close Lightbox">
+      <button 
+        id="lightbox-close" 
+        class="absolute top-3 right-4 z-30 w-10 h-10 rounded-full bg-black/60 hover:bg-[#f286aa] hover:text-black text-white text-xl flex items-center justify-center transition cursor-pointer focus-visible:ring-2 focus-visible:ring-[#f286aa]" 
+        aria-label="Close nail art preview modal"
+      >
         &times;
       </button>
 
       <!-- Image Area with Next/Prev Arrows -->
       <div class="relative flex-1 bg-black flex items-center justify-center min-h-[300px] md:min-h-[500px] overflow-hidden">
-        <img id="lightbox-img" src="" alt="" class="max-h-[75vh] w-auto max-w-full object-contain transition-transform duration-300" />
+        <img id="lightbox-img" src="" alt="Full resolution nail art design preview" class="max-h-[75vh] w-auto max-w-full object-contain transition-transform duration-300" />
         
-        <button id="lightbox-prev" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-[#f286aa] hover:text-black text-white flex items-center justify-center transition cursor-pointer" aria-label="Previous Image">
-          <i class="fas fa-chevron-left text-xs"></i>
+        <button 
+          id="lightbox-prev" 
+          class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-[#f286aa] hover:text-black text-white flex items-center justify-center transition cursor-pointer focus-visible:ring-2 focus-visible:ring-[#f286aa]" 
+          aria-label="Previous nail art photo"
+        >
+          <i class="fas fa-chevron-left text-xs" aria-hidden="true"></i>
         </button>
-        <button id="lightbox-next" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-[#f286aa] hover:text-black text-white flex items-center justify-center transition cursor-pointer" aria-label="Next Image">
-          <i class="fas fa-chevron-right text-xs"></i>
+        <button 
+          id="lightbox-next" 
+          class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-[#f286aa] hover:text-black text-white flex items-center justify-center transition cursor-pointer focus-visible:ring-2 focus-visible:ring-[#f286aa]" 
+          aria-label="Next nail art photo"
+        >
+          <i class="fas fa-chevron-right text-xs" aria-hidden="true"></i>
         </button>
       </div>
 

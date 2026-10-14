@@ -41,7 +41,7 @@ const promoCards = [
             <!-- Icon & Subtitle Header -->
             <div class="flex items-center gap-3 mb-4">
               <div class="w-12 h-12 rounded-xl bg-[#222222] border border-white/10 flex items-center justify-center text-[#f286aa] group-hover:border-[#f286aa]/40 group-hover:bg-[#f286aa]/10 transition-colors">
-                <i class={`fas ${card.icon} text-lg`}></i>
+                <i class={`fas ${card.icon} text-lg`} aria-hidden="true"></i>
               </div>
               <div>
                 <span class="font-script text-2xl text-[#f286aa] block leading-tight">
@@ -61,11 +61,11 @@ const promoCards = [
 
           <!-- Action Link -->
           <div class="pt-4 border-t border-white/5 flex items-center justify-between">
-            <a href={card.linkHref} class="text-xs font-semibold uppercase tracking-widest text-[#d9c1a3] hover:text-[#f286aa] transition flex items-center gap-2">
+            <a href={card.linkHref} class="text-xs font-semibold uppercase tracking-widest text-[#d9c1a3] hover:text-[#f286aa] transition flex items-center gap-2 focus-visible:ring-1 focus-visible:ring-[#f286aa] rounded p-0.5">
               <span>{card.linkText}</span>
-              <i class="fas fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
+              <i class="fas fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
             </a>
-            <span class="w-2 h-2 rounded-full bg-[#f286aa]/40 group-hover:bg-[#f286aa] transition-colors"></span>
+            <span class="w-2 h-2 rounded-full bg-[#f286aa]/40 group-hover:bg-[#f286aa] transition-colors" aria-hidden="true"></span>
           </div>
         </div>
       ))}
