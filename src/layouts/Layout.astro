@@ -5,15 +5,110 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  canonical?: string;
+  type?: string;
+  articleModifiedTime?: string;
 }
 
 const {
-  title = "DreamNails.Asia | Luxury Nail Sanctuary & Beauty Spa",
-  description = "DreamNails.Asia is a premier international beauty destination offering trendsetting nail artistry, hospital-grade sanitized manicures, pedicures, and organic cosmetics.",
-  image = "/images/2022/01/serv_01_02-800x800.jpg"
+  title = "Home - DreamNails.Asia",
+  description = "Creative Manicure Relaxing Paraffin Spa Soothing Pedicure nail fashion Art Manicure Creative color styles. Always in trend. Best quality.",
+  image = "/images/2022/01/serv_01_02-800x800.jpg",
+  canonical,
+  type = "website",
+  articleModifiedTime = "2024-01-16T22:22:07+00:00"
 } = Astro.props;
 
 const siteUrl = "https://dreamnails.asia";
+const pathname = Astro.url.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '') || '';
+const canonicalUrl = canonical || (pathname ? `${siteUrl}${pathname}/` : `${siteUrl}/`);
+const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image.startsWith('/') ? '' : '/'}${image}`;
+
+const schemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://dreamnails.asia/#website",
+      "url": "https://dreamnails.asia/",
+      "name": "DreamNails.Asia",
+      "description": "Perfection in Every Brush",
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://dreamnails.asia/gallery?s={search_term_string}"
+          },
+          "query-input": {
+            "@type": "PropertyValueSpecification",
+            "valueRequired": true,
+            "valueName": "search_term_string"
+          }
+        }
+      ],
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${canonicalUrl}#webpage`,
+      "url": canonicalUrl,
+      "name": title,
+      "isPartOf": {
+        "@id": "https://dreamnails.asia/#website"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://dreamnails.asia/#primaryimage"
+      },
+      "image": {
+        "@id": "https://dreamnails.asia/#primaryimage"
+      },
+      "thumbnailUrl": fullImageUrl,
+      "datePublished": "2022-01-21T21:24:31+00:00",
+      "dateModified": articleModifiedTime,
+      "breadcrumb": {
+        "@id": `${canonicalUrl}#breadcrumb`
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://dreamnails.asia/#primaryimage",
+      "url": fullImageUrl,
+      "contentUrl": fullImageUrl,
+      "width": 1920,
+      "height": 1920
+    },
+    {
+      "@type": ["BeautySalon", "NailSalon"],
+      "@id": "https://dreamnails.asia/#salon",
+      "name": "DreamNails.Asia",
+      "url": "https://dreamnails.asia/",
+      "logo": "https://dreamnails.asia/images/2022/03/cropped-icon.png",
+      "image": fullImageUrl,
+      "telephone": "+1-787-834-8888",
+      "priceRange": "$$",
+      "description": description,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mayagüez Mall, 975 Carr 2 Ste 001",
+        "addressLocality": "Mayagüez",
+        "addressRegion": "PR",
+        "postalCode": "00680",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ]
+    }
+  ]
+};
 ---
 
 <!doctype html>
@@ -21,28 +116,49 @@ const siteUrl = "https://dreamnails.asia";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/images/2022/04/Dream-Salon-Transparent-BG-02-noborder-1.png" />
-    <meta name="generator" content={Astro.generator} />
 
-    <!-- Primary Meta Tags -->
+    <!-- Website Icons (Extracted directly from original site) -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/2022/03/cropped-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileImage" content="/mstile-270x270.png" />
+    <meta name="msapplication-TileColor" content="#141414" />
+    <meta name="theme-color" content="#141414" />
+
+    <!-- Primary Meta & SEO Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <link rel="canonical" href={siteUrl} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={siteUrl} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="DreamNails.Asia" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image.startsWith('http') ? image : `${siteUrl}${image}`} />
+    <meta property="og:image" content={fullImageUrl} />
+    <meta property="og:image:secure_url" content={fullImageUrl} />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1920" />
+    <meta property="article:modified_time" content={articleModifiedTime} />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={siteUrl} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={image.startsWith('http') ? image : `${siteUrl}${image}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullImageUrl} />
+
+    <!-- JSON-LD Structured Data Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
 
     <!-- FontAwesome fallback CDN for complete glyph set -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
