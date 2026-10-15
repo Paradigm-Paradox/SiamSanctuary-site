@@ -90,8 +90,8 @@ const services = [
 
     <!-- 2-Column Responsive Service Price Menu Grid (Playbook de-floated layout) -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-      {services.map((item) => (
-        <div class="flex items-start gap-4 sm:gap-5 p-4 sm:p-5 rounded-2xl bg-[#1b1b1b] border border-white/5 hover:border-[#d9c1a3]/30 transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50">
+      {services.map((item, idx) => (
+        <div class={`flex items-start gap-4 sm:gap-5 p-4 sm:p-5 rounded-2xl bg-[#1b1b1b] border border-white/5 hover:border-[#d9c1a3]/40 transition-all duration-300 group hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/60 reveal-on-scroll ${idx % 2 === 1 ? 'reveal-delay-100' : ''}`}>
           
           <!-- Thumbnail -->
           <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden flex-shrink-0 border border-white/10 group-hover:border-[#f286aa]/40 transition">
