@@ -1,165 +1,123 @@
 ---
+const subServices = [
+  {
+    title: "MANICURE",
+    desc: "A manicure is a mostly cosmetic beauty treatment for the fingernails and hands",
+    icon: "fa-hand-sparkles"
+  },
+  {
+    title: "PEDICURE",
+    desc: "A pedicure is a cosmetic treatment of the feet and toenails, analogous to a manicure.",
+    icon: "fa-spa"
+  },
+  {
+    title: "NAIL CARE",
+    desc: "The care and maintenance of the fingernails and toenails.",
+    icon: "fa-magic"
+  },
+  {
+    title: "COSMETICS",
+    desc: "The most popular cosmetics are hair dyes, powders and creams.",
+    icon: "fa-pump-soap"
+  }
+];
 ---
 
-<section id="philosophy" class="py-24 bg-[#181818] relative overflow-hidden">
-  <!-- Subtle decorative watermark from original Atura theme with subtle parallax float -->
-  <div class="absolute -right-16 top-12 opacity-5 select-none pointer-events-none animate-float-slow">
-    <span class="font-script text-[14rem] sm:text-[18rem] text-[#f286aa] leading-none">nail bar</span>
+<section id="philosophy" class="py-20 sm:py-28 bg-[#141414] relative overflow-hidden select-none">
+  <!-- Subtle decorative watermark from original Atura theme -->
+  <div class="absolute -right-20 top-16 opacity-5 select-none pointer-events-none animate-float-slow">
+    <span class="font-script text-[14rem] sm:text-[18rem] text-[#f286aa] leading-none">nail styles</span>
   </div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
       
-      <!-- Visual Collage matching about-2.png with Reveal & Float -->
-      <div class="relative reveal-scale">
-        <div class="relative mx-auto max-w-md lg:max-w-none">
-          <div class="relative z-10 rounded-2xl overflow-hidden border border-[#d9c1a3]/20 shadow-2xl bg-[#0f0f0f] group">
-            <img 
-              src="/images/2022/01/about-2.png" 
-              alt="Luxury nail salon craftsmanship and manicure artistry at Dream Nails Asia" 
-              class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
-            />
-          </div>
-
-          <!-- Floating Counter Card 1: 54 Professional Techniques -->
-          <div class="absolute -bottom-6 -left-4 sm:-left-8 z-20 bg-[#121212] p-5 rounded-2xl border border-[#f286aa]/30 shadow-2xl max-w-[240px] transform hover:-translate-y-1 transition-transform">
-            <div class="flex items-center gap-4">
-              <div class="text-3xl sm:text-4xl font-serif font-bold text-[#f286aa] counter-number" data-target="54">
-                0
-              </div>
-              <div class="text-xs font-semibold text-white uppercase tracking-wider leading-snug">
-                Professional <br />Techniques
-              </div>
-            </div>
-          </div>
-
-          <!-- Floating Counter Card 2: 314 Nail Polish Colors -->
-          <div class="absolute -top-6 -right-4 sm:-right-8 z-20 bg-[#121212] p-5 rounded-2xl border border-[#d9c1a3]/30 shadow-2xl max-w-[240px] transform hover:-translate-y-1 transition-transform">
-            <div class="flex items-center gap-4">
-              <div class="text-3xl sm:text-4xl font-serif font-bold text-[#d9c1a3] counter-number" data-target="314">
-                0
-              </div>
-              <div class="text-xs font-semibold text-white uppercase tracking-wider leading-snug">
-                Nail Polish <br />Colors
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Left: Visual Collage matching about-2.png exactly as in original site (No box border) -->
+      <div class="relative reveal-scale flex items-center justify-center">
+        <img 
+          src="/images/2022/01/about-2.png" 
+          alt="Luxury nail salon craftsmanship and manicure artistry at Dream Nails Asia" 
+          class="w-full max-w-lg h-auto object-contain transform hover:scale-105 transition-transform duration-700 drop-shadow-2xl"
+        />
       </div>
 
-      <!-- Content Column matching original text -->
+      <!-- Right: Content Column matching original WordPress site typography and layout -->
       <div class="space-y-6 reveal-on-scroll">
         <div>
           <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-1">
             nail styles
           </span>
-          <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wide leading-tight">
-            Modern Style <br />
-            <span class="text-[#d9c1a3]">& High Quality Work</span>
+          <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider leading-tight">
+            MODERN STYLE <br />
+            AND HIGH QUALITY WORK
           </h2>
         </div>
 
-        <p class="text-gray-200 text-sm sm:text-base leading-relaxed font-light">
-          Above all, we place the highest emphasis in cleanliness, and all the technicians are trained to sterilize all the equipment so that each customer can have a very pleasant experience.
+        <p class="text-gray-300 text-sm sm:text-base leading-relaxed font-light">
+          Above all, we place the highest emphasis in cleanliness, and all the technicians are trained to adhere to the strictest sanitation standards. Let your worries behind and treat yourself at Uptown Nail Spa.
         </p>
 
-        <p class="text-gray-400 text-sm leading-relaxed">
-          DreamNails.Asia services include nail enhancements, pedicures, manicures, and other services. Our licensed and trained nail technicians are dedicated to personal attention and complete customer satisfaction in all our branches.
+        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed font-light">
+          DreamNails.Asia services include nail enhancements, pedicures, manicures, and other services that are all performed to the highest standards. The difference is that our services are provided with the utmost care and professionalism.
         </p>
 
-        <!-- Highlights Checklist -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-          <div class="flex items-center gap-2.5 text-xs text-gray-300">
-            <i class="fas fa-check-circle text-[#f286aa]" aria-hidden="true"></i>
-            <span>Hospital-Grade Sterilization</span>
+        <!-- Inline Live Metrics matching original theme (Not floating cards) -->
+        <div class="pt-4 flex items-center gap-12 sm:gap-16">
+          <!-- Metric 1: 54 Professional Techniques -->
+          <div class="flex items-center gap-4">
+            <span class="text-5xl sm:text-6xl font-serif font-bold text-[#f286aa] counter-number" data-target="54">
+              0
+            </span>
+            <div class="text-xs text-white uppercase tracking-wider leading-snug font-medium">
+              Professional <br />Techniques
+            </div>
           </div>
-          <div class="flex items-center gap-2.5 text-xs text-gray-300">
-            <i class="fas fa-check-circle text-[#f286aa]" aria-hidden="true"></i>
-            <span>Single-Use Liners & Buffers</span>
-          </div>
-          <div class="flex items-center gap-2.5 text-xs text-gray-300">
-            <i class="fas fa-check-circle text-[#f286aa]" aria-hidden="true"></i>
-            <span>Licensed International Technicians</span>
-          </div>
-          <div class="flex items-center gap-2.5 text-xs text-gray-300">
-            <i class="fas fa-check-circle text-[#f286aa]" aria-hidden="true"></i>
-            <span>Custom Hand-Crafted Nail Art</span>
-          </div>
-        </div>
 
-        <div class="pt-4 flex items-center gap-4">
-          <a href="/about-us" class="btn-luxury-outline text-xs focus-visible:ring-1 focus-visible:ring-[#d9c1a3]">
-            <span>Read Our Full Story</span>
-            <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
-          </a>
-          <button class="open-booking-modal btn-luxury-primary text-xs cursor-pointer focus-visible:ring-2 focus-visible:ring-[#f286aa]">
-            <span>Book An Appointment</span>
-          </button>
+          <!-- Metric 2: 314 Nail polish colors -->
+          <div class="flex items-center gap-4">
+            <span class="text-5xl sm:text-6xl font-serif font-bold text-[#f286aa] counter-number" data-target="314">
+              0
+            </span>
+            <div class="text-xs text-white uppercase tracking-wider leading-snug font-medium">
+              Nail polish <br />colors
+            </div>
+          </div>
         </div>
 
       </div>
 
     </div>
 
-    <!-- 4 Sub-Service Cards from Original Theme (MANICURE, PEDICURE, NAIL CARE, COSMETICS) -->
-    <div class="pt-12 border-t border-white/5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      
-      <div class="p-6 rounded-2xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/40 transition-all duration-300 group hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/70 reveal-on-scroll">
-        <div class="w-12 h-12 rounded-xl bg-[#222222] flex items-center justify-center text-[#f286aa] mb-4 group-hover:scale-110 group-hover:bg-[#f286aa]/10 transition-all">
-          <i class="fas fa-hand-sparkles text-lg" aria-hidden="true"></i>
-        </div>
-        <h4 class="text-base font-serif text-white uppercase tracking-wider mb-2 group-hover:text-[#f286aa] transition-colors">
-          Manicure
-        </h4>
-        <p class="text-xs text-gray-400 font-light leading-relaxed">
-          A manicure is a mostly cosmetic beauty treatment for the fingernails and hands, leaving them immaculate and refreshed.
-        </p>
-      </div>
+    <!-- 4 Circular Sub-Service Badges matching original Atura theme layout -->
+    <div class="pt-16 border-t border-white/5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      {subServices.map((serv, i) => (
+        <div class={`flex flex-col items-center group cursor-pointer reveal-on-scroll ${i === 1 ? 'reveal-delay-100' : i === 2 ? 'reveal-delay-200' : i === 3 ? 'reveal-delay-300' : ''}`}>
+          
+          <!-- Circular Outline Badge -->
+          <div class="w-24 h-24 rounded-full border border-white/15 group-hover:border-[#f286aa] flex items-center justify-center text-[#f286aa] mb-5 bg-[#181818]/60 group-hover:bg-[#f286aa]/10 transition-all duration-300 transform group-hover:scale-110 shadow-lg">
+            <i class={`fas ${serv.icon} text-2xl`} aria-hidden="true"></i>
+          </div>
 
-      <div class="p-6 rounded-2xl bg-[#141414] border border-white/5 hover:border-[#d9c1a3]/40 transition-all duration-300 group hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/70 reveal-on-scroll reveal-delay-100">
-        <div class="w-12 h-12 rounded-xl bg-[#222222] flex items-center justify-center text-[#d9c1a3] mb-4 group-hover:scale-110 group-hover:bg-[#d9c1a3]/10 transition-all">
-          <i class="fas fa-spa text-lg" aria-hidden="true"></i>
-        </div>
-        <h4 class="text-base font-serif text-white uppercase tracking-wider mb-2 group-hover:text-[#d9c1a3] transition-colors">
-          Pedicure
-        </h4>
-        <p class="text-xs text-gray-400 font-light leading-relaxed">
-          A pedicure is a cosmetic treatment of the feet and toenails, analogous to a manicure, providing deep relaxation and care.
-        </p>
-      </div>
+          <!-- Sub-Service Heading -->
+          <h4 class="text-sm font-serif text-white uppercase tracking-widest mb-2 group-hover:text-[#f286aa] transition-colors">
+            {serv.title}
+          </h4>
 
-      <div class="p-6 rounded-2xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/40 transition-all duration-300 group hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/70 reveal-on-scroll reveal-delay-200">
-        <div class="w-12 h-12 rounded-xl bg-[#222222] flex items-center justify-center text-[#f286aa] mb-4 group-hover:scale-110 group-hover:bg-[#f286aa]/10 transition-all">
-          <i class="fas fa-magic text-lg" aria-hidden="true"></i>
-        </div>
-        <h4 class="text-base font-serif text-white uppercase tracking-wider mb-2 group-hover:text-[#f286aa] transition-colors">
-          Nail Care
-        </h4>
-        <p class="text-xs text-gray-400 font-light leading-relaxed">
-          The care and maintenance of the fingernails and toenails, fortifying structural health and longevity.
-        </p>
-      </div>
+          <!-- Description -->
+          <p class="text-xs text-gray-400 font-light leading-relaxed max-w-xs">
+            {serv.desc}
+          </p>
 
-      <div class="p-6 rounded-2xl bg-[#141414] border border-white/5 hover:border-[#d9c1a3]/40 transition-all duration-300 group hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/70 reveal-on-scroll reveal-delay-300">
-        <div class="w-12 h-12 rounded-xl bg-[#222222] flex items-center justify-center text-[#d9c1a3] mb-4 group-hover:scale-110 group-hover:bg-[#d9c1a3]/10 transition-all">
-          <i class="fas fa-pump-soap text-lg" aria-hidden="true"></i>
         </div>
-        <h4 class="text-base font-serif text-white uppercase tracking-wider mb-2 group-hover:text-[#d9c1a3] transition-colors">
-          Cosmetics
-        </h4>
-        <p class="text-xs text-gray-400 font-light leading-relaxed">
-          The most popular cosmetics are gentle organic formulas, nourishing powders, and protective luxury cuticle creams.
-        </p>
-      </div>
-
+      ))}
     </div>
 
   </div>
 
   <script is:inline>
     // Live Number CountUp Animation
-    function setupCounters() {
-      const counters = document.querySelectorAll('.counter-number');
+    function setupPhilosophyCounters() {
+      const counters = document.querySelectorAll('#philosophy .counter-number');
       if (!counters.length) return;
 
       const animateCount = (el) => {
@@ -169,7 +127,6 @@
 
         function step(now) {
           const progress = Math.min((now - startTime) / duration, 1);
-          // Ease-out cubic
           const eased = 1 - Math.pow(1 - progress, 3);
           const current = Math.floor(eased * target);
           el.textContent = current.toString();
@@ -200,6 +157,6 @@
       }
     }
 
-    document.addEventListener('DOMContentLoaded', setupCounters);
+    document.addEventListener('DOMContentLoaded', setupPhilosophyCounters);
   </script>
 </section>
