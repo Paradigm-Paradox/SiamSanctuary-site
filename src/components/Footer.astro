@@ -222,18 +222,18 @@ const flagConfig: Record<string, { flag: string; countryCode: string; stripes: s
           Follow our latest nail fashion drops, seasonal gel palettes, and masterclass tutorials across our global channels.
         </p>
 
-        <!-- 12 Social Media Badges Grid -->
-        <div class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-4 gap-2 pt-1">
+        <!-- 12 Social Media Badges Grid (Official Logo Pack) -->
+        <div class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-4 gap-2.5 pt-1">
           {socials.map((s) => (
             <a 
               href={s.url} 
               target="_blank" 
               rel="noopener noreferrer" 
-              class="w-9 h-9 rounded-xl bg-[#141414] border border-white/10 hover:border-[#f286aa] hover:bg-[#f286aa] hover:text-black text-gray-300 flex items-center justify-center transition-all duration-200 group relative focus-visible:ring-1 focus-visible:ring-[#f286aa] shadow-sm hover:scale-105" 
+              class="w-9 h-9 rounded-xl overflow-hidden shadow-md hover:scale-115 hover:shadow-lg transition-all duration-200 group relative focus-visible:ring-1 focus-visible:ring-[#f286aa] block" 
               aria-label={`Visit Dream Nails on ${s.name}`} 
               title={`${s.name} (${s.handle})`}
             >
-              <SocialIcon icon={s.icon} class="w-4 h-4" name={s.name} />
+              <SocialIcon id={s.id} class="w-full h-full" />
               
               <!-- Luxury Micro-Tooltip -->
               <span class="absolute -top-7 left-1/2 -translate-x-1/2 bg-black/95 text-white text-[9px] font-sans px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-150 whitespace-nowrap z-30 border border-white/10 shadow-lg">
@@ -267,19 +267,19 @@ const flagConfig: Record<string, { flag: string; countryCode: string; stripes: s
       </div>
 
       <!-- Quick Scrollable Social Pills -->
-      <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+      <div class="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-none">
         {socials.map((s) => (
           <a
             href={s.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="shrink-0 inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#141414] border border-white/10 hover:border-[#f286aa]/50 hover:bg-white/5 transition-all text-xs text-gray-300 hover:text-white group"
+            class="shrink-0 inline-flex items-center gap-2.5 px-3 py-1.5 rounded-xl bg-[#141414] border border-white/10 hover:border-[#f286aa]/50 hover:bg-[#1f1f1f] transition-all text-xs text-gray-300 hover:text-white group shadow-sm hover:-translate-y-0.5"
           >
-            <div class="w-5 h-5 rounded-lg flex items-center justify-center text-xs group-hover:scale-110 transition-transform" style={`color: ${s.color}`}>
-              <SocialIcon icon={s.icon} class="w-3.5 h-3.5" name={s.name} />
+            <div class="w-5 h-5 rounded-md overflow-hidden flex-shrink-0 group-hover:scale-110 transition-transform">
+              <SocialIcon id={s.id} class="w-full h-full" />
             </div>
-            <span class="font-medium text-[11px]">{s.name}</span>
-            <span class="text-[9px] text-[#d9c1a3] uppercase font-sans font-semibold px-1 rounded bg-black/40 border border-white/5">{s.badge}</span>
+            <span class="font-medium text-[11px] text-white">{s.name}</span>
+            <span class="text-[9px] text-[#d9c1a3] uppercase font-sans font-semibold px-1 rounded bg-black/60 border border-white/5">{s.badge}</span>
           </a>
         ))}
       </div>

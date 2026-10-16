@@ -1,29 +1,115 @@
 ---
 interface Props {
-  icon: string;
-  class?: string;
+  id?: string;
   name?: string;
+  icon?: string;
+  class?: string;
 }
 
-const { icon, class: className = "w-4 h-4", name = "" } = Astro.props;
+const { id, name = "", icon = "", class: className = "w-full h-full" } = Astro.props;
+
+// Normalize key
+const platform = (id || name || icon).toLowerCase();
 ---
 
-{icon === 'custom-red' ? (
-  <!-- XiaoHongShu (RED / 小红书) SVG Icon -->
-  <svg viewBox="0 0 24 24" class={className} fill="currentColor" aria-hidden="true">
-    <rect x="2" y="3" width="20" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="1.8" />
-    <path d="M7 8h3.5c1.4 0 2.5 1 2.5 2.2 0 1.2-1.1 2.2-2.5 2.2H7V8z" fill="none" stroke="currentColor" stroke-width="1.6" />
-    <path d="M10.5 12.4L13.2 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-    <path d="M15 8h2v8h-2M15 12h1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+{platform.includes('instagram') ? (
+  <!-- Instagram Official Logo Pack -->
+  <svg viewBox="0 0 24 24" class={className} aria-label="Instagram">
+    <defs>
+      <radialGradient id="igGrad" cx="0.2" cy="1" r="1">
+        <stop offset="0%" stop-color="#FFDD55" />
+        <stop offset="20%" stop-color="#FF543E" />
+        <stop offset="60%" stop-color="#C837AB" />
+        <stop offset="100%" stop-color="#4B5BE7" />
+      </radialGradient>
+    </defs>
+    <rect width="24" height="24" rx="6" fill="url(#igGrad)" />
+    <path fill="#FFFFFF" d="M12 7.1a4.9 4.9 0 1 0 0 9.8 4.9 4.9 0 0 0 0-9.8zm0 8.1a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.1-8.4a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z" />
+    <path fill="#FFFFFF" fill-rule="evenodd" d="M16.5 4.5h-9a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h9a3 3 0 0 0 3-3v-9a3 3 0 0 0-3-3zm1.3 12a1.3 1.3 0 0 1-1.3 1.3h-9a1.3 1.3 0 0 1-1.3-1.3v-9a1.3 1.3 0 0 1 1.3-1.3h9a1.3 1.3 0 0 1 1.3 1.3v9z" clip-rule="evenodd" />
   </svg>
-) : icon === 'custom-lemon8' ? (
-  <!-- Lemon8 SVG Icon -->
-  <svg viewBox="0 0 24 24" class={className} fill="currentColor" aria-hidden="true">
-    <ellipse cx="12" cy="12.5" rx="7.5" ry="6.5" fill="none" stroke="currentColor" stroke-width="1.8" />
-    <path d="M12 6c0-2 1.5-3 2.5-3.5-.5 1.5-.2 2.5.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-    <circle cx="12" cy="12.5" r="2.5" fill="currentColor" />
-    <path d="M12 9v1M12 15v1M8.5 12.5h1M14.5 12.5h1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+) : platform.includes('tiktok') ? (
+  <!-- TikTok Official Logo Pack -->
+  <svg viewBox="0 0 24 24" class={className} aria-label="TikTok">
+    <rect width="24" height="24" rx="6" fill="#000000" />
+    <!-- Cyan glow offset -->
+    <path fill="#00F2FE" d="M16.4 6.8a4.8 4.8 0 0 1-2.4-.7v6.3a4.3 4.3 0 1 1-3.3-4.2v2.3a2 2 0 1 0 1.3 1.9V4.2h2a4.8 4.8 0 0 0 2.4 2.6z" />
+    <!-- Red glow offset -->
+    <path fill="#FF0050" d="M16.8 6.4a4.8 4.8 0 0 1-2.4-.7v6.3a4.3 4.3 0 1 1-3.3-4.2v2.3a2 2 0 1 0 1.3 1.9V3.8h2a4.8 4.8 0 0 0 2.4 2.6z" />
+    <!-- White core note -->
+    <path fill="#FFFFFF" d="M16.6 6.6a4.8 4.8 0 0 1-2.4-.7v6.3a4.3 4.3 0 1 1-3.3-4.2v2.3a2 2 0 1 0 1.3 1.9V4h2a4.8 4.8 0 0 0 2.4 2.6z" />
+  </svg>
+) : platform.includes('google') || platform.includes('map') ? (
+  <!-- Google Maps / Business Profile Official 4-Color Logo Pack -->
+  <svg viewBox="0 0 24 24" class={className} aria-label="Google Business and Maps">
+    <rect width="24" height="24" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="0.8" />
+    <!-- Official 4-Color Google Maps Pin -->
+    <path fill="#EA4335" d="M12 4a5.5 5.5 0 0 0-5.5 5.5c0 2.1 1.2 4.1 3 5.5l2.5 5 2.5-5c1.8-1.4 3-3.4 3-5.5A5.5 5.5 0 0 0 12 4z"/>
+    <path fill="#4285F4" d="M6.5 9.5a5.5 5.5 0 0 1 5.5-5.5v5.5H6.5z"/>
+    <path fill="#FBBC04" d="M12 4a5.5 5.5 0 0 1 5.5 5.5h-5.5V4z"/>
+    <path fill="#34A853" d="M9.5 15l2.5 5 2.5-5a5.4 5.4 0 0 1-5 0z"/>
+    <circle cx="12" cy="9.5" r="2.2" fill="#FFFFFF"/>
+    <circle cx="12" cy="9.5" r="1.3" fill="#4285F4"/>
+  </svg>
+) : platform.includes('facebook') ? (
+  <!-- Facebook Official Logo Pack -->
+  <svg viewBox="0 0 24 24" class={className} aria-label="Facebook">
+    <rect width="24" height="24" rx="6" fill="#1877F2" />
+    <path fill="#FFFFFF" d="M14.5 12.2h-2V19H9.6v-6.8H8v-2.5h1.6V8c0-2.1 1.2-3.3 3.2-3.3 1 0 1.8.1 2 .1v2.3h-1.4c-1 0-1.2.5-1.2 1.2v1.4h2.6l-.3 2.5z"/>
+  </svg>
+) : platform.includes('whatsapp') ? (
+  <!-- WhatsApp Business Official Logo Pack -->
+  <svg viewBox="0 0 24 24" class={className} aria-label="WhatsApp Business">
+    <rect width="24" height="24" rx="6" fill="#25D366" />
+    <path fill="#FFFFFF" d="M12 4a8 8 0 0 0-6.9 12L4 20l4.2-1.1A8 8 0 1 0 12 4zm4.7 11.4c-.2.6-1.2 1.1-1.6 1.1-.4.1-1 .1-1.6-.1-.4-.1-.8-.3-1.4-.5-2.5-1.1-4.2-3.7-4.3-3.8-.1-.2-1-1.4-1-2.6s.7-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4-.1.6.4.2.5.7 1.7.8 1.8 0 .1.1.3 0 .4-.1.2-.1.3-.2.4-.1.1-.3.3-.4.4-.1.1-.3.3-.1.5.1.2.6 1 1.3 1.7.9.8 1.7 1.1 1.9 1.2.2.1.4.1.5-.1.1-.2.6-.7.8-.9.2-.2.3-.2.6-.1.2.1 1.4.7 1.6.8.2.1.4.2.5.3 0 .1 0 .6-.2 1.1z"/>
+  </svg>
+) : platform.includes('line') ? (
+  <!-- LINE Official Account Logo Pack -->
+  <svg viewBox="0 0 24 24" class={className} aria-label="LINE Official">
+    <rect width="24" height="24" rx="6" fill="#06C755" />
+    <path fill="#FFFFFF" d="M19.4 10.1C19.4 6.2 16.1 3 12 3S4.6 6.2 4.6 10.1c0 3.5 2.7 6.4 6.3 6.9.3.1.6.2.7.4.1.2 0 .5 0 .7l-.2 1.4c-.1.4-.3 1.6 1.4.9 1.8-.8 4.8-2.8 6.5-4.8 1.2-1.4 1.8-2.9 1.8-4.5zM8.3 12.3H6.9a.4.4 0 0 1-.4-.4V8.1a.4.4 0 0 1 .4-.4h.7a.4.4 0 0 1 .4.4v3.5h.3a.4.4 0 0 1 .4.4v.3zm1.9 0h-.7a.4.4 0 0 1-.4-.4V8.1a.4.4 0 0 1 .4-.4h.7a.4.4 0 0 1 .4.4v3.8a.4.4 0 0 1-.4.4zm3.9 0h-.7a.4.4 0 0 1-.3-.2l-1.6-2.3v2.1a.4.4 0 0 1-.4.4h-.7a.4.4 0 0 1-.4-.4V8.1a.4.4 0 0 1 .4-.4h.7c.1 0 .3.1.3.2l1.6 2.3V8.1c0-.2.2-.4.4-.4h.7a.4.4 0 0 1 .4.4v3.8a.4.4 0 0 1-.4.4zm3.3-2.6h-1v.6h1a.4.4 0 0 1 .4.4v.4a.4.4 0 0 1-.4.4h-1.7a.4.4 0 0 1-.4-.4V8.1a.4.4 0 0 1 .4-.4h1.7a.4.4 0 0 1 .4.4v.4a.4.4 0 0 1-.4.4h-1v.5h1a.4.4 0 0 1 .4.4v.4a.4.4 0 0 1-.4.4z"/>
+  </svg>
+) : platform.includes('telegram') ? (
+  <!-- Telegram Official Logo Pack -->
+  <svg viewBox="0 0 24 24" class={className} aria-label="Telegram">
+    <rect width="24" height="24" rx="6" fill="#229ED9" />
+    <path fill="#FFFFFF" d="M18.8 6.4L4.8 11.8c-1 .4-.98 1 .18 1.34l3.6 1.12 1.25 3.84c.15.42.08.58.52.58.34 0 .49-.15.68-.34l1.64-1.58 3.4 2.5c.63.35 1.08.17 1.24-.58l2.24-10.56c.23-.92-.35-1.33-.95-1.08zm-9.8 8.1l-.3 3.3-1.03-3.3 8.35-7.5-7.02 7.5z"/>
+  </svg>
+) : platform.includes('youtube') ? (
+  <!-- YouTube Official Logo Pack -->
+  <svg viewBox="0 0 24 24" class={className} aria-label="YouTube">
+    <rect width="24" height="24" rx="6" fill="#FF0000" />
+    <path fill="#FFFFFF" d="M19.6 8.2c-.2-.7-.8-1.3-1.5-1.5C16.8 6.3 12 6.3 12 6.3s-4.8 0-6.1.4c-.7.2-1.3.8-1.5 1.5C4 9.5 4 12 4 12s0 2.5.4 3.8c.2.7.8 1.3 1.5 1.5 1.3.4 6.1.4 6.1.4s4.8 0 6.1-.4c.7-.2 1.3-.8 1.5-1.5.4-1.3.4-3.8.4-3.8s0-2.5-.4-3.8zM10.4 14.3V9.7l4 2.3-4 2.3z"/>
+  </svg>
+) : platform.includes('snapchat') ? (
+  <!-- Snapchat Official Logo Pack -->
+  <svg viewBox="0 0 24 24" class={className} aria-label="Snapchat">
+    <rect width="24" height="24" rx="6" fill="#FFFC00" />
+    <path fill="#FFFFFF" stroke="#000000" stroke-width="1.1" stroke-linejoin="round" d="M12 4.5c-2.3 0-3.8 1.6-3.8 3.5 0 .5.1 1.2.1 1.5-.4.1-1.1.4-1.4.9-.3.5-.2 1.1.2 1.4.2.1.4.2.6.2-.1.3-.3.8-.7 1.3-.5.6-1.1.9-1.8 1-.3 0-.5.2-.5.5s.3.6.7.7c1 .3 2 .1 2.8-.5.3.6.9 1.1 1.8 1.2.4.1.7.3.7.6 0 .5-.7.8-1.3 1.1-.5.2-.8.5-.8.9s.4.7.9.7c.8 0 1.9-.3 2.8-.8.9.5 2 .8 2.8.8.5 0 .9-.3.9-.7s-.3-.7-.8-.9c-.6-.3-1.3-.6-1.3-1.1 0-.3.3-.5.7-.6.9-.1 1.5-.6 1.8-1.2.8.6 1.8.8 2.8.5.4-.1.7-.4.7-.7s-.2-.5-.5-.5c-.7-.1-1.3-.4-1.8-1-.4-.5-.6-1-.7-1.3.2 0 .4-.1.6-.2.4-.3.5-.9.2-1.4-.3-.5-1-.8-1.4-.9 0-.3.1-1 .1-1.5 0-1.9-1.5-3.5-3.8-3.5z"/>
+  </svg>
+) : platform.includes('xiaohongshu') || platform.includes('red') ? (
+  <!-- XiaoHongShu (RED / 小红书) Official Logo Pack -->
+  <svg viewBox="0 0 24 24" class={className} aria-label="XiaoHongShu RED">
+    <rect width="24" height="24" rx="6" fill="#FF2442" />
+    <!-- Authentic Bold RED Lettering and Bookmark Notch -->
+    <path fill="#FFFFFF" d="M6 7.2h3.2c1.4 0 2.4.8 2.4 2 0 1-.7 1.7-1.6 1.9l2 3.7h-1.9L8.4 11.4H7.5V14.8H6V7.2zm1.5 3h1.6c.6 0 1.1-.3 1.1-.9 0-.6-.5-.9-1.1-.9H7.5v1.8zM12.5 7.2H17v1.4h-3v2.2h2.6v1.4H14v2.6h3v1.4h-4.5V7.2zm5.2 0h2.8c2 0 3.2 1.4 3.2 3.8s-1.2 3.8-3.2 3.8h-2.8V7.2zm1.6 6.2h1.2c1.2 0 1.8-.8 1.8-2.4 0-1.6-.6-2.4-1.8-2.4h-1.2v4.8z" transform="scale(0.85) translate(2, 2.5)" />
+    <text x="12" y="15.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.3">RED</text>
+  </svg>
+) : platform.includes('lemon8') ? (
+  <!-- Lemon8 Official Logo Pack -->
+  <svg viewBox="0 0 24 24" class={className} aria-label="Lemon8">
+    <rect width="24" height="24" rx="6" fill="#FFE100" />
+    <!-- Lemon fruit outline + green leaf -->
+    <path fill="#52B72A" d="M14.5 4.5c-1.8.2-3.2 1.6-3.5 3.4 1.8-.2 3.2-1.6 3.5-3.4z"/>
+    <ellipse cx="12" cy="13.2" rx="6.8" ry="5.8" fill="#FFFFFF"/>
+    <ellipse cx="12" cy="13.2" rx="5.4" ry="4.4" fill="#FFE100"/>
+    <text x="12" y="16.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="900" fill="#1C1C1E" text-anchor="middle" letter-spacing="-0.2">L8</text>
+  </svg>
+) : platform.includes('pinterest') ? (
+  <!-- Pinterest Official Logo Pack -->
+  <svg viewBox="0 0 24 24" class={className} aria-label="Pinterest">
+    <rect width="24" height="24" rx="6" fill="#E60023" />
+    <path fill="#FFFFFF" d="M12 4.5c-4.14 0-7.5 3.36-7.5 7.5 0 3.18 1.98 5.89 4.8 6.99-.07-.59-.13-1.5.03-2.15.14-.6.93-3.95.93-3.95s-.24-.48-.24-1.18c0-1.11.64-1.93 1.44-1.93.68 0 1.01.51 1.01 1.12 0 .68-.43 1.7-.66 2.65-.19.79.4 1.44 1.18 1.44 1.41 0 2.5-1.49 2.5-3.64 0-1.9-1.37-3.23-3.32-3.23-2.42 0-3.84 1.82-3.84 3.69 0 .73.28 1.52.63 1.94.07.08.08.16.06.25-.06.26-.2.83-.23.95-.04.16-.13.19-.3.12-1.12-.52-1.82-2.15-1.82-3.47 0-2.82 2.05-5.41 5.91-5.41 3.1 0 5.51 2.21 5.51 5.17 0 3.08-1.94 5.56-4.64 5.56-.91 0-1.76-.47-2.05-1.03l-.56 2.13c-.2.78-.75 1.75-1.12 2.35.85.26 1.75.4 2.68.4 4.14 0 7.5-3.36 7.5-7.5s-3.36-7.5-7.5-7.5z"/>
   </svg>
 ) : (
-  <i class={`${icon} ${className} flex items-center justify-center`} aria-hidden="true"></i>
+  <i class={`${icon} ${className}`} aria-hidden="true"></i>
 )}

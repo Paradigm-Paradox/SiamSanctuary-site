@@ -72,9 +72,9 @@ import SocialIcon from '../components/SocialIcon.astro';
                 class="p-5 rounded-2xl bg-[#1c1c1c] border border-white/5 hover:border-[#f286aa]/40 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group flex flex-col justify-between"
               >
                 <div>
-                  <div class="flex items-start justify-between mb-3">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl transition-transform group-hover:scale-110 shadow-sm" style={`background-color: ${s.color}20; color: ${s.color};`}>
-                      <SocialIcon icon={s.icon} class="w-6 h-6" name={s.name} />
+                  <div class="flex items-start justify-between mb-3.5">
+                    <div class="w-12 h-12 rounded-xl overflow-hidden shadow-md group-hover:scale-110 transition-transform flex-shrink-0">
+                      <SocialIcon id={s.id} class="w-full h-full" />
                     </div>
                     <span class="text-[9px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-gray-300 group-hover:text-white">
                       {s.badge}

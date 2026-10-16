@@ -1,5 +1,7 @@
 ---
 import services from '../data/services.json';
+import socials from '../data/socials.json';
+import SocialIcon from './SocialIcon.astro';
 
 interface Props {
   overlay?: boolean;
@@ -21,20 +23,26 @@ const navLinks = [
 ---
 
 <header class={`w-full ${overlay ? 'absolute top-0 left-0 right-0 z-40' : 'relative z-40'} select-none`} id="site-header">
-  <!-- Slim Top Black Utility Bar matching original theme with Social Presence -->
+  <!-- Slim Top Black Utility Bar with Official Social Logo Pack -->
   <div class="bg-[#0a0a0a]/90 backdrop-blur-sm text-gray-300 py-1.5 px-4 sm:px-8 border-b border-white/10 text-xs">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
-      <!-- Quick Social Icons (Left) -->
-      <div class="hidden sm:flex items-center gap-3 text-gray-400 text-[12px]">
-        <span class="text-[10px] uppercase tracking-wider text-gray-500 hidden md:inline">Connect:</span>
-        <a href="https://www.instagram.com/dreamnails.asia/" target="_blank" rel="noopener noreferrer" class="hover:text-[#E4405F] transition" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@dreamnails.asia" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" title="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://wa.me/17878348888" target="_blank" rel="noopener noreferrer" class="hover:text-[#25D366] transition" title="WhatsApp Business"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://line.me/R/ti/p/@dreamnails.asia" target="_blank" rel="noopener noreferrer" class="hover:text-[#06C755] transition" title="LINE Official"><i class="fab fa-line"></i></a>
-        <a href="https://maps.google.com/?q=Dream+Nails+Salon" target="_blank" rel="noopener noreferrer" class="hover:text-[#4285F4] transition" title="Google Business & Maps"><i class="fab fa-google"></i></a>
-        <a href="https://www.xiaohongshu.com/user/profile/dreamnailsasia" target="_blank" rel="noopener noreferrer" class="hover:text-[#FF2442] transition text-[10px] font-bold px-1 rounded bg-white/10" title="XiaoHongShu (RED)">RED</a>
-        <a href="https://www.lemon8-app.com/@dreamnails.asia" target="_blank" rel="noopener noreferrer" class="hover:text-[#FFDE00] transition text-[10px] font-bold px-1 rounded bg-white/10" title="Lemon8">L8</a>
-        <a href="https://www.pinterest.com/dreamnailsasia" target="_blank" rel="noopener noreferrer" class="hover:text-[#BD081C] transition" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      <!-- Quick Social Icons with Official Brand Logos -->
+      <div class="hidden sm:flex items-center gap-2 text-[12px]">
+        <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium hidden md:inline">Connect:</span>
+        <div class="flex items-center gap-1.5">
+          {socials.map((s) => (
+            <a 
+              href={s.url} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-5 h-5 rounded-md overflow-hidden hover:scale-125 transition-transform shadow-sm block focus-visible:ring-1 focus-visible:ring-[#f286aa]" 
+              title={`${s.name} (${s.handle})`}
+              aria-label={`Visit Dream Nails on ${s.name}`}
+            >
+              <SocialIcon id={s.id} class="w-full h-full" />
+            </a>
+          ))}
+        </div>
       </div>
 
       <!-- Right Utility Actions -->
@@ -247,18 +255,22 @@ const navLinks = [
           Book now &rarr;
         </button>
 
-        <!-- Mobile Social Links Grid -->
+        <!-- Mobile Social Links Grid with Official Logos -->
         <div class="pt-2 text-center">
-          <span class="text-[10px] uppercase tracking-wider text-gray-400 block mb-2 font-medium">Follow & Chat:</span>
-          <div class="flex items-center justify-center flex-wrap gap-2">
-            <a href="https://www.instagram.com/dreamnails.asia/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#E4405F] hover:text-white text-gray-700 flex items-center justify-center transition text-xs" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@dreamnails.asia" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-black hover:text-white text-gray-700 flex items-center justify-center transition text-xs" title="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="https://wa.me/17878348888" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#25D366] hover:text-white text-gray-700 flex items-center justify-center transition text-xs" title="WhatsApp Business"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://line.me/R/ti/p/@dreamnails.asia" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#06C755] hover:text-white text-gray-700 flex items-center justify-center transition text-xs" title="LINE Official"><i class="fab fa-line"></i></a>
-            <a href="https://maps.google.com/?q=Dream+Nails+Salon" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#4285F4] hover:text-white text-gray-700 flex items-center justify-center transition text-xs" title="Google Business & Maps"><i class="fab fa-google"></i></a>
-            <a href="https://www.xiaohongshu.com/user/profile/dreamnailsasia" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#FF2442] hover:text-white text-gray-700 flex items-center justify-center transition text-[10px] font-bold" title="XiaoHongShu (RED)">RED</a>
-            <a href="https://www.lemon8-app.com/@dreamnails.asia" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#FFDE00] hover:text-black text-gray-700 flex items-center justify-center transition text-[10px] font-bold" title="Lemon8">L8</a>
-            <a href="https://www.pinterest.com/dreamnailsasia" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#BD081C] hover:text-white text-gray-700 flex items-center justify-center transition text-xs" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+          <span class="text-[10px] uppercase tracking-wider text-gray-400 block mb-2 font-medium">Follow & Chat Across 12 Channels:</span>
+          <div class="flex items-center justify-center flex-wrap gap-2.5">
+            {socials.map((s) => (
+              <a 
+                href={s.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-7 h-7 rounded-lg overflow-hidden shadow-sm hover:scale-115 transition-transform block" 
+                title={`${s.name} (${s.handle})`}
+                aria-label={`Visit Dream Nails on ${s.name}`}
+              >
+                <SocialIcon id={s.id} class="w-full h-full" />
+              </a>
+            ))}
           </div>
         </div>
       </div>
