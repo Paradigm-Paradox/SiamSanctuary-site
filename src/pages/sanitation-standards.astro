@@ -1,0 +1,307 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pillars = [
+  {
+    icon: "fa-shield-virus",
+    title: "Class-B Medical Autoclave Sterilization",
+    badge: "Hospital Standard",
+    description: "Every metal tool (shears, cuticle nippers, pushers, tweezers, extractors) undergoes multi-stage enzymatic cleaning, ultrasonic submersion, and sterilization in a high-pressure medical autoclave at 275°F (135°C). Implements remain sealed in color-changing indicator pouches until opened directly in front of you."
+  },
+  {
+    icon: "fa-trash-arrow-up",
+    title: "100% Single-Use Sterile Disposables",
+    badge: "Zero Re-Use",
+    description: "Any implement that cannot be autoclaved is strictly single-use. Nail files, buffers, birchwood cuticle sticks, pedicure pumice pads, waxing spatulas (strictly zero double-dipping), and sanitary protective bed sheets are unwrapped new for your service and discarded immediately after."
+  },
+  {
+    icon: "fa-water",
+    title: "Pipeless Ozone Pedicure & Scalp Basins",
+    badge: "Anti-Biofilm",
+    description: "Traditional piped whirlpool footbaths harbor bacterial biofilm, mold, and fungus inside hidden plumbing lines. Dream Salon exclusively utilizes pipeless magnetic jet technology paired with single-use protective basin liners and ultrasonic ozone purification for flawless water hygiene."
+  },
+  {
+    icon: "fa-spray-can-sparkles",
+    title: "EPA Hospital-Grade Environmental Sanitization",
+    badge: "10-Min Protocol",
+    description: "Between every appointment, treatment stations, styling chairs, manicure tables, Japanese head spa beds, and LED curing lamps are treated with EPA-registered hospital-grade bactericidal, virucidal, and fungicidal disinfectants with full contact-dwell times."
+  },
+  {
+    icon: "fa-wind",
+    title: "Source-Capture Dust & HEPA-13 Air Filtration",
+    badge: "Clean Air Guarantee",
+    description: "Our salons feature active source-capture localized dust extraction and multi-stage medical HEPA-13 air purifiers with activated carbon layers. This continuously eliminates fine keratin dust, monomer vapors, aerosols, and allergens for clean, odorless breathing."
+  },
+  {
+    icon: "fa-user-nurse",
+    title: "Aseptic PMU & Aesthetic Clinical Technique",
+    badge: "Surgical Hygiene",
+    description: "Cosmetic tattooing (microblading, lip blush, lash line) and advanced facial treatments are executed under strict clinical aseptic protocols. We utilize 100% EO-sterilized single-use disposable needle cartridges, medical barrier film, surgical chlorhexidine prep, and medical-grade nitrile PPE."
+  }
+];
+
+const processSteps = [
+  {
+    step: "01",
+    title: "Enzymatic Pre-Wash",
+    desc: "Immediately after use, metal tools are soaked in hospital-grade enzymatic solution to break down organic proteins and debris."
+  },
+  {
+    step: "02",
+    title: "Ultrasonic Sonic Bath",
+    desc: "Submerged in an ultrasonic bath emitting 40kHz sound waves that dislodge microscopic particles from tight hinges and serrated edges."
+  },
+  {
+    step: "03",
+    title: "Medical Autoclave Chamber",
+    desc: "Tools are dried, sealed into medical-grade pouches with internal & external chemical indicators, and steam sterilized at 275°F under high pressure."
+  },
+  {
+    step: "04",
+    title: "Sealed Storage & Client Reveal",
+    desc: "Sterilized packs are cataloged in sealed UV cabinets. The color-changing sterilization mark is verified and opened only in your presence."
+  }
+];
+
+const departments = [
+  {
+    name: "Hair & Japanese Head Spa",
+    icon: "fa-pump-soap",
+    points: [
+      "Combs, brushes, and clips disinfected in hospital-grade virucide between every client",
+      "Ergonomic shampoo basins sanitized with EPA disinfectant before each scalp treatment",
+      "Freshly laundered, high-heat sanitized salon capes and plush microfiber towels",
+      "Scalp analysis cameras and micro-mist nozzles cleaned with 70% isopropyl alcohol"
+    ]
+  },
+  {
+    name: "Couture Nails & Medical Pedicures",
+    icon: "fa-hand-sparkles",
+    points: [
+      "Sterile autoclave pouches opened fresh at the beginning of each manicure or pedicure",
+      "Single-use nail file, buffer, pumice stone, and wooden stick provided in a disposable kit",
+      "Pipeless pedicure basins lined with fresh medical-grade disposable tub liners",
+      "Certified 10-Free, non-toxic, vegan Korean and Japanese gel cosmetic lines"
+    ]
+  },
+  {
+    name: "Cosmetic Tattoo (PMU) & Lashes",
+    icon: "fa-eye",
+    points: [
+      "100% sterile EO-gas certified disposable microblading and lip blush needle cartridges",
+      "Medical barrier film applied to machine grips, cords, and pigment trays",
+      "Single-use pigment cups and micro-applicators discarded into biohazard containers",
+      "Medical nitrile gloves changed frequently with skin antiseptic chlorhexidine prep"
+    ]
+  },
+  {
+    name: "Massage, Facials & Body Care",
+    icon: "fa-spa",
+    points: [
+      "Single-use bed roll liners and fresh high-temperature sanitized organic cotton linens",
+      "Waxing spatulas are single-dip only—strictly ZERO double-dipping into hot wax pots",
+      "Ultrasonic skin scrubbers, high-frequency wands, and stone warmers sanitized after each session",
+      "Therapists practice strict clinical hand hygiene before, during, and after every therapy"
+    ]
+  }
+];
+---
+
+<Layout 
+  title="Sanitation Standards & Clinical Safety Protocols | Dream Salon Asia"
+  description="Discover Dream Salon Asia's clinical hospital-grade sanitation protocols: Class-B medical autoclave sterilization, 100% single-use disposables, pipeless ozone pedicure basins, and EPA hospital disinfectants."
+>
+  <div class="min-h-screen flex flex-col bg-[#141414]">
+    <Header />
+    
+    <main class="flex-grow">
+      <!-- Header Banner -->
+      <section class="relative py-28 sm:py-32 bg-[#101010] border-b border-white/5 overflow-hidden">
+        <div class="absolute inset-0 opacity-25">
+          <img src="/images/2021/12/inner_header_01.jpg" alt="Sanitation Standards Banner" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/85 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f286aa]/10 border border-[#f286aa]/30 text-[#f286aa] text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="fas fa-shield-halved text-xs"></i>
+            Clinical Hygiene & Safety Charter
+          </span>
+          <h1 class="text-4xl sm:text-6xl font-serif text-white uppercase tracking-wider mb-4">
+            Sanitation Standards
+          </h1>
+          <p class="text-sm sm:text-base text-gray-300 font-light max-w-2xl mx-auto mb-6 leading-relaxed">
+            Your health, wellness, and peace of mind are our highest non-negotiable priority. We adhere to clinical hospital-grade protocols exceeding international health board and OSHA regulations across every salon worldwide.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-3 text-xs text-gray-300">
+            <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 flex items-center gap-2">
+              <i class="fas fa-temperature-arrow-up text-[#f286aa]"></i> 275°F Autoclave Steam
+            </span>
+            <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 flex items-center gap-2">
+              <i class="fas fa-trash text-[#f286aa]"></i> 100% Single-Use Disposables
+            </span>
+            <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 flex items-center gap-2">
+              <i class="fas fa-wind text-[#f286aa]"></i> Medical HEPA-13 Air Filtration
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 Core Pillars Grid -->
+      <section class="py-20 sm:py-24 bg-[#181818]" id="pillars">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-1">
+              Zero Compromise
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-4">
+              The 6 Pillars of Clinical Safety
+            </h2>
+            <p class="text-sm text-gray-400 font-light max-w-xl mx-auto">
+              Our comprehensive medical-grade sanitation system ensures that every service is delivered in an impeccably sterile, safe, and tranquil sanctuary.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {pillars.map((p, idx) => (
+              <div class="p-8 rounded-3xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/70 group flex flex-col justify-between">
+                <div>
+                  <div class="flex items-start justify-between mb-6">
+                    <div class="w-14 h-14 rounded-2xl bg-[#1e1e1e] border border-white/10 group-hover:border-[#f286aa]/50 text-[#f286aa] flex items-center justify-center text-2xl group-hover:scale-110 group-hover:bg-[#f286aa] group-hover:text-black transition-all duration-300 shadow-lg">
+                      <i class={`fas ${p.icon}`}></i>
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[#d9c1a3]">
+                      {p.badge}
+                    </span>
+                  </div>
+
+                  <h3 class="text-xl font-serif text-white group-hover:text-[#f286aa] transition-colors mb-3 leading-snug">
+                    {p.title}
+                  </h3>
+
+                  <p class="text-xs sm:text-sm text-gray-300 font-light leading-relaxed mb-6">
+                    {p.description}
+                  </p>
+                </div>
+
+                <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#d9c1a3]">
+                  <span class="font-mono text-[10px] tracking-wider uppercase">Protocol Standard 0{idx + 1}</span>
+                  <i class="fas fa-check-circle text-[#f286aa]"></i>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Step-by-Step Tool Sterilization Journey -->
+      <section class="py-20 bg-[#141414] border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-1">
+              Methodology
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-serif text-white uppercase tracking-wider mb-4">
+              The 4-Step Instrument Sterilization Journey
+            </h2>
+            <p class="text-sm text-gray-400 font-light max-w-xl mx-auto">
+              How every metal instrument is prepared, sanitized, verified, and sealed before it ever touches your skin.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {processSteps.map((step) => (
+              <div class="relative p-6 rounded-2xl bg-[#1b1b1b] border border-white/5 hover:border-[#d9c1a3]/40 transition group">
+                <span class="font-mono text-3xl font-bold text-[#f286aa]/30 group-hover:text-[#f286aa] transition-colors block mb-3">
+                  {step.step}
+                </span>
+                <h3 class="text-lg font-serif text-white mb-2 group-hover:text-[#d9c1a3] transition-colors">
+                  {step.title}
+                </h3>
+                <p class="text-xs text-gray-400 font-light leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Department-Specific Protocols -->
+      <section class="py-20 bg-[#181818] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-1">
+              Specialized Care
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-serif text-white uppercase tracking-wider mb-4">
+              Department-Specific Safety Protocols
+            </h2>
+            <p class="text-sm text-gray-400 font-light max-w-xl mx-auto">
+              Customized hygiene and barrier protections tailored to each specific discipline in our full-service salon.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {departments.map((dept) => (
+              <div class="p-8 rounded-3xl bg-[#141414] border border-white/5">
+                <div class="flex items-center gap-3.5 mb-6">
+                  <div class="w-12 h-12 rounded-xl bg-[#222222] text-[#f286aa] flex items-center justify-center text-xl border border-white/10">
+                    <i class={`fas ${dept.icon}`}></i>
+                  </div>
+                  <h3 class="text-2xl font-serif text-white">
+                    {dept.name}
+                  </h3>
+                </div>
+
+                <ul class="space-y-3.5 text-xs sm:text-sm text-gray-300 font-light">
+                  {dept.points.map((pt) => (
+                    <li class="flex items-start gap-3">
+                      <span class="w-5 h-5 rounded-full bg-[#f286aa]/10 text-[#f286aa] flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">✓</span>
+                      <span class="leading-relaxed">{pt}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Client Open Verification Guarantee -->
+      <section class="py-16 bg-[#121212] border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div class="w-16 h-16 rounded-full bg-[#f286aa]/10 text-[#f286aa] flex items-center justify-center text-2xl mx-auto mb-4 border border-[#f286aa]/30">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-serif text-white uppercase mb-3">
+            Our Open Transparency Guarantee
+          </h3>
+          <p class="text-sm text-gray-300 font-light max-w-2xl mx-auto leading-relaxed mb-8">
+            You are always welcome to inspect our sterilization pouch chemical color indicators, autoclave logbooks, and single-use supplies before any service begins. If you ever have a question regarding any safety step, our salon masters will gladly demonstrate our protocols for you.
+          </p>
+          <div class="flex items-center justify-center gap-4 flex-wrap">
+            <button class="open-booking-modal btn-luxury-primary text-xs cursor-pointer">
+              <i class="far fa-calendar-check mr-2"></i>
+              <span>Book An Appointment With Confidence</span>
+            </button>
+            <a href="/about-us" class="btn-luxury-outline text-xs">
+              <span>Read Our Story & Founders</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <Footer />
+  </div>
+</Layout>

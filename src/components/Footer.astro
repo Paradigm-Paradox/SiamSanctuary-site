@@ -160,15 +160,24 @@ const flagConfig: Record<string, { flag: string; countryCode: string; stripes: s
       
       <!-- 1. Safety & Hospital-Grade Protocols -->
       <div>
-        <h4 class="text-sm font-serif text-white uppercase tracking-wider mb-4 border-b border-white/10 pb-2">
-          Sanitation Standards
+        <h4 class="text-sm font-serif text-white uppercase tracking-wider mb-4 border-b border-white/10 pb-2 flex items-center justify-between">
+          <span>Sanitation Standards</span>
+          <span class="text-[9px] text-[#f286aa] font-sans font-semibold tracking-wider uppercase px-1.5 py-0.5 rounded bg-[#f286aa]/10 border border-[#f286aa]/20">Clinical</span>
         </h4>
         <ul class="space-y-2 text-xs text-gray-400">
-          <li class="flex items-center gap-2"><i class="fas fa-shield-virus text-[#f286aa]" aria-hidden="true"></i> Medical-grade autoclave sterilization</li>
-          <li class="flex items-center gap-2"><i class="fas fa-check text-[#d9c1a3]" aria-hidden="true"></i> Single-use disposable buffers & pumice</li>
-          <li class="flex items-center gap-2"><i class="fas fa-leaf text-[#f286aa]" aria-hidden="true"></i> 10-Free non-toxic Korean polishes</li>
+          <li class="flex items-center gap-2"><i class="fas fa-shield-virus text-[#f286aa]" aria-hidden="true"></i> 275°F Class-B autoclave sterilization</li>
+          <li class="flex items-center gap-2"><i class="fas fa-trash text-[#d9c1a3]" aria-hidden="true"></i> 100% single-use buffers, files & liners</li>
+          <li class="flex items-center gap-2"><i class="fas fa-water text-[#f286aa]" aria-hidden="true"></i> Pipeless hydrotherapy & ozone basins</li>
+          <li class="flex items-center gap-2"><i class="fas fa-spray-can-sparkles text-[#d9c1a3]" aria-hidden="true"></i> EPA hospital broad-spectrum virucides</li>
+          <li class="flex items-center gap-2"><i class="fas fa-wind text-[#f286aa]" aria-hidden="true"></i> HEPA-13 air purifiers & dust extraction</li>
           <li class="flex items-center gap-2"><i class="fas fa-certificate text-[#d9c1a3]" aria-hidden="true"></i> Certified master stylists & aestheticians</li>
         </ul>
+        <div class="mt-4 pt-3 border-t border-white/5">
+          <a href="/sanitation-standards" class="text-[11px] text-[#f286aa] hover:text-white transition flex items-center gap-1.5 font-medium group">
+            <span>Explore All 6 Clinical Protocols</span>
+            <i class="fas fa-arrow-right text-[9px] group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
       </div>
 
       <!-- 2. Quick Navigation -->
@@ -179,6 +188,7 @@ const flagConfig: Record<string, { flag: string; countryCode: string; stripes: s
         <ul class="space-y-2.5">
           <li><a href="/" class="hover:text-[#f286aa] transition">Home</a></li>
           <li><a href="/about-us" class="hover:text-[#f286aa] transition">About Us</a></li>
+          <li><a href="/sanitation-standards" class="hover:text-[#f286aa] transition">Sanitation Standards</a></li>
           <li><a href="/services" class="hover:text-[#f286aa] transition">Services Menu</a></li>
           <li><a href="/gallery" class="hover:text-[#f286aa] transition">Artistry Portfolio (79+ Designs)</a></li>
           <li><a href="/news" class="hover:text-[#f286aa] transition">Latest News & Guides</a></li>
