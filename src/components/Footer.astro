@@ -1,5 +1,68 @@
 ---
 import locations from '../data/locations.json';
+
+const flagConfig: Record<string, { flag: string; countryCode: string; stripes: string; glow: string }> = {
+  "san-juan": {
+    flag: "🇵🇷",
+    countryCode: "PR",
+    stripes: "linear-gradient(to bottom, #ed0000 0% 20%, #ffffff 20% 40%, #ed0000 40% 60%, #ffffff 60% 80%, #ed0000 80% 100%)",
+    glow: "radial-gradient(circle at 80% 20%, rgba(0, 80, 240, 0.45) 0%, rgba(237, 0, 0, 0.35) 50%, transparent 80%)"
+  },
+  "mayaguez": {
+    flag: "🇵🇷",
+    countryCode: "PR",
+    stripes: "linear-gradient(to bottom, #ed0000 0% 20%, #ffffff 20% 40%, #ed0000 40% 60%, #ffffff 60% 80%, #ed0000 80% 100%)",
+    glow: "radial-gradient(circle at 80% 20%, rgba(0, 80, 240, 0.45) 0%, rgba(237, 0, 0, 0.35) 50%, transparent 80%)"
+  },
+  "bangkok": {
+    flag: "🇹🇭",
+    countryCode: "TH",
+    stripes: "linear-gradient(to bottom, #a51931 0% 16.6%, #ffffff 16.6% 33.3%, #2d2a4a 33.3% 66.6%, #ffffff 66.6% 83.3%, #a51931 83.3% 100%)",
+    glow: "radial-gradient(circle at 80% 20%, rgba(45, 42, 74, 0.55) 0%, rgba(165, 25, 49, 0.4) 50%, transparent 80%)"
+  },
+  "phuket": {
+    flag: "🇹🇭",
+    countryCode: "TH",
+    stripes: "linear-gradient(to bottom, #a51931 0% 16.6%, #ffffff 16.6% 33.3%, #2d2a4a 33.3% 66.6%, #ffffff 66.6% 83.3%, #a51931 83.3% 100%)",
+    glow: "radial-gradient(circle at 80% 20%, rgba(45, 42, 74, 0.55) 0%, rgba(165, 25, 49, 0.4) 50%, transparent 80%)"
+  },
+  "pattaya": {
+    flag: "🇹🇭",
+    countryCode: "TH",
+    stripes: "linear-gradient(to bottom, #a51931 0% 16.6%, #ffffff 16.6% 33.3%, #2d2a4a 33.3% 66.6%, #ffffff 66.6% 83.3%, #a51931 83.3% 100%)",
+    glow: "radial-gradient(circle at 80% 20%, rgba(45, 42, 74, 0.55) 0%, rgba(165, 25, 49, 0.4) 50%, transparent 80%)"
+  },
+  "chiang-mai": {
+    flag: "🇹🇭",
+    countryCode: "TH",
+    stripes: "linear-gradient(to bottom, #a51931 0% 16.6%, #ffffff 16.6% 33.3%, #2d2a4a 33.3% 66.6%, #ffffff 66.6% 83.3%, #a51931 83.3% 100%)",
+    glow: "radial-gradient(circle at 80% 20%, rgba(45, 42, 74, 0.55) 0%, rgba(165, 25, 49, 0.4) 50%, transparent 80%)"
+  },
+  "hua-hin": {
+    flag: "🇹🇭",
+    countryCode: "TH",
+    stripes: "linear-gradient(to bottom, #a51931 0% 16.6%, #ffffff 16.6% 33.3%, #2d2a4a 33.3% 66.6%, #ffffff 66.6% 83.3%, #a51931 83.3% 100%)",
+    glow: "radial-gradient(circle at 80% 20%, rgba(45, 42, 74, 0.55) 0%, rgba(165, 25, 49, 0.4) 50%, transparent 80%)"
+  },
+  "bali": {
+    flag: "🇮🇩",
+    countryCode: "ID",
+    stripes: "linear-gradient(to bottom, #ce1126 0% 50%, #ffffff 50% 100%)",
+    glow: "radial-gradient(circle at 80% 20%, rgba(206, 17, 38, 0.5) 0%, rgba(255, 255, 255, 0.25) 50%, transparent 80%)"
+  },
+  "dubai": {
+    flag: "🇦🇪",
+    countryCode: "AE",
+    stripes: "linear-gradient(to bottom, #00732f 0% 33.3%, #ffffff 33.3% 66.6%, #000000 66.6% 100%)",
+    glow: "radial-gradient(circle at 80% 20%, rgba(0, 115, 47, 0.5) 0%, rgba(255, 0, 0, 0.35) 50%, transparent 80%)"
+  },
+  "douala": {
+    flag: "🇨🇲",
+    countryCode: "CM",
+    stripes: "linear-gradient(to right, #007a3d 0% 33.3%, #ce1126 33.3% 66.6%, #fcd116 66.6% 100%)",
+    glow: "radial-gradient(circle at 80% 20%, rgba(206, 17, 38, 0.5) 0%, rgba(252, 209, 22, 0.35) 50%, transparent 80%)"
+  }
+};
 ---
 
 <footer class="bg-[#0b0b0b] border-t border-white/10 pt-16 pb-12 text-gray-400 text-xs select-none">
@@ -39,22 +102,54 @@ import locations from '../data/locations.json';
         <span class="text-[10px] text-gray-500 uppercase tracking-wider">Hospital-Grade Sterilization Worldwide</span>
       </div>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
-        {locations.map((loc) => (
-          <a 
-            href={`/locations/${loc.slug}`}
-            class="p-3.5 rounded-xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/40 transition group hover:-translate-y-1 block"
-          >
-            <div class="text-[11px] font-serif text-white uppercase tracking-wider group-hover:text-[#f286aa] transition-colors truncate">
-              {loc.name || `${loc.city}, ${loc.country}`}
-            </div>
-            <div class="text-[9px] text-[#d9c1a3] tracking-wider uppercase mt-1 truncate">
-              {loc.badge || "Active Salon Hub"}
-            </div>
-            <div class="text-[10px] text-gray-500 truncate mt-1">
-              {loc.email}
-            </div>
-          </a>
-        ))}
+        {locations.map((loc) => {
+          const flag = flagConfig[loc.slug] || {
+            flag: "🌐",
+            countryCode: loc.code || "HUB",
+            stripes: "linear-gradient(135deg, rgba(242,134,170,0.3), rgba(217,193,163,0.3))",
+            glow: "radial-gradient(circle at 80% 20%, rgba(242,134,170,0.4), transparent 70%)"
+          };
+
+          return (
+            <a 
+              href={`/locations/${loc.slug}`}
+              class="relative overflow-hidden p-3.5 rounded-xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/50 transition-all duration-300 group hover:-translate-y-1 block shadow-sm hover:shadow-xl"
+            >
+              <!-- Ambient Flag Gradient Glow in the open space -->
+              <div 
+                class="absolute -top-6 -right-6 w-32 h-32 rounded-full pointer-events-none opacity-25 group-hover:opacity-55 blur-xl transition-all duration-500 transform group-hover:scale-125"
+                style={`background: ${flag.glow};`}
+              ></div>
+
+              <!-- Flag Stripes Watermark in the right open space with smooth horizontal fade -->
+              <div 
+                class="absolute right-0 top-0 bottom-0 w-28 pointer-events-none opacity-15 group-hover:opacity-30 transition-opacity duration-300"
+                style={`background: ${flag.stripes}; mask-image: linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.25) 50%, transparent 100%); -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.25) 50%, transparent 100%);`}
+              ></div>
+
+              <!-- Card Content -->
+              <div class="relative z-10">
+                <div class="flex items-start justify-between gap-1.5 mb-1.5">
+                  <div class="text-[11px] font-serif text-white uppercase tracking-wider group-hover:text-[#f286aa] transition-colors truncate">
+                    {loc.name || `${loc.city}, ${loc.country}`}
+                  </div>
+                  <!-- Flag & Airport Code Pill in the open space -->
+                  <span class="shrink-0 inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-black/50 border border-white/10 text-[9px] group-hover:border-white/20 transition-colors shadow-sm">
+                    <span class="text-[10px] leading-none">{flag.flag}</span>
+                    <span class="font-mono font-bold text-gray-300 group-hover:text-white transition-colors">{loc.code}</span>
+                  </span>
+                </div>
+
+                <div class="text-[9px] text-[#d9c1a3] tracking-wider uppercase truncate">
+                  {loc.badge || "Active Salon Hub"}
+                </div>
+                <div class="text-[10px] text-gray-500 truncate mt-1 group-hover:text-gray-400 transition-colors">
+                  {loc.email}
+                </div>
+              </div>
+            </a>
+          );
+        })}
       </div>
     </div>
 
