@@ -14,26 +14,53 @@ const navLinks = [
 ---
 
 <header class="w-full relative z-40">
-  <!-- Top Utility Bar -->
-  <div class="bg-[#0d0d0d] border-b border-white/5 py-2 px-4 sm:px-8 text-xs text-gray-400">
+  <!-- Top Utility Bar matching original Atura theme -->
+  <div class="bg-[#0b0b0b] border-b border-white/5 py-2 px-4 sm:px-8 text-xs text-gray-400">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
-      <div class="flex items-center gap-4 flex-wrap justify-center">
+      
+      <!-- Left: Global Hubs & Hours -->
+      <div class="flex items-center gap-4 flex-wrap justify-center text-[11px] sm:text-xs">
         <span class="inline-flex items-center gap-1.5 text-gray-300">
-          <i class="fas fa-gem text-[#f286aa]"></i>
+          <i class="fas fa-gem text-[#f286aa]" aria-hidden="true"></i>
           <span>Global Hubs: Mayagüez • Phuket • Pattaya • Bali • Dubai • Douala</span>
         </span>
-      </div>
-      <div class="flex items-center gap-5">
-        <span class="inline-flex items-center gap-1.5 text-gray-300">
+        <span class="hidden xl:inline text-gray-600" aria-hidden="true">•</span>
+        <span class="hidden xl:inline-flex items-center gap-1.5 text-gray-400">
           <i class="far fa-clock text-[#d9c1a3]" aria-hidden="true"></i>
           <span>Mon-Fri & Sun: 9:00 AM – 5:00 PM</span>
         </span>
-        <div class="flex items-center gap-3 text-gray-400 pl-3 border-l border-white/10">
-          <a href="https://fb.com/DreamNails.Asia" target="_blank" rel="noopener noreferrer" class="hover:text-[#f286aa] transition focus-visible:ring-1 focus-visible:ring-[#f286aa] p-0.5 rounded" aria-label="Visit Dream Nails on Facebook" title="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-          <a href="https://www.youtube.com/@DreamNailsAsia" target="_blank" rel="noopener noreferrer" class="hover:text-[#f286aa] transition focus-visible:ring-1 focus-visible:ring-[#f286aa] p-0.5 rounded" aria-label="Visit Dream Nails on YouTube" title="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-          <a href="mailto:info@dreamnails.asia" class="hover:text-[#f286aa] transition focus-visible:ring-1 focus-visible:ring-[#f286aa] p-0.5 rounded" aria-label="Send email to Dream Nails" title="Email"><i class="far fa-envelope" aria-hidden="true"></i></a>
+      </div>
+
+      <!-- Right: Search, Account, Cart & Socials from original theme -->
+      <div class="flex items-center gap-4 text-xs">
+        <div class="flex items-center gap-3 text-gray-300">
+          <!-- Live Search Link -->
+          <a href="/gallery" class="hover:text-[#f286aa] transition flex items-center gap-1 focus-visible:ring-1 focus-visible:ring-[#f286aa] rounded p-1" title="Search designs & services">
+            <i class="fas fa-search text-xs" aria-hidden="true"></i>
+            <span class="hidden sm:inline text-[11px] uppercase tracking-wider font-medium">Search</span>
+          </a>
+          <span class="text-gray-700" aria-hidden="true">|</span>
+          <!-- Shop Account Link -->
+          <a href="/shop" class="hover:text-[#f286aa] transition flex items-center gap-1 focus-visible:ring-1 focus-visible:ring-[#f286aa] rounded p-1" title="Customer portal & products">
+            <i class="far fa-user text-xs" aria-hidden="true"></i>
+            <span class="hidden sm:inline text-[11px] uppercase tracking-wider font-medium">Login</span>
+          </a>
+          <span class="text-gray-700" aria-hidden="true">|</span>
+          <!-- Cart Badge -->
+          <a href="/shop" class="hover:text-[#d9c1a3] transition flex items-center gap-1.5 focus-visible:ring-1 focus-visible:ring-[#d9c1a3] rounded p-1" title="View shopping bag">
+            <i class="fas fa-shopping-bag text-xs text-[#d9c1a3]" aria-hidden="true"></i>
+            <span class="text-[11px] uppercase tracking-wider font-medium">Cart</span>
+            <span class="w-4 h-4 rounded-full bg-[#f286aa] text-black text-[9px] font-bold flex items-center justify-center">0</span>
+          </a>
+        </div>
+
+        <div class="flex items-center gap-2.5 text-gray-400 pl-3 border-l border-white/10">
+          <a href="https://fb.com/DreamNails.Asia" target="_blank" rel="noopener noreferrer" class="hover:text-[#f286aa] transition p-1 focus-visible:ring-1 focus-visible:ring-[#f286aa] rounded" aria-label="Visit Dream Nails on Facebook" title="Facebook"><i class="fab fa-facebook-f text-xs" aria-hidden="true"></i></a>
+          <a href="https://www.youtube.com/@DreamNailsAsia" target="_blank" rel="noopener noreferrer" class="hover:text-[#f286aa] transition p-1 focus-visible:ring-1 focus-visible:ring-[#f286aa] rounded" aria-label="Visit Dream Nails on YouTube" title="YouTube"><i class="fab fa-youtube text-xs" aria-hidden="true"></i></a>
+          <a href="mailto:info@dreamnails.asia" class="hover:text-[#f286aa] transition p-1 focus-visible:ring-1 focus-visible:ring-[#f286aa] rounded" aria-label="Send email to Dream Nails" title="Email"><i class="far fa-envelope text-xs" aria-hidden="true"></i></a>
         </div>
       </div>
+
     </div>
   </div>
 
@@ -55,7 +82,7 @@ const navLinks = [
       </a>
 
       <!-- Desktop Nav Menu -->
-      <div class="hidden lg:flex items-center gap-7">
+      <div class="hidden lg:flex items-center gap-6 xl:gap-7">
         {navLinks.map((link) => {
           const isActive = currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href));
           return (
@@ -64,7 +91,7 @@ const navLinks = [
               class={`text-xs uppercase tracking-[0.14em] font-medium transition-colors duration-200 py-1 relative focus-visible:ring-1 focus-visible:ring-[#f286aa] rounded ${
                 isActive 
                   ? 'text-[#f286aa] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#f286aa]' 
-                  : 'text-gray-300 hover:text-white hover:text-[#f286aa]'
+                  : 'text-gray-300 hover:text-[#f286aa]'
               }`}
             >
               {link.name}
@@ -73,15 +100,15 @@ const navLinks = [
         })}
       </div>
 
-      <!-- Action Buttons -->
-      <div class="hidden md:flex items-center gap-3">
-        <a href="/shop" class="text-xs font-medium uppercase tracking-wider text-gray-300 hover:text-[#d9c1a3] px-3 py-2 transition flex items-center gap-1.5 focus-visible:ring-1 focus-visible:ring-[#d9c1a3] rounded">
-          <i class="fas fa-shopping-bag text-[#d9c1a3]" aria-hidden="true"></i>
-          <span>Shop</span>
+      <!-- Action Buttons matching original header (Phone + Book Now) -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="tel:+17878348888" class="text-xs font-serif font-bold text-gray-300 hover:text-[#d9c1a3] transition flex items-center gap-2 focus-visible:ring-1 focus-visible:ring-[#d9c1a3] rounded p-1 tracking-wider">
+          <i class="fas fa-phone-alt text-[#f286aa] text-xs" aria-hidden="true"></i>
+          <span>+1 787 834 8888</span>
         </a>
         <button class="open-booking-modal btn-luxury-primary text-xs !py-2.5 !px-5 shadow-lg shadow-[#f286aa]/20 cursor-pointer focus-visible:ring-2 focus-visible:ring-[#f286aa]">
-          <i class="far fa-calendar-check mr-1" aria-hidden="true"></i>
-          <span>Book Now</span>
+          <span>Book now</span>
+          <i class="fas fa-arrow-right text-[10px] ml-1" aria-hidden="true"></i>
         </button>
       </div>
 
@@ -108,11 +135,15 @@ const navLinks = [
           {link.name}
         </a>
       ))}
-      <div class="pt-3 border-t border-white/10 flex flex-col gap-2">
+      <div class="pt-3 border-t border-white/10 flex flex-col gap-2.5">
+        <a href="tel:+17878348888" class="text-center py-2.5 rounded-full border border-white/10 text-gray-300 text-xs tracking-wider flex items-center justify-center gap-2">
+          <i class="fas fa-phone-alt text-[#f286aa] text-xs" aria-hidden="true"></i>
+          <span>+1 787 834 8888</span>
+        </a>
         <a href="/shop" class="text-center py-2.5 rounded-full border border-[#d9c1a3] text-[#d9c1a3] text-xs uppercase tracking-wider">
           Visit Organic Shop
         </a>
-        <button class="open-booking-modal w-full text-center py-2.5 rounded-full bg-[#f286aa] text-black font-semibold text-xs uppercase tracking-wider">
+        <button class="open-booking-modal w-full text-center py-2.5 rounded-full bg-[#f286aa] text-black font-semibold text-xs uppercase tracking-wider cursor-pointer">
           Book Appointment
         </button>
       </div>

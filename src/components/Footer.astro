@@ -1,25 +1,110 @@
 ---
+const globalLocations = [
+  {
+    city: "Mayagüez, PR USA",
+    slug: "mayaguez",
+    address: "Mayagüez Mall, Carr 2 Ste 001, PR 00680",
+    email: "info.maz@dreamnails.asia"
+  },
+  {
+    city: "Phuket, Thailand",
+    slug: "phuket",
+    address: "Bang Tao Beach Road, Phuket 83110",
+    email: "info.hkt@dreamnails.asia"
+  },
+  {
+    city: "Pattaya, Thailand",
+    slug: "pattaya",
+    address: "Beach Road Central, Pattaya 20150",
+    email: "info.pty@dreamnails.asia"
+  },
+  {
+    city: "Bali, Indonesia",
+    slug: "bali",
+    address: "Jalan Petitenget, Seminyak, Bali 80361",
+    email: "info.dps@dreamnails.asia"
+  },
+  {
+    city: "Dubai, UAE",
+    slug: "dubai",
+    address: "Downtown Boulevard, Dubai UAE",
+    email: "info.uxb@dreamnails.asia"
+  },
+  {
+    city: "Douala, Cameroon",
+    slug: "douala",
+    address: "Boulevard de la Liberté, Douala 237",
+    email: "info.dla@dreamnails.asia"
+  }
+];
 ---
 
-<footer class="bg-[#0b0b0b] border-t border-white/10 pt-16 pb-12 text-gray-400 text-xs">
+<footer class="bg-[#0b0b0b] border-t border-white/10 pt-16 pb-12 text-gray-400 text-xs select-none">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-      
-      <!-- Brand Column -->
-      <div class="space-y-4">
-        <a href="/" class="flex items-center gap-3 focus-visible:ring-2 focus-visible:ring-[#f286aa] rounded-lg p-1" aria-label="Dream Nails Asia Homepage">
+    
+    <!-- Top Brand Statement matching original Atura theme -->
+    <div class="mb-14 pb-12 border-b border-white/5 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+      <div class="max-w-3xl space-y-3">
+        <a href="/" class="inline-flex items-center gap-3 focus-visible:ring-2 focus-visible:ring-[#f286aa] rounded-lg p-1 mb-2" aria-label="Dream Nails Asia Homepage">
           <img 
             src="/images/2022/04/Dream-Salon-Transparent-BG-02-noborder-1.png" 
             alt="Dream Nails Asia Luxury Nail Sanctuary Logo" 
             class="h-12 w-auto object-contain"
           />
           <div>
-            <span class="block text-xl font-serif text-white tracking-widest uppercase">Dream Nails</span>
-            <span class="block text-[9px] tracking-[0.25em] text-[#d9c1a3] uppercase font-sans">Perfection in Every Brush</span>
+            <span class="block text-2xl font-serif text-white tracking-widest uppercase">Dream Nails</span>
+            <span class="block text-[10px] tracking-[0.25em] text-[#d9c1a3] uppercase font-sans">Perfection in Every Brush</span>
           </div>
         </a>
+        <p class="text-xs sm:text-sm text-gray-300 font-light leading-relaxed italic">
+          “Esthetic, cozy, and professional salon experiences are what we want our clients to remember us. We are offering one of the most relaxing and comfortable atmospheres. We are using sanitized equipment, disposable liner, buffer, file, and pumice, cleanness is one of our top priorities besides our client’s satisfaction. <strong class="text-[#f286aa] not-italic font-normal">Come and chill with us.</strong>”
+        </p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button class="open-booking-modal btn-luxury-primary text-xs cursor-pointer shadow-xl focus-visible:ring-2 focus-visible:ring-[#f286aa]">
+          <i class="far fa-calendar-check mr-1.5" aria-hidden="true"></i>
+          <span>Book Appointment</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 6 Global Salon Hubs Bar matching original WordPress theme layout -->
+    <div class="mb-14">
+      <div class="flex items-center justify-between mb-4">
+        <span class="text-[11px] uppercase tracking-[0.25em] text-[#d9c1a3] font-semibold">Global Salon Network</span>
+        <span class="text-[10px] text-gray-500 uppercase tracking-wider">Hospital-Grade Sterilization Worldwide</span>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+        {globalLocations.map((loc) => (
+          <a 
+            href={`/locations/${loc.slug}`}
+            class="p-3.5 rounded-xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/40 transition group hover:-translate-y-1 block"
+          >
+            <div class="text-[11px] font-serif text-white uppercase tracking-wider group-hover:text-[#f286aa] transition-colors truncate">
+              {loc.city}
+            </div>
+            <div class="text-[9px] text-[#d9c1a3] tracking-wider uppercase mt-1">
+              Active Salon Hub
+            </div>
+            <div class="text-[10px] text-gray-500 truncate mt-1">
+              {loc.email}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Main Navigation Columns -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Brand & Socials -->
+      <div class="space-y-4">
+        <h4 class="text-sm font-serif text-white uppercase tracking-wider border-b border-white/10 pb-2">
+          Connect With Us
+        </h4>
         <p class="text-xs text-gray-400 font-light leading-relaxed">
-          Esthetic, cozy, and professional salon experiences are what we want our clients to remember us. We are offering one of the most relaxing and comfortable atmospheres with sanitized equipment, disposable supplies, and top-notch service providers.
+          Follow our latest nail fashion drops, seasonal gel palettes, and masterclass tutorials across our global channels.
         </p>
         <div class="flex items-center gap-3 pt-2 text-gray-400">
           <a href="https://fb.com/DreamNails.Asia" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/5 hover:bg-[#f286aa] hover:text-black flex items-center justify-center transition focus-visible:ring-1 focus-visible:ring-[#f286aa]" aria-label="Visit Dream Nails on Facebook" title="Facebook"><i class="fab fa-facebook-f text-xs" aria-hidden="true"></i></a>
@@ -36,12 +121,12 @@
         <ul class="space-y-2.5">
           <li><a href="/" class="hover:text-[#f286aa] transition">Home</a></li>
           <li><a href="/about-us" class="hover:text-[#f286aa] transition">About Us</a></li>
-          <li><a href="/services" class="hover:text-[#f286aa] transition">Services</a></li>
-          <li><a href="/gallery" class="hover:text-[#f286aa] transition">Gallery</a></li>
-          <li><a href="/news" class="hover:text-[#f286aa] transition">News</a></li>
-          <li><a href="/shop" class="hover:text-[#f286aa] transition">Shop</a></li>
-          <li><a href="/#testimonials" class="hover:text-[#f286aa] transition">Testimonials</a></li>
-          <li><a href="/contacts" class="hover:text-[#f286aa] transition">Contacts</a></li>
+          <li><a href="/services" class="hover:text-[#f286aa] transition">Services Menu</a></li>
+          <li><a href="/gallery" class="hover:text-[#f286aa] transition">Nail Portfolio (79+ Designs)</a></li>
+          <li><a href="/news" class="hover:text-[#f286aa] transition">Latest News & Guides</a></li>
+          <li><a href="/shop" class="hover:text-[#f286aa] transition">Cosmetics & Care Shop</a></li>
+          <li><a href="/#testimonials" class="hover:text-[#f286aa] transition">Client Testimonials</a></li>
+          <li><a href="/contacts" class="hover:text-[#f286aa] transition">Contact & Booking</a></li>
         </ul>
       </div>
 
@@ -57,7 +142,7 @@
           </div>
           <div class="flex justify-between py-1 border-b border-white/5">
             <span>Saturday:</span>
-            <span class="text-[#f286aa] font-medium">Closed for Sanitization</span>
+            <span class="text-[#f286aa] font-medium">Sanitization Deep Clean</span>
           </div>
           <div class="flex justify-between py-1 border-b border-white/5">
             <span>Sunday:</span>
@@ -69,18 +154,16 @@
         </p>
       </div>
 
-      <!-- Global Locations Summary -->
+      <!-- Safety & Hospital-Grade Protocols -->
       <div>
         <h4 class="text-sm font-serif text-white uppercase tracking-wider mb-4 border-b border-white/10 pb-2">
-          Global Hubs
+          Sanitation Standards
         </h4>
-        <ul class="space-y-2 text-xs">
-          <li><strong class="text-white font-medium">Mayagüez, PR:</strong> <a href="mailto:info.maz@dreamnails.asia" class="hover:text-[#d9c1a3]">info.maz@dreamnails.asia</a></li>
-          <li><strong class="text-white font-medium">Phuket, Thailand:</strong> <a href="mailto:info.hkt@dreamnails.asia" class="hover:text-[#d9c1a3]">info.hkt@dreamnails.asia</a></li>
-          <li><strong class="text-white font-medium">Pattaya, Thailand:</strong> <a href="mailto:info.pty@dreamnails.asia" class="hover:text-[#d9c1a3]">info.pty@dreamnails.asia</a></li>
-          <li><strong class="text-white font-medium">Bali, Indonesia:</strong> <a href="mailto:info.dps@dreamnails.asia" class="hover:text-[#d9c1a3]">info.dps@dreamnails.asia</a></li>
-          <li><strong class="text-white font-medium">Dubai, UAE:</strong> <a href="mailto:info.uxb@dreamnails.asia" class="hover:text-[#d9c1a3]">info.uxb@dreamnails.asia</a></li>
-          <li><strong class="text-white font-medium">Douala, Cameroon:</strong> <a href="mailto:info.dla@dreamnails.asia" class="hover:text-[#d9c1a3]">info.dla@dreamnails.asia</a></li>
+        <ul class="space-y-2 text-xs text-gray-400">
+          <li class="flex items-center gap-2"><i class="fas fa-shield-virus text-[#f286aa]" aria-hidden="true"></i> Medical-grade autoclave sterilization</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check text-[#d9c1a3]" aria-hidden="true"></i> Single-use disposable buffers & pumice</li>
+          <li class="flex items-center gap-2"><i class="fas fa-leaf text-[#f286aa]" aria-hidden="true"></i> 10-Free non-toxic Korean polishes</li>
+          <li class="flex items-center gap-2"><i class="fas fa-certificate text-[#d9c1a3]" aria-hidden="true"></i> Certified master nail stylists</li>
         </ul>
       </div>
 
