@@ -1,5 +1,11 @@
 ---
+interface Props {
+  overlay?: boolean;
+}
+
 const currentPath = Astro.url.pathname;
+const isHome = currentPath === '/' || currentPath === '';
+const { overlay = isHome } = Astro.props;
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -12,9 +18,9 @@ const navLinks = [
 ];
 ---
 
-<header class="w-full relative z-40 select-none">
+<header class={`w-full ${overlay ? 'absolute top-0 left-0 right-0 z-40' : 'relative z-40'} select-none`} id="site-header">
   <!-- Slim Top Black Utility Bar matching original theme -->
-  <div class="bg-[#0a0a0a] text-gray-300 py-1.5 px-4 sm:px-8 border-b border-white/10 text-xs">
+  <div class="bg-[#0a0a0a]/90 backdrop-blur-sm text-gray-300 py-1.5 px-4 sm:px-8 border-b border-white/10 text-xs">
     <div class="max-w-7xl mx-auto flex items-center justify-end gap-5">
       <a href="/gallery" class="flex items-center gap-1.5 hover:text-[#f286aa] transition text-[11px] uppercase tracking-wider">
         <i class="icon icon-search text-[11px]" aria-hidden="true"></i>
@@ -32,16 +38,16 @@ const navLinks = [
     </div>
   </div>
 
-  <!-- Main White Navbar matching original Atura theme -->
-  <nav class="bg-white text-[#181818] shadow-sm sticky top-0 px-4 sm:px-8 py-3 transition-all" aria-label="Main Navigation">
+  <!-- Main White Navbar matching original Atura theme with overlay styling -->
+  <nav id="main-navbar" class="bg-white/95 backdrop-blur-md text-[#181818] shadow-md px-4 sm:px-8 py-2 sm:py-2.5 transition-all duration-300" aria-label="Main Navigation">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       
-      <!-- Brand Logo (Dark Text Logo for White Background) -->
+      <!-- Brand Logo (Larger 1:1 Scale matching original) -->
       <a href="/" class="flex items-center group focus-visible:ring-2 focus-visible:ring-[#f286aa] rounded-lg p-1" aria-label="Dream Nails Asia Homepage">
         <img 
           src="/images/2022/04/Dream-Salon-Transparent-BG-01-noborder-1.png" 
           alt="DreamNails.Asia" 
-          class="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          class="h-16 sm:h-20 md:h-[92px] lg:h-[98px] w-auto max-w-[240px] sm:max-w-[300px] md:max-w-[360px] object-contain transition-transform duration-300 group-hover:scale-105"
         />
       </a>
 
