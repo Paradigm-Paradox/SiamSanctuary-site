@@ -1,110 +1,268 @@
 [
   {
-    "id": 26933,
-    "slug": "hair-balsam",
-    "name": "Hair Balsam",
-    "price": "$64.00",
-    "image": "/images/2021/12/shop-01.jpg",
-    "category": "Beauty",
-    "description": "Donec pulvinar tellus eget magna aliquet ultricies.\nMaecenas pulvinar ex a fermentum egestas. Curabitur tristique aliquam felis, a blandit nisl consequat quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam porttitor purus elit, sit amet viverra orci pretium non. Sed libero lorem, eleifend at congue quis, semper eget mauris. Nunc ullamcorper cursus libero a luctus. Nunc urna neque, consectetur eget viverra pretium, tempor eu ex. Donec faucibus, dui at consectetur gravida, nisi diam varius metus, sit amet maximus orci eros nec felis. Ut nisi neque, condimentum id magna non, sollicitudin lobortis nibh. Etiam in fermentum felis, non venenatis augue. Donec quis ipsum tortor. Suspendisse tempor turpis vitae velit pharetra, ac varius ipsum pharetra. Ut at metus lobortis, porta tellus at, faucibus odio. Maecenas dictum quam vulputate lacus pharetra, et iaculis erat scelerisque. Nullam nec dui porta, ultricies leo nec, malesuada enim."
+    "id": 30001,
+    "slug": "sandalwood-wide-tooth-comb",
+    "name": "Hand-Carved Green Sandalwood Detangling Comb",
+    "price": "$28.00",
+    "image": "/images/products/sandalwood-wide-tooth-comb.svg",
+    "category": "Combs & Brushes",
+    "tag": "Daily Essential",
+    "subtitle": "Naturally fragrant, anti-static green sandalwood with hand-rounded teeth for gentle scalp massage and snag-free detangling.",
+    "description": "Crafted from single-block 100% natural green sandalwood, this exquisite wide-tooth comb is designed to turn your daily hair routine into an intentional self-care ritual. Unlike plastic combs that generate friction and static frizz, sandalwood glides effortlessly through wet or dry hair without snagging or snapping delicate strands.\n\nAs you gently comb from root to tip, the hand-polished teeth massage the scalp, stimulating microcirculation to the hair follicles while distributing your natural scalp oils evenly along the hair shaft. Over time, genuine green sandalwood naturally matures into a richer jade-green patina and releases a calming, subtle woody fragrance with every stroke.",
+    "benefits": [
+      "100% genuine green sandalwood with natural soothing aroma",
+      "Zero static electricity and significantly reduced frizz",
+      "Hand-rounded teeth stimulate scalp blood flow and promote healthy hair growth",
+      "Evenly distributes natural hair oils, leave-in serums, and hair masks"
+    ],
+    "howToUse": "Start by gently detangling from ends upward toward roots. Follow with firm, soothing strokes from hairline to nape to stimulate scalp pressure points. Use morning and night as part of your grounding hair ritual.",
+    "materials": "100% Natural Green Sandalwood, Hand-Polished Beeswax Seal"
   },
   {
-    "id": 26932,
-    "slug": "love-and-faith",
-    "name": "Love and Faith",
+    "id": 30002,
+    "slug": "boar-bristle-paddle-brush",
+    "name": "Natural Boar Bristle & Ionic Scalp Paddle Brush",
+    "price": "$48.00",
+    "image": "/images/products/boar-bristle-paddle-brush.svg",
+    "category": "Combs & Brushes",
+    "tag": "Best Seller",
+    "subtitle": "Dual-action first-cut natural boar bristles combined with flexible ionic nylon pins set in an air-cushioned rubber pad.",
+    "description": "The crown jewel of at-home hair wellness. Our signature Dream Salon paddle brush combines dense, premium first-cut boar bristles with ball-tipped ionic nylon pins. The longer nylon pins penetrate deeply to gently detangle knots and stimulate the scalp, while the natural boar bristles polish the hair cuticle, sealing in moisture and imparting a salon-quality mirror shine.\n\nBoar bristles are structurally closest to human hair, allowing them to lift away micro-dust and dead skin cells while redistributing natural sebum from root to dehydrated ends. Crafted with an ergonomic matte-finish beechwood handle balanced for effortless styling.",
+    "benefits": [
+      "Transfers natural oils from scalp to dry lengths for luminous natural shine",
+      "Detangles without pulling, breaking, or stressing hair extensions",
+      "Flexible pneumatic cushion contours to your scalp shape",
+      "Smoothes flyaways and tames frizz before and after heat styling"
+    ],
+    "howToUse": "Brush dry hair morning and evening using 20–30 slow, intentional brush strokes from the hairline back to the crown. Ideal for refreshing blowouts and preserving hair extension health.",
+    "materials": "FSC-Certified Beechwood, 100% First-Cut Boar Bristles, Ionic Ball-Tipped Nylon, Natural Rubber Cushion"
+  },
+  {
+    "id": 30003,
+    "slug": "japanese-head-spa-shampoo-brush",
+    "name": "Japanese Head Spa Scalp Massage & Shampoo Brush",
+    "price": "$24.00",
+    "image": "/images/products/japanese-head-spa-shampoo-brush.svg",
+    "category": "Combs & Brushes",
+    "tag": "Head Spa Ritual",
+    "subtitle": "Ergonomic medical-grade silicone brush for deep pore scalp purification, dandruff relief, and shower relaxation.",
+    "description": "Bring the restorative serenity of our acclaimed Japanese Head Spa into your home shower. Engineered from a seamless single piece of medical-grade silicone, this waterproof scalp massager features variable-length conical teeth that gently dislodge sebum buildup, dead skin cells, and product residue without tangling hair.\n\nUsing this brush in the shower promotes blood circulation to dormant follicles, relieves chronic scalp tension and headaches, and transforms your everyday shampoo into an invigorating sensory lather. Its ergonomic palm grip fits comfortably in both wet hands and dry massage sessions.",
+    "benefits": [
+      "Purifies pores and removes dry shampoo, keratin, and sebum buildup",
+      "Deeply relaxes tense scalp muscles and promotes tranquil sleep",
+      "Stimulates oxygen delivery to hair roots for fuller, thicker hair",
+      "100% mold-resistant, hygienic medical silicone with zero hidden crevices"
+    ],
+    "howToUse": "Apply shampoo or scalp scrub to wet hair. Gently press the silicone brush against your scalp and massage in small circular motions. Can also be used dry with scalp serums.",
+    "materials": "100% Medical-Grade Hypoallergenic Silicone (BPA & Phthalate-Free)"
+  },
+  {
+    "id": 30004,
+    "slug": "thermal-blowout-round-brush",
+    "name": "Ceramic Tourmaline Thermal Styling Round Brush",
+    "price": "$38.00",
+    "image": "/images/products/thermal-blowout-round-brush.svg",
+    "category": "Combs & Brushes",
+    "tag": "Salon Tool",
+    "subtitle": "Vented ceramic barrel infused with negative tourmaline ions for ultra-fast, smooth, salon-grade volume blowouts.",
+    "description": "Achieve bouncy, frizz-free salon blowouts at home. Our thermal blowout brush features an aerated honeycomb ceramic barrel that heats up rapidly under hair dryer airflow, functioning like a hot styling roller to cut drying time in half.\n\nTourmaline minerals embedded directly into the ceramic emit millions of negative ions when warmed, closing hair cuticles and locking in hydration for high-gloss, silky smoothness. High-heat resistant wavy bristles grip hair with balanced tension for effortless flips, soft beach waves, or sleek straight styles.",
+    "benefits": [
+      "Aerated honeycomb barrel cuts blow-dry time by up to 50%",
+      "Tourmaline negative-ion technology eliminates static and humidity frizz",
+      "Heat-resistant bristles prevent snagging and breakage during round brushing",
+      "Ergonomic non-slip velvet handle with integrated sectioning pick"
+    ],
+    "howToUse": "Towel-dry hair until 80% dry. Section hair and roll brush from mid-lengths to ends while directing blow-dryer airflow downward. Hold for 5 seconds on cool shot to lock in curl and volume.",
+    "materials": "Ceramic-Coated Aluminum Barrel, Tourmaline-Infused Ionic Bristles, Heat-Resistant Rubber Grip"
+  },
+  {
+    "id": 30005,
+    "slug": "hair-balsam",
+    "name": "Dream Salon Botanical Restorative Hair Balsam & Leave-In",
+    "price": "$42.00",
+    "image": "/images/2021/12/shop-01.jpg",
+    "category": "Hair & Scalp",
+    "tag": "Signature Formula",
+    "subtitle": "Velvety leave-in thermal protector and restorative moisture balsam infused with organic Moroccan argan and pea peptides.",
+    "description": "Our signature salon leave-in balm, developed originally for Phuket's tropical humidity and now loved worldwide. This ultra-lightweight formula melts into damp strands to repair split ends, shield against UV radiation and thermal heat up to 450°F, and infuse deep moisture without weighing hair down.\n\nEnriched with hydrolysed botanical pea peptides, Japanese camellia seed oil, and golden argan, it softens coarse textures and seals color-treated hair with an irresistible subtle jasmine and white amber fragrance.",
+    "benefits": [
+      "Protects against thermal styling tools up to 450°F (232°C)",
+      "Eliminates humidity-induced frizz and preserves blowout shape",
+      "Botanical peptides reinforce compromised hair cortex fibers",
+      "Weightless finish suitable for fine to thick hair textures"
+    ],
+    "howToUse": "Dispense 1–2 pumps into palms, emulsify, and distribute evenly through towel-dried mid-lengths to ends before blow-drying or air-drying.",
+    "materials": "Cold-Pressed Argan Oil, Camellia Japonica Seed Oil, Hydrolysed Pea Protein, Vitamin B5, White Jasmine Extract"
+  },
+  {
+    "id": 30006,
+    "slug": "keratin-scalp-renewal-mask",
+    "name": "Keratin & Botanical Peptide Scalp Renewal Recovery Mask",
+    "price": "$54.00",
+    "image": "/images/products/keratin-scalp-renewal-mask.svg",
+    "category": "Hair & Scalp",
+    "tag": "Deep Treatment",
+    "subtitle": "Intensive weekly moisture and follicle rejuvenation treatment powered by vegan biomimetic keratin and French marula oil.",
+    "description": "A weekly transformative treatment that bridges the gap between deep scalp therapy and hair cuticle repair. Infused with biomimetic vegan keratin and pure botanical ceramides, this creamy mask works in tandem to calm dry or irritated scalps while deeply conditioning bleached, brittle, or chemically treated strands.\n\nIt restores elasticity and natural bounce within 10 minutes, leaving hair silky, radiant, and deeply fortified against environmental stressors and styling breakage.",
+    "benefits": [
+      "Reconstructs damaged keratin chains to prevent future split ends",
+      "Hydrates and rebalances dry, flaky, or stressed scalp microbiomes",
+      "Restores vibrant gloss to colored, bleached, and heat-styled locks",
+      "Zero silicones, parabens, sulfates, or artificial dyes"
+    ],
+    "howToUse": "After shampooing, apply generously from scalp to ends. Comb through with our Sandalwood Comb and leave on for 10–15 minutes before rinsing thoroughly with cool water.",
+    "materials": "Vegan Biomimetic Keratin, Marula Oil, Shea Butter, Rosemary Leaf Extract, Peppermint Oil"
+  },
+  {
+    "id": 30007,
+    "slug": "silk-sleep-turban",
+    "name": "100% Pure Mulberry Silk Anti-Frizz Night Turban",
+    "price": "$62.00",
+    "image": "/images/products/silk-sleep-turban.svg",
+    "category": "Hair & Scalp",
+    "tag": "Luxury Sleep",
+    "subtitle": "Crafted from highest grade 6A 22-momme pure mulberry silk to prevent bedhead friction, split ends, and preserve styling.",
+    "description": "Invest in your beauty sleep. Cotton pillowcases pull and absorb vital moisture from your hair and skin, creating friction that leads to tangles, frizz, split ends, and premature blowout collapse. Our double-layered 100% pure 22-momme Mulberry silk turban acts as a smooth protective shield all night long.\n\nIts elegant twist-knot silhouette comfortably accommodates short, long, curly, and extension hair while keeping locks hydrated, glossy, and camera-ready every morning.",
+    "benefits": [
+      "Protects expensive salon blowouts, curls, and extensions overnight",
+      "Prevents hair friction, morning bedhead, and mechanical breakage",
+      "Helps retain natural hair moisture and night serum treatments",
+      "Soft covered elastic band ensures secure, headache-free fit"
+    ],
+    "howToUse": "Twist hair loosely on top of head and slip turban on before sleep. Hand wash with gentle silk detergent and air dry flat.",
+    "materials": "100% Pure Grade 6A Mulberry Silk (22 Momme), Hypoallergenic Elastic"
+  },
+  {
+    "id": 30008,
+    "slug": "botanical-cuticle-elixir",
+    "name": "Dream Salon Botanical Cuticle & Nail Recovery Elixir",
+    "price": "$26.00",
+    "image": "/images/products/botanical-cuticle-elixir.svg",
+    "category": "Nails & Hands",
+    "tag": "Salon Signature",
+    "subtitle": "Fast-absorbing, non-greasy nail bed nourishment with cold-pressed jojoba, sweet almond, vitamin E, and natural jasmine.",
+    "description": "The secret behind the immaculate finish of our Russian manicures. Formulated with molecularly fine jojoba oil that mimics skin's natural sebum, this elixir penetrates deeply into the nail matrix and eponychium rather than sitting on the surface.\n\nInfused with restorative vitamin E, sweet almond oil, and whole hand-harvested jasmine flowers inside each amber dropper bottle, it prevents hangnails, softens overgrown cuticles, and dramatically prolongs the lifespan of your gel polish or extensions.",
+    "benefits": [
+      "Prevents hangnails, dryness, and brittle peeling nail plates",
+      "Micro-absorbent formulation absorbs in seconds with zero greasy residue",
+      "Nourishes the underlying nail matrix for thicker, healthier natural nail growth",
+      "Delicate, intoxicating jasmine aroma extracted without harsh solvents"
+    ],
+    "howToUse": "Apply one small drop to each cuticle contour morning and evening. Gently massage in upward circular motions into the cuticle and nail bed until fully absorbed.",
+    "materials": "Organic Jojoba Oil, Sweet Almond Oil, D-Alpha Tocopherol (Vitamin E), Pure Jasmine Essential Oil, Real Dried Jasmine Blossoms"
+  },
+  {
+    "id": 30009,
+    "slug": "crystal-glass-nail-file",
+    "name": "Tempered Czech Crystal Glass Nail File & Case",
+    "price": "$19.00",
+    "image": "/images/products/crystal-glass-nail-file.svg",
+    "category": "Nails & Hands",
+    "tag": "Nail Architecture",
+    "subtitle": "Permanently etched ultra-fine micro-grit glass that seals natural keratin edges, preventing chipping and tearing.",
+    "description": "Standard emery boards and metal files tear and shred the delicate keratin layers at the edge of your nail, leaving micro-fissures that lead to peeling and breaks. Our tempered Czech crystal file is chemically etched with uniform micro-abrasions that seal the nail edge as you shape.\n\nNon-porous, completely washable with soap and water, and sterilizable, this hygienic tool lasts a lifetime without wearing down. Comes accompanied by a slim velvet protective travel sleeve.",
+    "benefits": [
+      "Smoothly shapes in both directions without tearing keratin layers",
+      "Prevents post-manicure chipping, snagging on fabrics, and peeling",
+      "Hygienic and 100% washable—will never harbor bacteria or wear out",
+      "Safe for natural nails, brittle nails, and acrylic/gel touch-ups"
+    ],
+    "howToUse": "Hold file at a 45-degree angle to the nail edge. Shape with smooth, gentle back-and-forth strokes. Wash with warm soapy water after use.",
+    "materials": "100% Tempered Czech Float Glass, Protective Velvet Travel Sleeve"
+  },
+  {
+    "id": 30010,
+    "slug": "hand-cream",
+    "name": "Intensive Shea & Orchid Hand & Nail Recovery Balm",
     "price": "$29.00",
     "image": "/images/2021/12/shop-02.jpg",
-    "category": "Salon Care",
-    "description": "Donec pulvinar tellus eget magna aliquet ultricies.\nMaecenas pulvinar ex a fermentum egestas. Curabitur tristique aliquam felis, a blandit nisl consequat quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam porttitor purus elit, sit amet viverra orci pretium non. Sed libero lorem, eleifend at congue quis, semper eget mauris. Nunc ullamcorper cursus libero a luctus. Nunc urna neque, consectetur eget viverra pretium, tempor eu ex. Donec faucibus, dui at consectetur gravida, nisi diam varius metus, sit amet maximus orci eros nec felis. Ut nisi neque, condimentum id magna non, sollicitudin lobortis nibh. Etiam in fermentum felis, non venenatis augue. Donec quis ipsum tortor. Suspendisse tempor turpis vitae velit pharetra, ac varius ipsum pharetra. Ut at metus lobortis, porta tellus at, faucibus odio. Maecenas dictum quam vulputate lacus pharetra, et iaculis erat scelerisque. Nullam nec dui porta, ultricies leo nec, malesuada enim."
+    "category": "Nails & Hands",
+    "tag": "Daily Moisture",
+    "subtitle": "Velvety ceramide-rich barrier repair cream infused with 25% fair-trade shea butter and botanical tropical orchid extract.",
+    "description": "Frequent hand washing and environmental exposure strip the delicate skin of our hands faster than any other area. This rich yet fast-absorbing cream acts as an invisible protective glove, restoring moisture and repairing compromised lipid barriers.\n\nBlended with raw organic shea butter, soothing botanical orchid extract, and plant ceramides, it softens calluses, plumps fine lines, and leaves hands touchably soft and delicately scented with notes of fresh vanilla and island blossoms.",
+    "benefits": [
+      "Intensively hydrates cracked, parched hands, elbows, and cuticles",
+      "Restores protective skin moisture barrier within 24 hours",
+      "Non-slippery, quick-dry formula suitable for busy daytime use",
+      "Packed with antioxidants to protect against premature skin aging"
+    ],
+    "howToUse": "Warm a dime-sized amount between hands and massage over back of hands, fingers, and knuckles. Reapply as desired throughout the day and before sleep.",
+    "materials": "Fair-Trade Shea Butter, Tropical Orchid Extract, Ceramide NP, Squalane, Niacinamide"
   },
   {
-    "id": 26931,
-    "slug": "archangels-story",
-    "name": "Archangels Story",
-    "price": "$9.99",
-    "image": "/images/2021/12/shop-03.jpg",
-    "category": "Salon Care",
-    "description": "Donec pulvinar tellus eget magna aliquet ultricies.\nMaecenas pulvinar ex a fermentum egestas. Curabitur tristique aliquam felis, a blandit nisl consequat quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam porttitor purus elit, sit amet viverra orci pretium non. Sed libero lorem, eleifend at congue quis, semper eget mauris. Nunc ullamcorper cursus libero a luctus. Nunc urna neque, consectetur eget viverra pretium, tempor eu ex. Donec faucibus, dui at consectetur gravida, nisi diam varius metus, sit amet maximus orci eros nec felis. Ut nisi neque, condimentum id magna non, sollicitudin lobortis nibh. Etiam in fermentum felis, non venenatis augue. Donec quis ipsum tortor. Suspendisse tempor turpis vitae velit pharetra, ac varius ipsum pharetra. Ut at metus lobortis, porta tellus at, faucibus odio. Maecenas dictum quam vulputate lacus pharetra, et iaculis erat scelerisque. Nullam nec dui porta, ultricies leo nec, malesuada enim."
-  },
-  {
-    "id": 26930,
-    "slug": "anything-is-possible",
-    "name": "Anything is Possible",
-    "price": "$119.00",
-    "image": "/images/2021/12/shop-04.jpg",
-    "category": "Salon Care",
-    "description": "Donec pulvinar tellus eget magna aliquet ultricies.\nMaecenas pulvinar ex a fermentum egestas. Curabitur tristique aliquam felis, a blandit nisl consequat quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam porttitor purus elit, sit amet viverra orci pretium non. Sed libero lorem, eleifend at congue quis, semper eget mauris. Nunc ullamcorper cursus libero a luctus. Nunc urna neque, consectetur eget viverra pretium, tempor eu ex. Donec faucibus, dui at consectetur gravida, nisi diam varius metus, sit amet maximus orci eros nec felis. Ut nisi neque, condimentum id magna non, sollicitudin lobortis nibh. Etiam in fermentum felis, non venenatis augue. Donec quis ipsum tortor. Suspendisse tempor turpis vitae velit pharetra, ac varius ipsum pharetra. Ut at metus lobortis, porta tellus at, faucibus odio. Maecenas dictum quam vulputate lacus pharetra, et iaculis erat scelerisque. Nullam nec dui porta, ultricies leo nec, malesuada enim."
-  },
-  {
-    "id": 24279,
+    "id": 30011,
     "slug": "craft-soap",
-    "name": "Craft Soap",
-    "price": "$119.00",
+    "name": "Pure Botanical Cleansing Face & Body Nectar Soap",
+    "price": "$18.00",
     "image": "/images/2021/12/shop-05.jpg",
-    "category": "Manicure",
-    "description": "Donec pulvinar tellus eget magna aliquet ultricies.\nMaecenas pulvinar ex a fermentum egestas. Curabitur tristique aliquam felis, a blandit nisl consequat quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam porttitor purus elit, sit amet viverra orci pretium non. Sed libero lorem, eleifend at congue quis, semper eget mauris. Nunc ullamcorper cursus libero a luctus. Nunc urna neque, consectetur eget viverra pretium, tempor eu ex. Donec faucibus, dui at consectetur gravida, nisi diam varius metus, sit amet maximus orci eros nec felis. Ut nisi neque, condimentum id magna non, sollicitudin lobortis nibh. Etiam in fermentum felis, non venenatis augue. Donec quis ipsum tortor. Suspendisse tempor turpis vitae velit pharetra, ac varius ipsum pharetra. Ut at metus lobortis, porta tellus at, faucibus odio. Maecenas dictum quam vulputate lacus pharetra, et iaculis erat scelerisque. Nullam nec dui porta, ultricies leo nec, malesuada enim."
+    "category": "Nails & Hands",
+    "tag": "Handcrafted",
+    "subtitle": "Traditional cold-process artisan soap bar enriched with rich coconut milk, raw mountain honey, and sweet almond oil.",
+    "description": "Handcrafted in small micro-batches following time-honored cold-process methods, this creamy bar creates a dense, whipped lather that cleanses without ever stripping the skin's vital acid mantle.\n\nFormulated with natural island coconut milk, antioxidant-packed raw honey, and saponified virgin olive oil, it purifies skin while locking in profound hydration. Gentle enough for daily facial cleansing and sensitive skin types.",
+    "benefits": [
+      "100% natural cold-process bar cured for over 6 weeks",
+      "Zero sulfates, artificial foaming agents, or palm oil",
+      "Leaves skin supple, soft, and completely hydrated",
+      "Biodegradable and packaged in compostable seeded paper"
+    ],
+    "howToUse": "Work into a creamy lather in hands or with a sponge. Massage over wet skin and rinse thoroughly. Keep on a draining soap dish between uses.",
+    "materials": "Saponified Extra Virgin Olive Oil, Coconut Milk, Raw Honey, Sweet Almond Oil, Natural Jasmine Extract"
   },
   {
-    "id": 24278,
-    "slug": "angel-statue",
-    "name": "Angel Statue",
-    "price": "$190.00",
-    "image": "/images/2021/12/shop-06.jpg",
-    "category": "Manicure",
-    "description": "Donec pulvinar tellus eget magna aliquet ultricies.\nMaecenas pulvinar ex a fermentum egestas. Curabitur tristique aliquam felis, a blandit nisl consequat quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam porttitor purus elit, sit amet viverra orci pretium non. Sed libero lorem, eleifend at congue quis, semper eget mauris. Nunc ullamcorper cursus libero a luctus. Nunc urna neque, consectetur eget viverra pretium, tempor eu ex. Donec faucibus, dui at consectetur gravida, nisi diam varius metus, sit amet maximus orci eros nec felis. Ut nisi neque, condimentum id magna non, sollicitudin lobortis nibh. Etiam in fermentum felis, non venenatis augue. Donec quis ipsum tortor. Suspendisse tempor turpis vitae velit pharetra, ac varius ipsum pharetra. Ut at metus lobortis, porta tellus at, faucibus odio. Maecenas dictum quam vulputate lacus pharetra, et iaculis erat scelerisque. Nullam nec dui porta, ultricies leo nec, malesuada enim."
+    "id": 30012,
+    "slug": "rose-quartz-gua-sha-roller",
+    "name": "Rose Quartz Sculpting Gua Sha & Lymphatic Roller Set",
+    "price": "$45.00",
+    "image": "/images/products/rose-quartz-gua-sha-roller.svg",
+    "category": "Facial & Sanctuary",
+    "tag": "Facial Wellness",
+    "subtitle": "Natural Grade-A Brazilian rose quartz duo for morning depuffing, lymphatic drainage, and lifting facial contours.",
+    "description": "Elevate your morning and evening skincare ritual with this masterfully carved gemstone set. Sourced from natural, non-porous Grade-A rose quartz, these tools stay naturally cool to the touch, constricting capillaries to rapidly reduce morning facial puffiness and dark under-eye circles.\n\nThe heart-shaped Gua Sha stone hugs the jawline, cheekbones, and brow bone to relieve chronic facial tension (especially jaw clenching), drain stagnant lymphatic fluids, and contour features. The dual-ended roller gently presses facial serums and oils deep into skin for maximized absorption.",
+    "benefits": [
+      "Drains fluid retention to contour jawline and cheekbones",
+      "Eases facial tension, tight brow muscles, and TMJ discomfort",
+      "Maximizes the penetration and effectiveness of serums and face creams",
+      "Naturally cooling crystal soothes inflammation and redness"
+    ],
+    "howToUse": "Apply 3–4 drops of facial oil. Hold Gua Sha at a 15-degree flat angle and glide outward and upward from chin to ears, and brows to hairline. Use 5–10 minutes daily.",
+    "materials": "100% Authentic Brazilian Rose Quartz, Welded Rose-Gold Frame (Zero Squeak)"
   },
   {
-    "id": 24277,
-    "slug": "nature-care",
-    "name": "Nature Care",
-    "price": "$240.00",
-    "image": "/images/2021/12/shop-07.jpg",
-    "category": "Manicure",
-    "description": "Donec pulvinar tellus eget magna aliquet ultricies.\nMaecenas pulvinar ex a fermentum egestas. Curabitur tristique aliquam felis, a blandit nisl consequat quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam porttitor purus elit, sit amet viverra orci pretium non. Sed libero lorem, eleifend at congue quis, semper eget mauris. Nunc ullamcorper cursus libero a luctus. Nunc urna neque, consectetur eget viverra pretium, tempor eu ex. Donec faucibus, dui at consectetur gravida, nisi diam varius metus, sit amet maximus orci eros nec felis. Ut nisi neque, condimentum id magna non, sollicitudin lobortis nibh. Etiam in fermentum felis, non venenatis augue. Donec quis ipsum tortor. Suspendisse tempor turpis vitae velit pharetra, ac varius ipsum pharetra. Ut at metus lobortis, porta tellus at, faucibus odio. Maecenas dictum quam vulputate lacus pharetra, et iaculis erat scelerisque. Nullam nec dui porta, ultricies leo nec, malesuada enim."
+    "id": 30013,
+    "slug": "sanctuary-soy-candle",
+    "name": "Dream Salon Sanctuary Amber & Jasmine Soy Wax Candle",
+    "price": "$36.00",
+    "image": "/images/products/sanctuary-soy-candle.svg",
+    "category": "Facial & Sanctuary",
+    "tag": "Aromatherapy",
+    "subtitle": "Hand-poured 100% soy wax candle with Egyptian white jasmine, warm amber, and sandalwood, burning for 55+ peaceful hours.",
+    "description": "Recreate the intoxicating tranquility of our luxury salon sanctuaries in your own private living space. Hand-poured with clean-burning American-grown soy wax, this candle releases an artisanal fragrance blend crafted exclusively for Dream Salon.\n\nTop notes of blooming Egyptian jasmine and sheer citrus give way to a heart of warm sandalwood and comforting amber. With a lead-free organic cotton wick and an elegant amber glass jar, it offers a soothing, smokeless 55-hour burn that calms the senses and sets the mood for intentional self-care.",
+    "benefits": [
+      "Recreates our signature luxury salon aromatherapy atmosphere",
+      "100% clean-burning, non-toxic soy wax with zero paraffin",
+      "55+ hours of slow, even, soot-free burn time",
+      "Reusable amber apothecary vessel with black metal lid"
+    ],
+    "howToUse": "Trim wick to 1/4 inch before lighting. Allow wax to melt completely across the top on the first burn (2–3 hours) to prevent tunneling. Never leave unattended.",
+    "materials": "100% Natural Soy Wax, Phthalate-Free Fragrance Oils, Organic Cotton Wick, Recyclable Glass"
   },
   {
-    "id": 24276,
-    "slug": "wax-cream",
-    "name": "Wax Cream",
-    "price": "$73.49",
-    "image": "/images/2021/12/shop-08.jpg",
-    "category": "Manicure",
-    "description": "Donec pulvinar tellus eget magna aliquet ultricies.\nMaecenas pulvinar ex a fermentum egestas. Curabitur tristique aliquam felis, a blandit nisl consequat quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam porttitor purus elit, sit amet viverra orci pretium non. Sed libero lorem, eleifend at congue quis, semper eget mauris. Nunc ullamcorper cursus libero a luctus. Nunc urna neque, consectetur eget viverra pretium, tempor eu ex. Donec faucibus, dui at consectetur gravida, nisi diam varius metus, sit amet maximus orci eros nec felis. Ut nisi neque, condimentum id magna non, sollicitudin lobortis nibh. Etiam in fermentum felis, non venenatis augue. Donec quis ipsum tortor. Suspendisse tempor turpis vitae velit pharetra, ac varius ipsum pharetra. Ut at metus lobortis, porta tellus at, faucibus odio. Maecenas dictum quam vulputate lacus pharetra, et iaculis erat scelerisque. Nullam nec dui porta, ultricies leo nec, malesuada enim."
-  },
-  {
-    "id": 16305,
-    "slug": "cosmetic-brush",
-    "name": "Cosmetic Brush",
-    "price": "$13.49",
-    "image": "/images/2021/12/shop-12.jpg",
-    "category": "Nail polish",
-    "description": "Donec pulvinar tellus eget magna aliquet ultricies.\nMaecenas pulvinar ex a fermentum egestas. Curabitur tristique aliquam felis, a blandit nisl consequat quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam porttitor purus elit, sit amet viverra orci pretium non. Sed libero lorem, eleifend at congue quis, semper eget mauris. Nunc ullamcorper cursus libero a luctus. Nunc urna neque, consectetur eget viverra pretium, tempor eu ex. Donec faucibus, dui at consectetur gravida, nisi diam varius metus, sit amet maximus orci eros nec felis. Ut nisi neque, condimentum id magna non, sollicitudin lobortis nibh. Etiam in fermentum felis, non venenatis augue. Donec quis ipsum tortor. Suspendisse tempor turpis vitae velit pharetra, ac varius ipsum pharetra. Ut at metus lobortis, porta tellus at, faucibus odio. Maecenas dictum quam vulputate lacus pharetra, et iaculis erat scelerisque. Nullam nec dui porta, ultricies leo nec, malesuada enim."
-  },
-  {
-    "id": 16304,
-    "slug": "cosmetic-cream",
-    "name": "Cosmetic Cream",
-    "price": "$125.00",
-    "image": "/images/2021/12/shop-11.jpg",
-    "category": "Nail polish",
-    "description": "Sed ut perspiciatis unde omnis iste natus naror sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-  },
-  {
-    "id": 16303,
-    "slug": "deodorant",
-    "name": "Deodorant",
-    "price": "$9.99",
-    "image": "/images/2021/12/shop-10.jpg",
-    "category": "Nail polish",
-    "description": "Sed ut perspiciatis unde omnis iste natus naror sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur."
-  },
-  {
-    "id": 16302,
-    "slug": "hand-cream",
-    "name": "Hand Cream",
-    "price": "$17.99",
-    "image": "/images/2021/12/shop-09.jpg",
-    "category": "Nail polish",
-    "description": "Sed ut perspiciatis unde omnis iste natus naror sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    "id": 30014,
+    "slug": "velvet-vanity-travel-case",
+    "name": "Signature Embroidered Velvet Vanity & Brush Travel Case",
+    "price": "$58.00",
+    "image": "/images/products/velvet-vanity-travel-case.svg",
+    "category": "Facial & Sanctuary",
+    "tag": "Brand Icon",
+    "subtitle": "Water-resistant interior with dedicated sleeves for combs, styling brushes, and self-care tools, wrapped in plush rose velvet.",
+    "description": "Travel with your entire beauty and self-care ritual intact. Our signature vanity case is crafted from ultra-plush dusty-rose velvet with delicate gold crest embroidery, designed to protect your luxury tools wherever you journey.\n\nInside, an easy-wipe, spill-proof lining features tailored elastic slots for your detangling combs, round brushes, and crystal files, along with a deep zippered compartment for full-sized serums, head spa tools, and jewelry. The dual gold zippers and reinforced top carry handle make it the ultimate luxury travel companion.",
+    "benefits": [
+      "Keeps luxury combs, brushes, and cosmetics organized and protected",
+      "Wipeable, water-resistant interior lining cleans with a single swipe",
+      "Spacious interior fits full-size bottles and styling implements",
+      "Gold double-zipper hardware and comfortable reinforced carry strap"
+    ],
+    "howToUse": "Pack combs, brushes, and daily serums in designated sleeves. Wipe interior with a damp cloth as needed to maintain pristine condition.",
+    "materials": "Plush Dusty-Rose Velvet Exterior, Waterproof Satin Lining, Gold-Toned Brass Hardware"
   }
 ]

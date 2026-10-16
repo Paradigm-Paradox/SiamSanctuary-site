@@ -3,102 +3,311 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import products from '../data/products.json';
+
+const categories = [
+  { name: 'All Products', count: products.length, filter: 'all' },
+  { name: 'Combs & Brushes', count: products.filter(p => p.category === 'Combs & Brushes').length, filter: 'combs' },
+  { name: 'Hair & Scalp', count: products.filter(p => p.category === 'Hair & Scalp').length, filter: 'hair' },
+  { name: 'Nails & Hands', count: products.filter(p => p.category === 'Nails & Hands').length, filter: 'nails' },
+  { name: 'Facial & Sanctuary', count: products.filter(p => p.category === 'Facial & Sanctuary').length, filter: 'sanctuary' }
+];
 ---
 
 <Layout 
-  title="Organic Beauty & Salon Care Shop | DreamNails.Asia"
-  description="Shop clean, cruelty-free beauty products, handmade craft soaps, nourishing hair balsams, and professional salon essentials from Dream Salon Asia."
+  title="Dream Salon At-Home Rituals & Self-Care Shop | Luxury Combs, Brushes & Elixirs"
+  description="Explore the Dream Salon At-Home Rituals collection. Premium hand-carved sandalwood combs, ionic boar bristle brushes, Japanese head spa scalp tools, botanical cuticle elixirs, and luxury self-care essentials."
 >
   <div class="min-h-screen flex flex-col bg-[#141414]">
     <Header />
     
     <main class="flex-grow">
-      <!-- Header Banner -->
-      <section class="relative py-24 bg-[#101010] border-b border-white/5 overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
+      <!-- 1. Header Banner -->
+      <section class="relative py-28 sm:py-36 bg-[#101010] border-b border-white/5 overflow-hidden">
+        <div class="absolute inset-0 opacity-25">
           <img src="/images/2021/12/inner_header_01.jpg" alt="Shop Header" class="w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/80 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/85 to-transparent"></div>
         </div>
 
-        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-2">Clean Botanical Formulations</span>
-          <h1 class="text-4xl sm:text-6xl font-serif text-white uppercase tracking-wider mb-4">
-            Organic Beauty & Salon Care Shop
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f286aa]/10 border border-[#f286aa]/30 text-[#f286aa] text-xs uppercase tracking-widest font-semibold mb-6">
+            <i class="fas fa-sparkles text-[10px]"></i>
+            <span>The Dream Salon At-Home Rituals Line</span>
+            <i class="fas fa-sparkles text-[10px]"></i>
+          </div>
+
+          <span class="font-script text-3xl sm:text-5xl text-[#f286aa] block mb-2">Self-Care As A Daily Sanctuary</span>
+          <h1 class="text-4xl sm:text-6xl font-serif text-white uppercase tracking-wider mb-6">
+            Luxury Hair Tools & Beauty Care
           </h1>
-          <p class="text-xs sm:text-sm uppercase tracking-widest text-[#d9c1a3]">
-            100% Cruelty-Free • Artisan Crafted • Worldwide Shipping & Salon Pickup
+          <p class="text-sm sm:text-base text-gray-300 font-light max-w-3xl mx-auto leading-relaxed mb-8">
+            Extend the restorative luxury of our salon sanctuary into your daily home routine. From hand-carved sandalwood combs and ionic boar bristle brushes to Japanese head spa scalp massagers and pure botanical elixirs, each product is crafted to nurture hair, scalp, skin, and nails.
           </p>
+
+          <!-- Trust Badges -->
+          <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-gray-300 pt-6 border-t border-white/10">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-seedling text-[#42bf80]"></i>
+              <span>100% Clean & Botanical</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-gem text-[#d9c1a3]"></i>
+              <span>Artisan & Professional Grade</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-plane-departure text-[#38bdf8]"></i>
+              <span>Worldwide Shipping & Salon Pickup</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Products Grid Section -->
-      <section class="py-20 bg-[#181818]">
+      <!-- 2. Self-Care Philosophy Pillar -->
+      <section class="py-12 bg-[#161616] border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            
+            <div class="p-6 rounded-2xl bg-[#141414] border border-white/5 space-y-2">
+              <div class="w-10 h-10 rounded-full bg-[#f286aa]/10 text-[#f286aa] flex items-center justify-center text-lg mx-auto mb-3">
+                <i class="fas fa-hand-holding-heart"></i>
+              </div>
+              <h4 class="text-sm font-serif text-white uppercase tracking-wider">Mindful Daily Rituals</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">
+                Brushing and combing are not chores—they are tactile moments to slow down, stimulate circulation, and reconnect with yourself.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-[#141414] border border-white/5 space-y-2">
+              <div class="w-10 h-10 rounded-full bg-[#d9c1a3]/10 text-[#d9c1a3] flex items-center justify-center text-lg mx-auto mb-3">
+                <i class="fas fa-wand-magic-sparkles"></i>
+              </div>
+              <h4 class="text-sm font-serif text-white uppercase tracking-wider">Prolong Salon Longevity</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">
+                Our cuticle elixirs, crystal glass files, and mulberry silk wraps protect and prolong your professional manicures and hair blowouts.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-[#141414] border border-white/5 space-y-2">
+              <div class="w-10 h-10 rounded-full bg-[#38bdf8]/10 text-[#38bdf8] flex items-center justify-center text-lg mx-auto mb-3">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <h4 class="text-sm font-serif text-white uppercase tracking-wider">Sustainable Craftsmanship</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">
+                Hand-carved green sandalwood, FSC beechwood, Czech float glass, and zero toxic petroleum fillers.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Category Filter & Products Grid Section -->
+      <section class="py-20 bg-[#181818]" id="collection">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12 pb-6 border-b border-white/10">
+          <!-- Category Filter Bar -->
+          <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-12 pb-6 border-b border-white/10">
             <div>
-              <h2 class="text-2xl font-serif text-white uppercase tracking-wide">Featured Collection</h2>
-              <p class="text-xs text-gray-400">Showing all 12 organic cosmetics & care essentials</p>
+              <span class="text-xs uppercase tracking-widest text-[#f286aa] font-semibold block mb-1">Our Collection</span>
+              <h2 class="text-2xl sm:text-3xl font-serif text-white uppercase tracking-wide">Featured Self-Care Essentials</h2>
             </div>
-            <div class="text-xs text-gray-400 flex items-center gap-2">
-              <i class="fas fa-shipping-fast text-[#f286aa]"></i>
-              <span>Available for salon pickup or international delivery</span>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap items-center gap-2" id="filter-buttons">
+              <button 
+                data-filter="all" 
+                class="filter-btn active px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-[#f286aa] text-black font-semibold shadow-md"
+              >
+                All ({products.length})
+              </button>
+              <button 
+                data-filter="Combs & Brushes" 
+                class="filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-[#141414] text-gray-300 hover:text-white hover:bg-white/10 border border-white/5"
+              >
+                Combs & Brushes ({products.filter(p => p.category === 'Combs & Brushes').length})
+              </button>
+              <button 
+                data-filter="Hair & Scalp" 
+                class="filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-[#141414] text-gray-300 hover:text-white hover:bg-white/10 border border-white/5"
+              >
+                Hair & Scalp ({products.filter(p => p.category === 'Hair & Scalp').length})
+              </button>
+              <button 
+                data-filter="Nails & Hands" 
+                class="filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-[#141414] text-gray-300 hover:text-white hover:bg-white/10 border border-white/5"
+              >
+                Nails & Hands ({products.filter(p => p.category === 'Nails & Hands').length})
+              </button>
+              <button 
+                data-filter="Facial & Sanctuary" 
+                class="filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-[#141414] text-gray-300 hover:text-white hover:bg-white/10 border border-white/5"
+              >
+                Facial & Sanctuary ({products.filter(p => p.category === 'Facial & Sanctuary').length})
+              </button>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+          <!-- Product Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8" id="product-grid">
             {products.map((p) => (
-              <div class="rounded-2xl bg-[#141414] border border-white/5 hover:border-[#d9c1a3]/40 p-5 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group flex flex-col justify-between">
-                
+              <div 
+                data-category={p.category}
+                class="product-card rounded-2xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/40 p-5 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group flex flex-col justify-between"
+              >
                 <div>
-                  <!-- Product Image -->
-                  <div class="relative rounded-xl overflow-hidden aspect-square bg-[#1a1a1a] mb-4 border border-white/5">
+                  <!-- Product Image / Mockup -->
+                  <div class="relative rounded-xl overflow-hidden aspect-square bg-[#101010] mb-4 border border-white/5 flex items-center justify-center p-3">
                     <img 
                       src={p.image} 
                       alt={p.name} 
-                      class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500" 
+                      class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
                       loading="lazy"
                     />
-                    <span class="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-full text-[10px] uppercase font-semibold tracking-wider bg-black/70 backdrop-blur-md text-[#f286aa] border border-[#f286aa]/30">
+                    <!-- Top Tag Badge -->
+                    <span class="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-full text-[10px] uppercase font-semibold tracking-wider bg-black/80 backdrop-blur-md text-[#f286aa] border border-[#f286aa]/30">
                       {p.tag}
                     </span>
                   </div>
 
                   <!-- Category & Title -->
-                  <span class="text-[10px] uppercase tracking-widest text-[#d9c1a3] font-semibold block mb-1">
-                    {p.category}
-                  </span>
-                  <h3 class="text-lg font-serif text-white group-hover:text-[#f286aa] transition mb-2">
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <span class="text-[10px] uppercase tracking-widest text-[#d9c1a3] font-semibold">
+                      {p.category}
+                    </span>
+                    <span class="text-[10px] text-gray-400 font-mono">
+                      {p.materials.split(',')[0]}
+                    </span>
+                  </div>
+
+                  <h3 class="text-base font-serif text-white group-hover:text-[#f286aa] transition-colors mb-2 leading-snug">
                     <a href={`/shop/${p.slug}`} class="hover:underline">{p.name}</a>
                   </h3>
-                  <p class="text-xs text-gray-400 font-light leading-relaxed line-clamp-3 mb-4">
-                    {p.description}
+                  
+                  <p class="text-xs text-gray-400 font-light leading-relaxed line-clamp-2 mb-4">
+                    {p.subtitle || p.description.slice(0, 110) + '...'}
                   </p>
                 </div>
 
                 <div class="pt-4 border-t border-white/5 flex items-center justify-between">
-                  <span class="text-lg font-serif font-bold text-white">
-                    {p.price} <span class="text-[10px] text-gray-500 font-sans font-normal">USD</span>
-                  </span>
-                  <a 
-                    href={`mailto:info@dreamnails.asia?subject=Order%20Inquiry%20-%20${encodeURIComponent(p.name)}&body=Hello%2C%20I%20would%20like%20to%20order%20the%20${encodeURIComponent(p.name)}%20(${p.price}).%20Please%20let%20me%20know%20shipping%20details.`} 
-                    class="btn-luxury-primary !py-2 !px-4 text-[11px]"
-                  >
-                    <span>Order Now</span>
-                  </a>
+                  <div>
+                    <span class="text-xl font-serif font-bold text-white">
+                      {p.price}
+                    </span>
+                    <span class="text-[10px] text-gray-500 font-sans ml-1">USD</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <a 
+                      href={`/shop/${p.slug}`}
+                      class="px-3 py-1.5 rounded-lg border border-white/10 hover:border-white/30 text-[11px] text-gray-300 hover:text-white transition"
+                    >
+                      <span>Details</span>
+                    </a>
+                    <a 
+                      href={`mailto:info@dreamnails.asia?subject=Order%20Inquiry%20-%20${encodeURIComponent(p.name)}&body=Hello%20Dream%20Salon%20Team%2C%0A%0AI%20would%20like%20to%20order%20the%20following%20product%20from%20your%20At-Home%20Rituals%20Collection%3A%0A-%20Product%3A%20${encodeURIComponent(p.name)}%20(${p.price})%0A-%20Preferred%20Delivery%3A%20Salon%20Pickup%20or%20Shipping%0A-%20Shipping%20Address%20or%20Destination%20City%3A%20%0A%0AThank%20you%21`} 
+                      class="btn-luxury-primary !py-1.5 !px-3.5 text-[11px]"
+                    >
+                      <i class="fas fa-shopping-bag mr-1 text-[10px]"></i>
+                      <span>Order</span>
+                    </a>
+                  </div>
                 </div>
 
               </div>
             ))}
           </div>
 
-          <!-- Customer Service Note -->
-          <div class="mt-16 p-8 rounded-2xl bg-[#121212] border border-white/5 text-center max-w-2xl mx-auto">
-            <i class="fas fa-leaf text-2xl text-[#42bf80] mb-3"></i>
-            <h4 class="text-lg font-serif text-white uppercase mb-2">Custom Orders & Wholesale Inquiries</h4>
-            <p class="text-xs text-gray-400 font-light leading-relaxed mb-4">
-              Interested in bulk orders, salon gift sets, or retail partnerships? Contact Joey & Onanong Jones directly at <a href="mailto:info@dreamnails.asia" class="text-[#f286aa] underline">info@dreamnails.asia</a>.
+          <!-- 4. Interactive Ritual Sets Recommendation -->
+          <div class="mt-20 p-8 sm:p-12 rounded-3xl bg-[#121212] border border-white/5 relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-64 h-64 bg-[#f286aa]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-3xl mx-auto text-center mb-10 relative z-10">
+              <span class="font-script text-3xl text-[#f286aa] block mb-2">Curated Self-Care Experiences</span>
+              <h3 class="text-2xl sm:text-4xl font-serif text-white uppercase tracking-wider mb-3">
+                Dream Salon At-Home Ritual Bundles
+              </h3>
+              <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed">
+                Gift yourself or someone special our signature curated self-care ritual sets, combining our handcrafted tools with organic care elixirs in a complimentary velvet gift box.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+              
+              <!-- Set 1 -->
+              <div class="p-6 rounded-2xl bg-[#181818] border border-white/5 space-y-3">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-[#38bdf8] block">Ritual Set 01</span>
+                <h4 class="text-lg font-serif text-white">The Head Spa & Blowout Set</h4>
+                <p class="text-xs text-gray-400 font-light leading-relaxed">
+                  Includes the Japanese Scalp Massage Brush, Sandalwood Comb, and Botanical Restorative Hair Balsam. Purifies the scalp and delivers glossy, frizz-free locks.
+                </p>
+                <div class="pt-2 flex items-center justify-between">
+                  <span class="text-base font-serif text-[#d9c1a3] font-bold">$84 USD <span class="text-[10px] text-gray-500 font-sans line-through">$94</span></span>
+                  <a 
+                    href="mailto:info@dreamnails.asia?subject=Order%20Bundle%20-%20The%20Head%20Spa%20%26%20Blowout%20Set&body=Hello%2C%20I%20would%20like%20to%20order%20The%20Head%20Spa%20%26%20Blowout%20Set%20(%2484%20USD)."
+                    class="text-xs text-[#f286aa] hover:underline font-semibold"
+                  >
+                    Inquire Bundle &rarr;
+                  </a>
+                </div>
+              </div>
+
+              <!-- Set 2 -->
+              <div class="p-6 rounded-2xl bg-[#181818] border border-white/5 space-y-3">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-[#ec4899] block">Ritual Set 02</span>
+                <h4 class="text-lg font-serif text-white">The Manicure Longevity Set</h4>
+                <p class="text-xs text-gray-400 font-light leading-relaxed">
+                  Includes the Botanical Cuticle Elixir, Czech Tempered Crystal Glass File, and Intensive Shea & Orchid Hand Balm. Keeps cuticles soft and manicures flawless.
+                </p>
+                <div class="pt-2 flex items-center justify-between">
+                  <span class="text-base font-serif text-[#d9c1a3] font-bold">$64 USD <span class="text-[10px] text-gray-500 font-sans line-through">$74</span></span>
+                  <a 
+                    href="mailto:info@dreamnails.asia?subject=Order%20Bundle%20-%20The%20Manicure%20Longevity%20Set&body=Hello%2C%20I%20would%20like%20to%20order%20The%20Manicure%20Longevity%20Set%20(%2464%20USD)."
+                    class="text-xs text-[#f286aa] hover:underline font-semibold"
+                  >
+                    Inquire Bundle &rarr;
+                  </a>
+                </div>
+              </div>
+
+              <!-- Set 3 -->
+              <div class="p-6 rounded-2xl bg-[#181818] border border-white/5 space-y-3">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-[#f59e0b] block">Ritual Set 03</span>
+                <h4 class="text-lg font-serif text-white">The Evening Sanctuary Sleep Ritual</h4>
+                <p class="text-xs text-gray-400 font-light leading-relaxed">
+                  Includes the 100% Mulberry Silk Turban, Rose Quartz Sculpting Set, and the Sanctuary Amber & Jasmine Soy Candle. Ground your evening in pure relaxation.
+                </p>
+                <div class="pt-2 flex items-center justify-between">
+                  <span class="text-base font-serif text-[#d9c1a3] font-bold">$125 USD <span class="text-[10px] text-gray-500 font-sans line-through">$143</span></span>
+                  <a 
+                    href="mailto:info@dreamnails.asia?subject=Order%20Bundle%20-%20The%20Evening%20Sanctuary%20Sleep%20Ritual&body=Hello%2C%20I%20would%20like%20to%20order%20The%20Evening%20Sanctuary%20Sleep%20Ritual%20(%24125%20USD)."
+                    class="text-xs text-[#f286aa] hover:underline font-semibold"
+                  >
+                    Inquire Bundle &rarr;
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Customer Service & Salon Pickup Note -->
+          <div class="mt-16 p-8 rounded-2xl bg-[#121212] border border-white/5 text-center max-w-3xl mx-auto">
+            <div class="w-12 h-12 rounded-full bg-[#f286aa]/10 text-[#f286aa] flex items-center justify-center text-xl mx-auto mb-3">
+              <i class="fas fa-store"></i>
+            </div>
+            <h4 class="text-lg font-serif text-white uppercase mb-2">Available At All 10 Global Sanctuaries</h4>
+            <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">
+              Pick up your favorite combs, brushes, and elixirs directly during your salon appointment in Phuket, Bangkok, San Juan, Mayagüez, Bali, or Dubai. We also offer insured express worldwide door-to-door delivery.
             </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              <a href="mailto:info@dreamnails.asia" class="btn-luxury-primary text-xs inline-flex items-center gap-2">
+                <i class="fas fa-envelope text-[11px]"></i>
+                <span>Direct Order Inquiry</span>
+              </a>
+              <a href="https://wa.me/17878348888" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-400 hover:text-white border border-emerald-500/30 hover:border-emerald-500 px-5 py-2.5 rounded-full transition inline-flex items-center gap-2">
+                <i class="fab fa-whatsapp text-sm"></i>
+                <span>WhatsApp VIP Product Desk</span>
+              </a>
+            </div>
           </div>
 
         </div>
@@ -108,4 +317,37 @@ import products from '../data/products.json';
 
     <Footer />
   </div>
+
+  <!-- Client-side Category Filter Script -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.product-card');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          // Toggle button styles
+          buttons.forEach(b => {
+            b.classList.remove('bg-[#f286aa]', 'text-black', 'font-semibold', 'shadow-md');
+            b.classList.add('bg-[#141414]', 'text-gray-300', 'border', 'border-white/5');
+          });
+
+          btn.classList.remove('bg-[#141414]', 'text-gray-300', 'border', 'border-white/5');
+          btn.classList.add('bg-[#f286aa]', 'text-black', 'font-semibold', 'shadow-md');
+
+          // Filter product cards
+          cards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
 </Layout>

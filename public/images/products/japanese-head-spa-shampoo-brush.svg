@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#262322" />
+      <stop offset="60%" stop-color="#161616" />
+      <stop offset="100%" stop-color="#0d0d0d" />
+    </radialGradient>
+
+    <!-- Product Shading Gradient -->
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2726" />
+      <stop offset="50%" stop-color="#1f1c1b" />
+      <stop offset="100%" stop-color="#141312" />
+    </linearGradient>
+
+    <!-- Gold/Rose Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="600" fill="url(#bgGlow)" />
+
+  <!-- Luxury Outer Border Frame -->
+  <rect x="25" y="25" width="550" height="550" rx="24" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.35" />
+  <rect x="35" y="35" width="530" height="530" rx="16" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.2" stroke-dasharray="4 6" />
+
+  <!-- Top Brand Tag -->
+  <g transform="translate(300, 65)">
+    <rect x="-105" y="-12" width="210" height="24" rx="12" fill="#141414" stroke="#38bdf8" stroke-width="1.2" opacity="0.85" />
+    <text x="0" y="4" fill="#38bdf8" font-size="9" font-family="'Cinzel', 'Playfair Display', serif" font-weight="600" text-anchor="middle" letter-spacing="2.5">DREAM SALON ASIA</text>
+  </g>
+
+  <!-- Subtle Center Halo Glow -->
+  <circle cx="300" cy="275" r="140" fill="#38bdf8" opacity="0.06" filter="url(#glow)" />
+
+  <!-- Main Product Vector Silhouette -->
+  
+        <g transform="translate(300, 280)" stroke="#38bdf8" stroke-width="4" fill="none">
+            <!-- Top handle ring -->
+            <ellipse cx="0" cy="-90" rx="45" ry="25" stroke="#38bdf8" stroke-width="5" fill="none"/>
+            <path d="M -45 -90 C -45 -50 -70 -20 -80 10 L 80 10 C 70 -20 45 -50 45 -90" fill="url(#grad1)" stroke="#38bdf8" stroke-width="6"/>
+            <!-- Circular silicone base -->
+            <ellipse cx="0" cy="15" rx="100" ry="45" fill="url(#grad1)" stroke="#38bdf8" stroke-width="6"/>
+            <!-- Conical soft silicone teeth -->
+            <polygon points="-70,25 -65,75 -60,25" fill="#38bdf8"/>
+            <polygon points="-35,30 -30,95 -25,30" fill="#38bdf8"/>
+            <polygon points="0,35 0,110 5,35" fill="#38bdf8"/>
+            <polygon points="35,30 30,95 25,30" fill="#38bdf8"/>
+            <polygon points="70,25 65,75 60,25" fill="#38bdf8"/>
+            <polygon points="-45,10 -40,55 -35,10" fill="#0284c7"/>
+            <polygon points="45,10 40,55 35,10" fill="#0284c7"/>
+        </g>
+        
+
+  <!-- Bottom Details Typography -->
+  <g transform="translate(300, 500)">
+    <text x="0" y="-15" fill="#ffffff" font-size="18" font-family="'Playfair Display', serif" font-weight="600" text-anchor="middle" letter-spacing="0.5">Japanese Head Spa Brush</text>
+    <text x="0" y="8" fill="#38bdf8" font-size="11" font-family="'Inter', sans-serif" font-weight="400" text-anchor="middle" letter-spacing="1.5">Medical Silicone Scalp Massage</text>
+    
+    <!-- Mini divider -->
+    <line x1="-30" y1="22" x2="30" y2="22" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+    <circle cx="0" cy="22" r="2" fill="#38bdf8"/>
+  </g>
+</svg>
