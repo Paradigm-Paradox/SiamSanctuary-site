@@ -1,0 +1,613 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import testimonials from '../data/testimonials.json';
+import locations from '../data/locations.json';
+import socials from '../data/socials.json';
+import SocialIcon from '../components/SocialIcon.astro';
+---
+
+<Layout 
+  title="Client Reviews & Social Wall | Post & Save 15% | Dream Salon Asia"
+  description="Explore real client transformations, viral TikTok reels, Instagram lookbooks, and 5-star Google reviews from Dream Salon Asia. Post your salon look and get 15% off!"
+>
+  <div class="min-h-screen flex flex-col bg-[#141414]">
+    <Header />
+    
+    <main class="flex-grow">
+      <!-- Hero Header Banner -->
+      <section class="relative py-28 sm:py-32 bg-[#101010] border-b border-white/5 overflow-hidden">
+        <div class="absolute inset-0 opacity-25">
+          <img src="/images/2021/12/inner_header_01.jpg" alt="Testimonials Banner" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/85 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f286aa]/10 border border-[#f286aa]/30 text-[#f286aa] text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="fas fa-heart text-xs"></i>
+            Real Clients • Viral Transformations • 5-Star Reviews
+          </span>
+          
+          <h1 class="text-4xl sm:text-6xl font-serif text-white uppercase tracking-wider mb-4">
+            Social Proof & Client Stories
+          </h1>
+          
+          <p class="text-sm sm:text-base text-gray-300 font-light max-w-2xl mx-auto mb-8 leading-relaxed">
+            See the artistry come alive through the eyes of our global community. From viral TikTok Japanese head spa rituals to couture red-carpet nail sets and bridal glams across 10 international destinations.
+          </p>
+
+          <!-- Key Metrics Strip -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto pt-4 border-t border-white/10">
+            <div class="p-3 rounded-xl bg-white/5 border border-white/5">
+              <span class="text-2xl font-serif font-bold text-[#f286aa] block">4.95 ★</span>
+              <span class="text-[11px] text-gray-400 uppercase tracking-wider">Global Rating</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white/5 border border-white/5">
+              <span class="text-2xl font-serif font-bold text-white block">150K+</span>
+              <span class="text-[11px] text-gray-400 uppercase tracking-wider">Monthly Views</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white/5 border border-white/5">
+              <span class="text-2xl font-serif font-bold text-[#d9c1a3] block">12</span>
+              <span class="text-[11px] text-gray-400 uppercase tracking-wider">Official Channels</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white/5 border border-white/5">
+              <span class="text-2xl font-serif font-bold text-[#42bf80] block">15% OFF</span>
+              <span class="text-[11px] text-gray-400 uppercase tracking-wider">Post & Save</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- "POST & SAVE 15%" REWARD PROGRAM HERO BANNER -->
+      <section class="py-16 bg-gradient-to-b from-[#181818] to-[#141414] border-b border-white/5 relative overflow-hidden" id="rewards-program">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
+          <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#20151c] via-[#1a1a1a] to-[#1c1815] border border-[#f286aa]/30 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-12 -top-12 w-64 h-64 bg-[#f286aa]/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+              <div class="lg:col-span-2 space-y-4">
+                <span class="inline-flex items-center gap-1.5 text-xs uppercase font-bold tracking-widest text-[#f286aa] px-3 py-1 rounded-full bg-[#f286aa]/15 border border-[#f286aa]/30">
+                  <i class="fas fa-tag"></i>
+                  Exclusive Client Incentive Program
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-white uppercase tracking-wide">
+                  Post Your Salon Transformation & Get <span class="text-[#f286aa]">15% OFF</span>
+                </h2>
+                <p class="text-sm text-gray-300 font-light leading-relaxed max-w-2xl">
+                  We love celebrating your confidence! Post a photo, TikTok, or Instagram Reel showcasing your hair, nails, lashes, or head spa with our official tags. Show your post at reception or submit it below to claim an instant <strong>15% discount</strong> on your next visit or a complimentary botanical scalp ritual!
+                </p>
+
+                <!-- 3 Steps Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                  <div class="p-4 rounded-xl bg-black/40 border border-white/10">
+                    <span class="text-xl font-bold font-mono text-[#f286aa] block mb-1">01. Snap</span>
+                    <p class="text-xs text-gray-400">Capture your fresh hair, nails, lashes, or glow in our salon.</p>
+                  </div>
+                  <div class="p-4 rounded-xl bg-black/40 border border-white/10">
+                    <span class="text-xl font-bold font-mono text-[#d9c1a3] block mb-1">02. Tag</span>
+                    <p class="text-xs text-gray-400">Tag <strong>@dreamnails.asia</strong> + city hashtag & <strong>#PostAndSave</strong>.</p>
+                  </div>
+                  <div class="p-4 rounded-xl bg-black/40 border border-white/10">
+                    <span class="text-xl font-bold font-mono text-[#42bf80] block mb-1">03. Save</span>
+                    <p class="text-xs text-gray-400">Flash your post at checkout to receive 15% off your next session!</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA Box -->
+              <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-black/60 border border-white/10 text-center space-y-4">
+                <i class="fas fa-gift text-4xl text-[#f286aa]"></i>
+                <h3 class="text-lg font-serif text-white uppercase tracking-wider">Already Posted?</h3>
+                <p class="text-xs text-gray-400">Submit your social post link below to receive your personalized 15% VIP promo voucher.</p>
+                <a href="#submit-post" class="btn-luxury-primary text-xs w-full text-center">
+                  <span>Submit My Post &rarr;</span>
+                </a>
+                <a href="#hashtag-generator" class="text-[11px] text-[#d9c1a3] hover:text-[#f286aa] underline transition">
+                  Copy Official Hashtags
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- HASHTAG & TAG GENERATOR CENTER -->
+      <section class="py-16 bg-[#161616] border-b border-white/5" id="hashtag-generator">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-1">
+              Social Tags
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-serif text-white uppercase tracking-wider mb-3">
+              Official Hashtag & Tagging Center
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-400 font-light">
+              Select your salon location and service to generate the exact tags to include in your post for guaranteed reward qualification.
+            </p>
+          </div>
+
+          <div class="p-6 sm:p-8 rounded-3xl bg-[#121212] border border-white/10 max-w-4xl mx-auto shadow-2xl">
+            <!-- Selectors -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <div>
+                <label for="tag-location" class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-medium">1. Select Your Salon Location</label>
+                <select id="tag-location" class="w-full bg-[#1e1e1e] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition">
+                  {locations.map((loc) => (
+                    <option value={loc.city}>{loc.city}, {loc.country}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label for="tag-service" class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-medium">2. Select Your Service Category</label>
+                <select id="tag-service" class="w-full bg-[#1e1e1e] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition">
+                  <option value="Hair & Head Spa">Hair & Japanese Head Spa</option>
+                  <option value="Couture Nails">Couture Nails & Pedicure</option>
+                  <option value="Cosmetic Tattoo (PMU)">Cosmetic Tattoo (PMU) & Microblading</option>
+                  <option value="Lashes & Brows">Lash Extensions & Brow Shaping</option>
+                  <option value="Facials & Massage">Facial Skincare & Thai Massage</option>
+                  <option value="Packages & VIP">VIP Packages & Bridal Bundles</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Generated Hashtag Output Box -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-[#181818] border border-white/10 relative mb-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-[#d9c1a3]">Your Ready-to-Paste Tags</span>
+                <span class="text-[10px] text-gray-400">Tag account: <strong class="text-white">@dreamnails.asia</strong></span>
+              </div>
+              <p id="generated-hashtags" class="text-sm font-mono text-[#f286aa] leading-relaxed break-words select-all">
+                @dreamnails.asia #DreamSalonAsia #DreamNailsAsia #DreamSalonSanJuan #RussianManicure #JapaneseHeadSpa #PostAndSave #SanJuanSalon #PerfectionInEveryBrush
+              </p>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 flex-wrap">
+              <button id="copy-hashtags-btn" class="btn-luxury-primary text-xs cursor-pointer flex items-center gap-2">
+                <i class="far fa-copy text-sm"></i>
+                <span id="copy-btn-text">Copy All Hashtags</span>
+              </button>
+              <div class="text-[11px] text-gray-400 flex items-center gap-2">
+                <i class="fas fa-check-circle text-[#42bf80]"></i>
+                <span>Guaranteed 15% discount verification with these tags</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SOCIAL UGC & CLIENT FEED GRID -->
+      <section class="py-20 bg-[#181818]" id="ugc-wall">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-1">
+              Community Gallery
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-serif text-white uppercase tracking-wider mb-4">
+              Trending Client Transformations
+            </h2>
+            <p class="text-sm text-gray-400 font-light max-w-xl mx-auto">
+              Real posts from our cherished guests across Instagram, TikTok, XiaoHongShu (小红书), Lemon8, and Google Maps.
+            </p>
+          </div>
+
+          <!-- Platform Filter Tabs -->
+          <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-10" id="platform-filters">
+            <button class="ugc-filter-btn active px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-[#f286aa] text-black cursor-pointer shadow-md" data-platform="all">
+              All Channels ({testimonials.length})
+            </button>
+            <button class="ugc-filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 cursor-pointer flex items-center gap-1.5" data-platform="instagram">
+              <i class="fab fa-instagram text-[#E4405F]"></i> Instagram
+            </button>
+            <button class="ugc-filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 cursor-pointer flex items-center gap-1.5" data-platform="tiktok">
+              <i class="fab fa-tiktok text-cyan-400"></i> TikTok
+            </button>
+            <button class="ugc-filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 cursor-pointer flex items-center gap-1.5" data-platform="google">
+              <i class="fab fa-google text-blue-400"></i> Google 5★
+            </button>
+            <button class="ugc-filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 cursor-pointer flex items-center gap-1.5" data-platform="xiaohongshu">
+              <span class="text-[#FF2442] font-bold">RED</span> 小红书
+            </button>
+            <button class="ugc-filter-btn px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 cursor-pointer flex items-center gap-1.5" data-platform="lemon8">
+              <span class="text-yellow-400 font-bold">L8</span> Lemon8
+            </button>
+          </div>
+
+          <!-- UGC Grid (Responsive Cards mimicking modern Social Cards) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="ugc-cards-grid">
+            {testimonials.map((post) => (
+              <div 
+                class="ugc-card rounded-3xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/80 flex flex-col justify-between overflow-hidden group"
+                data-platform={post.platform}
+              >
+                <!-- Card Header with Creator Info -->
+                <div class="p-4 pb-3 flex items-center justify-between border-b border-white/5 bg-[#181818]/60">
+                  <div class="flex items-center gap-2.5 min-w-0">
+                    <img 
+                      src={post.avatar} 
+                      alt={post.name} 
+                      class="w-9 h-9 rounded-full object-cover border border-[#f286aa]/30 flex-shrink-0"
+                    />
+                    <div class="min-w-0">
+                      <div class="text-xs font-serif text-white font-medium truncate flex items-center gap-1">
+                        <span>{post.name}</span>
+                        <i class="fas fa-check-circle text-[9px] text-[#38bdf8]"></i>
+                      </div>
+                      <span class="text-[10px] text-gray-400 truncate block font-mono">{post.handle}</span>
+                    </div>
+                  </div>
+
+                  <!-- Platform Badge -->
+                  <div class="w-6 h-6 rounded-md overflow-hidden flex-shrink-0 shadow-sm" title={post.platformName}>
+                    <SocialIcon id={post.platform === 'xiaohongshu' ? 'xiaohongshu' : post.platform === 'google' ? 'google' : post.platform === 'lemon8' ? 'lemon8' : post.platform} class="w-full h-full" />
+                  </div>
+                </div>
+
+                <!-- Media Preview with Video/Photo Badge -->
+                <div class="relative aspect-square overflow-hidden bg-black cursor-pointer open-video-trigger" data-title={`${post.name} - ${post.service}`} data-handle={post.handle}>
+                  <img 
+                    src={post.image} 
+                    alt={post.quote} 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" 
+                    loading="lazy"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"></div>
+
+                  <!-- Video Play Badge if Video -->
+                  {post.isVideo && (
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <div class="w-12 h-12 rounded-full bg-black/60 backdrop-blur-md border border-white/30 text-white flex items-center justify-center text-sm shadow-xl group-hover:scale-125 group-hover:bg-[#f286aa] group-hover:text-black group-hover:border-transparent transition-all duration-300">
+                        <i class="fas fa-play ml-0.5"></i>
+                      </div>
+                    </div>
+                  )}
+
+                  <!-- View & Likes Floating Pill -->
+                  <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] text-white pointer-events-none">
+                    <span class="px-2 py-0.5 rounded-full bg-black/70 backdrop-blur-md border border-white/10 flex items-center gap-1">
+                      <i class="fas fa-eye text-[9px] text-[#f286aa]"></i> {post.views}
+                    </span>
+                    <span class="px-2 py-0.5 rounded-full bg-black/70 backdrop-blur-md border border-white/10 flex items-center gap-1">
+                      <i class="fas fa-heart text-[9px] text-[#f286aa]"></i> {post.likes}
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Post Body Content -->
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <!-- Star Rating & Location -->
+                    <div class="flex items-center justify-between mb-2 text-xs">
+                      <div class="flex text-[#f286aa] text-[10px]">
+                        {[...Array(post.rating)].map(() => (
+                          <i class="fas fa-star"></i>
+                        ))}
+                      </div>
+                      <span class="text-[10px] text-[#d9c1a3] uppercase font-sans font-medium">
+                        {post.location}
+                      </span>
+                    </div>
+
+                    <!-- Caption Quote -->
+                    <p class="text-xs text-gray-300 font-light leading-relaxed mb-4 italic line-clamp-4">
+                      "{post.quote}"
+                    </p>
+
+                    <!-- Hashtags Pills -->
+                    <div class="flex flex-wrap gap-1 mb-4">
+                      {post.hashtags.slice(0, 3).map((ht) => (
+                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/5">
+                          {ht}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <!-- Reward Badge Unlocked -->
+                  <div class="pt-3 border-t border-white/5 flex items-center justify-between text-[10px]">
+                    <span class="inline-flex items-center gap-1 text-[#42bf80] font-semibold">
+                      <i class="fas fa-circle-check"></i>
+                      {post.discountEarned}
+                    </span>
+                    <span class="text-gray-400 group-hover:text-[#f286aa] transition">
+                      Verified &rarr;
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SUBMIT YOUR TRANSFORMATION FORM SECTION -->
+      <section class="py-20 bg-[#121212] border-t border-white/5" id="submit-post">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="bg-[#1a1a1a] rounded-3xl p-8 sm:p-12 border border-white/10 shadow-2xl relative">
+            <div class="text-center max-w-xl mx-auto mb-10">
+              <span class="font-script text-3xl text-[#f286aa] block mb-1">Get Rewarded</span>
+              <h2 class="text-3xl font-serif text-white uppercase tracking-wider mb-2">
+                Submit Your Salon Post & Claim 15% OFF
+              </h2>
+              <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed">
+                Shared your new look on Instagram, TikTok, RED, Lemon8, or Google Maps? Enter your details below. Our concierge will verify your post and issue your <strong>15% VIP Promo Voucher</strong>.
+              </p>
+            </div>
+
+            <!-- Submission Form -->
+            <form id="ugc-submission-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="sub-name" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Your Name <span class="text-[#f286aa]">*</span></label>
+                  <input type="text" id="sub-name" required class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition" placeholder="Elena Martinez" />
+                </div>
+                <div>
+                  <label for="sub-email" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Email / WhatsApp <span class="text-[#f286aa]">*</span></label>
+                  <input type="text" id="sub-email" required class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition" placeholder="elena@example.com or +1 787..." />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label for="sub-platform" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Social Platform</label>
+                  <select id="sub-platform" class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition">
+                    <option value="Instagram">Instagram (Reel/Post/Story)</option>
+                    <option value="TikTok">TikTok Video</option>
+                    <option value="XiaoHongShu">XiaoHongShu (小红书)</option>
+                    <option value="Lemon8">Lemon8 Lookbook</option>
+                    <option value="Google">Google Maps Review</option>
+                    <option value="YouTube">YouTube Short/Video</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="sub-handle" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Your Handle <span class="text-[#f286aa]">*</span></label>
+                  <input type="text" id="sub-handle" required class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition" placeholder="@yourhandle" />
+                </div>
+                <div>
+                  <label for="sub-city" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Salon Location</label>
+                  <select id="sub-city" class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition">
+                    {locations.map((loc) => (
+                      <option value={loc.city}>{loc.city}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="sub-link" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Direct Link to Your Post or Review <span class="text-[#f286aa]">*</span></label>
+                <input type="url" id="sub-link" required class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition" placeholder="https://www.instagram.com/reel/... or https://www.tiktok.com/@..." />
+              </div>
+
+              <div>
+                <label for="sub-comment" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Comments or Favorite Treatment Highlights (Optional)</label>
+                <textarea id="sub-comment" rows="3" class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] transition" placeholder="Tell us what you loved about your experience!"></textarea>
+              </div>
+
+              <div class="pt-4 text-center">
+                <button type="submit" class="btn-luxury-primary text-xs w-full sm:w-auto px-10 py-3.5 cursor-pointer">
+                  <i class="fas fa-paper-plane mr-2"></i>
+                  <span>Submit Post & Reveal 15% Voucher</span>
+                </button>
+              </div>
+            </form>
+
+            <!-- Success Reveal Voucher Modal/State -->
+            <div id="voucher-success-box" class="hidden mt-6 p-6 rounded-2xl bg-emerald-950/60 border border-emerald-500/40 text-center animate-fade-in">
+              <i class="fas fa-gift text-3xl text-emerald-400 mb-2"></i>
+              <h3 class="text-xl font-serif text-white uppercase mb-1">Congratulations! Your 15% Discount is Unlocked</h3>
+              <p class="text-xs text-emerald-200 mb-4">Use the VIP promo code below at checkout at any Dream Salon Asia location or mention it during booking:</p>
+              
+              <div class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-black border border-emerald-400/50 shadow-xl mb-4">
+                <span class="font-mono text-xl font-bold tracking-widest text-emerald-300" id="voucher-code">DREAMVIP15</span>
+                <button id="copy-voucher-btn" class="px-3 py-1 rounded bg-emerald-500 hover:bg-emerald-400 text-black text-xs font-semibold uppercase tracking-wider cursor-pointer transition">
+                  Copy
+                </button>
+              </div>
+              <p class="text-[11px] text-gray-400">Our concierge has received your post link and verified your VIP reward. Thank you for sharing the beauty!</p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Video Reel Modal Viewer -->
+      <div 
+        id="ugc-video-modal" 
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Client Transformation Video Viewer"
+      >
+        <div class="relative w-full max-w-lg bg-[#141414] border border-[#d9c1a3]/30 rounded-3xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300">
+          <button 
+            id="close-ugc-modal" 
+            class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/70 hover:bg-[#f286aa] text-white hover:text-black flex items-center justify-center transition cursor-pointer"
+            aria-label="Close video player"
+          >&times;</button>
+
+          <div class="relative aspect-[9/16] max-h-[70vh] w-full bg-black flex items-center justify-center">
+            <iframe 
+              id="ugc-modal-iframe" 
+              class="w-full h-full"
+              src="" 
+              title="Client Transformation Video Reel"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="p-5 bg-[#181818] border-t border-white/10 flex items-center justify-between">
+            <div>
+              <h4 id="ugc-modal-title" class="text-sm font-serif text-white">Client Transformation</h4>
+              <p id="ugc-modal-handle" class="text-xs text-[#f286aa] font-mono">@dreamnails.asia</p>
+            </div>
+            <button class="open-booking-modal btn-luxury-primary text-xs !py-2 !px-4 cursor-pointer">
+              <span>Book This Look</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <Footer />
+  </div>
+</Layout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Dynamic Hashtag Generator
+    const locSelect = document.getElementById('tag-location');
+    const servSelect = document.getElementById('tag-service');
+    const hashtagText = document.getElementById('generated-hashtags');
+    const copyBtn = document.getElementById('copy-hashtags-btn');
+    const copyBtnText = document.getElementById('copy-btn-text');
+
+    const locationTags = {
+      "San Juan": "#DreamSalonSanJuan #SanJuanSalon #CondadoGlam #PuertoRicoBeauty",
+      "Mayaguez": "#DreamSalonMayaguez #MayaguezMall #PuertoRicoSalon",
+      "Bangkok": "#DreamSalonBangkok #BangkokSalon #SukhumvitBeauty #BangkokHeadSpa",
+      "Phuket": "#DreamSalonPhuket #PhuketSpa #BangTaoSalon #PhuketBeauty",
+      "Pattaya": "#DreamSalonPattaya #PattayaSalon #PattayaBeauty",
+      "Chiang Mai": "#DreamSalonChiangMai #NimmanSalon #ChiangMaiSpa",
+      "Hua Hin": "#DreamSalonHuaHin #HuaHinResort #HuaHinSpa",
+      "Bali": "#DreamSalonBali #BaliWellness #BaliSpaSalon",
+      "Dubai": "#DreamSalonDubai #DubaiLuxurySalon #DubaiSpa",
+      "Douala": "#DreamSalonDouala #DoualaBeauty #CameroonSalon"
+    };
+
+    const serviceTags = {
+      "Hair & Head Spa": "#JapaneseHeadSpa #ScalpTherapy #DreamHair #BalayageHair",
+      "Couture Nails": "#RussianManicure #ChromeNails #NailArtistry #GelSculpting",
+      "Cosmetic Tattoo (PMU)": "#MicrobladingAsia #LipBlush #PMUTattoo #PermanentMakeup",
+      "Lashes & Brows": "#LashExtensions #BrowLamination #VolumeLashes",
+      "Facials & Massage": "#GlassSkinFacial #KoreanSkinCare #ThaiAromaTherapy",
+      "Packages & VIP": "#BridalPowerHour #VIPBeauty #SalonPowerHour"
+    };
+
+    function updateTags() {
+      if (!locSelect || !servSelect || !hashtagText) return;
+      const city = locSelect.value;
+      const service = servSelect.value;
+      const cTags = locationTags[city] || "#DreamSalon";
+      const sTags = serviceTags[service] || "#SalonArtistry";
+      hashtagText.textContent = `@dreamnails.asia #DreamSalonAsia #DreamNailsAsia ${cTags} ${sTags} #PostAndSave #PerfectionInEveryBrush`;
+    }
+
+    if (locSelect && servSelect) {
+      locSelect.addEventListener('change', updateTags);
+      servSelect.addEventListener('change', updateTags);
+      updateTags();
+    }
+
+    if (copyBtn && hashtagText) {
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(hashtagText.textContent.trim()).then(() => {
+          copyBtnText.textContent = "Copied to Clipboard!";
+          copyBtn.classList.add('!bg-emerald-500', '!text-black');
+          setTimeout(() => {
+            copyBtnText.textContent = "Copy All Hashtags";
+            copyBtn.classList.remove('!bg-emerald-500', '!text-black');
+          }, 2500);
+        });
+      });
+    }
+
+    // 2. UGC Filter Tabs
+    const filterBtns = document.querySelectorAll('.ugc-filter-btn');
+    const cards = document.querySelectorAll('#ugc-cards-grid .ugc-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-[#f286aa]', 'text-black');
+          b.classList.add('bg-white/5', 'text-gray-300');
+        });
+        btn.classList.add('active', 'bg-[#f286aa]', 'text-black');
+        btn.classList.remove('bg-white/5', 'text-gray-300');
+
+        const filter = btn.getAttribute('data-platform');
+        cards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-platform') === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // 3. Form Submission Simulation & Instant Voucher Reveal
+    const form = document.getElementById('ugc-submission-form');
+    const voucherBox = document.getElementById('voucher-success-box');
+    const copyVoucherBtn = document.getElementById('copy-voucher-btn');
+    const voucherCode = document.getElementById('voucher-code');
+
+    if (form && voucherBox) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        voucherBox.classList.remove('hidden');
+        voucherBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        form.reset();
+      });
+    }
+
+    if (copyVoucherBtn && voucherCode) {
+      copyVoucherBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(voucherCode.textContent.trim()).then(() => {
+          copyVoucherBtn.textContent = "COPIED!";
+          setTimeout(() => {
+            copyVoucherBtn.textContent = "Copy";
+          }, 2000);
+        });
+      });
+    }
+
+    // 4. Video Reel Cinema Modal
+    const videoTriggers = document.querySelectorAll('.open-video-trigger');
+    const videoModal = document.getElementById('ugc-video-modal');
+    const modalIframe = document.getElementById('ugc-modal-iframe');
+    const closeModalBtn = document.getElementById('close-ugc-modal');
+    const modalTitle = document.getElementById('ugc-modal-title');
+    const modalHandle = document.getElementById('ugc-modal-handle');
+
+    if (videoModal && modalIframe) {
+      videoTriggers.forEach(trig => {
+        trig.addEventListener('click', () => {
+          const title = trig.getAttribute('data-title') || "Salon Transformation";
+          const handle = trig.getAttribute('data-handle') || "@dreamnails.asia";
+          if (modalTitle) modalTitle.textContent = title;
+          if (modalHandle) modalHandle.textContent = handle;
+          modalIframe.src = "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1";
+          videoModal.classList.remove('opacity-0', 'pointer-events-none');
+        });
+      });
+
+      if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', () => {
+          modalIframe.src = "";
+          videoModal.classList.add('opacity-0', 'pointer-events-none');
+        });
+      }
+
+      videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) {
+          modalIframe.src = "";
+          videoModal.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+    }
+  });
+</script>
