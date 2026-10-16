@@ -8,12 +8,12 @@
     "address": "Condado District, San Juan, PR 00907",
     "phone": "+1.787.724.8800",
     "email": "info.sju@dreamnails.asia",
-    "tagline": "Metropolitan Glamour & High-Fashion Artistry",
+    "tagline": "Metropolitan Glamour & Full-Service Salon Luxury",
     "hours": "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
     "badge": "Metro Flagship",
     "lat": 18.4655,
     "lng": -66.1057,
-    "description": "Our premier metropolitan salon hub in San Juan offering couture nail enhancements, luxury pedicure suites, and high-fashion chrome artistry in the heart of Puerto Rico."
+    "description": "Our premier metropolitan salon & spa in San Juan offering bespoke hairstyling, Japanese scalp head spa, couture nail enhancements, lash extensions, and facial aesthetics in the heart of Puerto Rico."
   },
   {
     "city": "Mayaguez",
@@ -24,12 +24,12 @@
     "address": "Mayagüez Mall, Carr 2 Ste 001, PR 00680",
     "phone": "+1.787.906.8800",
     "email": "info.maz@dreamnails.asia",
-    "tagline": "Caribbean Luxury & Coastal Nail Art",
+    "tagline": "Caribbean Full-Service Salon & Spa Sanctuary",
     "hours": "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
     "badge": "Active Hub",
     "lat": 18.2013,
     "lng": -67.1452,
-    "description": "Our Caribbean oasis offering premium manicures, pedicure spa rituals, and coastal nail artistry in the historic city of Mayagüez."
+    "description": "Our Caribbean oasis offering bespoke hair care, couture manicures, pedicure spa rituals, and full-service beauty care in the historic city of Mayagüez."
   },
   {
     "city": "Bangkok",
@@ -40,12 +40,12 @@
     "address": "Sukhumvit Road, Watthana, Bangkok 10110",
     "phone": "+66.2.712.8800",
     "email": "info.bkk@dreamnails.asia",
-    "tagline": "Capital City Couture & Master Gel Sculpting",
+    "tagline": "Capital City Luxury Salon & Aesthetics Flagship",
     "hours": "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
     "badge": "Urban Flagship",
     "lat": 13.7563,
     "lng": 100.5018,
-    "description": "Our flagship Bangkok studio in the vibrant heart of Thailand's capital, offering avant-garde nail artistry, couture gel enhancements, and precision Russian manicures."
+    "description": "Our flagship Bangkok salon in the vibrant heart of Thailand's capital, offering complete beauty care: bespoke hairstyling, Japanese head spa, brow microblading, lash volume, and couture nail enhancements."
   },
   {
     "city": "Phuket",
@@ -56,12 +56,12 @@
     "address": "Bang Tao Beach Road, Phuket 83110",
     "phone": "+66.76.321.456",
     "email": "info.hkt@dreamnails.asia",
-    "tagline": "Founding Studio & Master Artists",
+    "tagline": "Founding Flagship Salon & Wellness Spa",
     "hours": "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
     "badge": "Flagship Heritage",
     "lat": 7.8804,
     "lng": 98.3923,
-    "description": "The birthplace of Dream Nails Asia. Seasoned masters with over 15+ years crafting intricate nail designs in tropical paradise."
+    "description": "The founding flagship of Dream Salon Asia. Seasoned masters crafting bespoke hair design, restorative spa rituals, facial rejuvenation, and couture nails in tropical paradise."
   },
   {
     "city": "Pattaya",
@@ -72,12 +72,12 @@
     "address": "Beach Road Central, Pattaya 20150",
     "phone": "+66.38.654.321",
     "email": "info.pty@dreamnails.asia",
-    "tagline": "Vibrant Coastal Beauty Bar",
+    "tagline": "Vibrant Coastal Beauty Salon & Spa Lounge",
     "hours": "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
     "badge": "Active Studio",
     "lat": 12.9276,
     "lng": 100.8771,
-    "description": "Trendsetting nail studio catering to discerning locals and world travelers with high-speed express care and glam enhancements."
+    "description": "Trendsetting full-service beauty salon catering to discerning locals and world travelers with luxury hair styling, lash extensions, head spa, and couture nail care."
   },
   {
     "city": "Chiang Mai",
@@ -88,12 +88,12 @@
     "address": "Nimmanhaemin Road, Chiang Mai 50200",
     "phone": "+66.53.221.800",
     "email": "info.cnx@dreamnails.asia",
-    "tagline": "Artisan Sanctuary & Botanical Nail Spa",
+    "tagline": "Artisan Beauty Sanctuary & Botanical Day Spa",
     "hours": "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
     "badge": "Artisan Studio",
     "lat": 18.7883,
     "lng": 98.9853,
-    "description": "Nestled in Northern Thailand's cultural capital, our Chiang Mai studio blends holistic botanical treatments with delicate, handcrafted nail art."
+    "description": "Nestled in Northern Thailand's cultural capital, our Chiang Mai salon blends holistic botanical hair and scalp treatments, organic facials, Thai massage, and delicate nail artistry."
   },
   {
     "city": "Hua Hin",
@@ -104,12 +104,12 @@
     "address": "Phetkasem Road, Hua Hin, Prachuap Khiri Khan 77110",
     "phone": "+66.32.511.900",
     "email": "info.hhq@dreamnails.asia",
-    "tagline": "Royal Seaside Retreat & Resort Spa Lounge",
+    "tagline": "Royal Seaside Salon & Wellness Spa Retreat",
     "hours": "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
     "badge": "Seaside Resort",
     "lat": 12.5684,
     "lng": 99.9577,
-    "description": "Located in the historic royal beach resort of Hua Hin, offering tranquil seaside spa pedicures, restorative hand therapies, and elegant coastal manicures."
+    "description": "Located in the historic royal beach resort of Hua Hin, offering tranquil seaside spa pedicures, Japanese head spa, restorative hair rituals, and luxury beauty care."
   },
   {
     "city": "Bali",
@@ -120,12 +120,12 @@
     "address": "Bali, Indonesia 80361",
     "phone": "+62.361.789.012",
     "email": "info.dps@dreamnails.asia",
-    "tagline": "Tropical Island Wellness Sanctuary",
+    "tagline": "Tropical Island Full-Service Spa Sanctuary",
     "hours": "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
     "badge": "Wellness Destination",
     "lat": -8.4095,
     "lng": 115.1889,
-    "description": "Holistic island retreat blending organic botanical scrubs, hot stone pedicures, and eco-conscious nail care."
+    "description": "Holistic island retreat blending organic botanical hair therapies, body scrubs, rejuvenating facials, and couture nail care."
   },
   {
     "city": "Dubai",
@@ -136,12 +136,12 @@
     "address": "Dubai, United Arab Emirates",
     "phone": "+971.4.555.0199",
     "email": "info.uxb@dreamnails.asia",
-    "tagline": "Ultra-Luxury Nail Lounge & 24K Treatments",
+    "tagline": "Ultra-Luxury Beauty Salon & VIP Spa Lounge",
     "hours": "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
     "badge": "VIP Luxury",
     "lat": 25.2048,
     "lng": 55.2708,
-    "description": "High-fashion nail lounge featuring 24K gold foil embellishments, private VIP suites, and precision Russian manicures."
+    "description": "High-fashion salon lounge featuring 24K gold foil embellishments, private VIP styling suites, bespoke hair artistry, and couture nail enhancements."
   },
   {
     "city": "Douala",
@@ -152,11 +152,11 @@
     "address": "Douala, Cameroon 237",
     "phone": "+237.233.421.900",
     "email": "info.dla@dreamnails.asia",
-    "tagline": "West African Flagship Beauty Hub",
+    "tagline": "West African Flagship Beauty & Salon Sanctuary",
     "hours": "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
     "badge": "Global Expansion",
     "lat": 4.0511,
     "lng": 9.7679,
-    "description": "State-of-the-art beauty sanctuary delivering international nail artistry, extensions, and luxury spa treatments in Douala."
+    "description": "State-of-the-art beauty salon delivering international hair styling, lash extensions, aesthetic skincare, and luxury spa treatments in Douala."
   }
 ]
