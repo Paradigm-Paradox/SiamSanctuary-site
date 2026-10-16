@@ -3,22 +3,22 @@ const subServices = [
   {
     title: "MANICURE",
     desc: "A manicure is a mostly cosmetic beauty treatment for the fingernails and hands",
-    icon: "fa-hand-sparkles"
+    icon: "icon-serv_01"
   },
   {
     title: "PEDICURE",
     desc: "A pedicure is a cosmetic treatment of the feet and toenails, analogous to a manicure.",
-    icon: "fa-spa"
+    icon: "icon-serv_02"
   },
   {
     title: "NAIL CARE",
     desc: "The care and maintenance of the fingernails and toenails.",
-    icon: "fa-magic"
+    icon: "icon-serv_03"
   },
   {
     title: "COSMETICS",
     desc: "The most popular cosmetics are hair dyes, powders and creams.",
-    icon: "fa-pump-soap"
+    icon: "icon-serv_04"
   }
 ];
 ---
@@ -65,8 +65,8 @@ const subServices = [
         <div class="pt-4 flex items-center gap-12 sm:gap-16">
           <!-- Metric 1: 54 Professional Techniques -->
           <div class="flex items-center gap-4">
-            <span class="text-5xl sm:text-6xl font-serif font-bold text-[#f286aa] counter-number" data-target="54">
-              0
+            <span class="text-6xl sm:text-7xl font-serif font-normal text-[#f286aa] counter-number" data-target="54">
+              54
             </span>
             <div class="text-xs text-white uppercase tracking-wider leading-snug font-medium">
               Professional <br />Techniques
@@ -75,8 +75,8 @@ const subServices = [
 
           <!-- Metric 2: 314 Nail polish colors -->
           <div class="flex items-center gap-4">
-            <span class="text-5xl sm:text-6xl font-serif font-bold text-[#f286aa] counter-number" data-target="314">
-              0
+            <span class="text-6xl sm:text-7xl font-serif font-normal text-[#f286aa] counter-number" data-target="314">
+              314
             </span>
             <div class="text-xs text-white uppercase tracking-wider leading-snug font-medium">
               Nail polish <br />colors
@@ -93,18 +93,18 @@ const subServices = [
       {subServices.map((serv, i) => (
         <div class={`flex flex-col items-center group cursor-pointer reveal-on-scroll ${i === 1 ? 'reveal-delay-100' : i === 2 ? 'reveal-delay-200' : i === 3 ? 'reveal-delay-300' : ''}`}>
           
-          <!-- Circular Outline Badge -->
-          <div class="w-24 h-24 rounded-full border border-white/15 group-hover:border-[#f286aa] flex items-center justify-center text-[#f286aa] mb-5 bg-[#181818]/60 group-hover:bg-[#f286aa]/10 transition-all duration-300 transform group-hover:scale-110 shadow-lg">
-            <i class={`fas ${serv.icon} text-2xl`} aria-hidden="true"></i>
+          <!-- Circular Outline / Organic Backdrop Badge from original lte-icons -->
+          <div class="w-44 h-44 sm:w-48 sm:h-48 rounded-full bg-[#1c1c1c] group-hover:bg-[#222222] border border-white/10 group-hover:border-[#f286aa]/40 transition-all duration-500 flex items-center justify-center relative mb-6 shadow-2xl group-hover:scale-105">
+            <i class={`icon ${serv.icon} text-6xl sm:text-7xl text-[#f286aa] transition-transform duration-500 group-hover:scale-110`} aria-hidden="true"></i>
           </div>
 
           <!-- Sub-Service Heading -->
-          <h4 class="text-sm font-serif text-white uppercase tracking-widest mb-2 group-hover:text-[#f286aa] transition-colors">
+          <h3 class="text-base sm:text-lg font-serif text-white uppercase tracking-[0.15em] mb-2 group-hover:text-[#f286aa] transition-colors">
             {serv.title}
-          </h4>
+          </h3>
 
           <!-- Description -->
-          <p class="text-xs text-gray-400 font-light leading-relaxed max-w-xs">
+          <p class="text-xs text-gray-400 font-light leading-relaxed max-w-[220px] mx-auto">
             {serv.desc}
           </p>
 
@@ -113,50 +113,4 @@ const subServices = [
     </div>
 
   </div>
-
-  <script is:inline>
-    // Live Number CountUp Animation
-    function setupPhilosophyCounters() {
-      const counters = document.querySelectorAll('#philosophy .counter-number');
-      if (!counters.length) return;
-
-      const animateCount = (el) => {
-        const target = parseInt(el.getAttribute('data-target') || '0', 10);
-        const duration = 1800; // ms
-        const startTime = performance.now();
-
-        function step(now) {
-          const progress = Math.min((now - startTime) / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          const current = Math.floor(eased * target);
-          el.textContent = current.toString();
-
-          if (progress < 1) {
-            requestAnimationFrame(step);
-          } else {
-            el.textContent = target.toString();
-          }
-        }
-
-        requestAnimationFrame(step);
-      };
-
-      if ('IntersectionObserver' in window) {
-        const obs = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              animateCount(entry.target);
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.3 });
-
-        counters.forEach(c => obs.observe(c));
-      } else {
-        counters.forEach(animateCount);
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', setupPhilosophyCounters);
-  </script>
 </section>

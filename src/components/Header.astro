@@ -17,23 +17,23 @@ const navLinks = [
   <div class="bg-[#0a0a0a] text-gray-300 py-1.5 px-4 sm:px-8 border-b border-white/10 text-xs">
     <div class="max-w-7xl mx-auto flex items-center justify-end gap-5">
       <a href="/gallery" class="flex items-center gap-1.5 hover:text-[#f286aa] transition text-[11px] uppercase tracking-wider">
-        <i class="fas fa-search text-[10px]" aria-hidden="true"></i>
+        <i class="icon icon-search text-[11px]" aria-hidden="true"></i>
         <span>search</span>
       </a>
       <a href="/shop" class="flex items-center gap-1.5 hover:text-[#f286aa] transition text-[11px] uppercase tracking-wider">
-        <i class="far fa-user text-[10px]" aria-hidden="true"></i>
+        <i class="icon icon-login text-[11px]" aria-hidden="true"></i>
         <span>login</span>
       </a>
       <a href="/shop" class="flex items-center gap-1.5 hover:text-[#f286aa] transition text-[11px] uppercase tracking-wider">
-        <i class="fas fa-shopping-bag text-[10px]" aria-hidden="true"></i>
+        <i class="icon icon-shopping-bag text-[11px]" aria-hidden="true"></i>
         <span>cart</span>
-        <span class="text-[#f286aa] font-bold">0</span>
+        <span class="bg-[#f286aa] text-black text-[9px] font-bold rounded-full w-4 h-4 inline-flex items-center justify-center ml-0.5">0</span>
       </a>
     </div>
   </div>
 
   <!-- Main White Navbar matching original Atura theme -->
-  <nav class="bg-white text-[#181818] shadow-sm sticky top-0 px-4 sm:px-8 py-3.5 transition-all" aria-label="Main Navigation">
+  <nav class="bg-white text-[#181818] shadow-sm sticky top-0 px-4 sm:px-8 py-3 transition-all" aria-label="Main Navigation">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       
       <!-- Brand Logo (Dark Text Logo for White Background) -->
@@ -41,18 +41,18 @@ const navLinks = [
         <img 
           src="/images/2022/04/Dream-Salon-Transparent-BG-01-noborder-1.png" 
           alt="DreamNails.Asia" 
-          class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          class="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
         />
       </a>
 
       <!-- Desktop Nav Menu (Dark Text on White) -->
-      <div class="hidden lg:flex items-center gap-7">
+      <div class="hidden lg:flex items-center gap-6 xl:gap-8">
         {navLinks.map((link) => {
           const isActive = currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href));
           return (
             <a 
               href={link.href} 
-              class={`text-[13px] font-sans font-medium tracking-wide transition-colors py-1 relative focus-visible:ring-1 focus-visible:ring-[#f286aa] rounded ${
+              class={`text-[14px] font-sans font-medium tracking-wide transition-colors py-1 relative focus-visible:ring-1 focus-visible:ring-[#f286aa] ${
                 isActive 
                   ? 'text-[#f286aa] font-semibold' 
                   : 'text-[#222222] hover:text-[#f286aa]'
@@ -67,12 +67,12 @@ const navLinks = [
       <!-- Action Buttons matching original header (Phone + Black Book Now Button) -->
       <div class="hidden md:flex items-center gap-6">
         <a href="tel:+17878348888" class="text-xs text-[#222222] hover:text-[#f286aa] transition flex items-center gap-2 focus-visible:ring-1 focus-visible:ring-[#f286aa] rounded p-1 tracking-wider font-medium">
-          <i class="fas fa-phone-alt text-[#f286aa] text-xs" aria-hidden="true"></i>
+          <i class="icon icon-phone text-[#f286aa] text-sm" aria-hidden="true"></i>
           <span>+1 787 XXX XXXX</span>
         </a>
-        <button class="open-booking-modal bg-[#141414] hover:bg-[#f286aa] text-white hover:text-black font-sans text-xs uppercase tracking-wider font-semibold py-2.5 px-6 rounded-md transition-all duration-300 flex items-center gap-2 cursor-pointer shadow-sm focus-visible:ring-2 focus-visible:ring-[#141414]">
+        <button class="open-booking-modal bg-[#141414] hover:bg-[#f286aa] text-white hover:text-black font-sans text-xs uppercase tracking-wider font-semibold py-3 px-6 rounded-none transition-all duration-300 flex items-center gap-2 cursor-pointer shadow-sm focus-visible:ring-2 focus-visible:ring-[#141414]">
           <span>Book now</span>
-          <i class="fas fa-arrow-right text-[10px]" aria-hidden="true"></i>
+          <span class="text-xs">&rarr;</span>
         </button>
       </div>
 

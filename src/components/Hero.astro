@@ -31,24 +31,29 @@ const slides = [
 ];
 
 const socialLinks = [
-  { name: 'facebook', href: 'https://fb.com/DreamNails.Asia' },
-  { name: 'twitter', href: 'https://twitter.com' },
-  { name: 'instagram', href: 'https://instagram.com' },
-  { name: 'youtube', href: 'https://youtube.com/@DreamNailsAsia' },
-  { name: 'pinterest', href: 'https://pinterest.com' }
+  { name: 'Facebook', href: 'https://www.facebook.com/DreamNails.Asia' },
+  { name: 'Instagram', href: 'https://www.instagram.com/dreamnails.asia/' },
+  { name: 'X', href: 'https://x.com/DreamNailsAsia' },
+  { name: 'Youtube', href: 'https://www.youtube.com/@DreamNails-Asia' },
+  { name: 'Pinterest.com', href: 'https://www.pinterest.com/dreamnailsasia' },
+  { name: 'LinkedIN', href: 'https://www.linkedin.com/in/owner-dreamnails-asia/' },
+  { name: 'LinkTr.ee', href: 'https://linktr.ee/DreamNails.Asia' },
+  { name: 'Calendly', href: 'https://calendly.com/dreamnails.asia' }
 ];
+
+const totalDots = Array.from({ length: 11 });
 ---
 
 <section id="hero-slider" class="relative h-[85vh] sm:h-[90vh] min-h-[600px] max-h-[1000px] w-full overflow-hidden bg-[#0d0d0d] select-none">
   
   <!-- Left Side: Vertical Rotated Social Links matching original Atura theme -->
-  <div class="hidden xl:flex absolute left-6 top-1/2 -translate-y-1/2 z-30 flex-col items-center gap-8 text-[11px] uppercase tracking-[0.25em] text-white/40 pointer-events-auto">
+  <div class="hidden xl:flex absolute left-8 top-1/2 -translate-y-1/2 z-30 flex-col items-center gap-7 text-[10px] uppercase tracking-[0.25em] text-white/50 pointer-events-auto select-none" style="writing-mode: vertical-rl; transform: rotate(180deg);">
     {socialLinks.map((s) => (
       <a 
         href={s.href} 
         target="_blank" 
         rel="noopener noreferrer" 
-        class="transform -rotate-90 hover:text-[#f286aa] transition-colors py-2"
+        class="hover:text-[#f286aa] transition-colors py-1 block"
         aria-label={`Visit Dream Nails on ${s.name}`}
       >
         {s.name}
@@ -56,11 +61,11 @@ const socialLinks = [
     ))}
   </div>
 
-  <!-- Right Side: Vertical Slide Indicators matching original theme -->
+  <!-- Right Side: Vertical Slide Indicators matching original theme (11 dots) -->
   <div class="hidden sm:flex absolute right-8 top-1/2 -translate-y-1/2 z-30 flex-col items-center gap-3 pointer-events-auto" id="vertical-dots" role="tablist" aria-label="Slide indicators">
-    {slides.map((_, i) => (
+    {totalDots.map((_, i) => (
       <button 
-        class={`vertical-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer focus-visible:ring-2 focus-visible:ring-[#f286aa] ${i === 0 ? 'bg-[#f286aa] ring-2 ring-[#f286aa]/40' : 'bg-white/40 hover:bg-white'}`}
+        class={`vertical-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer focus-visible:ring-2 focus-visible:ring-[#f286aa] ${i === 0 ? 'bg-[#f286aa] ring-4 ring-[#f286aa]/30 scale-125' : 'bg-white/35 hover:bg-white'}`}
         data-index={i}
         role="tab"
         aria-selected={i === 0 ? "true" : "false"}
@@ -94,14 +99,14 @@ const socialLinks = [
           
           <!-- Giant Background Ghost/Outline Text from original Elementor layout -->
           <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-            <span class="text-6xl sm:text-8xl md:text-9xl lg:text-[11rem] font-serif font-bold uppercase tracking-wider text-transparent stroke-text opacity-25">
+            <span class="text-7xl sm:text-9xl md:text-[11rem] lg:text-[13rem] font-serif font-bold uppercase tracking-wider text-transparent stroke-text opacity-35">
               {slide.heading}
             </span>
           </div>
 
           <div class="relative z-10 flex flex-col items-center">
             <!-- Quentin Calligraphy Accent -->
-            <span class="slide-script font-script text-4xl sm:text-5xl md:text-6xl text-[#f286aa] drop-shadow-md mb-2 block transform translate-y-6 opacity-0 transition-all duration-700 delay-200">
+            <span class="slide-script font-script text-5xl sm:text-6xl md:text-7xl text-[#f286aa] drop-shadow-md mb-2 block transform translate-y-6 opacity-0 transition-all duration-700 delay-200">
               {slide.scriptTitle}
             </span>
 
@@ -119,10 +124,10 @@ const socialLinks = [
             <div class="slide-actions transform translate-y-8 opacity-0 transition-all duration-700 delay-500">
               <a 
                 href="/services" 
-                class="inline-flex items-center gap-3 px-8 py-3.5 rounded-full border border-white/30 hover:border-[#f286aa] bg-white/5 hover:bg-[#f286aa] text-white hover:text-black font-sans text-xs uppercase tracking-widest font-semibold transition-all duration-300 backdrop-blur-sm cursor-pointer shadow-lg group focus-visible:ring-2 focus-visible:ring-[#f286aa]"
+                class="inline-flex items-center gap-3 px-8 py-3.5 rounded-full border border-white/40 hover:border-[#f286aa] bg-white/10 hover:bg-[#f286aa] text-white hover:text-black font-sans text-xs uppercase tracking-widest font-medium transition-all duration-300 backdrop-blur-md cursor-pointer shadow-lg group focus-visible:ring-2 focus-visible:ring-[#f286aa]"
               >
                 <span>{slide.cta}</span>
-                <i class="fas fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
+                <span class="text-sm transform group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>

@@ -45,6 +45,11 @@
 .icon-shopping-bag:before { content: '\e827'; }
 .icon-quote_soft:before { content: '\e80d'; }
 .icon-star:before { content: '\e812'; }
+.icon-serv_01:before { content: '\e848'; }
+.icon-serv_02:before { content: '\e845'; }
+.icon-serv_03:before { content: '\e846'; }
+.icon-serv_04:before { content: '\e82e'; }
+.icon-bg:before { content: '\e82a'; }
 
 :root {
   --brand-pink: #f286aa;
@@ -187,29 +192,17 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* REA Signature Scroll-Reveal Animations (Zero layout shift, 60fps) */
+/* REA Signature Scroll-Reveal Animations (Zero layout shift, 60fps, 100% Accessible) */
 .reveal-on-scroll {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-
-.reveal-on-scroll.is-revealed {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .reveal-scale {
-  opacity: 0;
-  transform: scale(0.94);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-
-.reveal-scale.is-revealed {
   opacity: 1;
   transform: scale(1);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .reveal-delay-100 { transition-delay: 100ms; }
