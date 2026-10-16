@@ -2,77 +2,479 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import locations from '../data/locations.json';
 ---
 
 <Layout 
   title="About Us | Dream Salon Asia - Joey & Onanong Jones"
-  description="Learn about the founders, vision, and hospital-grade sterilization standards of Dream Salon Asia. Full-service luxury salon & spa founded in Phuket, Thailand and expanding worldwide."
+  description="Discover the story, founding vision, and hospital-grade clinical standards of Dream Salon Asia. Full-service international luxury beauty salon & spa founded by Joey & Onanong Jones in Phuket, Thailand."
 >
   <div class="min-h-screen flex flex-col bg-[#141414]">
     <Header />
     
     <main class="flex-grow">
-      <!-- Subpage Header Banner -->
-      <section class="relative py-24 bg-[#101010] border-b border-white/5 overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
+      <!-- 1. Hero Banner -->
+      <section class="relative py-28 sm:py-36 bg-[#101010] border-b border-white/5 overflow-hidden">
+        <div class="absolute inset-0 opacity-25">
           <img src="/images/2021/12/inner_header_01.jpg" alt="About Header Background" class="w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/80 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/85 to-transparent"></div>
         </div>
 
-        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-2">Our Journey & Mission</span>
-          <h1 class="text-4xl sm:text-6xl font-serif text-white uppercase tracking-wider mb-4">
-            About Dream Salon
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f286aa]/10 border border-[#f286aa]/30 text-[#f286aa] text-xs uppercase tracking-widest font-semibold mb-6">
+            <i class="fas fa-sparkles text-[10px]"></i>
+            <span>The Dream Salon Story</span>
+            <i class="fas fa-sparkles text-[10px]"></i>
+          </div>
+          <span class="font-script text-3xl sm:text-5xl text-[#f286aa] block mb-3">Our Journey, Artistry & Mission</span>
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif text-white uppercase tracking-wider mb-6 leading-tight">
+            Where Beauty Meets <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#d9c1a3] via-white to-[#f286aa]">Sanctuary</span>
           </h1>
-          <p class="text-xs sm:text-sm uppercase tracking-widest text-[#d9c1a3]">
-            Founded by Joey & Onanong Jones • Phuket, Thailand to the World
+          <p class="text-sm sm:text-base text-gray-300 font-light max-w-3xl mx-auto leading-relaxed mb-8">
+            Founded by <strong class="text-white font-medium">Joey & Onanong Jones</strong>, Dream Salon Asia evolved from an intimate boutique atelier in Phuket, Thailand into a globally celebrated full-service beauty sanctuary, uniting Japanese Head Spa rituals, master hair styling, cosmetic tattooing, clinical skincare, and couture nail architecture.
           </p>
+
+          <!-- Stat Badges Row -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto pt-6 border-t border-white/10">
+            <div class="p-3 bg-[#181818]/80 backdrop-blur rounded-xl border border-white/5">
+              <span class="text-2xl sm:text-3xl font-serif text-[#f286aa] font-bold block">15+</span>
+              <span class="text-[11px] uppercase tracking-wider text-gray-400">Years of Mastery</span>
+            </div>
+            <div class="p-3 bg-[#181818]/80 backdrop-blur rounded-xl border border-white/5">
+              <span class="text-2xl sm:text-3xl font-serif text-[#d9c1a3] font-bold block">10</span>
+              <span class="text-[11px] uppercase tracking-wider text-gray-400">Global Sanctuaries</span>
+            </div>
+            <div class="p-3 bg-[#181818]/80 backdrop-blur rounded-xl border border-white/5">
+              <span class="text-2xl sm:text-3xl font-serif text-emerald-400 font-bold block">100%</span>
+              <span class="text-[11px] uppercase tracking-wider text-gray-400">Class-B Autoclave</span>
+            </div>
+            <div class="p-3 bg-[#181818]/80 backdrop-blur rounded-xl border border-white/5">
+              <span class="text-2xl sm:text-3xl font-serif text-white font-bold block">13</span>
+              <span class="text-[11px] uppercase tracking-wider text-gray-400">Beauty Disciplines</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Main Story Section -->
-      <section class="py-20 bg-[#181818]">
+      <!-- 2. The Founders' Story & The Sanctuary Vision -->
+      <section class="py-24 bg-[#181818] border-b border-white/5 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-            <div>
-              <span class="font-script text-3xl text-[#f286aa] block mb-1">Empowering Beauty</span>
-              <h2 class="text-3xl sm:text-4xl font-serif text-white uppercase tracking-wide mb-6">
-                Where Confidence & Sophistication Begin
-              </h2>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+              <div class="inline-block">
+                <span class="font-script text-3xl text-[#f286aa] block mb-1">Our Humble Beginnings</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-white uppercase tracking-wide leading-tight">
+                  Born in Paradise, Crafted for the Discerning
+                </h2>
+              </div>
+              
               <div class="space-y-4 text-sm sm:text-base text-gray-300 font-light leading-relaxed">
                 <p>
-                  Welcome to <strong class="text-white font-medium">Dream Salon Asia</strong>, your global full-service luxury beauty salon and spa destination. We believe that beauty is much more than an aesthetic experience—it is a personal movement. Our core purpose is to empower individuals worldwide by providing an all-inclusive sanctuary where bespoke hair design, Japanese head spa rituals, facial wellness, lash & brow PMU, and couture nail artistry come together.
+                  Over a decade and a half ago, in the sun-drenched coastal haven of <strong class="text-white font-medium">Phuket, Thailand</strong>, husband-and-wife founders <strong class="text-white font-medium">Joey & Onanong Jones</strong> shared a transformative vision: to transcend the rushed, chemical-heavy environment of conventional salon salons and build a true holistic beauty sanctuary.
                 </p>
                 <p>
-                  Our journey originated in the picture-perfect tropical paradise of <strong class="text-white">Phuket, Thailand</strong>. With over a decade and a half in the luxury beauty industry, our master stylists, licensed aestheticians, and certified nail artists have built an acclaimed international reputation for excellence across hair, skin, and nail care. Throughout the years, we have had the honor of styling local and international clients, models, and travelers seeking perfection.
+                  Onanong, endowed with an innate eye for fine design and trained rigorously in European dry manicure methods and Japanese trichology, partnered with Joey's deep commitment to operational excellence and clinical hospital-level sanitation. Together, they established a salon standard unseen in Southeast Asia—one where every instrument is sterilised to surgical standards, every formulation is non-toxic, and every guest is treated to unhurried, royal Thai hospitality.
                 </p>
-                <p class="italic text-[#d9c1a3] font-serif text-base border-l-2 border-[#f286aa] pl-4 my-4">
-                  "We believe that when you look good and feel good, you do good. When women support and inspire each other, truly magical things happen."
+                <p>
+                  As international clientele, expatriates, and travelers experienced this level of technical mastery and heartfelt care, word quickly spread across continents. Guests demanded the same pristine experience in their home cities and travel hubs.
+                </p>
+              </div>
+
+              <!-- Quote Box -->
+              <div class="p-6 rounded-2xl bg-[#141414] border-l-4 border-[#f286aa] border-y border-r border-white/5 my-6">
+                <p class="italic text-[#d9c1a3] font-serif text-base sm:text-lg leading-relaxed mb-3">
+                  "We believe that when you look good and feel good, you do good. True beauty is not about covering imperfections; it is about honoring yourself with time, unhurried craftsmanship, and complete peace of mind."
+                </p>
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-[#f286aa]/20 border border-[#f286aa]/40 flex items-center justify-center text-[#f286aa] font-serif font-bold text-sm">
+                    JO
+                  </div>
+                  <div>
+                    <h4 class="text-xs uppercase tracking-wider font-semibold text-white">Joey & Onanong Jones</h4>
+                    <span class="text-[11px] text-gray-400">Founders & Directors, Dream Salon Asia</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <p class="text-sm text-gray-300 font-light leading-relaxed">
+                  Today, Dream Salon Asia has evolved from an exclusive nail atelier into a <strong class="text-white font-medium">world-class full-service salon and spa collective</strong>, operating 10 destination sanctuaries spanning Thailand, the Caribbean (San Juan & Mayagüez, Puerto Rico), Bali, and Dubai.
                 </p>
               </div>
             </div>
 
-            <div class="relative">
-              <div class="rounded-2xl overflow-hidden border border-[#d9c1a3]/20 shadow-2xl">
-                <img src="/images/2021/12/about_sidebar.jpg" alt="Dream Nails Sanctuary Experience" class="w-full h-auto object-cover" />
+            <!-- Visual Showcase Column -->
+            <div class="lg:col-span-5 space-y-6">
+              <div class="relative group">
+                <div class="absolute -inset-2 bg-gradient-to-r from-[#f286aa]/20 to-[#d9c1a3]/20 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500"></div>
+                <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#141414]">
+                  <img 
+                    src="/images/2021/12/about_sidebar.jpg" 
+                    alt="Dream Salon Sanctuary Experience" 
+                    class="w-full h-[460px] object-cover hover:scale-105 transition-transform duration-700" 
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                    <div>
+                      <span class="text-[10px] uppercase tracking-widest text-[#f286aa] font-semibold block mb-1">Sanctuary Atmosphere</span>
+                      <h4 class="text-white font-serif text-lg">Phuket Flagship Sanctuary</h4>
+                      <p class="text-xs text-gray-300 font-light">Where clinical sterility meets warm tropical elegance.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Badges Grid -->
+              <div class="grid grid-cols-2 gap-3">
+                <div class="p-4 rounded-xl bg-[#141414] border border-white/5 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-[#f286aa]/10 text-[#f286aa] flex items-center justify-center text-sm flex-shrink-0">
+                    <i class="fas fa-award"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-semibold text-white">Award-Winning</h5>
+                    <span class="text-[10px] text-gray-400">Master technicians</span>
+                  </div>
+                </div>
+                <div class="p-4 rounded-xl bg-[#141414] border border-white/5 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-[#d9c1a3]/10 text-[#d9c1a3] flex items-center justify-center text-sm flex-shrink-0">
+                    <i class="fas fa-leaf"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-semibold text-white">Clean & Vegan</h5>
+                    <span class="text-[10px] text-gray-400">Non-toxic formulas</span>
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
 
-          <!-- Hospital-Grade Sanitation Pillar -->
-          <div class="bg-[#121212] rounded-3xl p-8 sm:p-12 border border-white/5 shadow-2xl mb-20">
-            <div class="max-w-3xl mx-auto text-center mb-10">
-              <span class="font-script text-3xl text-[#f286aa] block mb-1">Our Safety Commitment</span>
-              <h2 class="text-3xl sm:text-4xl font-serif text-white uppercase tracking-wider mb-4">
-                Hospital-Grade Sanitation Standards
-              </h2>
-              <p class="text-sm text-gray-400 font-light max-w-xl mx-auto">
-                Cleanliness and clinical safety are our highest non-negotiable priorities. We implement hospital-grade sterilization exceeding international health board and OSHA regulations across every salon worldwide.
+        </div>
+      </section>
+
+      <!-- 3. From Nails to Full-Service Sanctuary: Our 13 Disciplines -->
+      <section class="py-24 bg-[#141414] border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="max-w-3xl mx-auto text-center mb-16">
+            <span class="font-script text-3xl text-[#f286aa] block mb-2">Complete Harmony</span>
+            <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-4">
+              A Multi-Disciplinary Beauty Sanctuary
+            </h2>
+            <p class="text-sm sm:text-base text-gray-300 font-light">
+              We recognized that modern luxury clients do not want to commute between four different studios for hair, skin, lashes, and nails. We curated 13 interconnected disciplines under one serene, clinical roof.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Card 1: Hair Artistry & Color -->
+            <div class="p-8 rounded-2xl bg-[#1a1a1a] border border-white/5 hover:border-[#f286aa]/30 transition group flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-[#f286aa]/10 text-[#f286aa] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                  <i class="fas fa-scissors"></i>
+                </div>
+                <h3 class="text-lg font-serif text-white uppercase tracking-wide mb-2 group-hover:text-[#f286aa] transition-colors">
+                  Hairstyling & Balayage
+                </h3>
+                <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed mb-4">
+                  Precision French dry cutting, bespoke dimensional balayage, gloss toner glazes, and bridal couture styling using bond-protecting Olaplex and Kérastase formulations.
+                </p>
+              </div>
+              <a href="/services/hairstyling" class="text-xs text-[#d9c1a3] hover:text-[#f286aa] font-medium flex items-center gap-1.5 pt-2">
+                <span>Explore Hair Services</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+
+            <!-- Card 2: Japanese Head Spa Rituals -->
+            <div class="p-8 rounded-2xl bg-[#1a1a1a] border border-white/5 hover:border-[#f286aa]/30 transition group flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-[#38bdf8]/10 text-[#38bdf8] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                  <i class="fas fa-spa"></i>
+                </div>
+                <h3 class="text-lg font-serif text-white uppercase tracking-wide mb-2 group-hover:text-[#38bdf8] transition-colors">
+                  Japanese Head Spa & Trichology
+                </h3>
+                <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed mb-4">
+                  Multi-step hydrotherapy waterfalls, microscopic 200x scalp diagnostics, enzymatic exfoliation, deep scalp acupressure massage, and botanical vapor infusions.
+                </p>
+              </div>
+              <a href="/services/hair-treatments-head-spa" class="text-xs text-[#d9c1a3] hover:text-[#38bdf8] font-medium flex items-center gap-1.5 pt-2">
+                <span>Explore Head Spa Rituals</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+
+            <!-- Card 3: Russian & Couture Nail Architecture -->
+            <div class="p-8 rounded-2xl bg-[#1a1a1a] border border-white/5 hover:border-[#f286aa]/30 transition group flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-[#ec4899]/10 text-[#ec4899] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                  <i class="fas fa-hand-sparkles"></i>
+                </div>
+                <h3 class="text-lg font-serif text-white uppercase tracking-wide mb-2 group-hover:text-[#ec4899] transition-colors">
+                  Russian E-File & Couture Nails
+                </h3>
+                <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed mb-4">
+                  Micro-diamond dry cuticle alignment, structured hard gel overlays, Japanese APRES soft gel extensions, hand-painted fine art, and Swarovski crystal encapsulation.
+                </p>
+              </div>
+              <a href="/services/manicure" class="text-xs text-[#d9c1a3] hover:text-[#ec4899] font-medium flex items-center gap-1.5 pt-2">
+                <span>Explore Nail Artistry</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+
+            <!-- Card 4: Cosmetic Tattooing & PMU -->
+            <div class="p-8 rounded-2xl bg-[#1a1a1a] border border-white/5 hover:border-[#f286aa]/30 transition group flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-[#a855f7]/10 text-[#a855f7] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <h3 class="text-lg font-serif text-white uppercase tracking-wide mb-2 group-hover:text-[#a855f7] transition-colors">
+                  Cosmetic Tattooing & PMU
+                </h3>
+                <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed mb-4">
+                  Nanoblading hair-strokes, ombre powder brows, Aquarelle watercolor lip blush, and lash line enhancement using medical-grade organic mineral pigments and sterile cartridges.
+                </p>
+              </div>
+              <a href="/services/cosmetic-tattoo-pmu" class="text-xs text-[#d9c1a3] hover:text-[#a855f7] font-medium flex items-center gap-1.5 pt-2">
+                <span>Explore PMU Artistry</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+
+            <!-- Card 5: Clinical Facials & Skin Therapy -->
+            <div class="p-8 rounded-2xl bg-[#1a1a1a] border border-white/5 hover:border-[#f286aa]/30 transition group flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-[#42bf80]/10 text-[#42bf80] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                  <i class="fas fa-feather"></i>
+                </div>
+                <h3 class="text-lg font-serif text-white uppercase tracking-wide mb-2 group-hover:text-[#42bf80] transition-colors">
+                  Clinical Facials & Skin Revival
+                </h3>
+                <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed mb-4">
+                  Dermal hydra-infusion, peptide lifting, LED photo-biomodulation therapy, cold plasma purification, and deep lymphatic sculpting for radiant, camera-ready skin.
+                </p>
+              </div>
+              <a href="/services/facial" class="text-xs text-[#d9c1a3] hover:text-[#42bf80] font-medium flex items-center gap-1.5 pt-2">
+                <span>Explore Facial Therapies</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+
+            <!-- Card 6: Private Celebrity & Multi-Hand Glam -->
+            <div class="p-8 rounded-2xl bg-gradient-to-br from-[#1a1a1a] via-[#1f1b14] to-[#1a1a1a] border border-[#d9c1a3]/30 hover:border-[#d9c1a3] transition group flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-[#d9c1a3]/20 text-[#d9c1a3] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                  <i class="fas fa-crown"></i>
+                </div>
+                <h3 class="text-lg font-serif text-white uppercase tracking-wide mb-2 group-hover:text-[#d9c1a3] transition-colors">
+                  Private Celebrity & VIP Services
+                </h3>
+                <p class="text-xs sm:text-sm text-gray-300 font-light leading-relaxed mb-4">
+                  Discreet salon buyouts with rear executive entry, mobile glam squads for superyachts & private villas, and synchronized 4-to-6 hand master sessions with binding NDA protection.
+                </p>
+              </div>
+              <a href="/celebrity-services" class="text-xs text-[#d9c1a3] hover:text-white font-medium flex items-center gap-1.5 pt-2">
+                <span>Explore VIP Offerings</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="text-center mt-12">
+            <a href="/services" class="btn-luxury-primary text-xs inline-flex items-center gap-2">
+              <span>View All 13 Signature Salon Offerings</span>
+              <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 4. The 5 Core Pillars of Our Philosophy -->
+      <section class="py-24 bg-[#181818] border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="max-w-3xl mx-auto text-center mb-16">
+            <span class="font-script text-3xl text-[#f286aa] block mb-2">Our Guiding Light</span>
+            <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-4">
+              The 5 Pillars of Dream Salon
+            </h2>
+            <p class="text-sm sm:text-base text-gray-300 font-light">
+              Every appointment is guided by our immutable philosophy of clinical safety, technical perfection, and warm authenticity.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="p-6 rounded-2xl bg-[#121212] border border-white/5 space-y-3">
+              <span class="text-3xl font-serif text-[#f286aa] font-bold block">01</span>
+              <h3 class="text-base font-serif text-white uppercase tracking-wide">Aseptic Clinical Integrity</h3>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">
+                We believe true luxury begins with safety. Hospital-grade Class-B vacuum autoclaves, pipeless ozone hydrotherapy foot baths, HEPA-13 carbon air purifiers, and 100% single-use sealed disposable kits are standard across every chair.
               </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-10">
+            <div class="p-6 rounded-2xl bg-[#121212] border border-white/5 space-y-3">
+              <span class="text-3xl font-serif text-[#d9c1a3] font-bold block">02</span>
+              <h3 class="text-base font-serif text-white uppercase tracking-wide">Global Technical Mastery</h3>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">
+                Our specialists undergo more than 200 hours of annual advanced training in Tokyo trichology, Paris hair cutting, London color theory, Russian dry manicure precision, and Korean permanent makeup artistry.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-[#121212] border border-white/5 space-y-3">
+              <span class="text-3xl font-serif text-emerald-400 font-bold block">03</span>
+              <h3 class="text-base font-serif text-white uppercase tracking-wide">Clean & Conscious Formulations</h3>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">
+                We strictly ban toxic chemicals: formaldehyde, toluene, DBP, ammonia, and aggressive phthalates. We formulate with organic cold-pressed botanicals, vegan keratin, and biocompatible Japanese minerals.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-[#121212] border border-white/5 space-y-3">
+              <span class="text-3xl font-serif text-sky-400 font-bold block">04</span>
+              <h3 class="text-base font-serif text-white uppercase tracking-wide">Genuine Thai Hospitality</h3>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">
+                No matter where you step into a Dream Salon—whether in Thailand, Puerto Rico, Dubai, or Bali—you are greeted with legendary Thai warmth, soothing welcome infusions, warm aromatherapy towels, and genuine care.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-[#121212] border border-white/5 space-y-3">
+              <span class="text-3xl font-serif text-purple-400 font-bold block">05</span>
+              <h3 class="text-base font-serif text-white uppercase tracking-wide">Uncompromising Discretion</h3>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">
+                Whether you are a visiting international dignitary, a touring artist, or simply seeking a quiet moment of recharge away from the world, our sound-softened suites and strict confidentiality protocols honor your peace.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-[#121212] to-[#1c1815] border border-[#d9c1a3]/30 space-y-3 flex flex-col justify-between">
+              <div>
+                <span class="text-3xl font-serif text-[#d9c1a3] font-bold block">06</span>
+                <h3 class="text-base font-serif text-white uppercase tracking-wide">Tailored Consultation</h3>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">
+                  Every service begins with a one-on-one diagnostic consultation assessing hair porosity, scalp health, skin undertone, nail bed architecture, and personal lifestyle.
+                </p>
+              </div>
+              <div class="pt-2">
+                <a href="/sanitation-standards" class="text-xs text-[#f286aa] hover:underline font-medium flex items-center gap-1">
+                  <span>Read our Clinical Charter</span>
+                  <i class="fas fa-shield-virus text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 5. Interactive Timeline / Milestones: The Journey -->
+      <section class="py-24 bg-[#141414] border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="max-w-3xl mx-auto text-center mb-16">
+            <span class="font-script text-3xl text-[#f286aa] block mb-2">Our Milestones</span>
+            <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-4">
+              Fifteen Years of Evolution
+            </h2>
+            <p class="text-sm sm:text-base text-gray-300 font-light">
+              From our first two styling chairs in Phuket to an international beauty network.
+            </p>
+          </div>
+
+          <div class="relative border-l-2 border-[#f286aa]/30 ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-12">
+            
+            <!-- Milestone 1 -->
+            <div class="relative">
+              <div class="absolute -left-[31px] sm:-left-[47px] top-1 w-6 h-6 rounded-full bg-[#141414] border-2 border-[#f286aa] flex items-center justify-center">
+                <div class="w-2 h-2 rounded-full bg-[#f286aa]"></div>
+              </div>
+              <span class="text-xs font-bold text-[#f286aa] uppercase tracking-widest block mb-1">2011 — The Genesis in Phuket</span>
+              <h3 class="text-xl font-serif text-white uppercase mb-2">Pioneering Russian Precision in Southeast Asia</h3>
+              <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed">
+                Joey & Onanong Jones launch the first Dream Nails boutique in Phuket, Thailand. Facing a market dominated by fast, generic nail stalls, they introduce clinical dry Russian manicure techniques, medical autoclaves, and Japanese soak-off gels, quickly attracting international expatriates and resort guests.
+              </p>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="relative">
+              <div class="absolute -left-[31px] sm:-left-[47px] top-1 w-6 h-6 rounded-full bg-[#141414] border-2 border-[#d9c1a3] flex items-center justify-center">
+                <div class="w-2 h-2 rounded-full bg-[#d9c1a3]"></div>
+              </div>
+              <span class="text-xs font-bold text-[#d9c1a3] uppercase tracking-widest block mb-1">2016 — The Artistry Era</span>
+              <h3 class="text-xl font-serif text-white uppercase mb-2">Fine Art, Custom Pigments & Bridal Mastery</h3>
+              <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed">
+                The salon expands its nail artistry portfolio to over 100 bespoke designs, mastering 3D sculpting, chrome powders, Swarovski encapsulation, and luxury bridal beauty parties. Demand surges for on-location destination wedding styling across Andaman Sea island resorts.
+              </p>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="relative">
+              <div class="absolute -left-[31px] sm:-left-[47px] top-1 w-6 h-6 rounded-full bg-[#141414] border-2 border-emerald-400 flex items-center justify-center">
+                <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+              </div>
+              <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">2020 — Clinical Hospital Standards</span>
+              <h3 class="text-xl font-serif text-white uppercase mb-2">Class-B Vacuum Autoclaves & Pipeless Ozone Hydrotherapy</h3>
+              <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed">
+                When global safety consciousness peaked, Dream Salon elevated its protocols to medical-grade sterility: installing Class-B fractionated autoclaves, pipeless magnetic-jet foot basins, and individual HEPA-13 particulate extraction tables.
+              </p>
+            </div>
+
+            <!-- Milestone 4 -->
+            <div class="relative">
+              <div class="absolute -left-[31px] sm:-left-[47px] top-1 w-6 h-6 rounded-full bg-[#141414] border-2 border-purple-400 flex items-center justify-center">
+                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+              </div>
+              <span class="text-xs font-bold text-purple-400 uppercase tracking-widest block mb-1">2023 — The Full Sanctuary Transformation</span>
+              <h3 class="text-xl font-serif text-white uppercase mb-2">Japanese Head Spa, Master Hair & Cosmetic Tattooing</h3>
+              <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed">
+                Transitioning from a premier nail atelier into a holistic sanctuary, the salon introduces Japanese waterfall head spa beds with microscopic trichology diagnostics, master hair coloring suites, and an aseptic permanent makeup suite for nanoblading and Aquarelle lip blush.
+              </p>
+            </div>
+
+            <!-- Milestone 5 -->
+            <div class="relative">
+              <div class="absolute -left-[31px] sm:-left-[47px] top-1 w-6 h-6 rounded-full bg-[#141414] border-2 border-amber-400 flex items-center justify-center">
+                <div class="w-2 h-2 rounded-full bg-amber-400"></div>
+              </div>
+              <span class="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-1">2025–Present — Global Expansion & Celebrity Glam Squads</span>
+              <h3 class="text-xl font-serif text-white uppercase mb-2">10 International Destinations & Superyacht Deployment</h3>
+              <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed">
+                Expanding our footprint across Thailand (Bangkok, Phuket, Pattaya, Chiang Mai, Hua Hin), Puerto Rico (San Juan & Mayagüez), Bali, Dubai, and Douala. Unveiling our Private Celebrity Services suite for synchronized 6-hand glam squads and yacht/villa deployments under strict NDA confidentiality.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 6. Hospital-Grade Sanitation Pillar (Elevated) -->
+      <section class="py-24 bg-[#181818] border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="bg-[#121212] rounded-3xl p-8 sm:p-14 border border-white/5 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-[#f286aa]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-3xl mx-auto text-center mb-12 relative z-10">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs uppercase tracking-wider font-semibold mb-3">
+                <i class="fas fa-shield-halved text-[10px]"></i>
+                <span>Clinical Sterilization Protocol</span>
+              </div>
+              <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-4">
+                Clinical Sterility Meets Luxury Pampering
+              </h2>
+              <p class="text-sm text-gray-300 font-light max-w-xl mx-auto leading-relaxed">
+                At Dream Salon Asia, peace of mind is never an afterthought. Our multi-step sterilization workflow mirrors hospital surgical standards, verified through biological spore testing.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 relative z-10">
+              
               <div class="p-6 rounded-2xl bg-[#1a1a1a] border border-white/5 text-center flex flex-col justify-between">
                 <div>
                   <div class="w-14 h-14 rounded-full bg-[#f286aa]/10 text-[#f286aa] flex items-center justify-center text-2xl mx-auto mb-4">
@@ -80,7 +482,7 @@ import Footer from '../components/Footer.astro';
                   </div>
                   <h3 class="text-base font-serif text-white uppercase mb-2">Class-B Medical Autoclave</h3>
                   <p class="text-xs text-gray-400 font-light leading-relaxed">
-                    All metal tools undergo ultrasonic enzymatic cleaning and steam sterilization at 275°F (135°C), sealed in indicator pouches opened in your presence.
+                    Surgical-grade steam sterilization at 275°F (135°C) with fractionated vacuum cycles. Implements remain sealed in color-changing indicator pouches opened exclusively before you.
                   </p>
                 </div>
               </div>
@@ -92,7 +494,7 @@ import Footer from '../components/Footer.astro';
                   </div>
                   <h3 class="text-base font-serif text-white uppercase mb-2">100% Single-Use Disposables</h3>
                   <p class="text-xs text-gray-400 font-light leading-relaxed">
-                    Nail files, buffers, wooden sticks, pedicure tub liners, and waxing spatulas (strictly zero double-dipping) are discarded immediately after each client.
+                    Buffers, diamond abrasive pads, toe separators, disposable pedicure liners, and waxing wooden spatulas (with strictly zero double-dipping) are disposed after every single guest.
                   </p>
                 </div>
               </div>
@@ -104,7 +506,7 @@ import Footer from '../components/Footer.astro';
                   </div>
                   <h3 class="text-base font-serif text-white uppercase mb-2">Pipeless Ozone Hydrotherapy</h3>
                   <p class="text-xs text-gray-400 font-light leading-relaxed">
-                    Direct-drive magnetic jet basins with zero internal pipes, eliminating biofilm and bacterial recirculation for completely pure foot and scalp therapy.
+                    Our pedicure thrones and Japanese Head Spa basins utilize magnetic direct-drive impellers with zero internal pipes, eliminating biofilm, mildew, and stagnant water recirculation.
                   </p>
                 </div>
               </div>
@@ -116,7 +518,7 @@ import Footer from '../components/Footer.astro';
                   </div>
                   <h3 class="text-base font-serif text-white uppercase mb-2">EPA Hospital Disinfection</h3>
                   <p class="text-xs text-gray-400 font-light leading-relaxed">
-                    Styling chairs, head spa beds, manicure stations, and LED lamps are thoroughly sanitized with broad-spectrum virucides and bactericides between guests.
+                    All styling chairs, ergonomic head spa beds, manicure stations, LED drying lamps, and armrests undergo 10-minute contact wipes with broad-spectrum hospital-grade virucides.
                   </p>
                 </div>
               </div>
@@ -128,7 +530,7 @@ import Footer from '../components/Footer.astro';
                   </div>
                   <h3 class="text-base font-serif text-white uppercase mb-2">HEPA-13 Air Filtration</h3>
                   <p class="text-xs text-gray-400 font-light leading-relaxed">
-                    Source-capture dust extraction tables and medical-grade HEPA-13 carbon air purifiers continuously remove airborne keratin dust, vapors, and aerosols.
+                    Dual source-capture extraction fans at every table combined with medical-grade activated carbon HEPA-13 filters continually purify the air from dust, vapors, and airborne aerosols.
                   </p>
                 </div>
               </div>
@@ -140,29 +542,95 @@ import Footer from '../components/Footer.astro';
                   </div>
                   <h3 class="text-base font-serif text-white uppercase mb-2">Certified & Licensed Masters</h3>
                   <p class="text-xs text-gray-400 font-light leading-relaxed">
-                    Every stylist, aesthetician, and artist maintains professional licensing and undergoes continuous advanced hygiene, PMU aseptic, and trichology certification.
+                    Every stylist, aesthetician, and nail artist holds state or national board licenses and passes rigorous bi-annual examinations in aseptic technique, bloodborne pathogens, and trichology.
                   </p>
                 </div>
               </div>
+
             </div>
 
-            <div class="text-center pt-6 border-t border-white/5">
+            <div class="text-center pt-6 border-t border-white/5 relative z-10 flex flex-wrap items-center justify-center gap-4">
               <a href="/sanitation-standards" class="btn-luxury-primary text-xs inline-flex items-center gap-2">
-                <span>View Full Sanitation Charter & Step-by-Step Process</span>
+                <span>View Full Sanitation Charter & 6-Step Sterilization Walkthrough</span>
                 <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="/celebrity-services" class="text-xs text-gray-400 hover:text-white border border-white/10 hover:border-white/30 px-5 py-3 rounded-full transition flex items-center gap-2">
+                <i class="fas fa-crown text-[#d9c1a3]"></i>
+                <span>Private Celebrity & VIP Concierge</span>
               </a>
             </div>
           </div>
 
-          <!-- Customer Gratitude Section -->
-          <div class="text-center max-w-2xl mx-auto">
-            <h3 class="text-2xl font-serif text-white uppercase mb-3">A Message From Joey & Onanong</h3>
-            <p class="text-sm text-gray-300 font-light leading-relaxed mb-6">
-              "We at DreamNails.Asia want to say a massive thank you to all our supporters, friends, and customers worldwide. You have made this dream a reality, and we cannot wait to welcome you to our sanctuaries."
+        </div>
+      </section>
+
+      <!-- 7. Global Destination Network Grid -->
+      <section class="py-24 bg-[#141414] border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="max-w-3xl mx-auto text-center mb-16">
+            <span class="font-script text-3xl text-[#f286aa] block mb-2">Worldwide Presence</span>
+            <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-4">
+              10 Global Destination Sanctuaries
+            </h2>
+            <p class="text-sm sm:text-base text-gray-300 font-light">
+              Experience identical clinical excellence, Thai hospitality, and master craftsmanship across three continents.
             </p>
-            <button class="open-booking-modal btn-luxury-primary text-xs cursor-pointer">
-              <span>Book An Appointment With Us</span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+            {locations.map((loc) => (
+              <a 
+                href={`/locations/${loc.slug}`}
+                class="group p-4 rounded-2xl bg-[#181818] border border-white/5 hover:border-[#f286aa]/40 transition duration-300 text-center flex flex-col justify-between"
+              >
+                <div>
+                  <div class="w-10 h-10 rounded-full bg-[#121212] border border-white/10 group-hover:border-[#f286aa]/50 flex items-center justify-center text-lg mx-auto mb-3 transition-colors">
+                    {loc.country === 'Thailand' ? '🇹🇭' : loc.country === 'Puerto Rico' ? '🇵🇷' : loc.country === 'Indonesia' ? '🇮🇩' : loc.country === 'United Arab Emirates' ? '🇦🇪' : '🇨🇲'}
+                  </div>
+                  <h4 class="text-xs sm:text-sm font-serif text-white uppercase tracking-wide group-hover:text-[#f286aa] transition-colors truncate">
+                    {loc.name.split(',')[0]}
+                  </h4>
+                  <span class="text-[10px] text-gray-400 font-light block mt-0.5">
+                    {loc.country}
+                  </span>
+                </div>
+                <div class="mt-3 pt-2 border-t border-white/5 text-[10px] text-[#d9c1a3] group-hover:text-white flex items-center justify-center gap-1">
+                  <span>Visit Sanctuary</span>
+                  <i class="fas fa-chevron-right text-[8px] group-hover:translate-x-0.5 transition-transform"></i>
+                </div>
+              </a>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 8. Leadership & Founders' Gratitude Banner -->
+      <section class="py-24 bg-[#181818] relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          
+          <div class="w-20 h-20 rounded-full bg-[#f286aa]/10 border border-[#f286aa]/30 text-[#f286aa] flex items-center justify-center text-3xl mx-auto mb-6">
+            <i class="fas fa-heart"></i>
+          </div>
+
+          <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-2">With Sincere Gratitude</span>
+          <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-6">
+            From Joey, Onanong & The Global Dream Team
+          </h2>
+          <p class="text-sm sm:text-base text-gray-300 font-light leading-relaxed mb-8 max-w-2xl mx-auto">
+            "To every bride who trusted us on her wedding morning, every traveler who discovered us in Thailand, and every loyal client across the world who makes our chairs their home: thank you for making Dream Salon Asia your sanctuary. We pledge to continue pushing the boundaries of beauty, wellness, and clinical care every single day."
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <button class="open-booking-modal btn-luxury-primary text-xs cursor-pointer inline-flex items-center gap-2">
+              <i class="fas fa-calendar-check text-[11px]"></i>
+              <span>Book An Appointment</span>
             </button>
+            <a href="/testimonials" class="text-xs text-gray-300 hover:text-white border border-white/10 hover:border-white/30 px-6 py-3 rounded-full transition inline-flex items-center gap-2">
+              <i class="fas fa-star text-amber-400 text-[11px]"></i>
+              <span>Read Client Stories & Social Reviews</span>
+            </a>
           </div>
 
         </div>
