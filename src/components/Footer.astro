@@ -1,48 +1,5 @@
 ---
-const globalLocations = [
-  {
-    city: "San Juan, PR USA",
-    slug: "san-juan",
-    address: "Condado District, San Juan, PR 00907",
-    email: "info.sju@dreamnails.asia"
-  },
-  {
-    city: "Mayagüez, PR USA",
-    slug: "mayaguez",
-    address: "Mayagüez Mall, Carr 2 Ste 001, PR 00680",
-    email: "info.maz@dreamnails.asia"
-  },
-  {
-    city: "Phuket, Thailand",
-    slug: "phuket",
-    address: "Bang Tao Beach Road, Phuket 83110",
-    email: "info.hkt@dreamnails.asia"
-  },
-  {
-    city: "Pattaya, Thailand",
-    slug: "pattaya",
-    address: "Beach Road Central, Pattaya 20150",
-    email: "info.pty@dreamnails.asia"
-  },
-  {
-    city: "Bali, Indonesia",
-    slug: "bali",
-    address: "Jalan Petitenget, Seminyak, Bali 80361",
-    email: "info.dps@dreamnails.asia"
-  },
-  {
-    city: "Dubai, UAE",
-    slug: "dubai",
-    address: "Downtown Boulevard, Dubai UAE",
-    email: "info.uxb@dreamnails.asia"
-  },
-  {
-    city: "Douala, Cameroon",
-    slug: "douala",
-    address: "Boulevard de la Liberté, Douala 237",
-    email: "info.dla@dreamnails.asia"
-  }
-];
+import locations from '../data/locations.json';
 ---
 
 <footer class="bg-[#0b0b0b] border-t border-white/10 pt-16 pb-12 text-gray-400 text-xs select-none">
@@ -75,23 +32,23 @@ const globalLocations = [
       </div>
     </div>
 
-    <!-- 6 Global Salon Hubs Bar matching original WordPress theme layout -->
+    <!-- Global Salon Hubs Bar matching original WordPress theme layout -->
     <div class="mb-14">
       <div class="flex items-center justify-between mb-4">
         <span class="text-[11px] uppercase tracking-[0.25em] text-[#d9c1a3] font-semibold">Global Salon Network</span>
         <span class="text-[10px] text-gray-500 uppercase tracking-wider">Hospital-Grade Sterilization Worldwide</span>
       </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 sm:gap-4">
-        {globalLocations.map((loc) => (
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
+        {locations.map((loc) => (
           <a 
             href={`/locations/${loc.slug}`}
             class="p-3.5 rounded-xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/40 transition group hover:-translate-y-1 block"
           >
             <div class="text-[11px] font-serif text-white uppercase tracking-wider group-hover:text-[#f286aa] transition-colors truncate">
-              {loc.city}
+              {loc.name || `${loc.city}, ${loc.country}`}
             </div>
-            <div class="text-[9px] text-[#d9c1a3] tracking-wider uppercase mt-1">
-              Active Salon Hub
+            <div class="text-[9px] text-[#d9c1a3] tracking-wider uppercase mt-1 truncate">
+              {loc.badge || "Active Salon Hub"}
             </div>
             <div class="text-[10px] text-gray-500 truncate mt-1">
               {loc.email}

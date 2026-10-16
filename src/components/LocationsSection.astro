@@ -1,83 +1,5 @@
 ---
-const locations = [
-  {
-    city: "San Juan",
-    country: "Puerto Rico, USA",
-    code: "SJU",
-    address: "Condado District, San Juan, PR 00907",
-    phone: "+1.787.724.8800",
-    email: "info.sju@dreamnails.asia",
-    tagline: "Metropolitan Glamour & High-Fashion Artistry",
-    hours: "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
-    badge: "Metro Flagship"
-  },
-  {
-    city: "Mayagüez",
-    country: "Puerto Rico, USA",
-    code: "MAZ",
-    address: "Mayagüez, PR 00680",
-    phone: "+1.787.906.8800",
-    email: "info.maz@dreamnails.asia",
-    tagline: "Caribbean Luxury & Coastal Nail Art",
-    hours: "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
-    badge: "Active Hub"
-  },
-  {
-    city: "Phuket",
-    country: "Thailand",
-    code: "HKT",
-    address: "Phuket, Thailand 83000",
-    phone: "+66.76.",
-    email: "info.hkt@dreamnails.asia",
-    tagline: "Founding Studio & Master Artists",
-    hours: "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
-    badge: "Flagship Heritage"
-  },
-  {
-    city: "Pattaya",
-    country: "Thailand",
-    code: "PTY",
-    address: "Pattaya, Thailand 20150",
-    phone: "+66.38.",
-    email: "info.pty@dreamnails.asia",
-    tagline: "Vibrant Coastal Beauty Bar",
-    hours: "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
-    badge: "Expanding"
-  },
-  {
-    city: "Bali",
-    country: "Indonesia",
-    code: "DPS",
-    address: "Bali, Indonesia 80361",
-    phone: "+62.361.",
-    email: "info.dps@dreamnails.asia",
-    tagline: "Tropical Island Wellness Sanctuary",
-    hours: "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
-    badge: "Wellness Destination"
-  },
-  {
-    city: "Dubai",
-    country: "UAE",
-    code: "DXB",
-    address: "Dubai, United Arab Emirates",
-    phone: "+971.4.",
-    email: "info.uxb@dreamnails.asia",
-    tagline: "Ultra-Luxury Nail Lounge & 24K Treatments",
-    hours: "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
-    badge: "VIP Luxury"
-  },
-  {
-    city: "Douala",
-    country: "Cameroon",
-    code: "DLA",
-    address: "Douala, Cameroon 237",
-    phone: "+237.233.",
-    email: "info.dla@dreamnails.asia",
-    tagline: "West African Flagship Beauty Hub",
-    hours: "Mon - Fri & Sun: 9:00 AM - 5:00 PM",
-    badge: "Global Expansion"
-  }
-];
+import locations from '../data/locations.json';
 ---
 
 <section id="locations" class="py-24 bg-[#141414] relative">
@@ -95,7 +17,7 @@ const locations = [
       </p>
     </div>
 
-    <!-- 6 Global Locations Grid -->
+    <!-- Global Locations Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
       {locations.map((loc) => (
         <div class="rounded-2xl bg-[#1c1c1c] border border-white/5 hover:border-[#d9c1a3]/40 p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl group flex flex-col justify-between">
@@ -138,7 +60,10 @@ const locations = [
               <span>Book in {loc.city}</span>
               <i class="fas fa-arrow-right text-[10px]" aria-hidden="true"></i>
             </a>
-            <span class="text-[10px] text-gray-500 uppercase tracking-widest">Walk-ins / Appt</span>
+            <a href={`/locations/${loc.slug}`} class="text-[10px] text-gray-400 hover:text-[#d9c1a3] uppercase tracking-widest transition flex items-center gap-1 focus-visible:ring-1 focus-visible:ring-[#d9c1a3] rounded p-0.5">
+              <span>View Hub</span>
+              <i class="fas fa-chevron-right text-[8px]" aria-hidden="true"></i>
+            </a>
           </div>
 
         </div>
