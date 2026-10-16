@@ -13,14 +13,14 @@ const displayItems = limit > 0 ? galleryItems.slice(0, limit) : galleryItems;
 
 {mode === 'carousel' ? (
   <!-- Section 19: Full-Bleed Infinite Photo Swiper matching original Atura theme -->
-  <section id="gallery" class="w-full bg-[#141414] overflow-hidden select-none border-t border-white/5 py-0 relative">
+  <section id="gallery" class="w-full bg-[#141414] overflow-hidden select-none border-t border-white/5 py-0 relative lte-gallery-sc lte-gallery-slider">
     <div class="relative w-full overflow-hidden">
-      <div class="flex items-center gap-0 animate-marquee hover:pause whitespace-nowrap" id="gallery-carousel">
-        {displayItems.slice(0, 30).concat(displayItems.slice(0, 30)).map((item, index) => (
+      <div class="gallery-marquee-track whitespace-nowrap" id="gallery-carousel">
+        {displayItems.concat(displayItems).map((item, index) => (
           <a 
             href="javascript:void(0)" 
-            class="gallery-item inline-block flex-shrink-0 w-44 sm:w-56 md:w-64 aspect-[3/4] overflow-hidden relative cursor-pointer group/item border-r border-black/30"
-            data-index={index % 30}
+            class="gallery-item lte-gallery-item flex-shrink-0 relative cursor-pointer group"
+            data-index={index % displayItems.length}
             data-img={item.image}
             data-title={item.title}
             data-cat-name={item.categoryName}
@@ -30,11 +30,11 @@ const displayItems = limit > 0 ? galleryItems.slice(0, limit) : galleryItems;
             <img 
               src={item.image} 
               alt={item.title} 
-              class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-700" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-115" 
               loading="lazy" 
             />
-            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-[#f286aa] text-black flex items-center justify-center text-sm shadow-xl">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <span class="w-12 h-12 rounded-full bg-[#f286aa] text-black flex items-center justify-center text-sm shadow-xl transform scale-75 group-hover:scale-100 transition-transform duration-300">
                 <i class="icon icon-search" aria-hidden="true"></i>
               </span>
             </div>
@@ -204,12 +204,56 @@ const displayItems = limit > 0 ? galleryItems.slice(0, limit) : galleryItems;
     </div>
   </div>
 
-</section>
+<style>
+  .gallery-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: galleryMarquee 75s linear infinite;
+    will-change: transform;
+  }
+  .gallery-marquee-track:hover {
+    animation-play-state: paused;
+  }
+  @keyframes galleryMarquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+  .lte-gallery-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 255px;
+    height: 340px;
+    border-right: 1px solid #000 !important;
+    background-color: #141414;
+  }
+  .lte-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+    transition: transform 0.4s ease;
+  }
+  .lte-gallery-item:hover img {
+    transform: scale(1.15);
+  }
+  @media (max-width: 767px) {
+    .lte-gallery-item {
+      width: 200px;
+      height: 267px;
+    }
+  }
+</style>
 
 <script is:inline>
   function initGallerySystem() {
     const filterBtns = document.querySelectorAll('#gallery-filters .filter-btn');
-    const items = document.querySelectorAll('#gallery-grid .gallery-item');
+    const items = document.querySelectorAll('.gallery-item');
     const modal = document.getElementById('lightbox-modal');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxTitle = document.getElementById('lightbox-title');
@@ -222,46 +266,49 @@ const displayItems = limit > 0 ? galleryItems.slice(0, limit) : galleryItems;
     let visibleItems = Array.from(items);
     let currentIdx = 0;
 
-    // Filter Logic
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => {
-          b.classList.remove('bg-[#f286aa]', 'text-black');
-          b.classList.add('bg-white/5', 'text-gray-300');
-        });
-        btn.classList.add('bg-[#f286aa]', 'text-black');
-        btn.classList.remove('bg-white/5', 'text-gray-300');
+    // Filter Logic (only active on grid page)
+    if (filterBtns.length > 0) {
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-[#f286aa]', 'text-black');
+            b.classList.add('bg-white/5', 'text-gray-300');
+          });
+          btn.classList.add('bg-[#f286aa]', 'text-black');
+          btn.classList.remove('bg-white/5', 'text-gray-300');
 
-        const filter = btn.getAttribute('data-filter');
-        visibleItems = [];
-        items.forEach(item => {
-          const cat = item.getAttribute('data-category');
-          if (filter === 'all' || cat === filter) {
-            item.style.display = 'block';
-            visibleItems.push(item);
-          } else {
-            item.style.display = 'none';
-          }
+          const filter = btn.getAttribute('data-filter');
+          visibleItems = [];
+          items.forEach(item => {
+            const cat = item.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              item.style.display = 'block';
+              visibleItems.push(item);
+            } else {
+              item.style.display = 'none';
+            }
+          });
         });
       });
-    });
+    }
 
     // Lightbox Logic
     function openLightbox(index) {
       if (!visibleItems.length) return;
       currentIdx = (index + visibleItems.length) % visibleItems.length;
       const target = visibleItems[currentIdx];
+      if (!target) return;
 
-      lightboxImg.src = target.getAttribute('data-img');
-      lightboxTitle.textContent = target.getAttribute('data-title');
-      lightboxCat.textContent = target.getAttribute('data-cat-name');
-      lightboxDesc.textContent = target.getAttribute('data-desc');
+      if (lightboxImg) lightboxImg.src = target.getAttribute('data-img') || '';
+      if (lightboxTitle) lightboxTitle.textContent = target.getAttribute('data-title') || '';
+      if (lightboxCat) lightboxCat.textContent = target.getAttribute('data-cat-name') || '';
+      if (lightboxDesc) lightboxDesc.textContent = target.getAttribute('data-desc') || '';
 
-      modal.classList.remove('opacity-0', 'pointer-events-none');
+      if (modal) modal.classList.remove('opacity-0', 'pointer-events-none');
     }
 
     function closeLightbox() {
-      modal.classList.add('opacity-0', 'pointer-events-none');
+      if (modal) modal.classList.add('opacity-0', 'pointer-events-none');
     }
 
     items.forEach((item) => {
@@ -282,7 +329,7 @@ const displayItems = limit > 0 ? galleryItems.slice(0, limit) : galleryItems;
     }
 
     document.addEventListener('keydown', (e) => {
-      if (!modal.classList.contains('opacity-0')) {
+      if (modal && !modal.classList.contains('opacity-0')) {
         if (e.key === 'Escape') closeLightbox();
         if (e.key === 'ArrowLeft') openLightbox(currentIdx - 1);
         if (e.key === 'ArrowRight') openLightbox(currentIdx + 1);
@@ -290,5 +337,9 @@ const displayItems = limit > 0 ? galleryItems.slice(0, limit) : galleryItems;
     });
   }
 
-  document.addEventListener('DOMContentLoaded', initGallerySystem);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGallerySystem);
+  } else {
+    initGallerySystem();
+  }
 </script>
