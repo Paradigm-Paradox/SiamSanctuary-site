@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import LocationsSection from '../components/LocationsSection.astro';
+import socials from '../data/socials.json';
+import SocialIcon from '../components/SocialIcon.astro';
 ---
 
 <Layout 
@@ -45,8 +47,60 @@ import LocationsSection from '../components/LocationsSection.astro';
         </div>
       </section>
 
-      <!-- 6 Locations Grid -->
+      <!-- 10 Locations Grid -->
       <LocationsSection />
+
+      <!-- 12 Official Social & Instant Messaging Channels -->
+      <section class="py-20 bg-[#151515] border-t border-white/5" id="social-channels">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-2">Connect Directly</span>
+            <h2 class="text-3xl sm:text-4xl font-serif text-white uppercase tracking-wider mb-4">
+              Our 12 Official Channels
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-400 font-light max-w-xl mx-auto">
+              Reach our concierge on instant messengers, browse viral nail tutorials, read verified Google reviews, or explore our seasonal lookbooks.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {socials.map((s) => (
+              <a
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-5 rounded-2xl bg-[#1c1c1c] border border-white/5 hover:border-[#f286aa]/40 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-start justify-between mb-3">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl transition-transform group-hover:scale-110 shadow-sm" style={`background-color: ${s.color}20; color: ${s.color};`}>
+                      <SocialIcon icon={s.icon} class="w-6 h-6" name={s.name} />
+                    </div>
+                    <span class="text-[9px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-gray-300 group-hover:text-white">
+                      {s.badge}
+                    </span>
+                  </div>
+
+                  <h3 class="text-lg font-serif text-white group-hover:text-[#f286aa] transition-colors mb-1">
+                    {s.name}
+                  </h3>
+                  <div class="text-xs text-[#d9c1a3] font-mono mb-2">
+                    {s.handle}
+                  </div>
+                  <p class="text-xs text-gray-400 font-light">
+                    {s.category}
+                  </p>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-gray-400 group-hover:text-[#f286aa] transition-colors">
+                  <span class="font-medium">Connect &rarr;</span>
+                  <i class="fas fa-external-link-alt text-[10px]"></i>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <!-- Contact Message Form Section -->
       <section class="py-20 bg-[#181818] border-t border-white/5">

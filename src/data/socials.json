@@ -1,0 +1,135 @@
+[
+  {
+    "id": "instagram",
+    "name": "Instagram",
+    "handle": "@dreamnails.asia",
+    "category": "Visual Stories",
+    "url": "https://www.instagram.com/dreamnails.asia/",
+    "icon": "fa-brands fa-instagram",
+    "color": "#E4405F",
+    "bgHover": "hover:bg-[#E4405F]",
+    "badge": "Daily Stories"
+  },
+  {
+    "id": "tiktok",
+    "name": "TikTok",
+    "handle": "@dreamnails.asia",
+    "category": "Short Video",
+    "url": "https://www.tiktok.com/@dreamnails.asia",
+    "icon": "fa-brands fa-tiktok",
+    "color": "#00F2FE",
+    "bgHover": "hover:bg-[#000000]",
+    "badge": "Viral Trends"
+  },
+  {
+    "id": "google",
+    "name": "Google Business",
+    "subtitle": "Google Maps & Reviews",
+    "handle": "Dream Nails Salon",
+    "category": "Maps & Reviews",
+    "url": "https://maps.google.com/?q=Dream+Nails+Salon",
+    "icon": "fa-brands fa-google",
+    "color": "#4285F4",
+    "bgHover": "hover:bg-[#4285F4]",
+    "badge": "Verified 5★"
+  },
+  {
+    "id": "facebook",
+    "name": "Facebook",
+    "handle": "DreamNails.Asia",
+    "category": "Community",
+    "url": "https://www.facebook.com/DreamNails.Asia",
+    "icon": "fa-brands fa-facebook-f",
+    "color": "#1877F2",
+    "bgHover": "hover:bg-[#1877F2]",
+    "badge": "Official Page"
+  },
+  {
+    "id": "whatsapp",
+    "name": "WhatsApp Business",
+    "handle": "+1 (787) 834-8888",
+    "category": "Direct Chat",
+    "url": "https://wa.me/17878348888",
+    "icon": "fa-brands fa-whatsapp",
+    "color": "#25D366",
+    "bgHover": "hover:bg-[#25D366]",
+    "badge": "Instant Support"
+  },
+  {
+    "id": "line",
+    "name": "LINE Official Account",
+    "handle": "@dreamnails.asia",
+    "category": "VIP Concierge",
+    "url": "https://line.me/R/ti/p/@dreamnails.asia",
+    "icon": "fa-brands fa-line",
+    "color": "#06C755",
+    "bgHover": "hover:bg-[#06C755]",
+    "badge": "Asian VIP Desk"
+  },
+  {
+    "id": "telegram",
+    "name": "Telegram",
+    "handle": "@dreamnailsasia",
+    "category": "VIP Channel",
+    "url": "https://t.me/dreamnailsasia",
+    "icon": "fa-brands fa-telegram",
+    "color": "#229ED9",
+    "bgHover": "hover:bg-[#229ED9]",
+    "badge": "Private Club"
+  },
+  {
+    "id": "youtube",
+    "name": "YouTube",
+    "handle": "@DreamNailsAsia",
+    "category": "Masterclasses",
+    "url": "https://www.youtube.com/@DreamNailsAsia",
+    "icon": "fa-brands fa-youtube",
+    "color": "#FF0000",
+    "bgHover": "hover:bg-[#FF0000]",
+    "badge": "4K Tutorials"
+  },
+  {
+    "id": "snapchat",
+    "name": "Snapchat",
+    "handle": "dreamnailsasia",
+    "category": "Daily Snaps",
+    "url": "https://www.snapchat.com/add/dreamnailsasia",
+    "icon": "fa-brands fa-snapchat",
+    "color": "#FFFC00",
+    "bgHover": "hover:bg-[#FFFC00]",
+    "badge": "Live Behind Scenes"
+  },
+  {
+    "id": "xiaohongshu",
+    "name": "XiaoHongShu (RED)",
+    "handle": "小红书 ID: dreamnails",
+    "category": "Lookbook & Lifestyle",
+    "url": "https://www.xiaohongshu.com/user/profile/dreamnailsasia",
+    "icon": "custom-red",
+    "color": "#FF2442",
+    "bgHover": "hover:bg-[#FF2442]",
+    "badge": "小红书 认证"
+  },
+  {
+    "id": "lemon8",
+    "name": "Lemon8",
+    "handle": "@dreamnails.asia",
+    "category": "Beauty Guides",
+    "url": "https://www.lemon8-app.com/@dreamnails.asia",
+    "icon": "custom-lemon8",
+    "color": "#FFDE00",
+    "bgHover": "hover:bg-[#FFDE00]",
+    "badge": "Trending Style"
+  },
+  {
+    "id": "pinterest",
+    "name": "Pinterest",
+    "handle": "@dreamnailsasia",
+    "category": "Moodboards",
+    "url": "https://www.pinterest.com/dreamnailsasia",
+    "icon": "fa-brands fa-pinterest-p",
+    "color": "#BD081C",
+    "bgHover": "hover:bg-[#BD081C]",
+    "badge": "Nail Moodboards"
+  }
+]

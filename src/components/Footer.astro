@@ -1,5 +1,7 @@
 ---
 import locations from '../data/locations.json';
+import socials from '../data/socials.json';
+import SocialIcon from './SocialIcon.astro';
 
 const flagConfig: Record<string, { flag: string; countryCode: string; stripes: string; glow: string }> = {
   "san-juan": {
@@ -212,19 +214,75 @@ const flagConfig: Record<string, { flag: string; countryCode: string; stripes: s
 
       <!-- 4. Brand & Socials -->
       <div class="space-y-4">
-        <h4 class="text-sm font-serif text-white uppercase tracking-wider border-b border-white/10 pb-2">
-          Connect With Us
+        <h4 class="text-sm font-serif text-white uppercase tracking-wider border-b border-white/10 pb-2 flex items-center justify-between">
+          <span>Connect With Us</span>
+          <span class="text-[10px] text-[#f286aa] tracking-widest font-sans font-semibold">12 CHANNELS</span>
         </h4>
         <p class="text-xs text-gray-400 font-light leading-relaxed">
           Follow our latest nail fashion drops, seasonal gel palettes, and masterclass tutorials across our global channels.
         </p>
-        <div class="flex items-center gap-3 pt-2 text-gray-400">
-          <a href="https://fb.com/DreamNails.Asia" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/5 hover:bg-[#f286aa] hover:text-black flex items-center justify-center transition focus-visible:ring-1 focus-visible:ring-[#f286aa]" aria-label="Visit Dream Nails on Facebook" title="Facebook"><i class="fab fa-facebook-f text-xs" aria-hidden="true"></i></a>
-          <a href="https://www.youtube.com/@DreamNailsAsia" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/5 hover:bg-[#f286aa] hover:text-black flex items-center justify-center transition focus-visible:ring-1 focus-visible:ring-[#f286aa]" aria-label="Visit Dream Nails on YouTube" title="YouTube"><i class="fab fa-youtube text-xs" aria-hidden="true"></i></a>
-          <a href="mailto:info@dreamnails.asia" class="w-8 h-8 rounded-full bg-white/5 hover:bg-[#f286aa] hover:text-black flex items-center justify-center transition focus-visible:ring-1 focus-visible:ring-[#f286aa]" aria-label="Send email to Dream Nails" title="Email"><i class="far fa-envelope text-xs" aria-hidden="true"></i></a>
+
+        <!-- 12 Social Media Badges Grid -->
+        <div class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-4 gap-2 pt-1">
+          {socials.map((s) => (
+            <a 
+              href={s.url} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-9 h-9 rounded-xl bg-[#141414] border border-white/10 hover:border-[#f286aa] hover:bg-[#f286aa] hover:text-black text-gray-300 flex items-center justify-center transition-all duration-200 group relative focus-visible:ring-1 focus-visible:ring-[#f286aa] shadow-sm hover:scale-105" 
+              aria-label={`Visit Dream Nails on ${s.name}`} 
+              title={`${s.name} (${s.handle})`}
+            >
+              <SocialIcon icon={s.icon} class="w-4 h-4" name={s.name} />
+              
+              <!-- Luxury Micro-Tooltip -->
+              <span class="absolute -top-7 left-1/2 -translate-x-1/2 bg-black/95 text-white text-[9px] font-sans px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-150 whitespace-nowrap z-30 border border-white/10 shadow-lg">
+                {s.name}
+              </span>
+            </a>
+          ))}
+        </div>
+
+        <div class="pt-2 text-[11px] text-gray-400 flex items-center gap-2">
+          <i class="far fa-envelope text-[#f286aa]"></i>
+          <a href="mailto:info@dreamnails.asia" class="hover:text-[#f286aa] transition">info@dreamnails.asia</a>
         </div>
       </div>
 
+    </div>
+
+    <!-- Global Social Presence Ribbon -->
+    <div class="my-10 pt-8 border-t border-white/5">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.25em] text-[#d9c1a3] font-semibold block">Social & Direct Messaging Network</span>
+          <h5 class="text-sm font-serif text-white tracking-wide">Stay Connected Across 12 Official Platforms</h5>
+        </div>
+        <div class="flex items-center gap-2 text-xs text-gray-400">
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[10px]">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            VIP Concierge Active
+          </span>
+        </div>
+      </div>
+
+      <!-- Quick Scrollable Social Pills -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+        {socials.map((s) => (
+          <a
+            href={s.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="shrink-0 inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#141414] border border-white/10 hover:border-[#f286aa]/50 hover:bg-white/5 transition-all text-xs text-gray-300 hover:text-white group"
+          >
+            <div class="w-5 h-5 rounded-lg flex items-center justify-center text-xs group-hover:scale-110 transition-transform" style={`color: ${s.color}`}>
+              <SocialIcon icon={s.icon} class="w-3.5 h-3.5" name={s.name} />
+            </div>
+            <span class="font-medium text-[11px]">{s.name}</span>
+            <span class="text-[9px] text-[#d9c1a3] uppercase font-sans font-semibold px-1 rounded bg-black/40 border border-white/5">{s.badge}</span>
+          </a>
+        ))}
+      </div>
     </div>
 
     <!-- Bottom Copyright & Back to Top -->
