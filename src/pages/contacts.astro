@@ -78,6 +78,7 @@ import LocationsSection from '../components/LocationsSection.astro';
                 <div>
                   <label for="contact-location" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5">Preferred Location</label>
                   <select id="contact-location" name="location" class="w-full bg-[#1e1e1e] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f286aa] focus-visible:ring-1 focus-visible:ring-[#f286aa] transition">
+                    <option value="San Juan">San Juan, Puerto Rico</option>
                     <option value="Mayaguez">Mayagüez, Puerto Rico</option>
                     <option value="Phuket">Phuket, Thailand</option>
                     <option value="Pattaya">Pattaya, Thailand</option>
@@ -127,12 +128,13 @@ import LocationsSection from '../components/LocationsSection.astro';
       scrollWheelZoom: false 
     }).setView([20.0, 30.0], 2);
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; OpenStreetMap & CartoDB',
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
       maxZoom: 18
     }).addTo(map);
 
     const locations = [
+      { city: "San Juan, PR", lat: 18.4655, lng: -66.1057, email: "info.sju@dreamnails.asia" },
       { city: "Mayagüez, PR", lat: 18.2013, lng: -67.1452, email: "info.maz@dreamnails.asia" },
       { city: "Phuket, Thailand", lat: 7.8804, lng: 98.3923, email: "info.hkt@dreamnails.asia" },
       { city: "Pattaya, Thailand", lat: 12.9276, lng: 100.8771, email: "info.pty@dreamnails.asia" },

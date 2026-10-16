@@ -1,6 +1,23 @@
 [
   {
+    "city": "San Juan",
+    "slug": "san-juan",
+    "name": "San Juan, Puerto Rico",
+    "country": "Puerto Rico, USA",
+    "code": "SJU",
+    "address": "Condado District, San Juan, PR 00907",
+    "phone": "+1 (787) 724-8800",
+    "email": "info.sju@dreamnails.asia",
+    "tagline": "Metropolitan Glamour & High-Fashion Artistry",
+    "hours": "Monday - Friday & Sunday: 9:00 AM - 5:00 PM",
+    "badge": "Metro Flagship",
+    "lat": 18.4655,
+    "lng": -66.1057,
+    "description": "Our premier metropolitan salon hub in San Juan offering couture nail enhancements, luxury pedicure suites, and high-fashion chrome artistry in the heart of Puerto Rico."
+  },
+  {
     "city": "Mayaguez",
+    "slug": "mayaguez",
     "name": "Mayag\u00fcez, Puerto Rico",
     "country": "Puerto Rico, USA",
     "code": "MAZ",
