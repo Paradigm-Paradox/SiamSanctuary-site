@@ -15,8 +15,8 @@ const { service } = Astro.props;
 ---
 
 <Layout 
-  title={`${service.title} | DreamNails.Asia`}
-  description={service.excerpt}
+  title={`${service.title} | Luxury Salon Services | DreamNails.Asia`}
+  description={service.excerpt || service.description}
   image={service.image}
 >
   <div class="min-h-screen flex flex-col bg-[#141414]">
@@ -24,44 +24,116 @@ const { service } = Astro.props;
     
     <main class="flex-grow">
       <!-- Service Header Banner -->
-      <section class="relative py-24 bg-[#101010] border-b border-white/5 overflow-hidden">
-        <div class="absolute inset-0 opacity-25">
+      <section class="relative py-28 bg-[#101010] border-b border-white/5 overflow-hidden">
+        <div class="absolute inset-0 opacity-30">
           <img src={service.image} alt={service.title} class="w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/80 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/85 to-transparent"></div>
         </div>
 
         <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <a href="/services" class="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#f286aa] hover:text-white transition mb-3">
             <i class="fas fa-arrow-left text-[10px]"></i>
-            <span>All Services</span>
+            <span>All Services Menu</span>
           </a>
           <span class="font-script text-3xl sm:text-4xl text-[#d9c1a3] block mb-2">{service.tag}</span>
           <h1 class="text-4xl sm:text-6xl font-serif text-white uppercase tracking-wider mb-4">
             {service.title}
           </h1>
-          <p class="text-xs sm:text-sm uppercase tracking-widest text-gray-400">
-            Hospital-Grade Sanitation • Certified Master Technicians
+          <p class="text-sm text-gray-300 font-light max-w-2xl mx-auto mb-6">
+            {service.description}
           </p>
+          <div class="flex items-center justify-center gap-3">
+            <button class="open-booking-modal btn-luxury-primary text-xs cursor-pointer shadow-xl">
+              <i class="far fa-calendar-check mr-1.5"></i>
+              <span>Book This Service</span>
+            </button>
+          </div>
         </div>
       </section>
 
-      <!-- Content Body -->
-      <section class="py-20 bg-[#181818]">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Key Highlights -->
+      {service.highlights && service.highlights.length > 0 && (
+        <section class="py-8 bg-[#181818] border-b border-white/5">
+          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {service.highlights.map((h: string) => (
+                <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#141414] border border-white/5">
+                  <div class="w-7 h-7 rounded-full bg-[#f286aa]/10 text-[#f286aa] flex items-center justify-center shrink-0 text-xs">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="text-xs text-gray-300 font-medium">{h}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <!-- Treatment Menu & Offerings -->
+      <section class="py-16 bg-[#141414]">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="bg-[#121212] rounded-3xl p-8 sm:p-12 border border-white/5 shadow-2xl mb-12">
+          {service.treatments && service.treatments.length > 0 && (
+            <div class="mb-16">
+              <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="font-script text-2xl text-[#f286aa] block mb-1">Treatment Options</span>
+                <h2 class="text-2xl sm:text-3xl font-serif text-white uppercase tracking-wider">
+                  {service.title} Menu & Pricing
+                </h2>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                {service.treatments.map((t: any) => (
+                  <div class="p-6 rounded-2xl bg-[#1c1c1c] border border-white/5 hover:border-[#f286aa]/30 transition group flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-start justify-between gap-4 mb-2">
+                        <h3 class="text-base font-serif text-white group-hover:text-[#f286aa] transition">
+                          {t.name}
+                        </h3>
+                        {t.price && (
+                          <span class="text-xs font-mono font-bold text-[#d9c1a3] shrink-0 px-2 py-0.5 rounded bg-white/5 border border-white/10">
+                            {t.price}
+                          </span>
+                        )}
+                      </div>
+                      <p class="text-xs text-gray-400 font-light leading-relaxed mb-4">
+                        {t.description}
+                      </p>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-3 border-t border-white/5 text-[11px]">
+                      {t.duration && (
+                        <span class="text-gray-500 flex items-center gap-1.5">
+                          <i class="far fa-clock text-xs text-[#f286aa]"></i>
+                          <span>{t.duration}</span>
+                        </span>
+                      )}
+                      <button class="open-booking-modal text-[#f286aa] hover:text-white uppercase tracking-wider font-medium transition cursor-pointer flex items-center gap-1">
+                        <span>Book Now</span>
+                        <i class="fas fa-arrow-right text-[9px]"></i>
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Detailed Editorial Content -->
+          <div class="bg-[#181818] rounded-3xl p-8 sm:p-12 border border-white/5 shadow-2xl mb-16">
             <div class="prose prose-invert max-w-none text-gray-300 font-light leading-relaxed space-y-6 [&>p]:text-sm sm:[&>p]:text-base [&>h2]:font-serif [&>h2]:text-white [&>h2]:text-2xl sm:[&>h2]:text-3xl [&>h3]:font-serif [&>h3]:text-[#d9c1a3] [&>ul]:list-disc [&>ul]:pl-5 [&>li]:text-sm sm:[&>li]:text-base [&>li]:text-gray-300">
               <Fragment set:html={service.content} />
             </div>
 
-            <!-- Service Action Box -->
+            <!-- Booking Action Box -->
             <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
               <div>
-                <span class="text-xs uppercase tracking-wider text-[#d9c1a3] font-semibold block">Ready for your treatment?</span>
-                <h4 class="text-lg font-serif text-white">Book Your {service.title} Session</h4>
+                <span class="text-xs uppercase tracking-wider text-[#d9c1a3] font-semibold block">Experience Absolute Luxury</span>
+                <h4 class="text-lg font-serif text-white">Reserve Your {service.title} Treatment</h4>
+                <p class="text-xs text-gray-400 mt-0.5">Complimentary consultations & personalized color matching</p>
               </div>
               <div class="flex items-center gap-3">
-                <button class="open-booking-modal btn-luxury-primary text-xs cursor-pointer">
+                <button class="open-booking-modal btn-luxury-primary text-xs cursor-pointer shadow-lg">
                   <i class="far fa-calendar-check mr-1.5"></i>
                   <span>Schedule Appointment</span>
                 </button>
@@ -69,16 +141,20 @@ const { service } = Astro.props;
             </div>
           </div>
 
-          <!-- Other Services Bar -->
-          <div class="border-t border-white/10 pt-10">
-            <h3 class="text-xl font-serif text-white uppercase tracking-wide mb-6 text-center">
-              Explore More Sanctuary Offerings
-            </h3>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {services.filter(s => s.slug !== service.slug).slice(0, 4).map((other) => (
-                <a href={`/services/${other.slug}`} class="p-4 rounded-xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/40 text-center transition group">
+          <!-- Other Services Navigation -->
+          <div class="border-t border-white/10 pt-12">
+            <div class="text-center max-w-xl mx-auto mb-8">
+              <span class="font-script text-2xl text-[#f286aa] block mb-1">More Sanctuary Treatments</span>
+              <h3 class="text-xl sm:text-2xl font-serif text-white uppercase tracking-wide">
+                Explore Our Other Services
+              </h3>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+              {services.filter(s => s.slug !== service.slug).map((other) => (
+                <a href={`/services/${other.slug}`} class="p-3.5 rounded-xl bg-[#181818] border border-white/5 hover:border-[#f286aa]/40 text-center transition group hover:-translate-y-1 block">
                   <i class={`fas ${other.icon} text-lg text-[#f286aa] group-hover:scale-110 transition-transform mb-2 block`}></i>
                   <span class="text-xs font-serif text-white group-hover:text-[#f286aa] transition line-clamp-1">{other.title}</span>
+                  <span class="text-[9px] text-[#d9c1a3] block uppercase tracking-wider mt-0.5 truncate">{other.tag}</span>
                 </a>
               ))}
             </div>

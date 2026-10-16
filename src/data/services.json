@@ -1,82 +1,573 @@
 [
   {
-    "id": 32457,
-    "slug": "nail-care-artistry",
-    "title": "Nail Care & Artistry",
-    "icon": "fa-paint-brush",
-    "tag": "Signature Core",
-    "image": "/images/2022/01/serv_01_02.jpg",
-    "excerpt": "Discover the height of nail elegance with Dream Nails. From classic manicures to advanced gel and acrylic nail sculpting, each service is performed with hospital-grade sterilized i...",
-    "content": "<p>Discover the height of nail elegance with Dream Nails. From classic manicures to advanced gel and acrylic nail sculpting, each service is performed with hospital-grade sterilized instruments and premium imported polishes.</p><p>Our master nail technicians customize every shape, color palette, and intricate hand-painted design to complement your individual style.</p>"
+    "id": 1,
+    "slug": "manicure",
+    "title": "Manicure",
+    "tag": "Signature Nail Artistry",
+    "icon": "fa-hand-sparkles",
+    "image": "/images/2024/01/manicurist-paints-nails-with-gel-polish-applicat-2023-11-27-05-18-34-utc.jpg",
+    "excerpt": "Experience the epitome of nail couture with our Russian dry manicures, builder gel (BIAB), precision acrylic sculpting, and bespoke hand-painted artistry.",
+    "description": "Dream Nails Asia is globally celebrated for our meticulous nail care. Every manicure begins with diamond-drill cuticle refinement, followed by structural nail reinforcement and flawless high-shine color application using 10-Free non-toxic imported polishes.",
+    "highlights": [
+      "Russian dry precision e-file technique",
+      "Builder Gel in a Bottle (BIAB) nail strengthening",
+      "Custom 3D nail art, chrome & Swarovski crystals",
+      "Autoclave medical-grade sterilized instruments"
+    ],
+    "treatments": [
+      {
+        "name": "Russian Dry Manicure",
+        "duration": "60 mins",
+        "price": "\u0e3f 600 / $18",
+        "description": "Micro-precision diamond bit cuticle sculpting, nail balancing, and high-shine organic strengthening coat."
+      },
+      {
+        "name": "Builder Gel (BIAB) Overlay",
+        "duration": "75 mins",
+        "price": "\u0e3f 900 / $26",
+        "description": "Flexible reinforcement layer over natural nails that prevents chipping and encourages healthy nail growth."
+      },
+      {
+        "name": "Gel Extension & Sculpting",
+        "duration": "90 mins",
+        "price": "\u0e3f 1,200 / $35",
+        "description": "Seamless, lightweight gel enhancements sculpted to your desired stiletto, almond, coffin, or square shape."
+      },
+      {
+        "name": "Bespoke Hand-Painted Artistry",
+        "duration": "30-60 mins",
+        "price": "\u0e3f 400 - 1,200 / $12 - $35",
+        "description": "Custom fine-line painting, chrome powder burnishing, French micro-tips, and 3D floral accents."
+      },
+      {
+        "name": "Deep Paraffin Hand Spa",
+        "duration": "30 mins",
+        "price": "\u0e3f 450 / $13",
+        "description": "Warm nourishing peach paraffin wax bath, heated thermal mittens, and intensive collagen restoration."
+      }
+    ],
+    "content": "<p>Discover the height of nail elegance at Dream Nails Asia. Our world-renowned manicure rituals combine European medical-grade precision with trendsetting Asian nail artistry.</p><h3>Why Choose Dream Nails Manicures?</h3><p>We pride ourselves on hospital-grade autoclave sterilization for all metal instruments, while buffers, files, and towels are strictly 100% single-use disposable. Whether you desire understated natural elegance or high-fashion editorial nails, our certified master stylists deliver perfection in every brush.</p>"
   },
   {
-    "id": 31949,
-    "slug": "waxing-hair-removal",
-    "title": "Waxing & Hair Removal",
-    "icon": "fa-feather-alt",
-    "tag": "Gentle Care",
-    "image": "/images/2023/12/closeup-hand-applying-green-hot-wax-on-woman-butto-2023-11-27-05-17-53-utc-e1703953431339.jpg",
-    "excerpt": "&#8220;Experience the epitome of smooth sophistication at Dream Salon, where our upscale Waxing and Hair Removal services redefine the art of sleek perfection. Step into a realm wh...",
-    "content": "\n<p class=\"wp-block-paragraph\">&#8220;Experience the epitome of smooth sophistication at Dream Salon, where our upscale Waxing and Hair Removal services redefine the art of sleek perfection. Step into a realm where every treatment is a celebration of confidence, elegance, and a touch of glamour.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f338; Immerse yourself in the expertise of our skilled estheticians, who are not just professionals but artisans, sculpting a path to silky-smooth skin with precision and care. From eyebrow shaping to full-body waxing, our meticulous attention to detail ensures you leave with skin that feels as velvety as it looks.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x2728; Embrace the luxury of our salon environment, where comfort meets refinement. Our commitment to excellence ensures that each waxing session is not just a service but a moment of empowerment, leaving you feeling confidently radiant and ready to conquer the world.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f337; Experience the transformative power of our premium waxing products and techniques, carefully curated to make the process as gentle and effective as possible. Whether it&#8217;s a bikini wax, leg wax, or any other hair removal service, our upscale salon is your destination for flawless results and a touch of pampering.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f496; Because you deserve the finest, our salon is more than just a destination \u2013 it&#8217;s a sanctuary of sleek beauty, a place where your confidence is honored, and your skin is celebrated. Book your appointment now and step into a world where smooth sophistication meets the extraordinary.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Your skin, redefined. Experience the exceptional at Dream Salon. &#x2728;&#x1f485;&#8221;</p>\n"
-  },
-  {
-    "id": 31946,
-    "slug": "skincare-facial-treatments",
-    "title": "Skincare & Facial Treatments",
-    "icon": "fa-spa",
-    "tag": "Rejuvenating",
-    "image": "/images/2021/12/inner_header_01.jpg",
-    "excerpt": "&#8220;Indulge in a luxurious journey of self-care and radiant beauty at Dream Salon, where our upscale salon skincare services redefine the art of pampering. Elevate your skincare...",
-    "content": "\n<p class=\"wp-block-paragraph\">&#8220;Indulge in a luxurious journey of self-care and radiant beauty at Dream Salon, where our upscale salon skincare services redefine the art of pampering. Elevate your skincare routine to a realm of sophistication, where every treatment is a celebration of your unique glow.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f338; Immerse yourself in the expertise of our skilled estheticians, who are not just professionals but true artisans, crafting personalized skincare rituals tailored exclusively for you. From rejuvenating facials to cutting-edge treatments, we elevate skincare to an art form that transcends the ordinary.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x2728; Bask in the opulence of our salon environment, where tranquility meets glamour. Our commitment to excellence ensures that each skincare session is not just a service but a moment of pure indulgence, leaving your skin revitalized, refreshed, and absolutely luminous.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f337; Experience the transformative power of our premium skincare products and innovative techniques, carefully curated to address your unique skincare needs. Whether it&#8217;s anti-aging, hydration, or a radiant complexion you seek, our upscale salon is your haven for impeccable skincare solutions.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f496; Because you deserve the finest, our salon is more than just a destination \u2013 it&#8217;s a sanctuary of beauty, a place where your skin is honored, and your radiance is celebrated. Book your appointment now and embark on a journey to skincare perfection that speaks volumes about your timeless beauty.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Your skin, reimagined. Experience the extraordinary at Dream Salon. &#x2728;&#x1f33a;&#8221;</p>\n"
-  },
-  {
-    "id": 31944,
-    "slug": "lashes-brows",
-    "title": "Lashes & Brows",
-    "icon": "fa-eye",
-    "tag": "High Definition",
-    "image": "/images/2023/12/young-woman-during-procedure-of-permanent-eyebrow-2023-11-28-23-02-41-utc.jpg",
-    "excerpt": "&#8220;Discover the art of timeless beauty with our exquisite Cosmetic Tattoos and Permanent Make-Up services at Dream Salon, where every stroke is a masterpiece and every client i...",
-    "content": "\n<p class=\"wp-block-paragraph\">&#8220;Discover the art of timeless beauty with our exquisite Cosmetic Tattoos and Permanent Make-Up services at Dream Salon, where every stroke is a masterpiece and every client is a canvas of elegance. Elevate your natural allure and redefine glamour with our upscale and personalized treatments.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f484; Immerse yourself in the world of effortless beauty as our skilled artists, not mere technicians, but true visionaries, bring forth the artistry of Cosmetic Tattoos and Permanent Make-Up. From enhancing brows to defining lips, our meticulous attention to detail ensures that you leave with a look that is both flawless and uniquely yours.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x2728; Embrace the luxury of our salon environment, where sophistication meets serenity. Our commitment to excellence ensures that every visit is not just a cosmetic enhancement but a transformative experience, leaving you with an undeniable radiance that stands the test of time.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f339; Experience the freedom of waking up with a perfect pout, flawlessly defined eyes, and elegantly shaped brows, all achieved through our cutting-edge cosmetic tattoo techniques. Our upscale salon is your destination for precision, quality, and a touch of glamour that lasts.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f496; Because you deserve the epitome of sophistication, our salon transcends the conventional. Book your appointment now and step into a world where your beauty is celebrated, and confidence is a lasting legacy.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Your beauty, redefined. Experience the extraordinary at Dream Salon. &#x1f48b;&#x2728;&#8221;</p>\n"
-  },
-  {
-    "id": 31942,
-    "slug": "hair-services",
-    "title": "Hair Services",
-    "icon": "fa-cut",
-    "tag": "Salon Styling",
-    "image": "/images/2023/12/hairstyling-in-hair-salon-2023-11-27-04-52-40-utc-e1703953619118.jpg",
-    "excerpt": "&#8220;Step into the realm of timeless beauty and indulgence at our upscale hair salon, where luxury meets transformation. Elevate your senses and embrace the extraordinary with ou...",
-    "content": "\n<p class=\"wp-block-paragraph\">&#8220;Step into the realm of timeless beauty and indulgence at our upscale hair salon, where luxury meets transformation. Elevate your senses and embrace the extraordinary with our exquisite hair salon treatments, tailored exclusively for you.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f487;&#x200d;&#x2640;&#xfe0f; Immerse yourself in the artistry of our skilled stylists, who are not just professionals but visionaries, sculpting your hair into a masterpiece that reflects your individuality. From precision cuts to personalized color, our services are a celebration of your unique style and confidence.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x2728; Experience the epitome of opulence in our chic salon environment, where every visit is a journey of rejuvenation. Our commitment to excellence ensures that each treatment is not merely a service but a moment of pampering, where you are the canvas and the result is pure elegance.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f339; Unveil a world of possibilities as our premium hair treatments go beyond expectations. From nourishing hair masks that restore luster to innovative styling techniques that redefine glamour, we bring you the latest in hair care, ensuring your tresses are always at their radiant best.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f496; Because you deserve the finest, our salon is more than just a destination \u2013 it&#8217;s a sanctuary of sophistication, a place where trends are set, and your beauty is celebrated. Book your appointment now and embark on a journey to hair perfection that transcends the ordinary.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Your hair deserves the best. Experience the extraordinary at Dream Salon.</p>\n"
-  },
-  {
-    "id": 30718,
-    "slug": "makeup-beauty-enhancements",
-    "title": "Makeup & Beauty Enhancements",
-    "icon": "fa-magic",
-    "tag": "Editorial & Glam",
-    "image": "/images/2024/01/fast-beauty-service-beautiful-ginger-girl-having-2023-11-27-05-21-12-utc.jpg",
-    "excerpt": "Manicures keep your hands and fingertips polished and perfect by promoting healthy nail growth, improving the texture and health of your fingernails as well as maintaining properly...",
-    "content": "\n<p class=\"wp-block-paragraph\">Manicures keep your hands and fingertips polished and perfect by promoting healthy nail growth, improving the texture and health of your fingernails as well as maintaining properly moisturized cuticles and nail beds. Whether you just want basic grooming and polish or want to go all out with 3D art and gradients, manicures are an affordable gift for everyone \u2013 including yourself!</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#8220;Indulge in a world of glamorous self-care with our exquisite Manicure Services tailored just for you, because you deserve nothing but the best! &#x1f338;&#x2728; Step into a realm of luxury where your hands become a canvas of beauty and elegance. Our skilled technicians are not just nail artists, they&#8217;re magic-makers, ensuring every stroke is a masterpiece.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f380; Immerse yourself in the ultimate pampering experience as we transform your nails into stunning works of art. Choose from an array of chic designs, trendy colors, and sophisticated styles that reflect your unique personality. Whether you&#8217;re in the mood for timeless classics or daring statement nails, we&#8217;ve got you covered.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f485; Revel in the delight of perfectly manicured nails that speak volumes about your style and confidence. Our premium services go beyond beauty \u2013 they&#8217;re a celebration of YOU! Let your nails tell a story of empowerment, sophistication, and the joy of self-care.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x2728; Experience the bliss of meticulous nail care that not only enhances your natural beauty but also leaves you feeling rejuvenated and ready to conquer the world. Our luxurious atmosphere and attention to detail create an ambiance that&#8217;s not just a salon visit; it&#8217;s a retreat for your senses.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f33a; Because you&#8217;re worth it, we bring you more than just a manicure \u2013 it&#8217;s a moment of self-love, a celebration of femininity, and a commitment to making you feel absolutely fabulous. Book your session today and treat yourself to the radiant confidence that comes with perfectly manicured hands.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Your journey to dazzling nails begins here. &#x1f496;&#x2728;&#8221;</p>\n\n\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p class=\"wp-block-paragraph\"><a href=\"https://dreamnails.asia/aeroprofing-technique/\">I believe in manicures. I believe in overdressing. I believe in primping at leisure and wearing lipstick. I believe in pink. I believe happy girls are the prettiest girls.</a></p>\n<cite>Audrey Hepburn</cite></blockquote>\n\n\n\n<h2 class=\"wp-block-heading has-text-align-center\">Some Pictures from our Salon</h2>\n\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"768\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.54-PM-1-768x1024.jpeg\" alt=\"\" class=\"wp-image-31317\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" fetchpriority=\"high\" decoding=\"async\" width=\"1024\" height=\"768\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.47-PM.jpeg\" alt=\"\" class=\"wp-image-31311\" srcset=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.47-PM.jpeg 1024w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.47-PM.jpeg 300w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.47-PM.jpeg 768w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.47-PM.jpeg 100w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.47-PM.jpeg 800w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.47-PM.jpeg 480w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.47-PM.jpeg 600w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.47-PM.jpeg 1080w\" sizes=\"(max-width: 1024px) 100vw, 1024px\" /></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" decoding=\"async\" width=\"576\" height=\"1024\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.48-PM-1.jpeg\" alt=\"\" class=\"wp-image-31312\" srcset=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.48-PM-1.jpeg 576w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.48-PM-1.jpeg 169w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.48-PM-1.jpeg 768w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.48-PM-1.jpeg 864w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.48-PM-1.jpeg 56w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.48-PM-1.jpeg 450w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.48-PM-1.jpeg 480w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.48-PM-1.jpeg 600w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.48-PM-1.jpeg 1080w\" sizes=\"(max-width: 576px) 100vw, 576px\" /></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"576\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.48-PM-576x1024.jpeg\" alt=\"\" class=\"wp-image-31313\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"576\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.49-PM-576x1024.jpeg\" alt=\"\" class=\"wp-image-31314\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"768\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.50-PM-768x1024.jpeg\" alt=\"\" class=\"wp-image-31315\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"576\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.54-PM-1-1-576x1024.jpeg\" alt=\"\" class=\"wp-image-31316\"/></figure>\n</div>"
-  },
-  {
-    "id": 30716,
-    "slug": "body-treatments-wellness",
-    "title": "Body Treatments & Wellness",
-    "icon": "fa-heart",
-    "tag": "Holistic Health",
+    "id": 2,
+    "slug": "pedicure",
+    "title": "Pedicure",
+    "tag": "Restorative Foot Rituals",
+    "icon": "fa-shoe-prints",
     "image": "/images/2023/12/closeup-of-diverse-women-s-legs-sitting-in-studio-2023-11-27-05-18-57-utc-e1703953263386.jpg",
-    "excerpt": "Kick up your heels and enjoy a spa staple with a pedicure. Pedicures help keep your feet beautiful and healthy. This cosmetic treatment removes dead skin, softens hard skin, and sh...",
-    "content": "\n<p class=\"wp-block-paragraph\">Kick up your heels and enjoy a spa staple with a pedicure. Pedicures help keep your feet beautiful and healthy. This cosmetic treatment removes dead skin, softens hard skin, and shapes and treats your toenails while also providing calf massage and moisturizing. Your feet will be polished and massaged to pretty perfection, and you\u2019ll leave a more relaxed and more comfortable person.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#8220;Step into a world of ultimate relaxation and beauty with our divine Pedicure Services \u2013 because your feet deserve to be pampered and adorned! &#x1f338;&#x2728; Embark on a journey of tranquility as we transport you to a haven of luxury, where every step is a celebration of self-care.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f463; Treat your feet to a symphony of indulgence with our expert pedicurists who are not just technicians but artists, crafting a masterpiece for your toes. Choose from a palette of trendy colors, soothing treatments, and stylish designs that reflect your unique personality.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f485; Revel in the joy of impeccable pedicures that go beyond aesthetics \u2013 they&#8217;re a testament to your grace, style, and the importance of cherishing yourself. Our premium services are more than just a beauty ritual; they&#8217;re a declaration of self-love and confidence.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x2728; Immerse yourself in the luxurious ambiance of our salon, where every detail is curated to ensure your comfort and delight. Let the stress of the day melt away as you indulge in a pedicure experience that leaves you feeling refreshed, rejuvenated, and ready to conquer the world.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f33a; Because you deserve the best, we bring you more than just a pedicure \u2013 it&#8217;s a moment of bliss, a celebration of femininity, and a commitment to making you feel absolutely fabulous. Book your session now and treat your feet to the care they truly deserve.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Your journey to happy, healthy feet begins here. &#x1f496;&#x2728;&#8221;</p>\n\n\n\n<h2 class=\"wp-block-heading has-text-align-center\">Some Pictures from Our Salon</h2>\n\n\n\n<figure class=\"wp-block-image size-large is-resized\"><img data-recalc-dims=\"1\" height=\"768\" width=\"1024\" decoding=\"async\" src=\"/images/2022/01/02e3e97a-d387-4aff-986a-a40cc9d6fabf-1024x768.jpg\" alt=\"\" class=\"wp-image-31323\" style=\"width:1020px;height:765px\"/></figure>\n\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"768\" decoding=\"async\" src=\"/images/2022/01/3898accf-cb78-443a-817e-e1c3cf0db3b9-768x1024.jpg\" alt=\"\" class=\"wp-image-31325\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"768\" width=\"1024\" decoding=\"async\" src=\"/images/2022/01/66905b1e-04fc-43ff-9f48-d1f636080a6a-1024x768.jpg\" alt=\"\" class=\"wp-image-31326\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"768\" decoding=\"async\" src=\"/images/2022/01/cb7644df-1173-4475-ac95-aa798c178569-768x1024.jpg\" alt=\"\" class=\"wp-image-31327\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"768\" decoding=\"async\" src=\"/images/2022/01/8f19c33d-ee2e-4d39-8226-7e993cbccea3-768x1024.jpg\" alt=\"\" class=\"wp-image-31324\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"768\" decoding=\"async\" src=\"/images/2022/01/d0ae8cbf-f00d-449b-9123-6f2d1b7a1257-768x1024.jpg\" alt=\"\" class=\"wp-image-31328\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"768\" width=\"1024\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.36-PM-1024x768.jpeg\" alt=\"\" class=\"wp-image-31330\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"576\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.47-PM-1-576x1024.jpeg\" alt=\"\" class=\"wp-image-31331\"/></figure>\n</div>\n\n\n<figure class=\"wp-block-video aligncenter\"><video controls src=\"/images/2022/01/33cf1700-b637-48f3-86a3-134711dd2b45.mp4\"></video></figure>\n"
+    "excerpt": "Revitalize your step with medical-grade podiatric care, organic botanical foot baths, callus smoothing, and long-lasting gel toenails.",
+    "description": "Our restorative pedicure sanctuary offers deep relaxation and transformative foot care. From therapeutic callus elimination to soothing reflexology foot massages and hot stone therapies, we restore lightness, hydration, and baby-soft skin.",
+    "highlights": [
+      "Hygienic jet-free whirlpool basins with disposable liners",
+      "Intensive fruit-acid callus peeling & foot filing",
+      "Aromatherapy botanical scrubs & reflexology massage",
+      "Chip-resistant long-wear gel pedicure finishes"
+    ],
+    "treatments": [
+      {
+        "name": "Classic Botanical Spa Pedicure",
+        "duration": "60 mins",
+        "price": "\u0e3f 700 / $20",
+        "description": "Warm herbal foot soak, cuticle clean, gentle heel exfoliating scrub, soothing foot lotion, and regular polish."
+      },
+      {
+        "name": "Medical Callus Peel & Heel Therapy",
+        "duration": "75 mins",
+        "price": "\u0e3f 1,000 / $29",
+        "description": "Targeted podiatry-grade fruit acid softening treatment to eliminate deep cracks, dry patches, and hardened calluses."
+      },
+      {
+        "name": "Luxury Gel Pedicure with Reflexology",
+        "duration": "90 mins",
+        "price": "\u0e3f 1,200 / $35",
+        "description": "Complete spa foot ritual, 20-minute acupressure foot & calf massage, finished with high-gloss instant-cure gel polish."
+      },
+      {
+        "name": "Hot Stone & Paraffin Foot Cocoon",
+        "duration": "45 mins",
+        "price": "\u0e3f 650 / $19",
+        "description": "Warming volcanic basalt stone massage followed by deep-conditioning lavender paraffin wax wrap."
+      }
+    ],
+    "content": "<p>Your feet carry you through life \u2014 give them the luxury and restorative care they deserve. Our pedicure stations feature pipe-free sanitized baths with disposable single-use liners for total hygienic peace of mind.</p><h3>The Ultimate Soles Sanctuary</h3><p>Every step of our pedicure rituals is designed to relieve muscular tension, hydrate parched heels, and leave your toenails impeccably shaped and lacquered with brilliant, long-lasting color.</p>"
   },
   {
-    "id": 30701,
-    "slug": "specialized-vip-services",
-    "title": "Specialized & VIP Services",
+    "id": 3,
+    "slug": "eyelashes",
+    "title": "Eyelashes",
+    "tag": "Couture Lash Design",
+    "icon": "fa-eye",
+    "image": "/images/2024/01/fast-beauty-service-beautiful-ginger-girl-having-2023-11-27-05-21-12-utc.jpg",
+    "excerpt": "Enhance your eyes with customized silk and mink lash extensions, featherlight Russian volume, and organic keratin lash lifts.",
+    "description": "Wake up looking effortlessly glamorous every day. Our certified lash artists carefully analyze your eye shape, facial symmetry, and natural lash health to craft tailored sets that feel weightless and look mesmerizing.",
+    "highlights": [
+      "Premium ultra-lightweight Korean faux-mink fibers",
+      "Medical-grade fumes-free adhesives safe for sensitive eyes",
+      "Custom mapping: Cat Eye, Doll Eye, Squirrel, and Natural",
+      "Keratin lash infusions to nourish and curl natural lashes"
+    ],
+    "treatments": [
+      {
+        "name": "Classic 1-to-1 Silk Set",
+        "duration": "90 mins",
+        "price": "\u0e3f 1,200 / $35",
+        "description": "One single ultra-soft extension attached to each natural lash for an elegant, defined mascara-like enhancement."
+      },
+      {
+        "name": "Hybrid Wispy Kim-K Set",
+        "duration": "105 mins",
+        "price": "\u0e3f 1,600 / $46",
+        "description": "Artful combination of classic individual lashes and multidimensional volume fans for textured, flirty fullness."
+      },
+      {
+        "name": "Russian Mega Volume (6D-10D)",
+        "duration": "120 mins",
+        "price": "\u0e3f 2,200 / $63",
+        "description": "Handmade bouquets of ultra-fine 0.03mm lashes creating dense, velvet darkness and dramatic red-carpet glamour."
+      },
+      {
+        "name": "Keratin Lash Lift & Deep Tint",
+        "duration": "60 mins",
+        "price": "\u0e3f 950 / $28",
+        "description": "Semi-permanent lifting and curling of natural lashes paired with pitch-black tinting lasting 6 to 8 weeks."
+      },
+      {
+        "name": "Gentle Cream Lash Removal",
+        "duration": "30 mins",
+        "price": "\u0e3f 350 / $10",
+        "description": "Soothing conditioning solvent breakdown that protects your natural lashes completely."
+      }
+    ],
+    "content": "<p>Indulge in couture lash design with Dream Nails Asia. Our lash artists are masters in isolation and customized eye mapping, ensuring zero damage to your natural lashes.</p><h3>Featherlight Comfort</h3><p>Using only the finest Korean featherlight fibers and formaldehyde-free sensitive adhesives, you will forget you are even wearing extensions \u2014 while turning heads wherever you go.</p>"
+  },
+  {
+    "id": 4,
+    "slug": "eyebrow",
+    "title": "Eyebrow",
+    "tag": "Architectural Brow Shaping",
+    "icon": "fa-magic",
+    "image": "/images/2023/12/young-woman-during-procedure-of-permanent-eyebrow-2023-11-28-23-02-41-utc.jpg",
+    "excerpt": "Achieve symmetry and definition with golden-ratio brow mapping, organic henna tinting, Korean brow lamination, and precision threading.",
+    "description": "Your brows frame your entire face. Our brow architectural specialists utilize the golden ratio method to sculpt balanced, natural, and expressive eyebrows that accentuate your bone structure and personal style.",
+    "highlights": [
+      "Golden-ratio anatomical facial symmetry mapping",
+      "Korean Brow Lamination for fluffy, feathered brows",
+      "Natural botanical Henna coloring lasting up to 4 weeks",
+      "Ultra-clean threading and hypoallergenic brow waxing"
+    ],
+    "treatments": [
+      {
+        "name": "Brow Architecture & Threading",
+        "duration": "30 mins",
+        "price": "\u0e3f 400 / $12",
+        "description": "Custom precision mapping and threading to create clean, sharp lines and balanced facial harmony."
+      },
+      {
+        "name": "Korean Fluffy Brow Lamination",
+        "duration": "45 mins",
+        "price": "\u0e3f 1,100 / $32",
+        "description": "Nutrient-infused perm system that re-aligns brow hair direction for full, feathered, soap-brow perfection."
+      },
+      {
+        "name": "Henna Couture Brow Tinting",
+        "duration": "40 mins",
+        "price": "\u0e3f 600 / $17",
+        "description": "Organic plant-based henna that tints both the skin and brow hairs, creating a soft powdered ombr\u00e9 effect."
+      },
+      {
+        "name": "Total Brow Transformation Package",
+        "duration": "60 mins",
+        "price": "\u0e3f 1,500 / $43",
+        "description": "Complete architectural mapping, precision shaping, lamination, and custom keratin tint infusion."
+      }
+    ],
+    "content": "<p>Discover the power of perfectly sculpted eyebrows. Whether your brows are sparse, uneven, or unruly, our specialists restore definition, fullness, and symmetry with bespoke styling.</p><h3>Flawless Golden-Ratio Mapping</h3><p>Every brow service begins with tailored measurement of your facial proportions, ensuring results that naturally lift your features and bring youthful vitality to your eyes.</p>"
+  },
+  {
+    "id": 5,
+    "slug": "cosmetic-tattoo-pmu",
+    "title": "Cosmetic Tattoo (PMU)",
+    "tag": "Semi-Permanent Artistry",
+    "icon": "fa-pen-fancy",
+    "image": "/images/2023/12/young-woman-during-procedure-of-permanent-eyebrow-2023-11-28-23-02-41-utc.jpg",
+    "excerpt": "Wake up with smudge-proof perfection: Nano Microblading, Lash Line Enhancement, Aquarelle Lip Blush, and custom Ombr\u00e9 Shading.",
+    "description": "Step into the future of semi-permanent makeup (PMU). Our internationally certified PMU masters craft hyper-realistic hair strokes, luscious natural lip tints, and discreet lash-line definitions using German digital rotary machines and Swiss vegan pigments.",
+    "highlights": [
+      "New: Precision Lash Line Enhancement for naturally dense-looking eyes",
+      "New: Feather-stroke Microblading & Ombr\u00e9 Powder brows",
+      "New: Aquarelle Lip Blush for fresh youthful tint and contour definition",
+      "Topical dual-phase medical numbing for a virtually pain-free experience"
+    ],
+    "treatments": [
+      {
+        "name": "Nano Microblading & Powder Ombr\u00e9",
+        "duration": "120 mins",
+        "price": "\u0e3f 5,500 / $158",
+        "description": "Ultra-fine hair-like strokes blended with soft gradient shading for realistic, naturally full brows lasting 1-2 years."
+      },
+      {
+        "name": "Lash Line Enhancement (Semi-Permanent)",
+        "duration": "90 mins",
+        "price": "\u0e3f 4,000 / $115",
+        "description": "Subtle, dark pigment placed directly along the lash root line to make eyes pop and lashes appear naturally double-dense."
+      },
+      {
+        "name": "Aquarelle Lip Blush & Contour",
+        "duration": "120 mins",
+        "price": "\u0e3f 5,000 / $144",
+        "description": "Soft wash of sheer mineral color across the lips to correct pale tones, enhance asymmetry, and give a healthy tint."
+      },
+      {
+        "name": "PMU Touch-Up & Color Refresh (4-6 wks)",
+        "duration": "60 mins",
+        "price": "\u0e3f 1,500 / $43",
+        "description": "Secondary perfection session to solidify pigment retention and fine-tune tone and density."
+      }
+    ],
+    "content": "<p>Permanent Make-Up (PMU) at Dream Nails Asia offers effortless beauty that never washes off. Whether hitting the beach, the gym, or an evening gala, your features remain beautifully defined 24/7.</p><h3>Medical-Grade Safety & Artistry</h3><p>We use single-use sealed cartridge needles, medical-grade barrier film, and top-tier organic Swiss pigments that do not discolor into blues or reds over time. Dual-stage anesthetic numbing ensures maximum comfort throughout.</p>"
+  },
+  {
+    "id": 6,
+    "slug": "hairstyling",
+    "title": "Hairstyling",
+    "tag": "Runway & Event Styling",
+    "icon": "fa-cut",
+    "image": "/images/2023/12/hairstyling-in-hair-salon-2023-11-27-04-52-40-utc-e1703953619118.jpg",
+    "excerpt": "Experience master cuts, voluminous red-carpet blowouts, romantic bridal updos, and effortless beach waves tailored to your vibe.",
+    "description": "Our senior hair directors transform locks into works of art. Whether you are prepping for a tropical beach photoshoot, an elegant evening gala, or seeking a chic modern cut, we bring luxury, movement, and lustrous shine to your tresses.",
+    "highlights": [
+      "Couture precision haircutting for all hair textures",
+      "Signature voluminous silk-press and Parisian blowouts",
+      "Bridal, bridesmaid, and red-carpet event upstyling",
+      "Dyson Supersonic & premium thermal protective styling tools"
+    ],
+    "treatments": [
+      {
+        "name": "Dream Signature Luxury Blowout",
+        "duration": "45 mins",
+        "price": "\u0e3f 600 / $18",
+        "description": "Relaxing double scalp wash, conditioning massage, and bouncy, high-gloss blowout with round brushes."
+      },
+      {
+        "name": "Couture Cut & Style Transformation",
+        "duration": "60 mins",
+        "price": "\u0e3f 900 / $26",
+        "description": "Face-framing layers, blunt bobs, or textured butterfly cuts finished with professional heat styling."
+      },
+      {
+        "name": "Beach Waves & Hollywood Glam Curls",
+        "duration": "45 mins",
+        "price": "\u0e3f 750 / $22",
+        "description": "Effortless undone beach waves or polished vintage Hollywood glamour curls that last all evening."
+      },
+      {
+        "name": "Event & Bridal Updo Artistry",
+        "duration": "75 mins",
+        "price": "\u0e3f 1,800 / $52",
+        "description": "Architectural chignons, textured bridal braids, or sleek high-fashion ponytails pinned to perfection."
+      }
+    ],
+    "content": "<p>Step into our upscale hair sanctuary where every strand is treated with reverence. Our stylists combine European cutting precision with Asian hair expertise to deliver effortless movement and healthy radiance.</p><h3>Salon Blowouts that Turn Heads</h3><p>Using Dyson styling technology and antioxidant-infused finishing elixirs, our blowouts resist tropical humidity and maintain featherweight bounce from morning to night.</p>"
+  },
+  {
+    "id": 7,
+    "slug": "hair-color",
+    "title": "Hair Color",
+    "tag": "Master Color Chemistry",
+    "icon": "fa-palette",
+    "image": "/images/2023/12/hairstyling-in-hair-salon-2023-11-27-04-52-40-utc-e1703953619118-1024x1024.jpg",
+    "excerpt": "From seamless sun-kissed balayage to bold platinum blondes, pastel toners, and gentle ammonia-free color glazes.",
+    "description": "Achieve your dream hair color with zero compromise on hair integrity. Our master colorists specialize in Asian and international hair coloring, utilizing Olaplex bond repair technology, gentle low-volume developers, and luminous French toners.",
+    "highlights": [
+      "Seamless hand-painted Balayage, Babylights, and Ombr\u00e9",
+      "Safe high-lift blonding & brass-free corrective toning",
+      "Ammonia-free organic color glazes with mirror shine",
+      "Olaplex bonding system integrated into every bleaching service"
+    ],
+    "treatments": [
+      {
+        "name": "Bespoke Balayage & French Gloss Toner",
+        "duration": "180 mins",
+        "price": "\u0e3f 3,500 / $100",
+        "description": "Hand-painted dimensional highlights that grow out softly without harsh demarcation lines."
+      },
+      {
+        "name": "Full Blonde Transformation & Bond Repair",
+        "duration": "210 mins",
+        "price": "\u0e3f 4,500 / $130",
+        "description": "Multi-stage gentle lightening, Olaplex bond reinforcement, and custom pearl or ash toner application."
+      },
+      {
+        "name": "Root Retouch & Color Balancing",
+        "duration": "90 mins",
+        "price": "\u0e3f 1,600 / $46",
+        "description": "Flawless grey coverage or root regrowth matching with scalp-comfort protective barrier oil."
+      },
+      {
+        "name": "Luminous Acidic Color Melt / Glaze",
+        "duration": "60 mins",
+        "price": "\u0e3f 1,200 / $35",
+        "description": "Zero-lift shine booster that seals cuticles, neutralizes yellow brassiness, and amplifies radiance."
+      }
+    ],
+    "content": "<p>Whether you crave warm honey ribbons, an icy blonde bob, or a rich chocolate brunette melt, our color laboratory creates custom bespoke formulas tailored to your skin undertones.</p><h3>Damage-Free Lightening</h3><p>We believe healthy hair is the canvas for gorgeous color. That is why every coloring and lightening treatment includes bond-building therapies to preserve moisture, elasticity, and softness.</p>"
+  },
+  {
+    "id": 8,
+    "slug": "hair-treatments-head-spa",
+    "title": "Hair Treatments & Head Spa",
+    "tag": "Trichology & Scalp Sanctuary",
+    "icon": "fa-shower",
+    "image": "/images/2021/12/inner_header_01.jpg",
+    "excerpt": "Indulge in our viral Japanese Waterfall Scalp Spa, Brazilian Keratin smoothing, collagen Hair Botox, and deep Olaplex bond therapy.",
+    "description": "Revitalize over-processed tresses and calm stressed scalps in our dedicated Head Spa suite. Featuring circular hydro-waterfall rings, warm steam misting, and high-potency collagen infusions, this is pure sensorial bliss.",
+    "highlights": [
+      "New: Japanese Hydro-Waterfall Scalp Spa with micro-circulation massage",
+      "New: Brazilian Keratin Blowout for 3-5 months of frizz-free glass hair",
+      "New: Collagen Hair Botox to plump damaged cuticles and restore youth",
+      "Olaplex No. 1 & No. 2 professional intensive bond reconstruction"
+    ],
+    "treatments": [
+      {
+        "name": "Japanese Waterfall Scalp Spa & Head Massage",
+        "duration": "75 mins",
+        "price": "\u0e3f 1,800 / $52",
+        "description": "Aromatherapy scalp peeling, herbal steam bath, rhythmic pressure-point head massage, and circular waterfall rain ring."
+      },
+      {
+        "name": "Brazilian Keratin Smoothing Therapy",
+        "duration": "150 mins",
+        "price": "\u0e3f 3,200 / $92",
+        "description": "Formaldehyde-free keratin infusion that tames wild frizz, repels humidity, and cuts blowout time in half."
+      },
+      {
+        "name": "Collagen & Caviar Hair Botox",
+        "duration": "90 mins",
+        "price": "\u0e3f 2,500 / $72",
+        "description": "Deep cellular anti-aging filler treatment packed with amino acids that restores extreme softness to brittle hair."
+      },
+      {
+        "name": "Olaplex Intensive Molecular Bond Repair",
+        "duration": "60 mins",
+        "price": "\u0e3f 1,400 / $40",
+        "description": "Stand-alone treatment multiplying broken disulphide bonds to reverse bleach, heat, and chemical stress."
+      }
+    ],
+    "content": "<p>A healthy scalp is the secret to thriving, glossy hair. Our Japanese Head Spa experience begins with high-magnification trichological scalp analysis, followed by detoxifying scrubs, acupressure neck massage, and calming waterfall hydrotherapy.</p><h3>Frizz-Free Glass Hair</h3><p>Struggling with tropical humidity? Our Keratin and Hair Botox treatments coat every strand in silky nutrition, delivering mirror-like shine and effortless manageability for months.</p>"
+  },
+  {
+    "id": 9,
+    "slug": "facial",
+    "title": "Facial",
+    "tag": "Clinical Glow & Skin Health",
+    "icon": "fa-spa",
+    "image": "/images/2021/12/inner_header_01.jpg",
+    "excerpt": "Rejuvenate your complexion with deep pore Hydrafacials, collagen firming lifts, botanical vitamin infusions, and medical-grade LED light therapy.",
+    "description": "Unlock luminous, plump, and healthy skin. Our estheticians curate personalized facial rituals that tackle dehydration, environmental stress, fine lines, and sun damage using European bio-cosmetics and cutting-edge non-invasive skin tech.",
+    "highlights": [
+      "Deep vortex vacuum pore extraction and hydration (Hydra-Glow)",
+      "Medical-grade 7-wavelength LED phototherapy",
+      "Anti-gravity lymphatic drainage facial and neck massage",
+      "Collagen and hyaluronic acid sheet infusion masks"
+    ],
+    "treatments": [
+      {
+        "name": "Dream Hydra-Glow Deep Cleansing Facial",
+        "duration": "75 mins",
+        "price": "\u0e3f 1,800 / $52",
+        "description": "Vortex aqua-suction pore cleansing, enzymatic peel, antioxidant serum infusion, and cryo-firming wand."
+      },
+      {
+        "name": "Anti-Aging Collagen Firming & Lift",
+        "duration": "90 mins",
+        "price": "\u0e3f 2,400 / $69",
+        "description": "Targeted peptide ampoules, microcurrent muscle tone activation, and intensive freeze-dried collagen mask."
+      },
+      {
+        "name": "Brightening Vitamin C Radiance Facial",
+        "duration": "60 mins",
+        "price": "\u0e3f 1,500 / $43",
+        "description": "High-potency antioxidant treatment to diminish hyperpigmentation, even skin tone, and restore natural glow."
+      },
+      {
+        "name": "Calming Botanical Sensitive Skin Ritual",
+        "duration": "60 mins",
+        "price": "\u0e3f 1,300 / $38",
+        "description": "Centella asiatica and aloe vera infusion designed to soothe sunburn, reduce redness, and rebuild moisture barrier."
+      }
+    ],
+    "content": "<p>Experience skin transformation in an atmosphere of serene luxury. Our personalized facials breathe fresh life into dull skin, decongest congested pores, and restore barrier vitality.</p><h3>Bespoke Esthetic Diagnostics</h3><p>Every facial begins with a thorough skin assessment, ensuring that each serum, massage technique, and botanical mask directly targets your immediate skincare goals.</p>"
+  },
+  {
+    "id": 10,
+    "slug": "massage-body",
+    "title": "Massage & Body",
+    "tag": "Holistic Body Sanctuary",
+    "icon": "fa-heart",
+    "image": "/images/2022/01/02e3e97a-d387-4aff-986a-a40cc9d6fabf-1024x768.jpg",
+    "excerpt": "Melt away tension with authentic Thai aroma massages, organic coconut & coffee body scrubs, hot herbal compresses, and foot reflexology.",
+    "description": "Escape the hustle of daily life in our holistic body sanctuary. Blending ancient Thai healing traditions with aromatic botanical oils, our certified masseuses gently relieve knots, improve lymphatic flow, and restore mind-body balance.",
+    "highlights": [
+      "New: Authentic Thai Aromatherapy warm oil massages",
+      "New: Organic Himalayan salt & coconut body scrubs",
+      "New: Acupressure foot reflexology and lower leg revitalizer",
+      "Heated herbal compress (Luk Pra Kob) filled with lemongrass and ginger"
+    ],
+    "treatments": [
+      {
+        "name": "Traditional Thai Aroma Oil Massage",
+        "duration": "60 / 90 mins",
+        "price": "\u0e3f 900 / 1,300 ($26 / $38)",
+        "description": "Rhythmic gliding strokes and warm botanical essential oils combining Thai pressure points with Swedish relaxation."
+      },
+      {
+        "name": "Organic Coffee & Brown Sugar Body Polish",
+        "duration": "60 mins",
+        "price": "\u0e3f 1,100 / $32",
+        "description": "Stimulating full-body exfoliation that sloughs off dead cells, improves micro-circulation, and leaves skin baby-soft."
+      },
+      {
+        "name": "Herbal Compress (Luk Pra Kob) Tension Melt",
+        "duration": "90 mins",
+        "price": "\u0e3f 1,500 / $43",
+        "description": "Steamed muslin bundles of plai, turmeric, and kaffir lime pressed into aching muscles to release deep tension."
+      },
+      {
+        "name": "Restorative Foot & Calf Reflexology",
+        "duration": "45 mins",
+        "price": "\u0e3f 600 / $18",
+        "description": "Stimulation of key meridian points on the soles to promote whole-body wellness and alleviate travel fatigue."
+      }
+    ],
+    "content": "<p>Allow your senses to unwind as gentle tropical aromas and soothing ambient melodies fill the air. Our body treatments honor time-tested holistic therapies to leave you profoundly rested and revitalized.</p><h3>Premium Organic Body Scrubs</h3><p>Our scrubs use only food-grade organic botanicals \u2014 raw cold-pressed coconut oil, ground Arabica coffee, and wild honey \u2014 ensuring intense nourishment for sun-drenched skin.</p>"
+  },
+  {
+    "id": 11,
+    "slug": "waxing",
+    "title": "Waxing",
+    "tag": "Silky Smooth Hair Removal",
+    "icon": "fa-feather-alt",
+    "image": "/images/2023/12/closeup-hand-applying-green-hot-wax-on-woman-butto-2023-11-27-05-17-53-utc-e1703953431339.jpg",
+    "excerpt": "Experience gentle, hygienic hair removal with hypoallergenic European hot wax: Brazilian, bikini, full legs, underarms, and facial grooming.",
+    "description": "Smooth, radiant skin with minimal discomfort. Our waxing artisans use ultra-pliable European stripless hard waxes formulated with calming azulene and chamomile, making intimate waxing fast, hygienic, and virtually pain-free.",
+    "highlights": [
+      "100% strict no-double-dipping hygienic guarantee",
+      "Low-temperature stripless hard wax for sensitive zones",
+      "Pre-wax soothing jasmine oil barrier protection",
+      "Post-treatment cooling tea tree and aloe vera finish"
+    ],
+    "treatments": [
+      {
+        "name": "Signature Brazilian Bikini Wax (Hard Wax)",
+        "duration": "30 mins",
+        "price": "\u0e3f 1,200 / $35",
+        "description": "Gentle, thorough hair removal for intimate areas using our low-temp hypoallergenic wax for maximum comfort."
+      },
+      {
+        "name": "Full Leg & Bikini Perfection Combo",
+        "duration": "60 mins",
+        "price": "\u0e3f 1,800 / $52",
+        "description": "Complete lower-body smooth transformation, including ingrown prevention serum application."
+      },
+      {
+        "name": "Underarm Brightening & Velvet Wax",
+        "duration": "20 mins",
+        "price": "\u0e3f 400 / $12",
+        "description": "Quick, clean underarm waxing followed by soothing witch hazel and calming rosewater mist."
+      },
+      {
+        "name": "Complete Facial Wax & Brow Sculpt",
+        "duration": "30 mins",
+        "price": "\u0e3f 600 / $18",
+        "description": "Lip, chin, sides, and eyebrows smoothed to ensure flawless makeup application."
+      }
+    ],
+    "content": "<p>Waxing at Dream Nails Asia redefines the standard for comfort and hygiene. Our estheticians are swift, discrete, and gentle, ensuring you feel at ease from start to finish.</p><h3>Strict No-Double-Dipping Protocol</h3><p>We discard every wooden spatula after a single contact with wax, ensuring zero cross-contamination. Our imported waxes grip only the hair \u2014 never the delicate skin.</p>"
+  },
+  {
+    "id": 12,
+    "slug": "makeup",
+    "title": "Makeup",
+    "tag": "Editorial & Event Glamour",
+    "icon": "fa-brush",
+    "image": "/images/2024/01/fast-beauty-service-beautiful-ginger-girl-having-2023-11-27-05-21-12-utc.jpg",
+    "excerpt": "Turn heads at any event: luxury bridal beauty glam, red-carpet editorial looks, soft luminous day makeup, and airbrush perfection.",
+    "description": "Enhance your natural radiance with celebrity-level makeup artistry. Our makeup artists use prestige cosmetics (Charlotte Tilbury, Dior, NARS, MAC) to curate weather-proof, camera-ready looks that last through tears of joy, humidity, and all-night dancing.",
+    "highlights": [
+      "New: Luxury Destination Bridal & Bridesmaid packages",
+      "New: Red-Carpet & Evening Gala statement glam",
+      "Long-wearing airbrush foundation formulas resistant to heat & sweat",
+      "Custom cluster lashes customized to your eye shape"
+    ],
+    "treatments": [
+      {
+        "name": "Luxury Bridal Makeup & Trial Run",
+        "duration": "90 mins",
+        "price": "\u0e3f 3,500 / $100",
+        "description": "Waterproof, radiant bridal styling with skin prep, airbrush complexion, contouring, and luxury false lashes."
+      },
+      {
+        "name": "Red Carpet & Evening Gala Glam",
+        "duration": "60 mins",
+        "price": "\u0e3f 1,800 / $52",
+        "description": "Smoky eyes, defined brows, glass skin glow, and long-wear velvet lip designed for camera flashes."
+      },
+      {
+        "name": "Soft Luminous Day / Photoshoot Glam",
+        "duration": "45 mins",
+        "price": "\u0e3f 1,200 / $35",
+        "description": "Effortless no-makeup makeup look that enhances bone structure and delivers fresh, dewy radiance."
+      },
+      {
+        "name": "Express Eyes & Lash Application",
+        "duration": "30 mins",
+        "price": "\u0e3f 600 / $18",
+        "description": "Targeted eye makeup, winged liner, and individual cluster lash application for quick glam."
+      }
+    ],
+    "content": "<p>Whether walking down the aisle in a tropical paradise, stepping onto a red carpet, or attending a sunset cocktail reception, our makeup artists create unforgettable beauty tailored to your vision.</p><h3>Prestige International Cosmetics</h3><p>We work exclusively with high-end, dermatologist-tested beauty brands to ensure your skin looks luminous in natural sunlight, 4K video, and evening indoor lighting alike.</p>"
+  },
+  {
+    "id": 13,
+    "slug": "packages-vip",
+    "title": "Packages & VIP",
+    "tag": "Exclusive Luxury Bundles",
     "icon": "fa-crown",
-    "tag": "Exclusive Luxury",
     "image": "/images/2022/05/AboutUS-1.jpg",
-    "excerpt": "Our Paraffin spa treatment is a luxurious treat that can help you achieve baby-soft skin. Hands and feet are submerged in the wax, wrapped in plastic, and left to soak for 15-30 mi...",
-    "content": "\n<p class=\"wp-block-paragraph\">Our Paraffin spa treatment is a luxurious treat that can help you achieve baby-soft skin. Hands and feet are submerged in the wax, wrapped in plastic, and left to soak for 15-30 minutes. Paraffin spa treatments are great for skin after being in seawater which makes skin prone to dryness and cracking. Skin will be left highly moisturized, circulation is increased by the hot wax.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#8220;Indulge in the ultimate self-care experience with our luxurious Paraffin Spa Treatment \u2013 a pampering ritual designed to lavish your skin with love and leave you feeling positively radiant! &#x2728;&#x1f338; Immerse yourself in a world of tranquility as we elevate relaxation to an art form.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f56f;&#xfe0f; Our Paraffin Spa Treatment is more than just skincare; it&#8217;s a celebration of femininity and an ode to your radiant beauty. Imagine a warm embrace for your hands or feet, where the rich, soothing paraffin wax envelops your skin, melting away stress and unveiling a soft, supple glow.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f4ab; Rejuvenate your senses as the gentle warmth of the paraffin wax deeply moisturizes and nourishes your skin, leaving it velvety smooth. This is not just a spa treatment; it&#8217;s a moment to unwind, recharge, and rediscover the beauty within.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x1f33a; Let the calming ambiance of our spa transport you to a realm of serenity, where every detail is designed to enhance your experience. Our skilled therapists ensure that every application of the warm paraffin is a moment of pure bliss, providing both relaxation and transformative results.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#x2728; Treat yourself to the extraordinary \u2013 our Paraffin Spa Treatment is a testament to the care you deserve. Book your session today and embrace the glow that comes with indulging in a spa experience that goes beyond the ordinary.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Because you are a masterpiece, and your skin deserves to be adorned with nothing but the finest. &#x1f496;&#x2728;&#8221;</p>\n\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"1024\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.37-PM-1-1024x1024.jpeg\" alt=\"\" class=\"wp-image-31335\"/></figure>\n</div>\n\n\n<figure class=\"wp-block-video aligncenter\"><video controls src=\"/images/2022/03/WhatsApp-Video-2022-03-24-at-9.48.58-PM.mp4\"></video></figure>\n\n\n\n<figure class=\"wp-block-video\"><video controls src=\"/images/2022/01/WhatsApp-Video-2022-02-17-at-8.48.46-AM.mp4\"></video></figure>\n\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"768\" width=\"1024\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.38-PM-1-1024x768.jpeg\" alt=\"\" class=\"wp-image-31337\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"768\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.38-PM-768x1024.jpeg\" alt=\"\" class=\"wp-image-31338\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"768\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.39-PM-1-768x1024.jpeg\" alt=\"\" class=\"wp-image-31339\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" decoding=\"async\" width=\"768\" height=\"1024\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.39-PM.jpeg\" alt=\"\" class=\"wp-image-31340\" srcset=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.39-PM.jpeg 768w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.39-PM.jpeg 225w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.39-PM.jpeg 75w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.39-PM.jpeg 600w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.39-PM.jpeg 480w, /images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.39-PM.jpeg 1080w\" sizes=\"(max-width: 768px) 100vw, 768px\" /></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"768\" width=\"1024\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.41-PM-1-1024x768.jpeg\" alt=\"\" class=\"wp-image-31341\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"767\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.41-PM-2-767x1024.jpeg\" alt=\"\" class=\"wp-image-31342\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"767\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.41-PM-3-767x1024.jpeg\" alt=\"\" class=\"wp-image-31343\"/></figure>\n</div>\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large\"><img data-recalc-dims=\"1\" height=\"1024\" width=\"768\" decoding=\"async\" src=\"/images/2022/01/WhatsApp-Image-2022-03-24-at-10.03.41-PM-768x1024.jpeg\" alt=\"\" class=\"wp-image-31344\"/></figure>\n</div>"
+    "excerpt": "Save time in ultimate luxury: Synchronized Power Hour (4-hand care), destination Bridal Bundles, and private VIP Suite buyouts.",
+    "description": "For those who value both time and absolute luxury. Our VIP Packages offer multi-technician synchronized care \u2014 allowing you to receive a manicure, pedicure, and hair blowout simultaneously \u2014 or indulge in an all-inclusive bridal beauty retreat.",
+    "highlights": [
+      "New: Synchronized Power Hour (4-hand manicure + pedicure + blowout in 60 mins)",
+      "New: Bridal Sanctuary Bundles with champagne & private suite access",
+      "Full-day Head-to-Toe Glow makeover retreats",
+      "Private salon buyouts and corporate VIP celebrations"
+    ],
+    "treatments": [
+      {
+        "name": "Synchronized Power Hour (Triple Service)",
+        "duration": "60 mins",
+        "price": "\u0e3f 2,200 / $63",
+        "description": "Three artists working simultaneously: Gel manicure + spa pedicure + professional hair blowout finished in just one hour."
+      },
+      {
+        "name": "Bridal Sanctuary Ultimate Package",
+        "duration": "240 mins",
+        "price": "\u0e3f 6,500 / $187",
+        "description": "Bridal nail enhancements, luxury pedicure, lash set, brow architecture, and hair & makeup trial with chilled champagne."
+      },
+      {
+        "name": "Head-to-Toe Glow Day Retreat",
+        "duration": "180 mins",
+        "price": "\u0e3f 4,200 / $121",
+        "description": "Japanese scalp spa + deep hydration facial + classic gel mani & pedi + relaxing neck & shoulder massage."
+      },
+      {
+        "name": "Couples Luxury VIP Suite Pampering",
+        "duration": "120 mins",
+        "price": "\u0e3f 4,800 / $138",
+        "description": "Side-by-side manicure & pedicures, botanical body scrubs, and private suite ambiance for two."
+      }
+    ],
+    "content": "<p>Time is the ultimate luxury. Our signature VIP services are crafted for high-achievers, bridal parties, and world travelers who demand uncompromising pampering without wasting a single moment.</p><h3>Synchronized Multi-Artist Care</h3><p>Relax in our plush recliners while our coordinated team of certified master technicians pampers your hands, feet, and hair in flawless harmony. Enjoy complimentary artisanal teas, champagne, and high-speed Wi-Fi in our VIP lounges.</p>"
   }
 ]
