@@ -251,40 +251,6 @@ const flagConfig: Record<string, { flag: string; countryCode: string; stripes: s
 
     </div>
 
-    <!-- Global Social Presence Ribbon -->
-    <div class="my-10 pt-8 border-t border-white/5">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-        <div>
-          <span class="text-[10px] uppercase tracking-[0.25em] text-[#d9c1a3] font-semibold block">Social & Direct Messaging Network</span>
-          <h5 class="text-sm font-serif text-white tracking-wide">Stay Connected Across 12 Official Platforms</h5>
-        </div>
-        <div class="flex items-center gap-2 text-xs text-gray-400">
-          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[10px]">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            VIP Concierge Active
-          </span>
-        </div>
-      </div>
-
-      <!-- Quick Scrollable Social Pills -->
-      <div class="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-none">
-        {socials.map((s) => (
-          <a
-            href={s.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="shrink-0 inline-flex items-center gap-2.5 px-3 py-1.5 rounded-xl bg-[#141414] border border-white/10 hover:border-[#f286aa]/50 hover:bg-[#1f1f1f] transition-all text-xs text-gray-300 hover:text-white group shadow-sm hover:-translate-y-0.5"
-          >
-            <div class="w-5 h-5 rounded-md overflow-hidden flex-shrink-0 group-hover:scale-110 transition-transform">
-              <SocialIcon id={s.id} class="w-full h-full" />
-            </div>
-            <span class="font-medium text-[11px] text-white">{s.name}</span>
-            <span class="text-[9px] text-[#d9c1a3] uppercase font-sans font-semibold px-1 rounded bg-black/60 border border-white/5">{s.badge}</span>
-          </a>
-        ))}
-      </div>
-    </div>
-
     <!-- Bottom Copyright & Back to Top -->
     <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
       <div>
