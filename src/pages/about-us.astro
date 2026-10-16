@@ -3,6 +3,19 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import locations from '../data/locations.json';
+
+const locationFlags: Record<string, string> = {
+  "san-juan": "🇵🇷",
+  "mayaguez": "🇵🇷",
+  "bangkok": "🇹🇭",
+  "phuket": "🇹🇭",
+  "pattaya": "🇹🇭",
+  "chiang-mai": "🇹🇭",
+  "hua-hin": "🇹🇭",
+  "bali": "🇮🇩",
+  "dubai": "🇦🇪",
+  "douala": "🇨🇲"
+};
 ---
 
 <Layout 
@@ -586,7 +599,7 @@ import locations from '../data/locations.json';
               >
                 <div>
                   <div class="w-10 h-10 rounded-full bg-[#121212] border border-white/10 group-hover:border-[#f286aa]/50 flex items-center justify-center text-lg mx-auto mb-3 transition-colors">
-                    {loc.country === 'Thailand' ? '🇹🇭' : loc.country === 'Puerto Rico' ? '🇵🇷' : loc.country === 'Indonesia' ? '🇮🇩' : loc.country === 'United Arab Emirates' ? '🇦🇪' : '🇨🇲'}
+                    {locationFlags[loc.slug] || (loc.country.includes('Puerto Rico') ? '🇵🇷' : '🌐')}
                   </div>
                   <h4 class="text-xs sm:text-sm font-serif text-white uppercase tracking-wide group-hover:text-[#f286aa] transition-colors truncate">
                     {loc.name.split(',')[0]}
