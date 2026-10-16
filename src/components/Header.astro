@@ -109,10 +109,16 @@ const navLinks = [
                         <span class="text-[10px] uppercase tracking-widest text-[#f286aa] font-bold">Luxury Sanctuary Offerings</span>
                         <h4 class="text-sm font-serif text-white tracking-wide">Signature Salon Services</h4>
                       </div>
-                      <a href="/services" class="text-xs text-[#d9c1a3] hover:text-[#f286aa] transition flex items-center gap-1.5 font-medium group/link">
-                        <span>All Services Overview</span>
-                        <i class="fas fa-arrow-right text-[10px] group-hover/link:translate-x-0.5 transition-transform"></i>
-                      </a>
+                      <div class="flex items-center gap-2.5">
+                        <a href="/celebrity-services" class="text-xs bg-[#f286aa]/15 hover:bg-[#f286aa] text-[#f286aa] hover:text-black border border-[#f286aa]/40 px-2.5 py-1 rounded-full transition flex items-center gap-1 font-medium group/vip">
+                          <i class="fas fa-crown text-[10px]"></i>
+                          <span>Celebrity & VIP</span>
+                        </a>
+                        <a href="/services" class="text-xs text-[#d9c1a3] hover:text-[#f286aa] transition flex items-center gap-1.5 font-medium group/link">
+                          <span>All Services</span>
+                          <i class="fas fa-arrow-right text-[10px] group-hover/link:translate-x-0.5 transition-transform"></i>
+                        </a>
+                      </div>
                     </div>
 
                     {/* 2-Column Grid of 13 Services */}
@@ -223,6 +229,13 @@ const navLinks = [
                   class="block py-1.5 px-2 text-xs font-semibold text-[#f286aa] hover:bg-pink-50 rounded"
                 >
                   &rarr; All Services Overview
+                </a>
+                <a 
+                  href="/celebrity-services" 
+                  class="block py-1.5 px-2 text-xs font-bold text-amber-600 hover:bg-amber-50 rounded flex items-center justify-between"
+                >
+                  <span>&rarr; Celebrity & VIP Services</span>
+                  <i class="fas fa-crown text-[10px]"></i>
                 </a>
                 <a 
                   href="/sanitation-standards" 

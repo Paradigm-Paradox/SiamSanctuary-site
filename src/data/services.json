@@ -537,12 +537,19 @@
     "excerpt": "Save time in ultimate luxury: Synchronized Power Hour (4-hand care), destination Bridal Bundles, and private VIP Suite buyouts.",
     "description": "For those who value both time and absolute luxury. Our VIP Packages offer multi-technician synchronized care \u2014 allowing you to receive a manicure, pedicure, and hair blowout simultaneously \u2014 or indulge in an all-inclusive bridal beauty retreat.",
     "highlights": [
+      "New: Private Celebrity & High-Profile on-location glam squads & salon buyouts",
       "New: Synchronized Power Hour (4-hand manicure + pedicure + blowout in 60 mins)",
       "New: Bridal Sanctuary Bundles with champagne & private suite access",
       "Full-day Head-to-Toe Glow makeover retreats",
       "Private salon buyouts and corporate VIP celebrations"
     ],
     "treatments": [
+      {
+        "name": "Private Celebrity Buyout & Mobile Glam Squad",
+        "duration": "Custom Duration",
+        "price": "Bespoke / Inquire",
+        "description": "Full salon buyout or on-location deployment to private villas, luxury superyachts, or presidential suites with NDA protection and synchronized 6-hand glam squads."
+      },
       {
         "name": "Synchronized Power Hour (Triple Service)",
         "duration": "60 mins",

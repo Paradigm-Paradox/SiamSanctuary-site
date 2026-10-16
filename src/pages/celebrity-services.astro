@@ -1,0 +1,319 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import locations from '../data/locations.json';
+
+const celebrityPillars = [
+  {
+    icon: "fa-user-shield",
+    title: "Strict Confidentiality & NDA Protocols",
+    badge: "100% Discrete",
+    description: "Every technician and manager signs legally binding Non-Disclosure Agreements prior to booking. We maintain a zero-tolerance policy for unauthorized photography, social tagging, or disclosure. Talent code names are respected upon request."
+  },
+  {
+    icon: "fa-plane-departure",
+    title: "Mobile On-Location Glam Squads",
+    badge: "Global Deployment",
+    description: "Our elite beauty teams deploy directly to private villas, luxury superyachts (Bang Tao Phuket, Dubai Marina, Condado San Juan, Bali Uluwatu), presidential suites, private air hangars, and movie/recording sets with mobile autoclave-sterile equipment."
+  },
+  {
+    icon: "fa-door-closed",
+    title: "Full Salon Buyouts & Private VIP Suites",
+    badge: "Exclusive Access",
+    description: "Reserve an entire Dream Salon location or private soundproof VIP suite exclusively for talent and their entourage. Private rear executive entry, obscured windows, and restricted perimeter security ensure total peace and undisturbed pampering."
+  },
+  {
+    icon: "fa-stopwatch-20",
+    title: "Synchronized 6-Hand Power Glam",
+    badge: "Time Compression",
+    description: "For demanding press junkets, concert tours, and red-carpet premieres: up to 4 to 6 senior masters work simultaneously on hair styling, makeup, lash extensions, and couture manicures/pedicures to achieve perfection in 60 to 90 minutes."
+  },
+  {
+    icon: "fa-gem",
+    title: "Bespoke Couture Materials & 24K Gold",
+    badge: "Ultra-Prestige",
+    description: "Custom sculpted extensions, genuine 24-karat gold leaf embellishments, Swarovski crystal micro-pave, organic hospital-grade Japanese scalp elixirs, and bespoke custom-mixed color palettes tailored to stage lighting or wardrobe changes."
+  },
+  {
+    icon: "fa-champagne-glasses",
+    title: "Curated Riders & Dedicated Concierge",
+    badge: "White Glove",
+    description: "A single senior VIP liaison manages logistics from initial briefing to final touch-up. Customized culinary riders, chilled vintage champagne, organic cold-pressed botanicals, and bespoke music/aromatherapy playlists prepared to client specification."
+  }
+];
+
+const mobileLocations = [
+  {
+    name: "Luxury Superyachts & Marinas",
+    icon: "fa-ship",
+    cities: "Phuket (Ao Po / Royal Phuket Marina), Dubai Marina, San Juan Bay, Bali",
+    desc: "Complete onboard styling, head spa, and nail care while anchored in tropical bays or private docks."
+  },
+  {
+    name: "Private Island Villas & Estates",
+    icon: "fa-house-chimney-window",
+    cities: "Phuket, Koh Samui, Bali (Uluwatu/Canggu), Condado & Dorado Beach (PR)",
+    desc: "Discrete in-villa glam setups with portable zero-gravity chairs, autoclave kits, and studio lighting."
+  },
+  {
+    name: "Presidential Hotel Suites",
+    icon: "fa-hotel",
+    cities: "Bangkok (Sukhumvit / Riverside), Dubai Downtown, San Juan Condado",
+    desc: "Seamless coordination with luxury concierge desks, private service elevators, and security protocols."
+  },
+  {
+    name: "Film Sets, Studios & Tour Venues",
+    icon: "fa-clapperboard",
+    cities: "Bangkok, San Juan, Dubai, Douala, Phuket",
+    desc: "Rapid turnaround on-set nail and hair touch-ups, editorial campaign beauty, and concert artist dressing rooms."
+  }
+];
+---
+
+<Layout 
+  title="Private Celebrity & VIP Services | On-Location Glam Squads & Buyouts | Dream Salon Asia"
+  description="Exclusive white-glove beauty services for celebrities, dignitaries, and high-profile clients. Strict NDA confidentiality, private salon buyouts, superyacht & villa mobile squads."
+>
+  <div class="min-h-screen flex flex-col bg-[#141414]">
+    <Header />
+    
+    <main class="flex-grow">
+      <!-- Ultra-Luxury Celebrity Hero Banner -->
+      <section class="relative py-28 sm:py-36 bg-[#0a0a0a] border-b border-white/10 overflow-hidden">
+        <div class="absolute inset-0 opacity-30">
+          <img src="/images/2022/01/video-bg-2.jpg" alt="Celebrity VIP Luxury Experience" class="w-full h-full object-cover object-center filter brightness-[0.6] contrast-125 scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/70 to-black/60"></div>
+          <div class="absolute inset-0 bg-radial-gradient from-transparent via-black/40 to-black/85"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <!-- Gold VIP Crown Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#d9c1a3]/10 border border-[#d9c1a3]/30 text-[#d9c1a3] text-xs font-semibold uppercase tracking-[0.25em] mb-6 shadow-xl backdrop-blur-md">
+            <i class="fas fa-crown text-[#d9c1a3] text-xs"></i>
+            <span>Discrete White-Glove VIP Concierge</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif text-white uppercase tracking-wider mb-6 leading-tight">
+            Private Celebrity & <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f286aa] via-[#d9c1a3] to-[#f286aa]">High-Profile Services</span>
+          </h1>
+
+          <p class="text-sm sm:text-base md:text-lg text-gray-300 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+            Strict confidentiality, complete salon buyouts, and elite mobile glam squads deployed to private villas, superyachts, presidential suites, and film productions worldwide.
+          </p>
+
+          <div class="flex items-center justify-center gap-4 flex-wrap">
+            <a href="#celebrity-inquiry" class="btn-luxury-primary text-xs !py-3.5 !px-8 shadow-2xl">
+              <i class="fas fa-lock mr-2 text-xs"></i>
+              <span>Book Discrete Inquiry</span>
+            </a>
+            <a href="https://wa.me/17878348888?text=Hello%2C%20I%20am%20inquiring%20about%20Dream%20Salon%20Private%20Celebrity%20%26%20VIP%20Services." target="_blank" rel="noopener noreferrer" class="btn-luxury-outline text-xs !py-3.5 !px-8 flex items-center gap-2">
+              <i class="fab fa-whatsapp text-emerald-400 text-sm"></i>
+              <span>Direct Encrypted Concierge</span>
+            </a>
+          </div>
+
+          <!-- Trust Bar -->
+          <div class="mt-12 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-white/5">
+              <i class="fas fa-file-shield text-[#d9c1a3] text-lg"></i>
+              <span class="text-xs text-gray-300 font-medium">Binding NDA Protection</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-white/5">
+              <i class="fas fa-door-closed text-[#f286aa] text-lg"></i>
+              <span class="text-xs text-gray-300 font-medium">Private Rear Entry</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-white/5">
+              <i class="fas fa-ship text-[#38bdf8] text-lg"></i>
+              <span class="text-xs text-gray-300 font-medium">Yacht & Villa Squads</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-white/5">
+              <i class="fas fa-bolt text-[#eab308] text-lg"></i>
+              <span class="text-xs text-gray-300 font-medium">Synchronized 6-Hand</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 Pillars of Celebrity Service -->
+      <section class="py-20 sm:py-24 bg-[#141414]" id="pillars">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="font-script text-3xl sm:text-4xl text-[#f286aa] block mb-1">
+              Uncompromising Luxury
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-serif text-white uppercase tracking-wider mb-4">
+              The Celebrity Experience
+            </h2>
+            <p class="text-sm text-gray-400 font-light max-w-xl mx-auto">
+              Engineered specifically for artists, athletes, executives, and public figures whose privacy, security, and time are paramount.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {celebrityPillars.map((p, idx) => (
+              <div class="p-8 rounded-3xl bg-[#1a1a1a] border border-white/5 hover:border-[#d9c1a3]/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/80 group flex flex-col justify-between">
+                <div>
+                  <div class="flex items-start justify-between mb-6">
+                    <div class="w-14 h-14 rounded-2xl bg-[#222222] border border-white/10 group-hover:border-[#d9c1a3]/50 text-[#d9c1a3] flex items-center justify-center text-2xl group-hover:scale-110 group-hover:bg-[#d9c1a3] group-hover:text-black transition-all duration-300 shadow-lg">
+                      <i class={`fas ${p.icon}`}></i>
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full bg-black/60 border border-white/10 text-[#f286aa]">
+                      {p.badge}
+                    </span>
+                  </div>
+
+                  <h3 class="text-xl font-serif text-white group-hover:text-[#d9c1a3] transition-colors mb-3 leading-snug">
+                    {p.title}
+                  </h3>
+
+                  <p class="text-xs sm:text-sm text-gray-300 font-light leading-relaxed mb-6">
+                    {p.description}
+                  </p>
+                </div>
+
+                <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#d9c1a3]">
+                  <span class="font-mono text-[10px] tracking-wider uppercase">VIP Standard 0{idx + 1}</span>
+                  <i class="fas fa-shield text-[#f286aa]"></i>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Mobile Deployment Section: Yachts, Villas & Sets -->
+      <section class="py-20 bg-[#181818] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="font-script text-3xl sm:text-4xl text-[#d9c1a3] block mb-1">
+              On-Location Reach
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-serif text-white uppercase tracking-wider mb-4">
+              Where Our Elite Squads Deploy
+            </h2>
+            <p class="text-sm text-gray-400 font-light max-w-xl mx-auto">
+              Our master artists travel with self-contained medical autoclave kits, portable zero-gravity styling stations, and prestige cosmetic collections.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {mobileLocations.map((loc) => (
+              <div class="p-8 rounded-3xl bg-[#141414] border border-white/5 hover:border-[#f286aa]/40 transition group">
+                <div class="flex items-center gap-4 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-[#222222] text-[#f286aa] flex items-center justify-center text-xl border border-white/10 group-hover:scale-110 transition-transform">
+                    <i class={`fas ${loc.icon}`}></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-serif text-white group-hover:text-[#d9c1a3] transition-colors">{loc.name}</h3>
+                    <span class="text-[11px] text-[#d9c1a3] font-mono">{loc.cities}</span>
+                  </div>
+                </div>
+                <p class="text-xs sm:text-sm text-gray-300 font-light leading-relaxed">
+                  {loc.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CELEBRITY INQUIRY FORM SECTION -->
+      <section class="py-20 bg-[#121212] border-t border-white/5" id="celebrity-inquiry">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="bg-[#1a1a1a] rounded-3xl p-8 sm:p-12 border border-[#d9c1a3]/30 shadow-2xl relative">
+            <div class="text-center max-w-xl mx-auto mb-10">
+              <span class="font-script text-3xl text-[#d9c1a3] block mb-1">Confidential Booking</span>
+              <h2 class="text-3xl font-serif text-white uppercase tracking-wider mb-2">
+                Private Celebrity Concierge Request
+              </h2>
+              <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed">
+                Requests are reviewed exclusively by our senior directors Joey & Onanong Jones and our private executive liaison. NDAs executed upon first contact.
+              </p>
+            </div>
+
+            <form action="mailto:vip@dreamnails.asia?subject=Confidential%20Celebrity%20Service%20Inquiry" method="POST" enctype="text/plain" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="rep-name" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Representative / Agent Name <span class="text-[#f286aa]">*</span></label>
+                  <input type="text" id="rep-name" name="representative" required class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#d9c1a3] transition" placeholder="e.g. Talent Manager / Executive Protection" />
+                </div>
+                <div>
+                  <label for="rep-contact" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Confidential Contact (Phone / Signal / Email) <span class="text-[#f286aa]">*</span></label>
+                  <input type="text" id="rep-contact" name="contact" required class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#d9c1a3] transition" placeholder="+1 (XXX) XXX-XXXX or private email" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="talent-name" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Principal / Talent Name (or Code Name)</label>
+                  <input type="text" id="talent-name" name="talent_name" class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#d9c1a3] transition" placeholder="Optional code name accepted" />
+                </div>
+                <div>
+                  <label for="service-venue" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Preferred Service Venue <span class="text-[#f286aa]">*</span></label>
+                  <select id="service-venue" name="venue" class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#d9c1a3] transition">
+                    <option value="Complete Salon Buyout">Complete Salon Buyout (Full Privacy)</option>
+                    <option value="Private VIP Suite">Private VIP In-Salon Suite</option>
+                    <option value="Superyacht / On-Board">Superyacht / Vessel (On-Board)</option>
+                    <option value="Private Villa / Estate">Private Villa / Luxury Estate</option>
+                    <option value="Presidential Hotel Suite">5-Star Hotel Presidential Suite</option>
+                    <option value="Film / Video / Tour Set">Film Studio / Production Set / Tour Venue</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="service-location" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Destination Hub <span class="text-[#f286aa]">*</span></label>
+                  <select id="service-location" name="location" class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#d9c1a3] transition">
+                    {locations.map((loc) => (
+                      <option value={loc.city}>{loc.city}, {loc.country}</option>
+                    ))}
+                    <option value="Other International">Other International Destination (Fly-In Squad)</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="service-date" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Target Date & Time Window</label>
+                  <input type="text" id="service-date" name="target_date" class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#d9c1a3] transition" placeholder="e.g. Oct 24, 2:00 PM - 5:00 PM" />
+                </div>
+              </div>
+
+              <div>
+                <label for="service-details" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Specific Disciplines & Entourage Requirements</label>
+                <textarea id="service-details" name="details" rows="3" class="w-full bg-[#121212] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#d9c1a3] transition" placeholder="e.g. 6-Hand Synchronized team needed for talent (Hair, Nails, Makeup) + manicures for 3 assistants. Security detail arriving 30 mins prior."></textarea>
+              </div>
+
+              <div class="pt-4 text-center">
+                <button type="submit" class="btn-luxury-primary text-xs w-full sm:w-auto px-10 py-3.5 cursor-pointer">
+                  <i class="fas fa-paper-plane mr-2"></i>
+                  <span>Transmit Confidential Request</span>
+                </button>
+              </div>
+            </form>
+
+            <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+              <span class="flex items-center gap-2">
+                <i class="fas fa-lock text-[#d9c1a3]"></i>
+                Direct VIP Director Line: <strong class="text-white">+1 (787) 834-8888</strong>
+              </span>
+              <a href="mailto:vip@dreamnails.asia" class="text-[#f286aa] hover:underline">
+                vip@dreamnails.asia
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <Footer />
+  </div>
+</Layout>
