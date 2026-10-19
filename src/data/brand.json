@@ -3,6 +3,11 @@
   "shortName": "Siam Sanctuary",
   "legalName": "Siam Sanctuary International Ltd.",
   "tagline": "Full-Service Luxury Salon & Spa Sanctuary",
+  "slogan": {
+    "en": "Pure You, Perfected.",
+    "th": "รีเซ็ตตัวเอง สู่ความสวยที่ลงตัว",
+    "phoneticTh": "Reset tua-eng, su khwam-suay thi long-tua"
+  },
   "domain": "siamsanctuary.asia",
   "url": "https://siamsanctuary.asia",
   "email": "info@siamsanctuary.asia",
