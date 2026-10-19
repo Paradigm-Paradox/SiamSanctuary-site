@@ -7,5 +7,5 @@ export default defineConfig({
     format: 'directory'
   },
   integrations: [tailwind()],
-  site: 'https://dreamnails.asia',
+  site: 'https://siamsanctuary.asia',
 });

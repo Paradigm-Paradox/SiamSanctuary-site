@@ -31,7 +31,7 @@
   <!-- Top Brand Tag -->
   <g transform="translate(300, 65)">
     <rect x="-105" y="-12" width="210" height="24" rx="12" fill="#141414" stroke="#f286aa" stroke-width="1.2" opacity="0.85" />
-    <text x="0" y="4" fill="#f286aa" font-size="9" font-family="'Cinzel', 'Playfair Display', serif" font-weight="600" text-anchor="middle" letter-spacing="2.5">DREAM SALON ASIA</text>
+    <text x="0" y="4" fill="#f286aa" font-size="9" font-family="'Cinzel', 'Playfair Display', serif" font-weight="600" text-anchor="middle" letter-spacing="2.5">SIAM SANCTUARY</text>
   </g>
 
   <!-- Subtle Center Halo Glow -->

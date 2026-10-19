@@ -8,8 +8,8 @@ import SocialIcon from '../components/SocialIcon.astro';
 ---
 
 <Layout 
-  title="Contact Us & Global Salons | DreamNails.Asia"
-  description="Contact Dream Nails Asia salons in Puerto Rico, Thailand, Bali, Dubai, and Cameroon. Find local phone numbers, email addresses, and opening hours."
+  title="Contact Us & Global Salons | SiamSanctuary.Asia"
+  description="Contact Siam Sanctuary salons in Puerto Rico, Thailand, Bali, Dubai, and Cameroon. Find local phone numbers, email addresses, and opening hours."
 >
   <div class="min-h-screen flex flex-col bg-[#141414]">
     <Header />
@@ -41,7 +41,7 @@ import SocialIcon from '../components/SocialIcon.astro';
             <div id="global-salon-map" class="w-full h-[420px] bg-[#111111] z-10"></div>
             
             <div class="absolute bottom-4 left-4 z-20 bg-black/80 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/10 text-xs text-gray-300 pointer-events-none">
-              <span class="text-[#f286aa] font-semibold">DreamNails Global Hubs</span> • Click pins to view city details
+              <span class="text-[#f286aa] font-semibold">Siam Sanctuary Global Hubs</span> • Click pins to view city details
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ import SocialIcon from '../components/SocialIcon.astro';
               </p>
             </div>
 
-            <form action="mailto:info@dreamnails.asia" method="POST" enctype="text/plain" class="space-y-4" aria-label="Contact and inquiry form">
+            <form action="mailto:info@siamsanctuary.asia" method="POST" enctype="text/plain" class="space-y-4" aria-label="Contact and inquiry form">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label for="contact-name" class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5">Your Name <span class="text-[#f286aa]" aria-hidden="true">*</span></label>
@@ -191,22 +191,22 @@ import SocialIcon from '../components/SocialIcon.astro';
     }).addTo(map);
 
     const locations = [
-      { city: "San Juan, PR", lat: 18.4655, lng: -66.1057, email: "info.sju@dreamnails.asia" },
-      { city: "Mayagüez, PR", lat: 18.2013, lng: -67.1452, email: "info.maz@dreamnails.asia" },
-      { city: "Bangkok, Thailand", lat: 13.7563, lng: 100.5018, email: "info.bkk@dreamnails.asia" },
-      { city: "Phuket, Thailand", lat: 7.8804, lng: 98.3923, email: "info.hkt@dreamnails.asia" },
-      { city: "Pattaya, Thailand", lat: 12.9276, lng: 100.8771, email: "info.pty@dreamnails.asia" },
-      { city: "Chiang Mai, Thailand", lat: 18.7883, lng: 98.9853, email: "info.cnx@dreamnails.asia" },
-      { city: "Hua Hin, Thailand", lat: 12.5684, lng: 99.9577, email: "info.hhq@dreamnails.asia" },
-      { city: "Bali, Indonesia", lat: -8.4095, lng: 115.1889, email: "info.dps@dreamnails.asia" },
-      { city: "Dubai, UAE", lat: 25.2048, lng: 55.2708, email: "info.uxb@dreamnails.asia" },
-      { city: "Douala, Cameroon", lat: 4.0511, lng: 9.7679, email: "info.dla@dreamnails.asia" },
+      { city: "San Juan, PR", lat: 18.4655, lng: -66.1057, email: "info.sju@siamsanctuary.asia" },
+      { city: "Mayagüez, PR", lat: 18.2013, lng: -67.1452, email: "info.maz@siamsanctuary.asia" },
+      { city: "Bangkok, Thailand", lat: 13.7563, lng: 100.5018, email: "info.bkk@siamsanctuary.asia" },
+      { city: "Phuket, Thailand", lat: 7.8804, lng: 98.3923, email: "info.hkt@siamsanctuary.asia" },
+      { city: "Pattaya, Thailand", lat: 12.9276, lng: 100.8771, email: "info.pty@siamsanctuary.asia" },
+      { city: "Chiang Mai, Thailand", lat: 18.7883, lng: 98.9853, email: "info.cnx@siamsanctuary.asia" },
+      { city: "Hua Hin, Thailand", lat: 12.5684, lng: 99.9577, email: "info.hhq@siamsanctuary.asia" },
+      { city: "Bali, Indonesia", lat: -8.4095, lng: 115.1889, email: "info.dps@siamsanctuary.asia" },
+      { city: "Dubai, UAE", lat: 25.2048, lng: 55.2708, email: "info.uxb@siamsanctuary.asia" },
+      { city: "Douala, Cameroon", lat: 4.0511, lng: 9.7679, email: "info.dla@siamsanctuary.asia" },
     ];
 
     locations.forEach(loc => {
       L.marker([loc.lat, loc.lng])
         .addTo(map)
-        .bindPopup(`<b>DreamNails – ${loc.city}</b><br><a href="mailto:${loc.email}">${loc.email}</a>`);
+        .bindPopup(`<b>Siam Sanctuary – ${loc.city}</b><br><a href="mailto:${loc.email}">${loc.email}</a>`);
     });
   });
 </script>

@@ -31,7 +31,7 @@
   <!-- Top Brand Tag -->
   <g transform="translate(300, 65)">
     <rect x="-105" y="-12" width="210" height="24" rx="12" fill="#141414" stroke="#d9c1a3" stroke-width="1.2" opacity="0.85" />
-    <text x="0" y="4" fill="#d9c1a3" font-size="9" font-family="'Cinzel', 'Playfair Display', serif" font-weight="600" text-anchor="middle" letter-spacing="2.5">DREAM SALON ASIA</text>
+    <text x="0" y="4" fill="#d9c1a3" font-size="9" font-family="'Cinzel', 'Playfair Display', serif" font-weight="600" text-anchor="middle" letter-spacing="2.5">SIAM SANCTUARY</text>
   </g>
 
   <!-- Subtle Center Halo Glow -->
@@ -52,7 +52,7 @@
             <path d="M -110 60 L -60 30 L 0 60 L 60 30 L 110 60" stroke="#f286aa" stroke-width="2" opacity="0.5"/>
             <!-- Gold Crest Badge -->
             <circle cx="0" cy="15" r="24" fill="#141414" stroke="#d9c1a3" stroke-width="3"/>
-            <text x="0" y="20" fill="#d9c1a3" font-size="12" font-family="serif" text-anchor="middle" font-weight="bold">DS</text>
+            <text x="0" y="20" fill="#d9c1a3" font-size="12" font-family="serif" text-anchor="middle" font-weight="bold">SS</text>
         </g>
         
 

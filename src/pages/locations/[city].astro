@@ -16,8 +16,8 @@ const { location } = Astro.props;
 ---
 
 <Layout 
-  title={`Dream Nails ${location.name} | Luxury Salon & Spa`}
-  description={`Visit Dream Nails in ${location.name}. ${location.description} Certified master stylists and aestheticians, medical-grade sanitation, and full-service salon luxury.`}
+  title={`Siam Sanctuary ${location.name} | Luxury Salon & Spa`}
+  description={`Visit Siam Sanctuary in ${location.name}. ${location.description} Certified master stylists and aestheticians, medical-grade sanitation, and full-service salon luxury.`}
 >
   <div class="min-h-screen flex flex-col bg-[#141414]">
     <Header />
@@ -37,7 +37,7 @@ const { location } = Astro.props;
           </a>
           <span class="font-script text-3xl sm:text-4xl text-[#d9c1a3] block mb-2">{location.tagline}</span>
           <h1 class="text-4xl sm:text-6xl font-serif text-white uppercase tracking-wider mb-4">
-            Dream Nails {location.name}
+            Siam Sanctuary {location.name}
           </h1>
           <p class="text-xs sm:text-sm uppercase tracking-widest text-gray-400">
             Airport Code: <span class="text-[#f286aa] font-mono font-bold">{location.code}</span> • {location.badge}
@@ -88,7 +88,7 @@ const { location } = Astro.props;
 
               <div class="pt-2 flex items-center gap-4">
                 <a 
-                  href={`mailto:${location.email}?subject=Appointment%20Request%20-%20DreamNails%20${location.city}`} 
+                  href={`mailto:${location.email}?subject=Appointment%20Request%20-%20Siam Sanctuary%20${location.city}`} 
                   class="btn-luxury-primary text-xs"
                 >
                   <i class="far fa-calendar-check mr-2"></i>
@@ -137,7 +137,7 @@ const { location } = Astro.props;
 
     L.marker([lat, lng])
       .addTo(map)
-      .bindPopup(`<b>DreamNails – ${name}</b><br>Sanctuary Location`)
+      .bindPopup(`<b>Siam Sanctuary – ${name}</b><br>Sanctuary Location`)
       .openPopup();
   });
 </script>

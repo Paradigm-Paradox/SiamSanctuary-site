@@ -12,15 +12,15 @@ interface Props {
 }
 
 const {
-  title = "Dream Salon Asia | Full-Service Luxury Salon & Spa",
-  description = "Full-service luxury beauty salon and spa offering bespoke hairstyling, Japanese head spa, couture nail care, lashes, PMU cosmetic tattooing, and rejuvenating facials.",
+  title = "Siam Sanctuary | Full-Service Luxury Salon & Spa",
+  description = "Siam Sanctuary is a global full-service luxury beauty salon and spa sanctuary offering bespoke hairstyling, Japanese head spa, couture nail care, lashes, PMU cosmetic tattooing, and rejuvenating facials.",
   image = "/images/2022/01/serv_01_02-800x800.jpg",
   canonical,
   type = "website",
   articleModifiedTime = "2024-01-16T22:22:07+00:00"
 } = Astro.props;
 
-const siteUrl = "https://dreamnails.asia";
+const siteUrl = "https://siamsanctuary.asia";
 const pathname = Astro.url.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '') || '';
 const canonicalUrl = canonical || (pathname ? `${siteUrl}${pathname}/` : `${siteUrl}/`);
 const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image.startsWith('/') ? '' : '/'}${image}`;
@@ -30,16 +30,16 @@ const schemaGraph = {
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://dreamnails.asia/#website",
-      "url": "https://dreamnails.asia/",
-      "name": "Dream Salon Asia",
+      "@id": "https://siamsanctuary.asia/#website",
+      "url": "https://siamsanctuary.asia/",
+      "name": "Siam Sanctuary",
       "description": "Full-Service Luxury Beauty Salon & Spa Destination",
       "potentialAction": [
         {
           "@type": "SearchAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://dreamnails.asia/gallery?s={search_term_string}"
+            "urlTemplate": "https://siamsanctuary.asia/gallery?s={search_term_string}"
           },
           "query-input": {
             "@type": "PropertyValueSpecification",
@@ -56,13 +56,13 @@ const schemaGraph = {
       "url": canonicalUrl,
       "name": title,
       "isPartOf": {
-        "@id": "https://dreamnails.asia/#website"
+        "@id": "https://siamsanctuary.asia/#website"
       },
       "primaryImageOfPage": {
-        "@id": "https://dreamnails.asia/#primaryimage"
+        "@id": "https://siamsanctuary.asia/#primaryimage"
       },
       "image": {
-        "@id": "https://dreamnails.asia/#primaryimage"
+        "@id": "https://siamsanctuary.asia/#primaryimage"
       },
       "thumbnailUrl": fullImageUrl,
       "datePublished": "2022-01-21T21:24:31+00:00",
@@ -75,7 +75,7 @@ const schemaGraph = {
     {
       "@type": "ImageObject",
       "inLanguage": "en-US",
-      "@id": "https://dreamnails.asia/#primaryimage",
+      "@id": "https://siamsanctuary.asia/#primaryimage",
       "url": fullImageUrl,
       "contentUrl": fullImageUrl,
       "width": 1920,
@@ -83,10 +83,10 @@ const schemaGraph = {
     },
     {
       "@type": ["BeautySalon", "HairSalon", "DaySpa", "NailSalon"],
-      "@id": "https://dreamnails.asia/#salon",
-      "name": "Dream Salon Asia",
-      "url": "https://dreamnails.asia/",
-      "logo": "https://dreamnails.asia/images/2022/03/cropped-icon.png",
+      "@id": "https://siamsanctuary.asia/#salon",
+      "name": "Siam Sanctuary",
+      "url": "https://siamsanctuary.asia/",
+      "logo": "https://siamsanctuary.asia/images/2022/03/cropped-icon.png",
       "image": fullImageUrl,
       "telephone": "+1-787-834-8888",
       "priceRange": "$$",
@@ -214,7 +214,7 @@ const schemaGraph = {
         </div>
 
         <div class="text-center pt-2 border-t border-white/10">
-          <p class="text-xs text-gray-400">For general questions or global franchise inquiries: <a href="mailto:info@dreamnails.asia" class="text-[#f286aa] underline focus-visible:ring-1 focus-visible:ring-[#f286aa]">info@dreamnails.asia</a></p>
+          <p class="text-xs text-gray-400">For general questions or global franchise inquiries: <a href="mailto:info@siamsanctuary.asia" class="text-[#f286aa] underline focus-visible:ring-1 focus-visible:ring-[#f286aa]">info@siamsanctuary.asia</a></p>
         </div>
       </div>
     </div>

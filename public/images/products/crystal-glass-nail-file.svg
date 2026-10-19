@@ -31,7 +31,7 @@
   <!-- Top Brand Tag -->
   <g transform="translate(300, 65)">
     <rect x="-105" y="-12" width="210" height="24" rx="12" fill="#141414" stroke="#d9c1a3" stroke-width="1.2" opacity="0.85" />
-    <text x="0" y="4" fill="#d9c1a3" font-size="9" font-family="'Cinzel', 'Playfair Display', serif" font-weight="600" text-anchor="middle" letter-spacing="2.5">DREAM SALON ASIA</text>
+    <text x="0" y="4" fill="#d9c1a3" font-size="9" font-family="'Cinzel', 'Playfair Display', serif" font-weight="600" text-anchor="middle" letter-spacing="2.5">SIAM SANCTUARY</text>
   </g>
 
   <!-- Subtle Center Halo Glow -->
@@ -51,7 +51,7 @@
             <line x1="-10" y1="80" x2="10" y2="80" stroke="#d9c1a3" stroke-width="2" stroke-dasharray="3 3"/>
             <!-- Handle grip -->
             <rect x="-14" y="-115" width="28" height="50" rx="3" fill="#d9c1a3" opacity="0.8"/>
-            <text x="0" y="-85" fill="#141414" font-size="8" font-family="sans-serif" text-anchor="middle" font-weight="bold">DREAM</text>
+            <text x="0" y="-85" fill="#141414" font-size="8" font-family="sans-serif" text-anchor="middle" font-weight="bold">SIAM</text>
         </g>
         
 
