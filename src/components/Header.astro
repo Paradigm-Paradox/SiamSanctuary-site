@@ -23,30 +23,18 @@ const navLinks = [
 ---
 
 <header class={`w-full ${overlay ? 'absolute top-0 left-0 right-0 z-40' : 'relative z-40'} select-none`} id="site-header">
-  <!-- Slim Top Black Utility Bar with Official Social Logo Pack -->
+  <!-- Slim Top Black Utility Bar -->
   <div class="bg-[#0a0a0a]/90 backdrop-blur-sm text-gray-300 py-1.5 px-4 sm:px-8 border-b border-white/10 text-xs">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
-      <!-- Quick Social Icons with Official Brand Logos -->
-      <div class="hidden sm:flex items-center gap-2 text-[12px]">
-        <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium hidden md:inline">Connect:</span>
-        <div class="flex items-center gap-1.5">
-          {socials.map((s) => (
-            <a 
-              href={s.url} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="w-5 h-5 rounded-md overflow-hidden hover:scale-125 transition-transform shadow-sm block focus-visible:ring-1 focus-visible:ring-[#f286aa]" 
-              title={`${s.name} (${s.handle})`}
-              aria-label={`Visit Dream Nails on ${s.name}`}
-            >
-              <SocialIcon id={s.id} class="w-full h-full" />
-            </a>
-          ))}
-        </div>
+      <!-- Left: Subtle Brand Sanctuary Tagline -->
+      <div class="hidden sm:flex items-center gap-2 text-[11px] uppercase tracking-widest text-gray-400 font-light">
+        <span class="text-[#f286aa] font-medium">Siam Sanctuary</span>
+        <span class="text-white/20">•</span>
+        <span>Luxury Beauty & Wellness Sanctuaries</span>
       </div>
 
       <!-- Right Utility Actions -->
-      <div class="flex items-center gap-5 ml-auto sm:ml-0">
+      <div class="flex items-center gap-5 ml-auto">
         <a href="/gallery" class="flex items-center gap-1.5 hover:text-[#f286aa] transition text-[11px] uppercase tracking-wider">
           <i class="icon icon-search text-[11px]" aria-hidden="true"></i>
           <span>search</span>
