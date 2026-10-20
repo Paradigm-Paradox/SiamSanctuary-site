@@ -26,7 +26,7 @@ const { service } = Astro.props;
       <!-- Service Header Banner -->
       <section class="relative py-28 bg-[#101010] border-b border-white/5 overflow-hidden">
         <div class="absolute inset-0 opacity-30">
-          <img src={service.image} alt={service.title} class="w-full h-full object-cover" />
+          <img src={service.image} alt={service.alt || service.title} class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/85 to-transparent"></div>
         </div>
 
@@ -114,6 +114,41 @@ const { service } = Astro.props;
                       </button>
                     </div>
                   </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Ritual Visual Showcase & Authentic Process Gallery -->
+          {service.gallery && service.gallery.length > 0 && (
+            <div class="mb-16">
+              <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="font-script text-2xl text-[#f286aa] block mb-1">Authentic Craftsmanship</span>
+                <h2 class="text-2xl sm:text-3xl font-serif text-white uppercase tracking-wider">
+                  {service.title} Rituals In Focus
+                </h2>
+                <p class="text-xs sm:text-sm text-gray-400 font-light mt-1">
+                  Master craftsmanship, European precision, and hospital-grade sterility captured in our private sanctuaries.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {service.gallery.map((g: any) => (
+                  <figure class="group relative rounded-2xl overflow-hidden bg-[#181818] border border-white/5 hover:border-[#f286aa]/40 transition-all duration-500 shadow-xl m-0 flex flex-col">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-[#121212]">
+                      <img 
+                        src={g.image} 
+                        alt={g.alt} 
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                        loading="lazy"
+                      />
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <figcaption class="p-3.5 bg-[#161616] border-t border-white/5 text-[11px] text-gray-300 font-light leading-snug">
+                      <span class="text-[#f286aa] font-medium mr-1.5"><i class="fas fa-sparkles text-[9px]"></i></span>
+                      {g.alt}
+                    </figcaption>
+                  </figure>
                 ))}
               </div>
             </div>

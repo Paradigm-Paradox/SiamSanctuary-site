@@ -4,70 +4,80 @@ const services = [
     title: "Express Manicure",
     price: "฿ 250",
     approxUsd: "$7 USD",
-    image: "/images/2024/01/fast-beauty-service-beautiful-ginger-girl-having-2023-11-27-05-21-12-utc.jpg",
+    image: "/images/rituals/siam-sanctuary-manicure-precision-gel-polish-application.jpg",
+    alt: "Precision e-file nail refinement and rapid high-gloss gel polish application",
     description: "Ideal for those on the move: refined nail shaping, gentle cuticle care, and precision polish application without compromising speed or quality."
   },
   {
     title: "Pedicure",
     price: "฿ 350",
     approxUsd: "$10 USD",
-    image: "/images/2021/12/price_02.jpg",
+    image: "/images/rituals/siam-sanctuary-pedicure-botanical-flower-foot-soak.jpg",
+    alt: "Warm botanical orchid petal foot soak and exfoliating heel scrub in sanitized basin",
     description: "Transform your feet with our revitalizing pedicure. Warm botanical soak, exfoliating scrub, heel softening, and polish for soft, pampered perfection."
   },
   {
     title: "Regular manicure",
     price: "฿ 350",
     approxUsd: "$10 USD",
-    image: "/images/2021/12/price_01.jpg",
+    image: "/images/rituals/siam-sanctuary-couture-manicure-and-pedicure-elegance.jpg",
+    alt: "Classic French manicure on manicured natural hands with nourishing cuticle massage",
     description: "Elevate your look with our timeless manicure. Perfectly groomed nail shape, soothing hand massage, cuticle care, and lacquer of your choice."
   },
   {
     title: "Nail Art",
     price: "฿ 400 ~ 600",
     approxUsd: "$12 - $18 USD",
-    image: "/images/2021/12/price_08.jpg",
+    image: "/images/rituals/siam-sanctuary-manicure-gentle-hand-massage-treatment.jpg",
+    alt: "Bespoke hand-painted nail artistry and therapeutic hand massage ritual",
     description: "Express your unique individuality. From chic minimalist lines to intricate hand-painted motifs, chrome finishes, and personalized crystal accents."
   },
   {
     title: "Gel Nail Extention",
     price: "฿ 400",
     approxUsd: "$12 USD",
-    image: "/images/2024/01/manicurist-paints-nails-with-gel-polish-applicat-2023-11-27-05-18-34-utc.jpg",
+    image: "/images/rituals/siam-sanctuary-manicure-gel-curing-led-lamp.jpg",
+    alt: "Curing high-durability builder gel extensions under professional salon LED lamp",
     description: "Get glamorous with our premium gel extensions. Long-lasting, chip-free, mirror brilliance for stunning, resilient nails that steal the spotlight effortlessly."
   },
   {
     title: "Nail Protection",
     price: "฿ 350",
     approxUsd: "$10 USD",
-    image: "/images/2021/12/price_05.jpg",
+    image: "/images/rituals/siam-sanctuary-manicure-precision-gel-polish-application-2.jpg",
+    alt: "Applying keratin and botanical strengthening protective overlay to natural nail bed",
     description: "Shield and fortify your natural nails. Intensive keratin strengthening treatments designed to reverse brittleness and preserve natural vitality."
   },
   {
     title: "PVC Nail Extension",
     price: "฿ 499",
     approxUsd: "$15 USD",
-    image: "/images/2021/12/price_03.jpg",
+    image: "/images/rituals/siam-sanctuary-manicure-precision-gel-polish-application.jpg",
+    alt: "Seamless lightweight full-cover tip extension sculpted with organic gel adhesive",
     description: "Dazzle with ultra-durable, lightweight PVC extensions. Achieve stunning length, flawless curve, and resilient wear that lasts effortlessly."
   },
   {
     title: "Hand and Pedicure Spa Care",
     price: "฿ 350",
     approxUsd: "$10 USD",
-    image: "/images/2021/12/price_06.jpg",
+    image: "/images/rituals/siam-sanctuary-manicure-pedicure-dual-spa-care.jpg",
+    alt: "Synchronized botanical spa pampering for hands and feet with herbal mask",
     description: "Indulge in deep relaxation. Rejuvenating spa treatment including herbal masks, deep moisturizing, and therapeutic pressure-point massage."
   },
   {
     title: "Acrylic extension",
     price: "฿ 999",
     approxUsd: "$29 USD",
-    image: "/images/2021/12/price_04.jpg",
+    image: "/images/rituals/siam-sanctuary-couture-manicure-and-pedicure-elegance.jpg",
+    alt: "Handcrafted acrylic sculpted extensions with razor-sharp almond silhouette",
     description: "Custom sculpted length, superior structural strength, and razor-sharp shaping. Impeccable craftsmanship for a high-impact, durable finish."
   },
   {
     title: "Hand & Foot Spa + Hand & Foot Paint",
     price: "฿ 699",
     approxUsd: "$20 USD",
-    image: "/images/2021/12/price_07.jpg",
+    image: "/images/rituals/siam-sanctuary-pedicure-crimson-lacquer-and-petals.jpg",
+    alt: "Complete head-to-toe grooming featuring crimson red toenails and matching gel manicure",
     description: "The complete luxury journey: revitalizing dual hand and foot spa treatments followed by trendy nail artistry applied by senior salon technicians."
   }
 ];
@@ -97,7 +107,7 @@ const services = [
           <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden flex-shrink-0 border border-white/10 group-hover:border-[#f286aa]/40 transition">
             <img 
               src={item.image} 
-              alt={item.title} 
+              alt={item.alt || item.title} 
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               loading="lazy"
             />

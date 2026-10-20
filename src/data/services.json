@@ -5,7 +5,7 @@
     "title": "Manicure",
     "tag": "Signature Nail Artistry",
     "icon": "fa-hand-sparkles",
-    "image": "/images/2024/01/manicurist-paints-nails-with-gel-polish-applicat-2023-11-27-05-18-34-utc.jpg",
+    "image": "/images/rituals/siam-sanctuary-manicure-precision-gel-polish-application.jpg",
     "excerpt": "Experience the epitome of nail couture with our Russian dry manicures, builder gel (BIAB), precision acrylic sculpting, and bespoke hand-painted artistry.",
     "description": "Siam Sanctuary is globally celebrated for our meticulous nail care. Every manicure begins with diamond-drill cuticle refinement, followed by structural nail reinforcement and flawless high-shine color application using 10-Free non-toxic imported polishes.",
     "highlights": [
@@ -46,7 +46,30 @@
         "description": "Warm nourishing peach paraffin wax bath, heated thermal mittens, and intensive collagen restoration."
       }
     ],
-    "content": "<p>Discover the height of nail elegance at Siam Sanctuary. Our world-renowned manicure rituals combine European medical-grade precision with trendsetting Asian nail artistry.</p><h3>Why Choose Siam Sanctuary Manicures?</h3><p>We pride ourselves on hospital-grade autoclave sterilization for all metal instruments, while buffers, files, and towels are strictly 100% single-use disposable. Whether you desire understated natural elegance or high-fashion editorial nails, our certified master stylists deliver perfection in every brush.</p>"
+    "content": "<p>Discover the height of nail elegance at Siam Sanctuary. Our world-renowned manicure rituals combine European medical-grade precision with trendsetting Asian nail artistry.</p><h3>Why Choose Siam Sanctuary Manicures?</h3><p>We pride ourselves on hospital-grade autoclave sterilization for all metal instruments, while buffers, files, and towels are strictly 100% single-use disposable. Whether you desire understated natural elegance or high-fashion editorial nails, our certified master stylists deliver perfection in every brush.</p>",
+    "alt": "Certified nail technician applying high-gloss Japanese gel polish with precision micro-brush",
+    "gallery": [
+      {
+        "image": "/images/rituals/siam-sanctuary-manicure-precision-gel-polish-application.jpg",
+        "alt": "Nail artist applying high-gloss Japanese gel polish with fine brush strokes"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-couture-manicure-and-pedicure-elegance.jpg",
+        "alt": "Elegant manicured hands with natural pink French finish paired with matching pedicure"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-manicure-gentle-hand-massage-treatment.jpg",
+        "alt": "Nail specialist massaging client fingers during revitalizing manicure appointment"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-manicure-detailed-nail-prep-at-workstation.jpg",
+        "alt": "Close-up of sanitary manicure prep and shaping at clean salon workstation"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-manicure-russian-e-file-cuticle-care.jpg",
+        "alt": "Professional nail technician performing precise cuticle grooming with medical autoclave clippers"
+      }
+    ]
   },
   {
     "id": 2,
@@ -54,7 +77,7 @@
     "title": "Pedicure",
     "tag": "Restorative Foot Rituals",
     "icon": "fa-shoe-prints",
-    "image": "/images/2023/12/closeup-of-diverse-women-s-legs-sitting-in-studio-2023-11-27-05-18-57-utc-e1703953263386.jpg",
+    "image": "/images/rituals/siam-sanctuary-pedicure-botanical-flower-foot-soak.jpg",
     "excerpt": "Revitalize your step with medical-grade podiatric care, organic botanical foot baths, callus smoothing, and long-lasting gel toenails.",
     "description": "Our restorative pedicure sanctuary offers deep relaxation and transformative foot care. From therapeutic callus elimination to soothing reflexology foot massages and hot stone therapies, we restore lightness, hydration, and baby-soft skin.",
     "highlights": [
@@ -89,7 +112,26 @@
         "description": "Warming volcanic basalt stone massage followed by deep-conditioning lavender paraffin wax wrap."
       }
     ],
-    "content": "<p>Your feet carry you through life \u2014 give them the luxury and restorative care they deserve. Our pedicure stations feature pipe-free sanitized baths with disposable single-use liners for total hygienic peace of mind.</p><h3>The Ultimate Soles Sanctuary</h3><p>Every step of our pedicure rituals is designed to relieve muscular tension, hydrate parched heels, and leave your toenails impeccably shaped and lacquered with brilliant, long-lasting color.</p>"
+    "content": "<p>Your feet carry you through life \u2014 give them the luxury and restorative care they deserve. Our pedicure stations feature pipe-free sanitized baths with disposable single-use liners for total hygienic peace of mind.</p><h3>The Ultimate Soles Sanctuary</h3><p>Every step of our pedicure rituals is designed to relieve muscular tension, hydrate parched heels, and leave your toenails impeccably shaped and lacquered with brilliant, long-lasting color.</p>",
+    "alt": "Restorative botanical foot soak ritual with fresh orchid petals and essential salts in private pedicure basin",
+    "gallery": [
+      {
+        "image": "/images/rituals/siam-sanctuary-pedicure-crimson-lacquer-and-petals.jpg",
+        "alt": "Flawlessly polished crimson red pedicure resting beside fresh floral sanctuary accents"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-pedicure-hot-stone-foot-massage.jpg",
+        "alt": "Therapist using heated basalt stones to massage feet and relieve lower limb tension"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-pedicure-botanical-flower-foot-soak.jpg",
+        "alt": "Therapeutic warm foot soak infused with tropical orchid petals and essential bath salts"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-manicure-pedicure-dual-spa-care.jpg",
+        "alt": "Synchronized botanical care for manicured hands and feet surrounded by natural blossoms"
+      }
+    ]
   },
   {
     "id": 3,
@@ -97,7 +139,7 @@
     "title": "Eyelashes",
     "tag": "Couture Lash Design",
     "icon": "fa-eye",
-    "image": "/images/2024/01/fast-beauty-service-beautiful-ginger-girl-having-2023-11-27-05-21-12-utc.jpg",
+    "image": "/images/rituals/siam-sanctuary-eyelashes-volume-lash-extension-application.jpg",
     "excerpt": "Enhance your eyes with customized silk and mink lash extensions, featherlight Russian volume, and organic keratin lash lifts.",
     "description": "Wake up looking effortlessly glamorous every day. Our certified lash artists carefully analyze your eye shape, facial symmetry, and natural lash health to craft tailored sets that feel weightless and look mesmerizing.",
     "highlights": [
@@ -138,7 +180,22 @@
         "description": "Soothing conditioning solvent breakdown that protects your natural lashes completely."
       }
     ],
-    "content": "<p>Indulge in couture lash design with Siam Sanctuary. Our lash artists are masters in isolation and customized eye mapping, ensuring zero damage to your natural lashes.</p><h3>Featherlight Comfort</h3><p>Using only the finest Korean featherlight fibers and formaldehyde-free sensitive adhesives, you will forget you are even wearing extensions \u2014 while turning heads wherever you go.</p>"
+    "content": "<p>Indulge in couture lash design with Siam Sanctuary. Our lash artists are masters in isolation and customized eye mapping, ensuring zero damage to your natural lashes.</p><h3>Featherlight Comfort</h3><p>Using only the finest Korean featherlight fibers and formaldehyde-free sensitive adhesives, you will forget you are even wearing extensions \u2014 while turning heads wherever you go.</p>",
+    "alt": "Certified lash artist meticulously isolating natural lashes and applying handmade Russian volume fan extensions",
+    "gallery": [
+      {
+        "image": "/images/rituals/siam-sanctuary-eyelashes-editorial-eyeshadow-portrait.jpg",
+        "alt": "Close portrait highlighting radiant eye cosmetics and seamless lash fan placement"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-eyelash-dramatic-smoky-eye-contour.jpg",
+        "alt": "Dramatic warm bronze eyeshadow accentuating full fluttery lash extensions"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-eyelashes-volume-lash-extension-application.jpg",
+        "alt": "Certified lash technician meticulously placing delicate volume lash extensions on natural lashes"
+      }
+    ]
   },
   {
     "id": 4,
@@ -146,7 +203,7 @@
     "title": "Eyebrow",
     "tag": "Architectural Brow Shaping",
     "icon": "fa-magic",
-    "image": "/images/2023/12/young-woman-during-procedure-of-permanent-eyebrow-2023-11-28-23-02-41-utc.jpg",
+    "image": "/images/rituals/siam-sanctuary-eyebrow-sculpted-arch-and-lash-lift-result.jpg",
     "excerpt": "Achieve symmetry and definition with golden-ratio brow mapping, organic henna tinting, Korean brow lamination, and precision threading.",
     "description": "Your brows frame your entire face. Our brow architectural specialists utilize the golden ratio method to sculpt balanced, natural, and expressive eyebrows that accentuate your bone structure and personal style.",
     "highlights": [
@@ -181,7 +238,30 @@
         "description": "Complete architectural mapping, precision shaping, lamination, and custom keratin tint infusion."
       }
     ],
-    "content": "<p>Discover the power of perfectly sculpted eyebrows. Whether your brows are sparse, uneven, or unruly, our specialists restore definition, fullness, and symmetry with bespoke styling.</p><h3>Flawless Golden-Ratio Mapping</h3><p>Every brow service begins with tailored measurement of your facial proportions, ensuring results that naturally lift your features and bring youthful vitality to your eyes.</p>"
+    "content": "<p>Discover the power of perfectly sculpted eyebrows. Whether your brows are sparse, uneven, or unruly, our specialists restore definition, fullness, and symmetry with bespoke styling.</p><h3>Flawless Golden-Ratio Mapping</h3><p>Every brow service begins with tailored measurement of your facial proportions, ensuring results that naturally lift your features and bring youthful vitality to your eyes.</p>",
+    "alt": "Pristine sculpted brow lamination arch and lash tint enhancement on relaxed client",
+    "gallery": [
+      {
+        "image": "/images/rituals/siam-sanctuary-eyebrow-sculpted-arch-and-lash-lift-result.jpg",
+        "alt": "Completed brow lamination arch and lash tint enhancement on glowing eye profile"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-eyebrow-botanical-henna-tinting.jpg",
+        "alt": "Applying custom hybrid botanical tint to eyebrow hairs with fine angled brush"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-eyebrow-artisan-pencils-and-spoolie-tools.jpg",
+        "alt": "Professional eyebrow definition pencils, sharpeners, and grooming spoolie brushes"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-eyebrow-mapping-and-architectural-design.jpg",
+        "alt": "Brow artist measuring symmetry and mapping eyebrow architecture in clean treatment suite"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-eyebrow-threading-and-precision-tweezing.jpg",
+        "alt": "Close-up of precise eyebrow tweezing and shaping around natural eye contour"
+      }
+    ]
   },
   {
     "id": 5,
@@ -189,7 +269,7 @@
     "title": "Cosmetic Tattoo (PMU)",
     "tag": "Semi-Permanent Artistry",
     "icon": "fa-pen-fancy",
-    "image": "/images/2023/12/young-woman-during-procedure-of-permanent-eyebrow-2023-11-28-23-02-41-utc.jpg",
+    "image": "/images/rituals/siam-sanctuary-pmu-microblading-hair-stroke-eyebrow-craft.jpg",
     "excerpt": "Wake up with smudge-proof perfection: Nano Microblading, Lash Line Enhancement, Aquarelle Lip Blush, and custom Ombr\u00e9 Shading.",
     "description": "Step into the future of semi-permanent makeup (PMU). Our internationally certified PMU masters craft hyper-realistic hair strokes, luscious natural lip tints, and discreet lash-line definitions using German digital rotary machines and Swiss vegan pigments.",
     "highlights": [
@@ -224,7 +304,26 @@
         "description": "Secondary perfection session to solidify pigment retention and fine-tune tone and density."
       }
     ],
-    "content": "<p>Permanent Make-Up (PMU) at Siam Sanctuary offers effortless beauty that never washes off. Whether hitting the beach, the gym, or an evening gala, your features remain beautifully defined 24/7.</p><h3>Medical-Grade Safety & Artistry</h3><p>We use single-use sealed cartridge needles, medical-grade barrier film, and top-tier organic Swiss pigments that do not discolor into blues or reds over time. Dual-stage anesthetic numbing ensures maximum comfort throughout.</p>"
+    "content": "<p>Permanent Make-Up (PMU) at Siam Sanctuary offers effortless beauty that never washes off. Whether hitting the beach, the gym, or an evening gala, your features remain beautifully defined 24/7.</p><h3>Medical-Grade Safety & Artistry</h3><p>We use single-use sealed cartridge needles, medical-grade barrier film, and top-tier organic Swiss pigments that do not discolor into blues or reds over time. Dual-stage anesthetic numbing ensures maximum comfort throughout.</p>",
+    "alt": "Licensed PMU master hand-drawing ultra-fine nano hair strokes during sterile microblading procedure",
+    "gallery": [
+      {
+        "image": "/images/rituals/siam-sanctuary-pmu-microblading-hair-stroke-eyebrow-craft.jpg",
+        "alt": "Master artist hand-drawing realistic hair strokes during microblading eyebrow procedure"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-pmu-ombre-powder-brow-tattoo-black-gloves.jpg",
+        "alt": "PMU master wearing sterile black nitrile gloves performing precision ombr\u00e9 powder brow tattoo"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-pmu-cosmetic-tattoo-pigment-infusion.jpg",
+        "alt": "Precision micropigmentation device gently depositing cosmetic pigment into eyebrow contour"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-pmu-eyebrow-blade-precision-etching.jpg",
+        "alt": "Detail view of microblade feathering fine realistic hairs across brow arch"
+      }
+    ]
   },
   {
     "id": 6,
@@ -232,7 +331,7 @@
     "title": "Hairstyling",
     "tag": "Runway & Event Styling",
     "icon": "fa-cut",
-    "image": "/images/2023/12/hairstyling-in-hair-salon-2023-11-27-04-52-40-utc-e1703953619118.jpg",
+    "image": "/images/rituals/siam-sanctuary-hairstyling-bridal-updo-couture-creation.jpg",
     "excerpt": "Experience master cuts, voluminous red-carpet blowouts, romantic bridal updos, and effortless beach waves tailored to your vibe.",
     "description": "Our senior hair directors transform locks into works of art. Whether you are prepping for a tropical beach photoshoot, an elegant evening gala, or seeking a chic modern cut, we bring luxury, movement, and lustrous shine to your tresses.",
     "highlights": [
@@ -267,7 +366,34 @@
         "description": "Architectural chignons, textured bridal braids, or sleek high-fashion ponytails pinned to perfection."
       }
     ],
-    "content": "<p>Step into our upscale hair sanctuary where every strand is treated with reverence. Our stylists combine European cutting precision with Asian hair expertise to deliver effortless movement and healthy radiance.</p><h3>Salon Blowouts that Turn Heads</h3><p>Using Dyson styling technology and antioxidant-infused finishing elixirs, our blowouts resist tropical humidity and maintain featherweight bounce from morning to night.</p>"
+    "content": "<p>Step into our upscale hair sanctuary where every strand is treated with reverence. Our stylists combine European cutting precision with Asian hair expertise to deliver effortless movement and healthy radiance.</p><h3>Salon Blowouts that Turn Heads</h3><p>Using Dyson styling technology and antioxidant-infused finishing elixirs, our blowouts resist tropical humidity and maintain featherweight bounce from morning to night.</p>",
+    "alt": "Master hair stylist crafting an intricate textured couture bridal updo in luxury styling suite",
+    "gallery": [
+      {
+        "image": "/images/rituals/siam-sanctuary-hairstyling-family-gentle-haircut.jpg",
+        "alt": "Gentle and patient hairstyling session for younger guests in private family suite"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-hairstyling-precision-trim-session.jpg",
+        "alt": "Stylist carefully trimming split ends to promote healthy, resilient hair growth"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-hairstyling-bridal-updo-couture-creation.jpg",
+        "alt": "Master stylist pinning romantic textured bridal updo with intricate twists"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-hairstyling-waist-length-glossy-hair.jpg",
+        "alt": "Pristine waist-length sleek straight hair with brilliant light reflection"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-hairstyling-precision-shears-haircut.jpg",
+        "alt": "Stylist executing sharp blunt-line haircut using handcrafted Japanese shears"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-hairstyling-custom-curl-definition.jpg",
+        "alt": "Hair artisan refining natural curls with moisturizing salon elixir"
+      }
+    ]
   },
   {
     "id": 7,
@@ -275,7 +401,7 @@
     "title": "Hair Color",
     "tag": "Master Color Chemistry",
     "icon": "fa-palette",
-    "image": "/images/2023/12/hairstyling-in-hair-salon-2023-11-27-04-52-40-utc-e1703953619118-1024x1024.jpg",
+    "image": "/images/rituals/siam-sanctuary-hair-color-pastel-pink-and-blonde-balayage.jpg",
     "excerpt": "From seamless sun-kissed balayage to bold platinum blondes, pastel toners, and gentle ammonia-free color glazes.",
     "description": "Achieve your dream hair color with zero compromise on hair integrity. Our master colorists specialize in Asian and international hair coloring, utilizing Olaplex bond repair technology, gentle low-volume developers, and luminous French toners.",
     "highlights": [
@@ -310,7 +436,18 @@
         "description": "Zero-lift shine booster that seals cuticles, neutralizes yellow brassiness, and amplifies radiance."
       }
     ],
-    "content": "<p>Whether you crave warm honey ribbons, an icy blonde bob, or a rich chocolate brunette melt, our color laboratory creates custom bespoke formulas tailored to your skin undertones.</p><h3>Damage-Free Lightening</h3><p>We believe healthy hair is the canvas for gorgeous color. That is why every coloring and lightening treatment includes bond-building therapies to preserve moisture, elasticity, and softness.</p>"
+    "content": "<p>Whether you crave warm honey ribbons, an icy blonde bob, or a rich chocolate brunette melt, our color laboratory creates custom bespoke formulas tailored to your skin undertones.</p><h3>Damage-Free Lightening</h3><p>We believe healthy hair is the canvas for gorgeous color. That is why every coloring and lightening treatment includes bond-building therapies to preserve moisture, elasticity, and softness.</p>",
+    "alt": "Multidimensional pastel pink and luminous platinum blonde balayage color transformation",
+    "gallery": [
+      {
+        "image": "/images/rituals/siam-sanctuary-hair-color-pastel-pink-and-blonde-balayage.jpg",
+        "alt": "Vibrant pastel baby-pink and platinum blonde balayage dimensional color melt"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-hair-color-celestial-blue-editorial-couture.jpg",
+        "alt": "Avant-garde pastel ice-blue custom wig color installation with sharp micro-fringe"
+      }
+    ]
   },
   {
     "id": 8,
@@ -318,7 +455,7 @@
     "title": "Hair Treatments & Head Spa",
     "tag": "Trichology & Scalp Sanctuary",
     "icon": "fa-shower",
-    "image": "/images/2021/12/inner_header_01.jpg",
+    "image": "/images/rituals/siam-sanctuary-japanese-head-spa-water-basin-wash.jpg",
     "excerpt": "Indulge in our viral Japanese Waterfall Scalp Spa, Brazilian Keratin smoothing, collagen Hair Botox, and deep Olaplex bond therapy.",
     "description": "Revitalize over-processed tresses and calm stressed scalps in our dedicated Head Spa suite. Featuring circular hydro-waterfall rings, warm steam misting, and high-potency collagen infusions, this is pure sensorial bliss.",
     "highlights": [
@@ -353,7 +490,26 @@
         "description": "Stand-alone treatment multiplying broken disulphide bonds to reverse bleach, heat, and chemical stress."
       }
     ],
-    "content": "<p>A healthy scalp is the secret to thriving, glossy hair. Our Japanese Head Spa experience begins with high-magnification trichological scalp analysis, followed by detoxifying scrubs, acupressure neck massage, and calming waterfall hydrotherapy.</p><h3>Frizz-Free Glass Hair</h3><p>Struggling with tropical humidity? Our Keratin and Hair Botox treatments coat every strand in silky nutrition, delivering mirror-like shine and effortless manageability for months.</p>"
+    "content": "<p>A healthy scalp is the secret to thriving, glossy hair. Our Japanese Head Spa experience begins with high-magnification trichological scalp analysis, followed by detoxifying scrubs, acupressure neck massage, and calming waterfall hydrotherapy.</p><h3>Frizz-Free Glass Hair</h3><p>Struggling with tropical humidity? Our Keratin and Hair Botox treatments coat every strand in silky nutrition, delivering mirror-like shine and effortless manageability for months.</p>",
+    "alt": "Client experiencing authentic Japanese waterfall head spa hydrotherapy and botanical scalp detox wash",
+    "gallery": [
+      {
+        "image": "/images/rituals/siam-sanctuary-japanese-head-spa-collagen-scalp-treatment.jpg",
+        "alt": "Stylist applying deep restorative collagen hair mask and botanical scalp peeling treatment"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-japanese-head-spa-water-basin-wash.jpg",
+        "alt": "Client enjoying botanical hair wash and warm hydrotherapy rinse in Japanese head spa basin"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-hair-keratin-nourishing-mask-application.jpg",
+        "alt": "Salon specialist applying intensive keratin renewal treatment to client hair strands"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-japanese-head-spa-acupressure-massage.jpg",
+        "alt": "Senior aesthetician performing traditional Japanese pressure-point head massage during a luxury scalp ritual"
+      }
+    ]
   },
   {
     "id": 9,
@@ -361,7 +517,7 @@
     "title": "Facial",
     "tag": "Clinical Glow & Skin Health",
     "icon": "fa-spa",
-    "image": "/images/2021/12/inner_header_01.jpg",
+    "image": "/images/rituals/siam-sanctuary-facial-deep-pore-cleansing-ritual.jpg",
     "excerpt": "Rejuvenate your complexion with deep pore Hydrafacials, collagen firming lifts, botanical vitamin infusions, and medical-grade LED light therapy.",
     "description": "Unlock luminous, plump, and healthy skin. Our estheticians curate personalized facial rituals that tackle dehydration, environmental stress, fine lines, and sun damage using European bio-cosmetics and cutting-edge non-invasive skin tech.",
     "highlights": [
@@ -396,7 +552,34 @@
         "description": "Centella asiatica and aloe vera infusion designed to soothe sunburn, reduce redness, and rebuild moisture barrier."
       }
     ],
-    "content": "<p>Experience skin transformation in an atmosphere of serene luxury. Our personalized facials breathe fresh life into dull skin, decongest congested pores, and restore barrier vitality.</p><h3>Bespoke Esthetic Diagnostics</h3><p>Every facial begins with a thorough skin assessment, ensuring that each serum, massage technique, and botanical mask directly targets your immediate skincare goals.</p>"
+    "content": "<p>Experience skin transformation in an atmosphere of serene luxury. Our personalized facials breathe fresh life into dull skin, decongest congested pores, and restore barrier vitality.</p><h3>Bespoke Esthetic Diagnostics</h3><p>Every facial begins with a thorough skin assessment, ensuring that each serum, massage technique, and botanical mask directly targets your immediate skincare goals.</p>",
+    "alt": "Clinical aesthetician conducting European deep-pore cleansing and lymphatic facial in private suite",
+    "gallery": [
+      {
+        "image": "/images/rituals/siam-sanctuary-facial-clarifying-clay-masque-application.jpg",
+        "alt": "Spa aesthetician smoothing rich clarifying facial masque across client forehead"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-facial-botanical-nourishing-cream-mask.jpg",
+        "alt": "Client relaxing with soothing botanical moisture mask applied across complexion"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-facial-deep-pore-cleansing-ritual.jpg",
+        "alt": "Skin specialist conducting deep pore cleansing and extraction in serene spa room"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-facial-at-home-ritual-skincare-regimen.jpg",
+        "alt": "Gentle facial exfoliation ritual showcasing pure botanical self-care"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-facial-deep-pore-cleansing-ritual-2.jpg",
+        "alt": "Skin specialist conducting deep pore cleansing and extraction in serene spa room"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-facial-lymphatic-drainage-face-massage.jpg",
+        "alt": "Esthetician performing rhythmic lymphatic drainage massage along client jawline and cheek"
+      }
+    ]
   },
   {
     "id": 10,
@@ -404,7 +587,7 @@
     "title": "Massage & Body",
     "tag": "Holistic Body Sanctuary",
     "icon": "fa-heart",
-    "image": "/images/2022/01/02e3e97a-d387-4aff-986a-a40cc9d6fabf-1024x768.jpg",
+    "image": "/images/rituals/siam-sanctuary-massage-heated-volcanic-stone-back-therapy.jpg",
     "excerpt": "Melt away tension with authentic Thai aroma massages, organic coconut & coffee body scrubs, hot herbal compresses, and foot reflexology.",
     "description": "Escape the hustle of daily life in our holistic body sanctuary. Blending ancient Thai healing traditions with aromatic botanical oils, our certified masseuses gently relieve knots, improve lymphatic flow, and restore mind-body balance.",
     "highlights": [
@@ -439,7 +622,34 @@
         "description": "Stimulation of key meridian points on the soles to promote whole-body wellness and alleviate travel fatigue."
       }
     ],
-    "content": "<p>Allow your senses to unwind as gentle tropical aromas and soothing ambient melodies fill the air. Our body treatments honor time-tested holistic therapies to leave you profoundly rested and revitalized.</p><h3>Premium Organic Body Scrubs</h3><p>Our scrubs use only food-grade organic botanicals \u2014 raw cold-pressed coconut oil, ground Arabica coffee, and wild honey \u2014 ensuring intense nourishment for sun-drenched skin.</p>"
+    "content": "<p>Allow your senses to unwind as gentle tropical aromas and soothing ambient melodies fill the air. Our body treatments honor time-tested holistic therapies to leave you profoundly rested and revitalized.</p><h3>Premium Organic Body Scrubs</h3><p>Our scrubs use only food-grade organic botanicals \u2014 raw cold-pressed coconut oil, ground Arabica coffee, and wild honey \u2014 ensuring intense nourishment for sun-drenched skin.</p>",
+    "alt": "Heated volcanic basalt stones carefully aligned along spine during holistic Thai aroma massage therapy",
+    "gallery": [
+      {
+        "image": "/images/rituals/siam-sanctuary-massage-heated-volcanic-stone-back-therapy.jpg",
+        "alt": "Warm volcanic basalt stones aligned along client spine to release chronic muscular tension"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-massage-holistic-wellness-back-treatment.jpg",
+        "alt": "Therapeutic pressure-point palm massage easing deep shoulder and lumbar strain"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-massage-relaxing-full-body-relaxation.jpg",
+        "alt": "Client resting peacefully during full-body organic aromatherapy massage treatment"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-massage-deep-tissue-stress-relief.jpg",
+        "alt": "Therapist using firm forearm strokes to loosen knots and soothe shoulder blades"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-massage-hand-and-arm-reflexology.jpg",
+        "alt": "Hand and forearm massage relieving tension from keyboard fatigue and everyday strain"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-massage-targeted-neck-and-shoulder-relief.jpg",
+        "alt": "Targeted neck, trapezius, and shoulder massage session in comfortable treatment chair"
+      }
+    ]
   },
   {
     "id": 11,
@@ -447,7 +657,7 @@
     "title": "Waxing",
     "tag": "Silky Smooth Hair Removal",
     "icon": "fa-feather-alt",
-    "image": "/images/2023/12/closeup-hand-applying-green-hot-wax-on-woman-butto-2023-11-27-05-17-53-utc-e1703953431339.jpg",
+    "image": "/images/rituals/siam-sanctuary-waxing-organic-stripless-wax-and-wooden-spatulas.jpg",
     "excerpt": "Experience gentle, hygienic hair removal with hypoallergenic European hot wax: Brazilian, bikini, full legs, underarms, and facial grooming.",
     "description": "Smooth, radiant skin with minimal discomfort. Our waxing artisans use ultra-pliable European stripless hard waxes formulated with calming azulene and chamomile, making intimate waxing fast, hygienic, and virtually pain-free.",
     "highlights": [
@@ -482,7 +692,26 @@
         "description": "Lip, chin, sides, and eyebrows smoothed to ensure flawless makeup application."
       }
     ],
-    "content": "<p>Waxing at Siam Sanctuary redefines the standard for comfort and hygiene. Our estheticians are swift, discrete, and gentle, ensuring you feel at ease from start to finish.</p><h3>Strict No-Double-Dipping Protocol</h3><p>We discard every wooden spatula after a single contact with wax, ensuring zero cross-contamination. Our imported waxes grip only the hair \u2014 never the delicate skin.</p>"
+    "content": "<p>Waxing at Siam Sanctuary redefines the standard for comfort and hygiene. Our estheticians are swift, discrete, and gentle, ensuring you feel at ease from start to finish.</p><h3>Strict No-Double-Dipping Protocol</h3><p>We discard every wooden spatula after a single contact with wax, ensuring zero cross-contamination. Our imported waxes grip only the hair \u2014 never the delicate skin.</p>",
+    "alt": "Aseptic warm waxing station featuring organic stripless wax, wooden single-use spatulas, and botanical prep elixirs",
+    "gallery": [
+      {
+        "image": "/images/rituals/siam-sanctuary-waxing-expert-leg-hair-removal-care.jpg",
+        "alt": "Clean and rapid full-leg waxing treatment leaving skin silky and soft"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-waxing-arm-hair-removal-with-blossoms.jpg",
+        "alt": "Esthetician applying gentle warm wax to forearm in immaculate floral spa environment"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-waxing-organic-stripless-wax-and-wooden-spatulas.jpg",
+        "alt": "Gentle chamomile warm wax formula, wooden application spatulas, and soothing botanical oils"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-waxing-smooth-leg-wax-glide.jpg",
+        "alt": "Precision application of golden peel-off wax along lower leg for ultra-smooth skin"
+      }
+    ]
   },
   {
     "id": 12,
@@ -490,7 +719,7 @@
     "title": "Makeup",
     "tag": "Editorial & Event Glamour",
     "icon": "fa-brush",
-    "image": "/images/2024/01/fast-beauty-service-beautiful-ginger-girl-having-2023-11-27-05-21-12-utc.jpg",
+    "image": "/images/rituals/siam-sanctuary-makeup-luxury-beauty-brush-portrait.jpg",
     "excerpt": "Turn heads at any event: luxury bridal beauty glam, red-carpet editorial looks, soft luminous day makeup, and airbrush perfection.",
     "description": "Enhance your natural radiance with celebrity-level makeup artistry. Our makeup artists use prestige cosmetics (Charlotte Tilbury, Dior, NARS, MAC) to curate weather-proof, camera-ready looks that last through tears of joy, humidity, and all-night dancing.",
     "highlights": [
@@ -525,7 +754,34 @@
         "description": "Targeted eye makeup, winged liner, and individual cluster lash application for quick glam."
       }
     ],
-    "content": "<p>Whether walking down the aisle in a tropical paradise, stepping onto a red carpet, or attending a sunset cocktail reception, our makeup artists create unforgettable beauty tailored to your vision.</p><h3>Prestige International Cosmetics</h3><p>We work exclusively with high-end, dermatologist-tested beauty brands to ensure your skin looks luminous in natural sunlight, 4K video, and evening indoor lighting alike.</p>"
+    "content": "<p>Whether walking down the aisle in a tropical paradise, stepping onto a red carpet, or attending a sunset cocktail reception, our makeup artists create unforgettable beauty tailored to your vision.</p><h3>Prestige International Cosmetics</h3><p>We work exclusively with high-end, dermatologist-tested beauty brands to ensure your skin looks luminous in natural sunlight, 4K video, and evening indoor lighting alike.</p>",
+    "alt": "Editorial beauty portrait showcasing artisanal makeup application brushes and luminous sculpted complexion",
+    "gallery": [
+      {
+        "image": "/images/rituals/siam-sanctuary-makeup-luxury-beauty-brush-portrait.jpg",
+        "alt": "Model portrait holding soft artisanal badger and synthetic makeup brushes"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-makeup-artisan-pigment-palettes-and-brushes.jpg",
+        "alt": "Vibrant metallic and matte eyeshadow palettes arranged with gold beauty tools"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-makeup-rose-gold-beauty-tools-collection.jpg",
+        "alt": "Pastel pink vanity display of rose gold ferrule brushes and luxury compacts"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-makeup-luxury-beauty-brush-portrait-2.jpg",
+        "alt": "Model portrait holding soft artisanal badger and synthetic makeup brushes"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-makeup-couture-bridal-prep-backstage.jpg",
+        "alt": "Professional makeup artist sculpting complexion on model wearing hair rollers"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-makeup-custom-lipstick-application.jpg",
+        "alt": "Applying velvet rose lip color with fine lip brush for flawless pout"
+      }
+    ]
   },
   {
     "id": 13,
@@ -533,7 +789,7 @@
     "title": "Packages & VIP",
     "tag": "Exclusive Luxury Bundles",
     "icon": "fa-crown",
-    "image": "/images/2022/05/AboutUS-1.jpg",
+    "image": "/images/rituals/siam-sanctuary-vip-bridal-suite-champagne-celebration.jpg",
     "excerpt": "Save time in ultimate luxury: Synchronized Power Hour (4-hand care), destination Bridal Bundles, and private VIP Suite buyouts.",
     "description": "For those who value both time and absolute luxury. Our VIP Packages offer multi-technician synchronized care \u2014 allowing you to receive a manicure, pedicure, and hair blowout simultaneously \u2014 or indulge in an all-inclusive bridal beauty retreat.",
     "highlights": [
@@ -575,6 +831,21 @@
         "description": "Side-by-side manicure & pedicures, botanical body scrubs, and private suite ambiance for two."
       }
     ],
-    "content": "<p>Time is the ultimate luxury. Our signature VIP services are crafted for high-achievers, bridal parties, and world travelers who demand uncompromising pampering without wasting a single moment.</p><h3>Synchronized Multi-Artist Care</h3><p>Relax in our plush recliners while our coordinated team of certified master technicians pampers your hands, feet, and hair in flawless harmony. Enjoy complimentary artisanal teas, champagne, and high-speed Wi-Fi in our VIP lounges.</p>"
+    "content": "<p>Time is the ultimate luxury. Our signature VIP services are crafted for high-achievers, bridal parties, and world travelers who demand uncompromising pampering without wasting a single moment.</p><h3>Synchronized Multi-Artist Care</h3><p>Relax in our plush recliners while our coordinated team of certified master technicians pampers your hands, feet, and hair in flawless harmony. Enjoy complimentary artisanal teas, champagne, and high-speed Wi-Fi in our VIP lounges.</p>",
+    "alt": "Bridal party celebrating in silky robes with champagne during private VIP sanctuary pamper suite experience",
+    "gallery": [
+      {
+        "image": "/images/rituals/siam-sanctuary-vip-bridal-suite-champagne-celebration.jpg",
+        "alt": "Three bridal party guests in silky robes toasting champagne glasses in luxury private suite"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-vip-pamper-party-friends-suite.jpg",
+        "alt": "Friends enjoying celebratory morning of synchronized beauty treatments in salon lounge"
+      },
+      {
+        "image": "/images/rituals/siam-sanctuary-vip-plush-velvet-robe-relaxation-lounge.jpg",
+        "alt": "Guest resting in plush organic cotton robe between synchronized salon rituals"
+      }
+    ]
   }
 ]

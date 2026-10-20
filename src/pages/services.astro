@@ -17,7 +17,7 @@ import services from '../data/services.json';
       <!-- Subpage Header Banner -->
       <section class="relative py-24 sm:py-28 bg-[#101010] border-b border-white/5 overflow-hidden">
         <div class="absolute inset-0 opacity-25">
-          <img src="/images/2021/12/inner_header_01.jpg" alt="Services Header" class="w-full h-full object-cover" />
+          <img src="/images/rituals/siam-sanctuary-editorial-haute-couture-glamour-portrait.jpg" alt="Striking beauty portrait showcasing flawless sculpted features and bespoke makeup artistry" class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/85 to-transparent"></div>
         </div>
 
@@ -64,7 +64,7 @@ import services from '../data/services.json';
                 <div class="relative h-52 overflow-hidden bg-black">
                   <img 
                     src={svc.image} 
-                    alt={svc.title} 
+                    alt={svc.alt || svc.title} 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" 
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-black/40"></div>
